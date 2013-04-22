@@ -1,0 +1,44 @@
+Installing trytond_doc
+======================
+
+Prerequisites
+-------------
+
+ * Python 2.6 or later (http://www.python.org/)
+ * trytond (http://www.tryton.org/)
+
+Installation
+------------
+
+As it is not a real Tryton module, it's not required neither recommended to
+install this package with setup tools.
+
+To use without installation, extract the archive into ``trytond/modules`` with
+the directory name trytond_doc.
+
+Modify the file tryotnd_doc/userdoc/conf.py.template replacing the variables
+substitution for a value. You identify them because appear as'${tryond-conf:X}'
+Change the name of the file removing the '.template' ending.
+
+Create symbolic links to the 'doc' directory of the modules you want to include
+in the manual inside the 'userdoc' directory and with the name of the module.
+
+Don't forget the 'trytond_doc' because it has the initial file required to
+generate documentation.
+You also have to create a symlink 'index.rst' in 'userdoc' directory to
+'trytond_doc/doc/index.rst' file.
+
+Execute Makefile to generate the customized manual inside the 'userdoc'
+directory:
+$ cd userdoc
+$ make
+
+To help with this tasks you will found in the 'trytonspain/tryton-buildout'
+project in Mercurial (https://bitbucket.org/trytonspain/tryton-buildout) you
+will find (almost other utilities):
+- a Buildout configuration that include a 'part' to configure userdoc config
+  file from template. It create the 'userdoc' directory in the root of
+  'customers' directory.
+- the 'create-doc-symblinks.sh' script to generate links to modules 'doc'
+  directory (using the directory structure proposed in the project)
+

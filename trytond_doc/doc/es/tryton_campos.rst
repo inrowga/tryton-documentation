@@ -1,0 +1,166 @@
+======
+Campos
+======
+
+En las vistas formulario, si disponemos de privilegios de edición, podremos editar
+o añadir información.
+
+A continuación se listan algunos de los campos más comunes para la gestión de
+cliente, facturas, productos, etc. que encontraremos en Tryton.
+
+--------
+Booleano
+--------
+
+Es la típica casilla de verificación. Sólo puede almacenar verdadero o falso.
+
+Activo
+------
+
+Es un caso especial de campo booleano. Los campos **activo** (active) le permiten
+ocultar elementos que ya no desea usar. ES recomendable "desactivar" del campo
+*activo* del registro antes que eliminarlo.
+
+-----
+Texto
+-----
+
+Campo de texto de una única línea que permite almacenar cualquier carácter
+alfanumérico. El tamaño se aplica en el nivel de almacenamiento y la entrada
+del cliente.
+
+Traducción
+----------
+
+Algunos campos de texto pueden disponer de una *bandera* que indican que son
+ampos traducibles.
+
+.. figure:: images/tryton-translate.png
+
+   Campos traducibles en Tryton
+
+.. warning:: Si desea cambiar la información de este campo, recuerda hacerlo en
+             todos los idiomas disponibles
+
+
+--------
+TextArea
+--------
+
+Campo de texto de múltiples líneas.
+
+---------------------------
+SHA (Secure Hash Algorithm)
+---------------------------
+
+Campo que contiene una cadena de texto que se almacenará encriptada mediante
+el algoritmo `secure hash algorithm`_
+
+.. _secure hash algorithm: http://es.wikipedia.org/wiki/Secure_Hash_Algorithm
+
+---------------------
+Entero / Entero Largo
+---------------------
+
+Un número entero (sin decimales). Puede contener valores negativos.
+
+--------
+Numérico
+--------
+
+Campo numérico de coma fija.
+
+-----
+Float
+-----
+
+Campo numérico de coma flotante.
+
+--------------------------
+Fecha, Fecha y hora y Hora
+--------------------------
+
+Campo de fecha. La visualización de la fecha viene relacionada con el formato de
+fecha del idioma (menú **Administración/Localización/Idiomas**)::
+
+    %d/%m/%Y
+
+Si sois amantes del teclado, podéis interactuar con las fechas con **+**, **-**
+e **=**
+
+ * **+8d** añade 8 dias a la fecha
+ * **=23w** Fija la fecha a la semana 23
+ * **-2m** Quita 2 meses a la fecha
+
+.. figure:: images/tryton-data.png
+
+   Campo fecha en Tryton
+
+
+-------
+Binario
+-------
+
+Permite seleccionar una fichero del disco duro
+
+-------------------
+Campos relacionales
+-------------------
+
+Many2One: De Varios a Uno
+-------------------------
+
+Son campos que permiten ver qué registro está relacionado con el registro que
+estamos viendo en este momento. Por ejemplo: Un pedido de venta sólo puede estar
+relacionado con un tercero. Un campo de este tipo, se mostraría en el pedido de
+venta, y a través de él, se podría acceder a los datos del tercero.
+
+Tienen tres botones asociados pero en todo momento sólo pueden verse un máximo
+de dos:
+
+ * Buscar registro <F2>: Permite seleccionar un registro dentro de la lista de
+   registros existentes.
+ * Abrir registro <F2>: Permite abrir el registro seleccionado para su edición.
+ * Nuevo registro <F3>: Crea un nuevo registro para relacionarlo con el registro
+   del formulario que estamos editando/creando actualmente.
+
+.. figure:: images/tryton-selector.png
+
+   Selector de elementos de otros objetos
+
+
+Para seleccionar un elemento:
+
+ * Lupa del campo. Se nos listaran todos, y los podemos buscar
+ * Escribimos un texto y tabulador. Sólo nos listaran los que coincidan con el
+   texto escrito (se recomienda)
+
+Many2Many: De Varios a Varios
+-----------------------------
+
+Se refiere a registros que pueden estar relacionados a la vez con varios registros
+de otras tablas y viceversa. Por ejemplo: Una empresa puede pertenecer a una o a
+varias categorías y cada categoría de empresas puede tener asociadas varias empresas.
+
+Dispone de dos botones que permiten añadir registros a la relación (**+**) y quitar
+registros de la relación (**-**), así como de un campo que permite filtrar el
+resultado de la búsqueda que se realiza cuando se hace clic sobre el botón de añadir.
+
+.. figure:: images/tryton-m2m.png
+
+   Múltiples registros en Tryton
+
+
+One2Many: De Uno a muchos
+-------------------------
+
+Un ejemplo de campo One2Many es un tercero puede tener varios pedidos de venta.
+Este campo podría estar en la ficha del tercero, y mostrar todos los pedidos de
+compra que ha realizado el mismo.
+
+---------
+Selección
+---------
+
+Permite seleccionar un valor de una lista de valores predeterminada. Por ejemplo:
+'Hombre', 'Mujer'.
