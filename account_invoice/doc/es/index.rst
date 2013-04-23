@@ -1,6 +1,6 @@
-============
+===========
 Facturación
-============
+===========
 
 Módulo financiero y contable con:
 
