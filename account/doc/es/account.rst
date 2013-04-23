@@ -52,6 +52,8 @@ Recordar que en Tryton se denomina:
 Configuración de la contabilidad financiera
 --------------------------------------------
 
+.. inheritref:: account/account:bullet_list:account_configuration
+
 * Ejercicios y períodos
 * Diarios
 * Plazos, tipos y modos de pago
