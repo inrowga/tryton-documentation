@@ -1,3 +1,5 @@
+.. inheritref:: trytond_doc/admin:title:administracion_y_configuracion
+
 ==============================
 Administración y configuración
 ==============================
