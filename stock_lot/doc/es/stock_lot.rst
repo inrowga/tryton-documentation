@@ -29,11 +29,11 @@ Lote requerido
 Para indicar que un producto determinado debe tener asignado obligatoriamente
 un lote, siga los siguientes pasos:
 
-* Abra el menú |menu_product_product|
+* Abra el menú |menu_template|
 * Haga clic en la pestaña **Lotes**
 * Introduzca el *Tipo de lote*
 
-.. |menu_product_product| tryref:: product.menu_product_product/complete_name
+.. |menu_template| tryref:: product.menu_template/complete_name
 
 .. inheritref:: stock_lot/stock_lot:section:anadir_lote_a_movimiento
 

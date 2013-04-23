@@ -23,6 +23,7 @@ Producto
 * |default_uom|. La unidad de medida por defecto para este
   producto, usado por ejemplo para expresar niveles de stock.
 * |active|. Activar o desactivar el producto sin borrarlo.
+
 .. |name| field:: product.template/name
 .. |type| field:: product.template/type
 .. |category| field:: product.template/category

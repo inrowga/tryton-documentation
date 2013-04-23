@@ -11,7 +11,5 @@ al fin de mes, se facturen.
 Cuando crea un nueva factura, al seleccionar el tercero, en las líneas de la factura, podrá
 seleccionar líneas existentes pendientes de facturar.
 
-.. figure:: images/account_invoice_standalone.png
-
 .. note:: Sólo podrá seleccionar las líneas de factura del tercero de la factura
           y que no sean facturadas previamente.
