@@ -2,7 +2,7 @@
 Tarifas
 =======
 
-.. inheritref:: product_price_list/product:section:tarifas
+.. inheritref:: product_price_list/price_list:section:tarifas
 
 Tarifas
 -------
@@ -49,7 +49,7 @@ Deberá usar un ID válido.
           usted crea una **factura** manualmente se le aplicará el **precio de
           venta del producto**.
 
-.. inheritref:: product_price_list/product:section:lineas_en_las_tarifas
+.. inheritref:: product_price_list/price_list:section:lineas_en_las_tarifas
 
 Lineas en las tarifas
 =====================
