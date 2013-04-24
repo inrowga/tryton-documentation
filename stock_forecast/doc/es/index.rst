@@ -12,14 +12,3 @@ el pasado. Una vez el formulario se confirma, los movimientos correspondientes
 se crean y se distribuyen homogeneamente a lo largo del período.
 
 Dichos movimientos permitirá a otros procesos tener en cuenta las previsiones.
-
-Dependencias
-------------
-
-* Stock_
-* Producto_
-* Empresa_
-
-.. _Stock: ../stock/index.html
-.. _Producto: ../product/index.html
-.. _Empresa: ../company/index.html

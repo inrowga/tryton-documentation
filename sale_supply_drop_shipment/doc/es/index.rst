@@ -40,12 +40,3 @@ de proveedor a cliente (en inglés, drop shipment).
 Para acceder a los albaranes de envío directo, accederemos al menú |menu_shipment_drop|.
 
 .. |menu_shipment_drop| tryref:: sale_supply_drop_shipment.menu_shipment_drop_form/complete_name
-
-Dependencias
-------------
-
-* Empresa_
-* `Venta por suministro`_
-
-.. _Empresa: ../company/index.html
-.. _Venta por suministro: ../sale_supply/index.html

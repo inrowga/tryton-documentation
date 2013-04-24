@@ -9,10 +9,3 @@ Este módulo permite la gestión de:
 * Gestión de las conversiones
 * Registro de iniciativas perdidas
 * Oportunidades a pedidos de venta
-
-Dependencias
-------------
-
-* Ventas_
-
-.. _Ventas: ../sale/index.html

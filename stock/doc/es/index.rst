@@ -17,16 +17,3 @@ Y con los informes:
 * Lista de recálculo de stocks (en recepciones de proveedores y devoluciones
   de clientes)
 * Productos por ubicación
-
-Dependencias
-------------
-
-* Empresa_
-* Tercero_
-* Producto_
-* Moneda_
-
-.. _Empresa: ../company/index.html
-.. _Tercero: ../party/index.html
-.. _Producto: ../product/index.html
-.. _Moneda: ../currency/index.html

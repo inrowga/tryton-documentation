@@ -19,14 +19,3 @@ Y con los informes:
 * Balance de terceros
 * Saldo vencido
 * Libro diario
-
-Dependencias
-------------
-
-* Empresa_
-* Moneda_
-* Terceros_
-
-.. _Empresa: ../company/index.html
-.. _Moneda: ../currency/index.html
-.. _Terceros: ../party/index.html
