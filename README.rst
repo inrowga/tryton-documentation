@@ -23,7 +23,7 @@ Usage
 Get the sources and put into ``trytond/modules`` with the directory name
 *trytond_doc*.
 
-Modify the file *tryotnd_doc/userdoc/conf.py.template* replacing the variables
+Modify the file *trytond_doc/userdoc/conf.py.template* replacing the variables
 substitution for a value. You identify them because appear as'${tryond-conf:X}'
 Change the name of the file removing the '.template' ending.
 
