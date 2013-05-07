@@ -1,8 +1,8 @@
-.. inheritref:: trytond_doc/admin:title:administracion_y_configuracion
-
 ==============================
 Administración y configuración
 ==============================
+
+.. inheritref:: trytond_doc/admin:toctree:administracion_y_configuracion
 
 .. toctree::
    :maxdepth: 1
