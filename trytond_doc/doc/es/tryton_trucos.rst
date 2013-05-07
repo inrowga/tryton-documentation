@@ -79,8 +79,11 @@ lista a otra aplicación. Para ello únicamente hay que:
     ratón sobre uno de los registros seleccionados para que aparezca el menú
     desplegable contextual en el que aparece la opción **Copiar**.
 
+Si son varios registros a copiar, los puede seleccionar y copiar con las teclas
+**Crt + c**.
+
 Ahora se puede acceder a cualquier otra aplicación y pegar los registros
-seleccionados (Crtl + V).
+seleccionados con las teclas **Crtl + v**.
 
 .. figure:: images/tryton-copy.png
 
