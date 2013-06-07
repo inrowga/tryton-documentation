@@ -109,7 +109,7 @@ f = open('modules.cfg', 'r')
 config.readfp(f)
 f.close()
 
-inheritance_modules += [ x for x,y in config.items('modules') if y]
+inheritance_modules += [ x for x,y in config.items('modules') if y=='True']
 
 # -- Configuration of trydoc --------------------------------------------------
 
