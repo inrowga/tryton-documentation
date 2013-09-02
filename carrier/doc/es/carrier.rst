@@ -10,7 +10,7 @@ Transportistas
 Los transportistas van relacionados con un tercero y con un producto.
 
 * Abra el menú |menu_carrier| i cree un nuevo transportista.
-* Seleccione el |party| y |carrier_product|.
+* Seleccione el |party| y |carrier_product| (el producto debe ser del tipo servicios).
 * Seleccione el |carrier_cost_method|.
 
 Los |carrier_cost_method| disponibles son:
