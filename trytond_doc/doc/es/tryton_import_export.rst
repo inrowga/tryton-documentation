@@ -83,10 +83,15 @@ a importar*, como si lo deseamos, podemos especificar los campos de nuestro CSV.
 .. note:: El sistema de importación sólo crea nuevos registros; no modifica.
             Consulte con su técnico otras herramientas de importación.
 
-.. note:: El sistema de importación NO permite campos relacionados. Por ejemplo,
-            no podrá importar direcciones ya las direcciones van relacionadas con
-            un tercero. Consulte con su técnico otras herramientas de importación.
-
 .. warning:: El campo ID en la importación de datos no se debe usar. Si ha seleccionado
              este campo en la exportación de datos, deberá eliminarlo o no seleccionar
              en la lista de campos a importar.
+
+Tutoriales
+==========
+
+* `Importación de terceros mediante CSV`_
+* `Importación de productos mediante CSV`_
+
+.. _`Importación de terceros mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-terceros-mediante-csv.html
+.. _`Importación de productos mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-productos-mediante-csv.html
