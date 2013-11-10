@@ -1,2 +1,2 @@
-sh
-path.py
+sphinxcontrib-inheritance==0.5
+trydoc==0.4

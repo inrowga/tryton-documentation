@@ -20,41 +20,31 @@ integrated in Tryton's core after the community review.
 Usage
 -----
 
-Get the sources and put into ``trytond/modules`` with the directory name
-*trytond_doc*.
+To preapre a Tryton documentation project you should need to install two Sphinx
+extensions: **sphinxcontrib-inheritance** and **trydoc**:
 
-Modify the file *trytond_doc/userdoc/conf.py.template* replacing the variables
-substitution for a value. You identify them because appear as'${trytond-conf:X}'
-Change the name of the file removing the '.template' ending.
+    $ pip install sphinxcontrib-inheritance
+    $ pip install trydoc
 
-Create symbolic links to the 'doc' directory of the modules you want to include
-in the manual inside the 'userdoc' directory and with the name of the module.
+You can use the provided requirements.txt file:
 
-Don't forget the 'trytond_doc' because it has the initial file required to
-generate documentation.
-You also have to create a symlink 'index.rst' in 'userdoc' directory to
-'trytond_doc/doc/index.rst' file.
+    $ pip install -r requirements.txt
 
-Install the dependencies required for documentation system::
+The *trydoc* extensions provide some scripts to prepare and mantain this
+project. It is explained in `trydoc package documentation
+<http://pythonhosted.org/trydoc/#tryton-documentation-project-provided-scripts>`_.
 
-    $ pip install -r userdoc/requirements.txt
+    $ trydoc-quickstart <lang_code> <project documentation directory>
+    $ trydoc-symlinks <lang_code> <path to modules directory> <project documentation directory>
+    $ trydoc-symlinks --no-remove <lang_code> <path to trytond-doc project> <project documentation directory>
+    $ trydoc-update-modules -c <path to modules.cfg> -t <path to trytond directory> <project documentation directory>
 
-Execute Makefile to generate the customized manual inside the 'userdoc'
-directory::
+You will find more information in *--help* of each script.
 
-    $ cd userdoc
-    $ make
+After that you can generate the manual using *make* command:
 
-To help with this tasks you will found in the 'trytonspain/tryton-buildout'
-project in Mercurial (https://bitbucket.org/trytonspain/tryton-buildout) you
-will find (almost other utilities):
-
-- a Buildout configuration that include a 'part' to configure userdoc config
-  file from template. It create the 'userdoc' directory in the root of
-  'customers' directory.
-- the 'create-doc-symblinks.sh' script to generate links to modules 'doc'
-  directory (using the directory structure proposed in the project)
-
+    $ cd <project documentation directory>
+    $ make html
 
 License
 -------

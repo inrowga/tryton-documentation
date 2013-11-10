@@ -1,4 +1,0 @@
-sphinxcontrib-inheritance==0.4
-proteus
-trydoc==0.2
-
