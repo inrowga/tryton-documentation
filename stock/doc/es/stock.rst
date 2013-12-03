@@ -207,8 +207,8 @@ los movimientos los podemos consultar a |menu_move_form|.
 
 .. |menu_move_form| tryref:: stock.menu_move_form/complete_name
 
-Cantidad
-========
+Stock o cantidad de los productos
+=================================
 
 Para saber la cantidad de un producto debemos primero filtrar los productos por
 ubicación. A |menu_location_tree| escojaremos la ubicación y seleccionamos la fecha
