@@ -2,29 +2,6 @@
 Gestión de Ventas
 =================
 
-.. inheritref:: sale/sale:section:configuracion_metodo_de_envio_manual
-
-Configuración
-=============
-
-A |menu_configuration| nos permite:
-
-.. |menu_configuration| tryref:: sale.menu_configuration/complete_name
-
-* |conf_sequence|
-* |conf_invoice_method|
-    * Al enviar
-    * Al procesar el pedido
-    * Manual
-* |conf_shipment_method|
-    * Al pagar la factura
-    * Al procesar el pedido
-    * Manual
-
-.. |conf_sequence| field:: sale.configuration/sale_sequence
-.. |conf_invoice_method| field:: sale.configuration/sale_invoice_method
-.. |conf_shipment_method| field:: sale.configuration/sale_shipment_method
-
 .. inheritref:: sale/sale:section:venta
 
 Venta
@@ -147,3 +124,26 @@ según la configuración de venta:
 
 .. warning::  Se generan albaranes sólo si las linias del pedido de venta van
               relacionado con un producto y no sean del tipo servicio.
+
+.. inheritref:: sale/sale:section:configuracion_metodo_de_envio_manual
+
+Configuración
+=============
+
+A |menu_configuration| nos permite:
+
+.. |menu_configuration| tryref:: sale.menu_configuration/complete_name
+
+* |conf_sequence|
+* |conf_invoice_method|
+    * Al enviar
+    * Al procesar el pedido
+    * Manual
+* |conf_shipment_method|
+    * Al pagar la factura
+    * Al procesar el pedido
+    * Manual
+
+.. |conf_sequence| field:: sale.configuration/sale_sequence
+.. |conf_invoice_method| field:: sale.configuration/sale_invoice_method
+.. |conf_shipment_method| field:: sale.configuration/sale_shipment_method

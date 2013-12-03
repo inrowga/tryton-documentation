@@ -2,24 +2,6 @@
 Gestión de Compras
 ==================
 
-.. inheritref:: purchase/purchase:section:configuracion
-
-Configuración
-=============
-
-A |menu_configuration| nos permite:
-
-.. |menu_configuration| tryref:: purchase.menu_configuration/complete_name
-
-* |conf_purchase_sequence|
-* |conf_purchase_invoice_method|
-    * Al enviar
-    * Al procesar el pedido
-    * Manual
-    
-.. |conf_purchase_sequence| field:: purchase.configuration/purchase_sequence
-.. |conf_purchase_invoice_method| field:: purchase.configuration/purchase_invoice_method
-
 .. inheritref:: purchase/purchase:section:compra
 
 Compra
@@ -137,3 +119,21 @@ la configuración del pedido:
 
 .. warning::  Se generan albaranes sólo si las linias del pedido de compra van
               relacionado con un producto y no sean del tipo servicio.
+
+.. inheritref:: purchase/purchase:section:configuracion
+
+Configuración
+=============
+
+A |menu_configuration| nos permite:
+
+.. |menu_configuration| tryref:: purchase.menu_configuration/complete_name
+
+* |conf_purchase_sequence|
+* |conf_purchase_invoice_method|
+    * Al enviar
+    * Al procesar el pedido
+    * Manual
+    
+.. |conf_purchase_sequence| field:: purchase.configuration/purchase_sequence
+.. |conf_purchase_invoice_method| field:: purchase.configuration/purchase_invoice_method

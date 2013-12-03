@@ -2,27 +2,6 @@
 Logística
 =========
 
-.. inheritref:: stock/stock:section:configuracion
-
-Configuración
-=============
-
-A |menu_configuration| nos permite:
-
-.. |menu_configuration| tryref:: stock.menu_stock_configuration/complete_name
-
-* |shipment_in_sequence|
-* |shipment_in_return_sequence|
-* |shipment_out_sequence|
-* |shipment_out_return_sequence|
-* |shipment_internal_sequence|
-
-.. |shipment_in_sequence| field:: stock.configuration/shipment_in_sequence
-.. |shipment_in_return_sequence| field:: stock.configuration/shipment_in_return_sequence
-.. |shipment_out_sequence| field:: stock.configuration/shipment_out_sequence
-.. |shipment_out_return_sequence| field:: stock.configuration/shipment_out_return_sequence
-.. |shipment_internal_sequence| field:: stock.configuration/shipment_internal_sequence
-
 .. inheritref:: stock/stock:section:ubicaciones
 
 Ubicaciones
@@ -261,3 +240,24 @@ automáticamente se realizará un nuevo albarán con la diferencia para ser proc
 Los envios parciales se realizan en albaranes que provienen de ventas, por ejemplo. En
 albaranes creados manualmente no se realizarán envios parciales, ya que es el propio
 usuario quien crea el albarán.
+
+.. inheritref:: stock/stock:section:configuracion
+
+Configuración
+=============
+
+A |menu_configuration| nos permite:
+
+.. |menu_configuration| tryref:: stock.menu_stock_configuration/complete_name
+
+* |shipment_in_sequence|
+* |shipment_in_return_sequence|
+* |shipment_out_sequence|
+* |shipment_out_return_sequence|
+* |shipment_internal_sequence|
+
+.. |shipment_in_sequence| field:: stock.configuration/shipment_in_sequence
+.. |shipment_in_return_sequence| field:: stock.configuration/shipment_in_return_sequence
+.. |shipment_out_sequence| field:: stock.configuration/shipment_out_sequence
+.. |shipment_out_return_sequence| field:: stock.configuration/shipment_out_return_sequence
+.. |shipment_internal_sequence| field:: stock.configuration/shipment_internal_sequence

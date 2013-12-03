@@ -43,6 +43,55 @@ Recordar que en Tryton se denomina:
 * **Tercero:** Cualquier empresa/organización/particular con la que mantenemos
   una relación (cliente, proveedor, asesor, cliente potencial, ...).
 
+.. inheritref:: account/account:section:empresas_productos_y_informacion_contable
+
+---------------------------------------------
+Empresas/Productos y su información contable
+---------------------------------------------
+
+* Empresas y su información contable
+* Productos y su información contable
+
+.. inheritref:: account/account:section:asientos_y_movimientos
+
+----------------------
+Asientos y movimientos
+----------------------
+
+* Introduccion de asientos de forma manual
+* Nominas: Generación y pago
+* Asientos por extracto bancario
+* Creación de modelos para asientos recurrentes
+* Asientos periódicos/recurrentes
+
+.. inheritref:: account/account:section:conciliacion_de_cuentas
+
+------------------------
+Conciliación de cuentas
+------------------------
+
+* Conciliación manual
+* Conciliación automática
+* Romper conciliación
+
+.. inheritref:: account/account:section:otras_tareas_contables
+
+----------------------
+Otras tareas contables
+----------------------
+
+* Órdenes de pago y cobro (remesas)
+* Efectos
+* Recordatorios de pagos pendientes atrasados
+* Informes contables
+* Cierre del ejercicio fiscal
+* Creación de anticipos
+* Configuración multicompañía
+* Generación del modelo AEAT 347
+* Descuentos por pronto pago en ventas y compras
+* Amortización de activos
+* Gestión de efectos comerciales
+
 .. inheritref:: account/account:section:configuracion_de_la_contabilidad_financiera
 
 --------------------------------------------
@@ -110,52 +159,3 @@ los distintos planes contables de cada empresa a partir de la misma plantilla.
 
 * Planes y cuentas contables
 * Impuestos
-
-.. inheritref:: account/account:section:empresas_productos_y_informacion_contable
-
----------------------------------------------
-Empresas/Productos y su información contable
----------------------------------------------
-
-* Empresas y su información contable
-* Productos y su información contable
-
-.. inheritref:: account/account:section:asientos_y_movimientos
-
-----------------------
-Asientos y movimientos
-----------------------
-
-* Introduccion de asientos de forma manual
-* Nominas: Generación y pago
-* Asientos por extracto bancario
-* Creación de modelos para asientos recurrentes
-* Asientos periódicos/recurrentes
-
-.. inheritref:: account/account:section:conciliacion_de_cuentas
-
-------------------------
-Conciliación de cuentas
-------------------------
-
-* Conciliación manual
-* Conciliación automática
-* Romper conciliación
-
-.. inheritref:: account/account:section:otras_tareas_contables
-
-----------------------
-Otras tareas contables
-----------------------
-
-* Órdenes de pago y cobro (remesas)
-* Efectos
-* Recordatorios de pagos pendientes atrasados
-* Informes contables
-* Cierre del ejercicio fiscal
-* Creación de anticipos
-* Configuración multicompañía
-* Generación del modelo AEAT 347
-* Descuentos por pronto pago en ventas y compras
-* Amortización de activos
-* Gestión de efectos comerciales
