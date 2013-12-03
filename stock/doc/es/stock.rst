@@ -217,6 +217,39 @@ los productos por esta ubicación y con la cantidad a día de hoy.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name
 
+Inventario
+==========
+
+La creación de un inventario le permite regularizar el stock o las cantidades de los
+productos. A |menu_inventory_form| podrá generar los inventarios.
+
+Para la generación de un inventario deberemos seleccionar:
+
+* Ubicación donde hacemos el inventario
+* Ubicación "Perdido/encontrado"
+* Líneas. Cada línea corresponde a un producto y la cantidad que se dispone de este producto.
+
+En el momento de procesar el inventario se nos crearán los movimientos (uno por cada producto),
+de la ubicación por ejemplo "Perdido/encontrado" a la ubicación por ejemplo "Zona de almacenamiento".
+
+Para consultar todos los movimientos que se han realizado accede a |menu_move_form|. Los movimientos
+ya se encuentran en estado realizado.
+
+Inventario completo
+-------------------
+
+Al hacer un inventario disponemos de la acción de cargar todos los productos de nuestro
+sistema con la cantidad que disponemos en la ubicación. Esta acción puede ser útil
+si realizamos el inventario anual donde debemos procesar todos los productos.
+
+En el momento de procesar el inventario, por cada línea se nos creará un nuevo movimiento.
+
+El tiempo de carga de esta acción en las líneas del inventario dependerá de la
+cantidad de productos que disponemos.
+
+.. |menu_inventory_form| tryref:: stock.menu_inventory_form/complete_name
+.. |menu_move_form| tryref:: stock.menu_move_form/complete_name
+
 Envios parciales
 ================
 
