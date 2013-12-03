@@ -34,6 +34,50 @@ Cuenta
 Al seleccionar un tercero, a la factura se le anotará la cuenta que dispone del tercero.
 En caso contrario, deberá seleccionar una cuenta a la factura.
 
+.. inheritref:: account/account_invoice:section:plazos_de_pago
+
+Plazos de pago
+--------------
+
+En las facturas podemos relacionar con un plazo de pago. En el momento que procesamos la factura
+se nos crearan líneas de pago según el plazo de pago que le hemos marcado.
+
+En |menu_payment_terms_configuration| podrá añadir los plazos de pago de su empresa.
+
+Cada plazo de pago dispone de varias líneas. Si un pago es a 30 días, este plazo de pago
+sólo tendrá una línea. En cambio si el plazo de pago es 15/30 días, debe crear dos
+líneas. Veamos algunos ejemplos: 22
+
+* Pago a 30 días. Sólo crearemos una línea:
+
+  * Tipo: Remanete
+  * Número de meses: 0
+  * Número de semanas: 0
+  * Número de días: 30
+
+* Pago a 15/30 días. Crearemos dos líneas:
+
+  * Primera línea:
+
+    * Tipo: Porcentaje sobre total
+    * Porcentaje: 50
+    * Divisor: 2
+    * Número de meses: 0
+    * Número de semanas: 0
+    * Número de días: 15
+
+  * Segunda línea:
+
+    * Tipo: Remanete
+    * Número de meses: 0
+    * Número de semanas: 0
+    * Número de días: 30
+
+Si el plazo de pago debemos especificar el día, podemos añadir en la opción "Día del mes"
+el día que se realizará el plazo de pago.
+
+.. |menu_payment_terms_configuration| tryref:: account_invoice.menu_payment_terms_configuration/complete_name
+
 .. inheritref:: account/account_invoice:section:periodos_fiscales
 
 Períodos fiscales
