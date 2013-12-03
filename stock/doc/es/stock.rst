@@ -216,3 +216,15 @@ ubicación. A |menu_location_tree| escojaremos la ubicación y seleccionamos la 
 los productos por esta ubicación y con la cantidad a día de hoy.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name
+
+Envios parciales
+================
+
+Cuando desea hacer un envío de un albarán pero no dispone de todos los productos o
+las cantidades solicitadas, se realizan envios parciales. En el momento de procesar el
+albarán para la entrega, si la cantidad procesada de productos son menores que lo solicitado,
+automáticamente se realizará un nuevo albarán con la diferencia para ser procesado posteriormente.
+
+Los envios parciales se realizan en albaranes que provienen de ventas, por ejemplo. En
+albaranes creados manualmente no se realizarán envios parciales, ya que es el propio
+usuario quien crea el albarán.
