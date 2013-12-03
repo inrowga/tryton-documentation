@@ -43,9 +43,6 @@ Recordar que en Tryton se denomina:
 * **Tercero:** Cualquier empresa/organización/particular con la que mantenemos
   una relación (cliente, proveedor, asesor, cliente potencial, ...).
 
-.. image:: images/tryton_flujo_de_contabilidad.png
-    :scale: 50 %
-
 .. inheritref:: account/account:section:configuracion_de_la_contabilidad_financiera
 
 --------------------------------------------
@@ -81,8 +78,6 @@ Español.
 
 Al generar el plan contable de nuestra empresa lo basaremos en el Plan General
 Contable Español.
-
-.. figure:: images/tryton_creacion_cuentas_contables.png
 
 Para crear las cuentas contables a partir de la plantilla de plan contable correspondiente,
 lo deberemos realizar con el asistente que se ejecuta automáticamente o mediante el menú
