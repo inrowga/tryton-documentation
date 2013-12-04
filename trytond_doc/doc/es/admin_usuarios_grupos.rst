@@ -2,9 +2,9 @@
 Usuarios / Grupos
 =================
 
-.. tip:: Una empresa tiene X trabajadores, pero no todos los trabajadores
-         disponen de acceso a nuestro ERP. Por tanto, sólo deberemos dar de alta
-         usuarios que dispondrá acceso a nuestro ERP.
+Una empresa tiene X trabajadores, pero no todos los trabajadores disponen
+de acceso a nuestro ERP. Por tanto, sólo deberemos dar de alta usuarios que
+dispondrá acceso a nuestro ERP.
 
 ------
 Grupos
