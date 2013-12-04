@@ -78,3 +78,20 @@ Dispone de dos informes:
 * El informe **Carta** crea un documento pre-rellenado con la cabecera de la
   compañía, la dirección del destinatario, la fecha, un saludo, un final y la
   firma del usuario que lanza el informe.
+
+.. inheritref:: party/party:section:confuracion
+
+Configuración
+=============
+
+A |menu_party_configuration| nos permite:
+
+.. |menu_party_configuration| tryref:: party.menu_party_configuration/complete_name
+
+.. inheritref:: party/party:bullet_list:configuration_fields
+
+* |party_sequence|
+* |party_lang|
+
+.. |party_sequence| field:: party.configuration/party_sequence
+.. |party_lang| field:: party.configuration/party_lang
