@@ -125,7 +125,7 @@ según la configuración de venta:
 .. warning::  Se generan albaranes sólo si las linias del pedido de venta van
               relacionado con un producto y no sean del tipo servicio.
 
-.. inheritref:: sale/sale:section:configuracion_metodo_de_envio_manual
+.. inheritref:: sale/sale:section:configuracion
 
 Configuración
 =============
