@@ -10,6 +10,8 @@ manejo en un tiempo extremadamente corto. La curva de aprendizaje no resulta
 costosa y en unos pocos días se puede estar utilizando la aplicación al 100%
 obteniendo el máximo provecho de su uso.
 
+.. inheritref:: trytond_doc/base:toctree:conceptos_basicos
+
 .. toctree::
    :maxdepth: 1
 
