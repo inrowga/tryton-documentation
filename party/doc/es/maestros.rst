@@ -1,8 +1,8 @@
 #:after:trytond_doc/maestro:title:maestros#
 
---------
-Terceros
---------
+-------
+Tercero
+-------
 
 .. toctree::
    :maxdepth: 3
