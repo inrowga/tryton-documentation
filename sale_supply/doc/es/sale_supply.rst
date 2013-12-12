@@ -1,3 +1,6 @@
+Suministra en la venta
+======================
+
 Si el producto puede ser comprado, dispondremos de la opción |supply_on_sale|
 en la pestaña *Proveedores* del producto. Si la opción está marcada, generará
 un pedido de compra para cada línea del pedido de venta independientemente del
@@ -5,10 +8,10 @@ nivel de existencias. Cuando se procesa la compra, se crean los envíos de los
 clientes. Una vez se reciben los productos comprados, se asignan a los envíos
 de los clientes.
 
-.. inheritref:: sale_suppply/sale_suppply:section:configuracion
+.. inheritref:: sale_suppply/sale_suppply:section:productos_suministro_venta
 
-Configuración
-=============
+Productos para el suministro de la venta
+========================================
 
 Para crear/modificar productos de suministro directo en venta, siga los
 siguientes pasos:
@@ -19,12 +22,14 @@ siguientes pasos:
 * Abra la pestaña *Proveedores*.
 * Marque la opción |supply_on_sale|.
 
+Recomenable en el producto relacionar que proveedores ofrecen este producto y entrega.
+
 .. |menu_template| tryref:: product.menu_template/complete_name
 
-.. inheritref:: sale_suppply/sale_suppply:section:funcionamiento
+.. inheritref:: sale_suppply/sale_suppply:section:generacion_solicitudes_compra
 
-Funcionamiento
-==============
+Generación solicitudes de compra
+================================
 
 Una vez confirmado un pedido de venta, en el momento de procesarlo, se crea
 las correspondientes solicitudes de compra, una por cada línea del pedido de
