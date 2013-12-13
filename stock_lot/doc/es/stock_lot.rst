@@ -53,3 +53,6 @@ Para añadir un lote a un movimiento de stock siga los siguientes pasos:
 * Busque y abra el albarán concreto a añadir el lote.
 * Abra cada línea de albarán (movimiento), e introduzca el lote en el campo
   correspondiente.
+
+En el caso de albaranes de cliente, en el momento de realizar el envío un albarán,
+el lote que disponemos del movimiento interno será asiganado al movimiento de salida.
