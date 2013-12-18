@@ -229,6 +229,18 @@ cantidad de productos que disponemos.
 .. |menu_inventory_form| tryref:: stock.menu_inventory_form/complete_name
 .. |menu_move_form| tryref:: stock.menu_move_form/complete_name
 
+Cantidad estimada
+-----------------
+
+Es importante cuando realice un inventario disponer de la cantidad estimada por
+cada línea del inventario. La cantidad estimada es la cantidad actual en el almacén.
+Esta opción evita en el momento de hacer un inventario tener conflictos de stock si
+al mismo momento se realizan ventas o compras.
+
+Según la cantidad estimada y la cantidad que introduce en la línea del inventario, se
+suma a partir de la cantidad que se disponga. Es importante que si la cantidad estimada
+es un valor negativo, recalcular la cantidad estimada y no sea 0.
+
 Envios parciales
 ================
 
