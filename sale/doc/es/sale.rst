@@ -78,7 +78,8 @@ pedido de venta le podremos especificar:
 En el caso que el tipo de línea sea *línea* le podremos añadir la siguiente
 información:
 
-* |sale_line_quantity|: La cantidad.
+* |sale_line_quantity|: La cantidad. Si la cantidad es un valor negativo, en el
+  momento de procesar el pedido este generará albaranes de abono de cliente.
 * |sale_line_product|: El producto (opcional).
 * |sale_line_description|: La descripción. Se autocompleta si seleccionamos un
   producto.
