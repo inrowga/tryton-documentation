@@ -125,6 +125,20 @@ según la configuración de venta:
 .. warning::  Se generan albaranes sólo si las linias del pedido de venta van
               relacionado con un producto y no sean del tipo servicio.
 
+.. inheritref:: sale/sale:section:devolucion_venta
+
+Devolución de la venta
+======================
+
+En el caso de realizar una venta, se ha procesado y finalmente se debe abortar la entrega,
+dispone de un asistente para hacer una devolución de la venta.
+
+La acción devolución de la venta simplemente creará una nueva copia de la venta origen
+pero con la diferencia que las cantidades de las líneas serán ahora en negativo.
+
+Si las cantidades de las líneas de la venta son en negativo, en el momento de procesar
+un albarán en vez de crear un albarán de cliente, se creará un albarán de abono de cliente.
+
 .. inheritref:: sale/sale:section:configuracion
 
 Configuración
