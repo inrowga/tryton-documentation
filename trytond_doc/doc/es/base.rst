@@ -26,5 +26,4 @@ obteniendo el máximo provecho de su uso.
    tryton_buscador
    tryton_adjuntos
    tryton_import_export
-   tryton_request
    tryton_trucos
