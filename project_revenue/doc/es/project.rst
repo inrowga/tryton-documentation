@@ -5,7 +5,7 @@ Costes de los proyectos y tareas
 
 A proyectos y tareas disponemos de dos nuevos campos para el cálculo de los costes:
 
-* |product|
+* |product|. Debe ser un producto del tipo servicio y una unidad de media del tipo tiempo.
 * |list_price|
 
 Cuando seleccionamos un producto se le asignará el precio de venta en el proyecto
