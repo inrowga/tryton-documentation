@@ -22,6 +22,9 @@ Para que se active el botón "Facturar" deberá:
 * El método de facturación no sea manual.
 * Se disponga de horas a facturar.
 
+Sólo los usuarios del grupo "Facturación de proyectos" pueden crear facturas a
+partir de proyectos.
+
 .. |invoice_method| field:: project.work/project_invoice_method
 
 .. inheritref:: project_invoice/project_invoice:section:esfuerzo_estimado
