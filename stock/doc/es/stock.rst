@@ -191,7 +191,7 @@ Stock o cantidad de los productos
 
 Para saber la cantidad de un producto debemos primero filtrar los productos por
 ubicación. A |menu_location_tree| escojaremos la ubicación y seleccionamos la fecha
-(por defecto la fecha es a día de hoy). En la siguiente venta dispondremos de todos
+(por defecto la fecha es a día de hoy). En la siguiente ventana dispondremos de todos
 los productos por esta ubicación y con la cantidad a día de hoy.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name
