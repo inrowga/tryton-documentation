@@ -57,7 +57,6 @@ Donde:
   de la lista.
 * >07/09/2011: La fecha desde la que se quieren los registros
 
-
 ---------------
 Filtrar activos
 ---------------
@@ -117,3 +116,21 @@ También es posible escribirlo así::
 
 En cuyo caso aparecerán todas las direcciones de compañía cuya ciudad es Madrid
 o Barcelona.
+
+-------------------------
+Operaciones con el filtro
+-------------------------
+
+En las búsquedas podemos usar operadores para filtrar registros:
+
+* =: igual a
+* <: menor que
+* <=: menor o igual que
+* >: más grande que
+* >=: más grande o igual que
+* !=: no igual
+* !: no igual o no como (dependiendo del tipo de campo)
+
+Ejemplo de uso::
+
+    Tercero: !trytonerp
