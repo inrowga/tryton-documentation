@@ -99,3 +99,19 @@ de nueva, que se le asignará una nueva numeración.
 .. |menu_account_invoice| tryref:: account_invoice.menu_invoices/complete_name
 .. |menu_account_fiscalyear| tryref:: account.menu_fiscalyear_form/complete_name
 .. |menu_ir_sequence| tryref:: ir.menu_sequences/complete_name
+
+.. inheritref:: account/account_invoice:section:abono
+
+Abono
+-----
+
+En las facturas de cliente disponemos del asistente para generar el abono: "Abono" y marcar la opción
+"Devolución". La factura cliente se confirmará y se conciliará (para hacer un abono completo).
+Si no marcamos la opción "Devolución" nos hará un abono borrador, donde podremos modificar o eliminar
+líneas antes de confirmarlo (para hacer un abono parcial).
+
+En el caso de disponer el abono hecho pendiente de conciliar, y lo que deseamos es simplemente como
+conciliar mutuamente una factura y su factura de abono, es lo mismo que conciliar facturas con pagos.
+Iremos al atajo/realación "Cuentas a cobrar" del tercero y veremos sus apuntes pendiente de conciliación,
+de facturas, de abonos, de cobros o devolución de cobros. Marcamos los que la suma debe y haber coinciden
+y ejecutamos la acción "Conciliar apuntes".
