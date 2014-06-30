@@ -12,6 +12,9 @@ compartidos en la *plantilla* y los específicos en el *producto*.
 Producto
 ========
 
+.. view:: product.template_view_form
+   :field: name
+
 .. inheritref:: product/product:bullet_list:template_fields
 
 * |name|
