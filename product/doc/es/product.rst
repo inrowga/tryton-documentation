@@ -90,6 +90,16 @@ de coste.
 
 .. inheritref:: product/product:section:categoria
 
+Desactivar productos
+====================
+
+A veces es necesario poder desactivar un producto porqué ya no trabajamos con
+el mismo, pero esto no es posible porqué ya tenemos algun documento (factura,
+presupuesto, etc) que hace referencia al mismo.
+
+En este caso podremos desctivarlo tal cómo se explica en
+:ref:`desactivar-registros`.
+
 Classificar los productos
 =========================
 

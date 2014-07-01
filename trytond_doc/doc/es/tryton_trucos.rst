@@ -51,24 +51,32 @@ Acciones, Relacionado, Informes, etc. En cada momento únicamente aparecen habil
 (en negro) las que se pueden realizar, y en gris, las que no se pueden realizar
 (deshabilitadas).
 
------------------------------
-Desactivar en lugar de borrar
------------------------------
+.. _desactivar-registros:
 
-Siempre que sea posible, evitar eliminar registros. En su lugar, cuando no se
-necesite más un determinado registro, es mejor **desactivarlo** desmarcando la
-casilla de verificación del campo **Activo**. De esta forma, podrá después volver
-a activar ese registro si lo necesita.
+---------------------------
+¿Cómo desactivar registros?
+---------------------------
 
-Esta acción excluye dichos registros de las búsquedas. Para volver a encontrar
-los registro desactivados.
+A veces no es posible eliminar registro ya que debemos conservar documentos
+historico que hacen referencia al mismos (por ejemplo una factura sobre un
+producto), pero queremos eliminarlo porqué sabemos que no lo vamos a
+necesitar mas. En estos casos, debemos **desactivarlo** desmarcando la casilla
+de verificación del campo **Activo**.
+
+.. note:: La opción de desactivar registros sólo esta disponible en aquellos
+    modelos que disponen del campo activo. Si el registro que intenta
+    desactivar no dispone del campo activo, no se puede desactiva.
+
+Una vez desactivado un registro este no nos aparecerá en las búsquedas, aunque
+realimente exista en la base de datos. En :ref:`encontrar-inactivos` se
+explica cómo buscar registros que hayan sido desactivados.
 
 ------------
 Copiar/pegar
 ------------
 
 Con el cliente GTK de Tryton se puede copiar-pegar desde cualquier vista de
-lista a otra aplicación. Para ello únicamente hay que: 
+lista a otra aplicación. Para ello únicamente hay que:
 
   * Hacer clic con el botón izquierdo del ratón sobre el primero de los registros
     que se desea copiar,

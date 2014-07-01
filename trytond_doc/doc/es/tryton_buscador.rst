@@ -57,19 +57,28 @@ Donde:
   de la lista.
 * >07/09/2011: La fecha desde la que se quieren los registros
 
----------------
-Filtrar activos
----------------
 
-Como se comentó en los trucos de Tryton, `desactiar en lugar de borrar <tryton_trucos.html#desactivar-en-lugar-de-borrar>`_,
-siempre es mejor desactivar un registro en lugar de borrarlo. Un registro desactivado
-desaparece de las búsquedas, sin embargo, todavía puede ser consultado. Para ello
-es suficiente definir el siguiente filtro::
+.. _encontrar-inactivos:
 
-    "Active": Falso
+------------------------------------
+¿Cómo encontrar registros inactivos?
+------------------------------------
 
-Esto quitará todos los registros activos y únicamente mostrará los registros
-desactivados.
+Como se explica en :ref:`desactivar-registros`, los registros pueden ser
+desactivados. Para consultar los registros que hayan sido desactivados
+podemos utilizar el filtro activo:
+
+
+.. figure:: images/tryton-buscar-inactivos.png
+
+O directamente escribiendo el siguiente filtro::
+
+    Activo: Falso
+
+Aplicando este filtro veremos todos los registros que hayan sido desactivados.
+
+.. figure:: images/tryton-resultado-inactivo.png
+
 
 Filtrar por más de un criterio
 ==============================

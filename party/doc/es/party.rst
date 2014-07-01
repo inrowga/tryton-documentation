@@ -31,6 +31,17 @@ la provincia o la comarca)
 
 .. inheritref:: party/party:section:categoria
 
+Desactivar terceros
+===================
+
+A veces es necesario poder desactivar un tercero porqué ya no trabajamos con
+el mismo, pero esto no es posible porqué ya tenemos algun documento (factura,
+presupuesto, etc) que hace referencia al mismo.
+
+En este caso podremos desctivarlo tal cómo se explica en
+:ref:`desactivar-registros`.
+
+
 Clasificar los terceros
 ========================
 
