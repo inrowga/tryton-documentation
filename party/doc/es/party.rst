@@ -31,7 +31,7 @@ la provincia o la comarca)
 
 .. inheritref:: party/party:section:categoria
 
-Classificar los terceros
+Clasificar los terceros
 ========================
 
 Tryton nos permite clasificar los terceros por categorías. Así podremos
@@ -41,7 +41,8 @@ establecer tantas categorias cómo queramos para cada tercero.
 
 Entonces podemos utilizar la opción |menu_party_categories| para consultar
 todos los terceros de una categoria. Para ello, simplemente hace falta hacer
-doble click sobre la categoría.
+doble click sobre la categoría y se nos abrirá el listado de todos los
+terceros de la misma.
 
 .. figure:: images/categories-list.png
 

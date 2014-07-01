@@ -22,7 +22,7 @@ Producto
 * |category|. La categoría principal del producto.
 * |list_price|. Precio de venta.
 * |cost_price|. Precio de coste.
-* |cost_price_method|. Método del precio del coste 
+* |cost_price_method|. Método del precio del coste
 * |default_uom|. La unidad de medida por defecto para este
   producto, usado por ejemplo para expresar niveles de stock.
 * |active|. Activar o desactivar el producto sin borrarlo.
@@ -56,11 +56,36 @@ será transparente para vosotros:
 
 .. inheritref:: product/product:section:categoria
 
-Categoría
-=========
+Classificar los productos
+=========================
 
-La categoría de producto está compuesta de un nombre. Las categorías de
-productos se organizan en estructura de arbol.
+Los productos se pueden asociar a una categoria. Entonces podemos utilizar la
+opción |menu_product_categories| para consultar todos los productos de una
+categoria. Para ello, simplemente hace falta hacer doble click sobre la
+categoría y se nos abrirá el listado de todos los productos de la misma.
+
+.. |menu_product_categories| tryref:: product.menu_category_tree/complete_name
+
+
+Trabajar con productos en multicompañía
+=======================================
+
+Por defecto todos los productos se compraten entre la compañías. Esto significa
+que si creamos un producto en la empresa A, también lo veremos disponible en la
+empresa B. A pessar que los productos que vemos sean los mismos, no todos los
+datos de un determinado producto son los mismos en todas las compañias.
+
+Por ejemplo, podemos entrar en la compañia A y defeinir un precio de venta
+para el producto y después entrar en la compañía B y ahí definir otro precio
+de venta.
+
+A continuación detallamos los campos que dependen de la compañia:
+
+.. inheritref:: product/product:bullet_list:multicompany_fields
+
+* |list_price|
+* |cost_price|
+* |cost_price_method|
 
 .. inheritref:: product/product:section:precio_de_venta
 
