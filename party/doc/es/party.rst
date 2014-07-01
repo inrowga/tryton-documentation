@@ -4,27 +4,19 @@ Terceros (clientes, proveedores)
 
 Un **tercero** puede ser un cliente, un proveedor, una persona física o jurídica,
 una entidad, una fundación, etc. Aquí encontraremos cualquier contacto relacionado
-con nuestra empresa, incluida esta misma.
+con nuestra empresa, incluida esta misma y sus empleados.
 
-Está definido por su nombre, un código, un idioma, un CIF/NIF, una categoría, el
-mecanismo de contacto y una lista de direcciones.
-
-Gestionará los terceos a |menu_terceros|. Según los módulos que disponga, la ficha
-del tercero tendrá más o menos campos.
-
-.. |menu_terceros| tryref:: party.menu_party_form/name
+.. view:: party.party_view_form
+   :field: name
 
 .. inheritref:: party/party:section:direcciones
 
 Direcciones
 ===========
 
-Un tercero puede disponer de varios direcciones. Dentro del formulario dispondrá
-de varias direcciones relacionados con este tercero.
-
-Una dirección está compuesta del nombre, la calle, el código postal, la ciudad,
-el estado, una subdivisión (que en el caso de España puede ser la comunidad autónoma,
-la provincia o la comarca). El campo secuencia permite ordenarlos.
+Un tercero puede disponer de varios direcciones. Una dirección está compuesta
+del nombre, la calle, el código postal, la ciudad, el estado, una subdivisión (que en el caso de España puede ser la comunidad autónoma,
+la provincia o la comarca)
 
 .. image:: images/party-menu.png
 
@@ -37,33 +29,23 @@ la provincia o la comarca). El campo secuencia permite ordenarlos.
 
    Eliminar campos dentro de la ficha
 
-.. inheritref:: party/party:section:medios_de_contacto
-
-Medios de contacto
-=====================
-
-El mecanismo de contacto está constituido de un tipo, un valor y un comentario.
-El tipo puede ser:
-
-* Teléfono
-* Móvil
-* Fax
-* Correo electrónico
-* Sitio web
-* Skipe
-* SIP
-* IRC
-* Jabber
-* Otros
-
 .. inheritref:: party/party:section:categoria
 
-Categoría
-=========
+Classificar los terceros
+========================
 
-Una categoría está compuesta simplemente de un nombre, constituyendo las etiquetas
-que se pueden asociar a un tercero. Las categorías se organizan en una estructura de árbol.
+Tryton nos permite clasificar los terceros por categorías. Así podremos
+establecer tantas categorias cómo queramos para cada tercero.
 
+.. figure:: images/categories.png
+
+Entonces podemos utilizar la opción |menu_party_categories| para consultar
+todos los terceros de una categoria. Para ello, simplemente hace falta hacer
+doble click sobre la categoría.
+
+.. figure:: images/categories-list.png
+
+.. |menu_party_categories| tryref:: party.menu_category_tree/complete_name
 
 Trabajar con terceros en multicompañía
 ======================================
@@ -96,19 +78,35 @@ Dispone de dos informes:
   compañía, la dirección del destinatario, la fecha, un saludo, un final y la
   firma del usuario que lanza el informe.
 
-.. inheritref:: party/party:section:confuracion
+.. inheritref:: party/party:section:configuration
 
 Configuración
 =============
 
-A |menu_party_configuration| nos permite:
+En |menu_party_configuration| podemos encontrar distintas opciones
+que nos permetran adaptar el maestro de tercero a nuestras necesidades.
 
-.. |menu_party_configuration| tryref:: party.menu_party_configuration/complete_name
+.. view:: party.party_configuration_view_form
+   :field: party_lang
 
-.. inheritref:: party/party:bullet_list:configuration_fields
+Idioma por defecto de los terceros
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* |party_sequence|
-* |party_lang|
+En el campo |party_lang| podemos especificar el idoma que se utilizará por
+defecto para la creación de nuevos terceros. Esto sólo aplicará para los nuevos
+terceros creados a partir de este momento, y siempre podremos modificar
+manualmente el idioma en caso de que este deba ser distinto del idoma por
+defecto.
+
+Hacer editable el código del tercero
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para poder editar manualmente el código del tercero, sólo hay que dejar
+en blanco el campo: |party_sequence|. A partir de este momento podremos
+introducir manualmente el código de tercero.
 
 .. |party_sequence| field:: party.configuration/party_sequence
 .. |party_lang| field:: party.configuration/party_lang
+
+.. |menu_party_configuration| tryref:: party.menu_party_configuration/complete_name
+
