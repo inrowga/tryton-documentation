@@ -36,13 +36,6 @@ Producto
 .. |default_uom| field:: product.template/default_uom
 .. |active| field:: product.template/active
 
-El método del precio del coste:
-
-.. inheritref:: product/product:bullet_list:cost_price_method_options
-
-* Fijo: El precio de coste permanece sin cambios
-* Media: El precio de coste es la media de coste de todos los elementos que hay en stock
-
 Por cada plantilla, podrá crear sus variantes. Si no trabaja con variantes, este paso
 será transparente para vosotros:
 
@@ -53,6 +46,47 @@ será transparente para vosotros:
 
 .. |code| field:: product.product/code
 .. |description| field:: product.product/description
+
+.. inheritref:: product/product:section:calculo_precio_coste
+
+¿Cómo se calcula el precio de coste?
+====================================
+
+El campo |cost_price_method| determina cómo se cálcula el |cost_price|  de
+cada producto. Los posibles métodos son:
+
+.. inheritref:: product/product:bullet_list:cost_price_method_options
+
+* Fijo
+* Promedio
+
+Cómo se explica en el apartado :ref:`product-multicompany` tanto
+el |cost_price| cómo el |cost_price_method| pueden ser distintos para cada
+empresa.
+
+
+Método de coste Fijo
+~~~~~~~~~~~~~~~~~~~~
+
+Se establece el valor manualmente en la ficha de producto y éste no se
+actualiza automáticamente bajo ninguna circunstancia.
+
+Método de coste Promedio
+~~~~~~~~~~~~~~~~~~~~~~~
+Cuando se realiza un albarán de proveedor (o una devolución a proveedor) se
+recalcula el precio de coste del producto de forma ponderada; sumando (o
+restando) el precio al que se ha comprado teniendo en cuenta la cantidad que
+se está moviendo respecto al stock total de este producto en nuestro almacén
+(Precio Medio Ponderado - PMP). Cuando se realiza una producción también se
+recalcula el precio de coste de los productos producidos sumando, de forma
+ponderada, el coste unitario de la producción.
+
+Aunque se elija esta opción aún se podrá establecer el precio de coste de
+forma manual. Si hacemos esto estaremos indicando al sistema que las unidades
+de este producto que hay en nuestro almacén tienen el precio de coste unitario
+que indicamos y la próxima vez que se recalcule se tomará de base este precio
+de coste.
+
 
 .. inheritref:: product/product:section:categoria
 
@@ -66,6 +100,8 @@ categoría y se nos abrirá el listado de todos los productos de la misma.
 
 .. |menu_product_categories| tryref:: product.menu_category_tree/complete_name
 
+
+.. _product-multicompany:
 
 Trabajar con productos en multicompañía
 =======================================
