@@ -64,6 +64,23 @@ Categoría
 Una categoría está compuesta simplemente de un nombre, constituyendo las etiquetas
 que se pueden asociar a un tercero. Las categorías se organizan en una estructura de árbol.
 
+
+Trabajar con terceros en multicompañía
+======================================
+
+Por defecto, todos los terceros se comparten entre la compañías. Esto significa
+que si creamos un tercero en la empresa A, también lo tendremos disponible en
+la empresa B. Además podemos utilizarlo sin problemas indisitintamente en una
+compañia o en la otra. Lógicamente, los documentos (ventas, compras, albaranes,
+facturas, etc.) no se van a compartir y sólo los podremos ver en la misma
+compañía en las que han sido creados.
+
+A pesar que los terceros sean los mismos en todas la compañías esto no significa
+que  todos los datos de un determinado tercero sean los mismos en todas las
+compañías.
+
+A continuación detallamos los campos que dependen de la compañía en terceros:
+
 .. inheritref:: party/party:section:informes
 
 Informes
