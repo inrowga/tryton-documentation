@@ -132,9 +132,6 @@ mediante el campo |shipment_state|. Los posibles estados son:
 .. warning::  Se generan albaranes sólo si las linias del pedido de venta van
               relacionado con un producto y no sean del tipo servicio.
 
-En el apartado :ref:`sale-exceptions` se detalla cómo generar el estado de
-excepción.
-
 .. |invoice_state| field:: sale.sale/invoice_state
 .. |shipment_state| field:: sale.sale/shipment_state
 
