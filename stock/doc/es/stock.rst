@@ -117,20 +117,14 @@ stock en los productos.
 * |out_code|
 * |out_state|
 
-Los |out_state| de un albarán de cliente són:
+Los albaranes de cliente están formados por dos tipos de movimiento:
 
-* Borrador
-* Realizado
-* Cancelado
-* Asignado
-* Empaquetado
-* En espera
+* |out_inventory_moves|: Son aquellos movimientos en que cojemos los
+  productos de su ubicación actual (dónde se almacenan) y los preparamos para
+  entregarlos al cliente.
+* |out_outgoing_moves|: Movimientos que representan la entrega real al
+  cliente.
 
-En el caso que realizemos un albarán de cliente de devolución es similar al
-de salida pero en vez de salir productos, los volveremos a nuestro almacén.
-La gestión de estos albaranes lo haremos a |menu_shipment_out_return_form|.
-
-.. |menu_shipment_out_return_form| tryref:: stock.menu_shipment_out_return_form/complete_name
 .. |out_effective_date| field:: stock.shipment.out/effective_date
 .. |out_planned_date| field:: stock.shipment.out/planned_date
 .. |out_customer| field:: stock.shipment.out/customer
@@ -141,6 +135,64 @@ La gestión de estos albaranes lo haremos a |menu_shipment_out_return_form|.
 .. |out_moves| field:: stock.shipment.out/moves
 .. |out_code| field:: stock.shipment.out/code
 .. |out_state| field:: stock.shipment.out/state
+.. |out_inventory_moves| field:: stock.shipment.out/inventory_moves
+.. |out_outgoing_moves| field:: stock.shipment.out/outgoing_moves
+
+Un albarán de cliente puede estar en alguno de los siguientes estados.
+
+* **Borrador**: Estado inicial en que se introducen los movimientos de salida
+  previstos.
+* **En espera**: El albarán contiene los movimientos de salida y los
+  movimientos de inventario previstos, ambos en estado borrador.
+* **Asignado**: Todos los movimientos movimientos de inventario hay sido
+  reservados aunque no realizados.
+* **Empaquetado**: Todos los movimientos movimientos de inventario han sido ya
+  realizados y el albarán está a la espera de ser entregado al cliente.
+* **Realizado**: El albarán esta completamente realizado y los productos han
+  sido enviados al cliente.
+* **Cancelado**: El albarán ha sido cancelado.
+
+Flujo de albaranes de cliente
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+El primer paso para crear un albarán, es crear sus movimientos de salida.
+Una vez creados, podemos utilizar el botón En espera para crear los
+movimientos de inventario, automàticamente se nos crearán los movimientos de
+inventario necesarios para satisfacer los movimientos de salida.
+
+Al pulsar el botón Reservar el sistema intentará asignar todos los movimientos
+de inventario, teniendo en cuenta el stock del almacén.
+
+En caso de que no haya suficiente stock en el almacén para satisfacer todos
+los movimientos de inventario, el sistema nos mostrará el siguiente aviso:
+
+.. figure:: images/unable-to-assign-moves.png
+
+Dónde podremos visualizar de cada producto las cantidades que no se pueden
+reservar (porqué no hay suficiente estoc), junto con sus cantidades. El botóni
+Forzar reserva nos permitirá asignar igualmente los movimientos, però sólo nos
+aparecerá en caso de que nuestro usuario pertenezca al grupo
+|group_stock_force|. También podemos aceptar el aviso con el botón Aceptar.
+
+.. |group_stock_force| tryref:: stock.group_stock_force_assignment/name
+
+En caso de que no hayamos forzado las reservas, el albarán quedará en estado
+en espera, con los movimientos que se hayan podido reservar en estado
+Reservado, y los movimientos pendientes de reservar en estado Borrador.
+Podemos cancelar las reservas parciales, utilizando el botón En espera.
+Una vez asignados los movimientos de estoc, podemos utilizar el botón
+Realizar envió para marcar el envío cómo empaquetado.
+Los movimientos de inventario estarán completamente realizados, però los
+movimientos de salida estarán reservados, a la espera de ser entregados al
+cliente. Una vez entregado al cliente, podemos marcar el albarán cómo
+realizado con el botón Realizado.
+
+
+En el caso que realizemos un albarán de cliente de devolución es similar al
+de salida pero en vez de salir productos, los volveremos a nuestro almacén.
+La gestión de estos albaranes lo haremos a |menu_shipment_out_return_form|.
+
+.. |menu_shipment_out_return_form| tryref:: stock.menu_shipment_out_return_form/complete_name
 
 .. inheritref:: stock/stock:section:albaranes_internos
 
@@ -176,6 +228,23 @@ Los |internal_state| de un albarán de cliente són:
 .. |internal_moves| field:: stock.shipment.internal/moves
 .. |internal_state| field:: stock.shipment.internal/state
 
+Cancelar albaranes
+------------------
+
+En cualquier momento del flujo podremos cancelar los albaranes. Cancelar un
+albarán implica cancelar todos los movimientos (tanto los de inventario como
+los de entrada/salida) que están en estado borrador o reservado. Los
+movimientos que ya están realizados **no se pueden cancelar**.
+
+En caso de que ya hayamos realizado los movimientos de inventario y necesitemos
+cancelar el albarán, deberemos crear manualmente un albarán interno para
+devolver los productos de la zona de recepción del cliente a la zona de
+almacenamiento de nuevo.
+
+Una vez cancelado un albarán este puede volver a estado borrador utilizando
+el botón Borrador.
+
+
 .. inheritref:: stock/stock:section:movimientos
 
 Movimientos
@@ -195,6 +264,8 @@ ubicación. A |menu_location_tree| escojaremos la ubicación y seleccionamos la 
 los productos por esta ubicación y con la cantidad a día de hoy.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name
+
+.. inheritref:: stock/stock:section:configuracion
 
 Inventario
 ==========
@@ -240,20 +311,6 @@ al mismo momento se realizan ventas o compras.
 Según la cantidad estimada y la cantidad que introduce en la línea del inventario, se
 suma a partir de la cantidad que se disponga. Es importante que si la cantidad estimada
 es un valor negativo, recalcular la cantidad estimada y no sea 0.
-
-Envios parciales
-================
-
-Cuando desea hacer un envío de un albarán pero no dispone de todos los productos o
-las cantidades solicitadas, se realizan envios parciales. En el momento de procesar el
-albarán para la entrega, si la cantidad procesada de productos son menores que lo solicitado,
-automáticamente se realizará un nuevo albarán con la diferencia para ser procesado posteriormente.
-
-Los envios parciales se realizan en albaranes que provienen de ventas, por ejemplo. En
-albaranes creados manualmente no se realizarán envios parciales, ya que es el propio
-usuario quien crea el albarán.
-
-.. inheritref:: stock/stock:section:configuracion
 
 Configuración
 =============
