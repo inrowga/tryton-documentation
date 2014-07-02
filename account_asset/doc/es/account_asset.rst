@@ -100,8 +100,9 @@ utilizar el botón `Actualizar activo`. Se nos abrirá una pestaña donde podrem
 seleccionar los nuevos valores para el activo. Una vez modificados los valores
 se recalcularán las líneas de de amortización con los nuevos valores.
 
-.. nota:: Este proceso no modificará las líneas ya asentadas, sino que sólo i
-            afectará a las líneas pendientes de amortizar.
+.. note::
+    Este proceso no modificará las líneas ya asentadas, sino que sólo afectará
+    a las líneas pendientes de amortizar.
 
 Finalización de activos
 ~~~~~~~~~~~~~~~~~~~~~~~
