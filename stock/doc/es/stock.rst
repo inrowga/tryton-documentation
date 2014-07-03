@@ -375,52 +375,56 @@ los resultados.
 .. |product_forecast_quantity| field:: product.product/forecast_quantity
 .. |product_cost_value| field:: product.product/cost_value
 
-.. inheritref:: stock/stock:section:configuracion
+Regularización de existenicas
+=============================
 
-Inventario
-==========
+A veces, es necesario realizar un recuento de las cantides de producto en el
+almacen para validar que la información del sistema se corresponde con la
+realidad. Este conteo se conoce como Inventarios, y los podemos generar desde
+la opción |menu_inventory_form|.
 
-La creación de un inventario le permite regularizar el stock o las cantidades de los
-productos. A |menu_inventory_form| podrá generar los inventarios.
+.. view:: stock.inventory_view_form
+   :field: location
 
-Para la generación de un inventario deberemos seleccionar:
+Un inventario puede estar en alguno de los siguientes estados:
 
-* Ubicación donde hacemos el inventario
-* Ubicación "Perdido/encontrado"
-* Líneas. Cada línea corresponde a un producto y la cantidad que se dispone de este producto.
+* **Borrador**: Estado inicial en que se introducen las cantidades.
+* **Realizado**: Se ha finalizado el inventario y las existèncias han sido
+  regularizadas.
+* **Cancelado**: El inventario ha sido cancelado.
 
-En el momento de procesar el inventario se nos crearán los movimientos (uno por cada producto),
-de la ubicación por ejemplo "Perdido/encontrado" a la ubicación por ejemplo "Zona de almacenamiento".
+Para la generación de un inventario deberemos seleccionar la |inv_location|
+de dónde queremos realizar el inventario, la ubicación |inv_lost_found| y la
+|inv_date| a la que se corresponde.
 
-Para consultar todos los movimientos que se han realizado accede a |menu_move_form|. Los movimientos
-ya se encuentran en estado realizado.
+A partir de aquí podemos introducir los productos que queremos regularizar,
+junto con la cantidad actual que hay en el almacen. Una vez finalizado el
+recuento podemos utilizar el botón Confirmar, para marcar el albarán cómo
+realizado. En este momento tryton se encargará de realizar los movimientos
+necesarios para regularizar las cantidades, cogiendo cómo ubicación de origen
+la que hayamos seleccionado en el campo |inv_lost_found|.
 
 Inventario completo
 -------------------
 
-Al hacer un inventario disponemos de la acción de cargar todos los productos de nuestro
-sistema con la cantidad que disponemos en la ubicación. Esta acción puede ser útil
-si realizamos el inventario anual donde debemos procesar todos los productos.
-
-En el momento de procesar el inventario, por cada línea se nos creará un nuevo movimiento.
-
-El tiempo de carga de esta acción en las líneas del inventario dependerá de la
-cantidad de productos que disponemos.
+Al hacer un inventario podemos de cargar todos los productos para los cuales
+el sistema tiene existencías en la |inv_location| utilizando el botón Inventario
+completo. Así el sistema, nos creará una linea para cada producto que se
+encuentre disponible, rellenando el campo |inv_expected_quantity| con la
+el número de existencias del sistema. Una vez llegados a este punto, solo
+nos hace falta modificar el campo |inv_quantity| para aquellas lineas en
+las que tengamos diferencias reflejando la cantidad real en el almacen.
+Cuando hayamos finalizado, utilizaremos el boton Confirmar, para regularizar
+las existencias.
 
 .. |menu_inventory_form| tryref:: stock.menu_inventory_form/complete_name
-.. |menu_move_form| tryref:: stock.menu_move_form/complete_name
+.. |inv_location| field:: stock.inventory/location
+.. |inv_lost_found| field:: stock.inventory/lost_found
+.. |inv_date| field:: stock.inventory/date
+.. |inv_quantity| field:: stock.inventory.line/quantity
+.. |inv_expected_quantity| field:: stock.inventory.line/expected_quantity
 
-Cantidad estimada
------------------
-
-Es importante cuando realice un inventario disponer de la cantidad estimada por
-cada línea del inventario. La cantidad estimada es la cantidad actual en el almacén.
-Esta opción evita en el momento de hacer un inventario tener conflictos de stock si
-al mismo momento se realizan ventas o compras.
-
-Según la cantidad estimada y la cantidad que introduce en la línea del inventario, se
-suma a partir de la cantidad que se disponga. Es importante que si la cantidad estimada
-es un valor negativo, recalcular la cantidad estimada y no sea 0.
+.. inheritref:: stock/stock:section:configuracion
 
 Configuración
 =============
