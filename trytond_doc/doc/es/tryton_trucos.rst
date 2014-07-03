@@ -8,7 +8,7 @@ Esas cosillas que le harán una tarea más fácil en la gestión de Tryton.
 Eliminar un registro
 --------------------
 
-Cómo se elemina un registro creado? A simple vista el botón de eliminación no
+Cómo se elimina un registro creado? A simple vista el botón de eliminación no
 está visible. El motivo es simple, evitar que el usuario haga cosas que no debiera.
 Si realmente desea eliminar un registro, la opción **eliminar** la encontrará en
 el botón de herramientas (al lado del título). O bien, con la combinación de
@@ -58,7 +58,7 @@ Acciones, Relacionado, Informes, etc. En cada momento únicamente aparecen habil
 ---------------------------
 
 A veces no es posible eliminar registro ya que debemos conservar documentos
-historico que hacen referencia al mismos (por ejemplo una factura sobre un
+histórico que hacen referencia al mismos (por ejemplo una factura sobre un
 producto), pero queremos eliminarlo porqué sabemos que no lo vamos a
 necesitar mas. En estos casos, debemos **desactivarlo** desmarcando la casilla
 de verificación del campo **Activo**.

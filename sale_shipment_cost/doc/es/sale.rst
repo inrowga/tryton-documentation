@@ -28,6 +28,6 @@ con el coste del envío. Esta línea no pasará en el albarán ya que es un prod
 
 Si el método de facturación de un pedido de venta es a partir de albarán, es importante
 que a la configuración de las ventas activar la opción "Método coste envío" en el albarán.
-Si se selecciona la opción "Método de coste envío" en el pediod se generarán dos facturas,
+Si se selecciona la opción "Método de coste envío" en el pedido se generarán dos facturas,
 una factura en el momento de confirmar el pedido y la otra factura en el momento de procesar
 el albarán.

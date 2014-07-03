@@ -3,7 +3,7 @@
 .. inheritref:: account_invoice_line_standalone/account:section:lineas_pendientes_de_facturar
 
 -----------------------------------
-Añdir líneas pendientes de facturar
+Añadir líneas pendientes de facturar
 -----------------------------------
 
 En sistemas de automatización de facturación se genera facturas a partir de líneas a facturar.

@@ -19,7 +19,7 @@ del 10% al precio de venta:::
 
    Diseño de una tarifa de precios en Tryton
 
-También dispone de variables extras para cálcular su precio final:
+También dispone de variables extras para calcular su precio final:
 
 * **product**: Acceder a los campos del producto. Por ejemplo, el precio de coste:
   product.cost_price

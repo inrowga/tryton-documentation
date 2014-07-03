@@ -6,7 +6,7 @@ Desde los proyectos podrá crear una factura a partir del tiempo de:
 .. inheritref:: project_invoice/project_invoice:bullet_list:project_invoice_method
 
 * Por el esfuerzo estimado
-* Por las horas realitzadas
+* Por las horas realizadas
 
 En el proyecto, dispondremos del campo |invoice_method| donde decidimos el
 proyecto y el tipo de facturación.
@@ -34,11 +34,11 @@ Por el esfuerzo estimado
 
 Si seleccionamos esta opción podemos crear una factura con el tiempo estimado. Para
 que se active el botón *Facturar* deberá que todos los proyectos y tareas relacionados
-con el proyecto padre que se deseen facturar esten ya en el estado realizado. Si todavía
+con el proyecto padre que se deseen facturar estén ya en el estado realizado. Si todavía
 están las tareas en el estado abierto, no se facturarán hasta que los cierre (realizado).
 
 El tiempo que se facturará será el tiempo que se añade en el campo "Esfuerzo" de las
-tareas (el tiempo que se prevé la realización de est e proyecto/tarea).
+tareas (el tiempo que se prevé la realización de esto e proyecto/tarea).
 
 .. inheritref:: project_invoice/project_invoice:section:horas_realizadas
 

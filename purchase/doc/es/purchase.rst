@@ -15,7 +15,7 @@ Para crear o listar las ventas accederemos a |menu_purchase|.
    :field: party
 
 Una compra está compuesta principalmente por una parte en la que se
-define el proveedor con sus datos (a la que llamamos cabecer), y otra parte
+define el proveedor con sus datos (a la que llamamos cabecera), y otra parte
 compuesta de líneas en la que se definen los productos, la cantidad, etc.
 
 Crear una nueva compra
@@ -49,8 +49,8 @@ sencilla.
 
 .. inheritref:: purchase/purchase:paragraph:la_opcion_de_producto
 
-El |line_product| en una línia del pedido de compra es opcional.Si queremos
-que estos productos esten en los albaranes, deberemos seleccionar forzosamente
+El |line_product| en una linea del pedido de compra es opcional.Si queremos
+que estos productos estén en los albaranes, deberemos seleccionar forzosamente
 un producto.
 
 .. inheritref:: purchase/purchase:section:estados
@@ -109,7 +109,7 @@ Además también podemos saber el estado de la facturación y el estado de los a
   de los movimientos. En el apartado :ref:`purchase-exceptions` se detalla cómo
   corregir este estado.
 
-.. warning::  Se generan albaranes sólo si las linias del pedido de compra van
+.. warning::  Se generan albaranes sólo si las lineas del pedido de compra van
               relacionado con un producto y no sean del tipo servicio.
 
 .. |invoice_state| field:: purchase.purchase/invoice_state
@@ -134,7 +134,7 @@ pendientes de recibir del proveedor y añadirlos automáticamente al albarán.
 El campo |invoice_method| determina en qué momento se generarán las
 facturas relacionadas con las compras.  Los métodos posibles son:
 
-* **Manual**: No se generarà ninguna factura de forma automática.
+* **Manual**: No se generará ninguna factura de forma automática.
 * **Al procesar el pedido**: Una vez procesada la compra se generarán un factura con todas las líneas del pedido de compra en estado borrador.
 * **Al envío**: Se generará una factura cada vez que se realice el envío de un albarán. Si el albarán no contiene todos los productos de la compra, sólo se facturará aquellos productos que hayan sido recibidos.
 
@@ -242,7 +242,7 @@ junto con sus implicaciones.
 
 .. |menu_configuration| tryref:: purchase.menu_configuration/complete_name
 
-Además tambien podremos definir la |conf_sequence| que será la utilizada para
+Además también podremos definir la |conf_sequence| que será la utilizada para
 generar el campo |reference|.
 
 .. |conf_sequence| field:: purchase.configuration/purchase_sequence

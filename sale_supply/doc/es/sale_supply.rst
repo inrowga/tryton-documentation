@@ -22,7 +22,7 @@ siguientes pasos:
 * Abra la pestaña *Proveedores*.
 * Marque la opción |supply_on_sale|.
 
-Recomenable en el producto relacionar que proveedores ofrecen este producto y entrega.
+Recomendable en el producto relacionar que proveedores ofrecen este producto y entrega.
 
 .. |menu_template| tryref:: product.menu_template/complete_name
 

@@ -49,7 +49,7 @@ Activación de idiomas
 
 La gestión de los idiomas en Tryton los encontrará en **Administrador/Localización/Idiomas**
 
-En Tryton puedemos activar los idiomas según:
+En Tryton podemos activar los idiomas según:
 
  * **Traducible**: Los idiomas que estará disponible en nuestro ERP tanto la
    interficie gráfica (idioma de los usuarios) como la traducción de los campos
@@ -60,5 +60,5 @@ En Tryton puedemos activar los idiomas según:
 .. warning:: La traducción de los módulos se encuentran dentro del código del
              módulo y sólo se carga el idioma cuando este es traducible. Por tanto,
              si activa un idioma como traducible, deberá actualizar su Tryton server
-             con la opción **-u all** para que se actualizen los idiomas y los nuevos,
+             con la opción **-u all** para que se actualicen los idiomas y los nuevos,
              se carguen.

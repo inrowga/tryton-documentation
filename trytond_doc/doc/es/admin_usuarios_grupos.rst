@@ -12,9 +12,9 @@ Grupos
 
 * **Administración/Usuarios/Grupos**. Grupos que pertenecerán a nuestros usuarios
 
-Al instalar los módulos estaran disponibles ciertos grupos por defecto. Estos
+Al instalar los módulos estarán disponibles ciertos grupos por defecto. Estos
 grupos darán acceso a ciertos objetos, como si los usuarios sólo pueden consultar
-o editar los registros del objecto.
+o editar los registros del objeto.
 
 --------
 Usuarios

@@ -9,7 +9,7 @@ de los pagos pendientes.
 Para consultar las reclamaciones que se van creando con un tercero puede consultar
 des del tercero mediante la acción Reclamaciones.
 
-Tambíen puede consultar las reclamaciones a |menu_dunning_procedure_form|.
+También puede consultar las reclamaciones a |menu_dunning_procedure_form|.
 
 A |menu_dunning_create| dispone de un asistente que podrá crear las reclamaciones
 especificando una fecha. Según la fecha del asistente, se nos crearán las reclamaciones

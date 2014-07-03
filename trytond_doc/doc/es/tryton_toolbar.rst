@@ -29,7 +29,7 @@ Borrar registros
 
 **Botón Herramienta:** Tryton no tiene definido un botón para borrar un registro
 en la Barra de Herramientas principal. Sí lo tiene en cambio en los campos
-**múltimpes** (m2m) de las vistas de formulario. En su lugar hay que acceder a través
+**múltiples** (m2m) de las vistas de formulario. En su lugar hay que acceder a través
 del menú desplegable que se abre cuando se hace clic sobre el botón de las **Herramientas**.
 Desde la vista de formulario esta opción borra el registro actual. En todo caso nos
 pedirá confirmación. También se puede borrar uno o más registros desde la vista de

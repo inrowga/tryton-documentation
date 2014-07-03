@@ -35,10 +35,10 @@ Desactivar terceros
 ===================
 
 A veces es necesario poder desactivar un tercero porqué ya no trabajamos con
-el mismo, pero esto no es posible porqué ya tenemos algun documento (factura,
+el mismo, pero esto no es posible porqué ya tenemos algún documento (factura,
 presupuesto, etc) que hace referencia al mismo.
 
-En este caso podremos desctivarlo tal cómo se explica en
+En este caso podremos desactivarlo tal cómo se explica en
 :ref:`desactivar-registros`.
 
 
@@ -46,13 +46,13 @@ Clasificar los terceros
 ========================
 
 Tryton nos permite clasificar los terceros por categorías. Así podremos
-establecer tantas categorias cómo queramos para cada tercero.
+establecer tantas categorías cómo queramos para cada tercero.
 
 .. figure:: images/categories.png
 
 Entonces podemos utilizar la opción |menu_party_categories| para consultar
 todos los terceros de una categoria. Para ello, simplemente hace falta hacer
-doble click sobre la categoría y se nos abrirá el listado de todos los
+doble clic sobre la categoría y se nos abrirá el listado de todos los
 terceros de la misma.
 
 .. figure:: images/categories-list.png
@@ -64,8 +64,8 @@ Trabajar con terceros en multicompañía
 
 Por defecto, todos los terceros se comparten entre la compañías. Esto significa
 que si creamos un tercero en la empresa A, también lo tendremos disponible en
-la empresa B. Además podemos utilizarlo sin problemas indisitintamente en una
-compañia o en la otra. Lógicamente, los documentos (ventas, compras, albaranes,
+la empresa B. Además podemos utilizarlo sin problemas indistintamente en una
+compañía o en la otra. Lógicamente, los documentos (ventas, compras, albaranes,
 facturas, etc.) no se van a compartir y sólo los podremos ver en la misma
 compañía en las que han sido creados.
 
@@ -96,7 +96,7 @@ Configuración
 =============
 
 En |menu_party_configuration| podemos encontrar distintas opciones
-que nos permetran adaptar el maestro de tercero a nuestras necesidades.
+que nos permitirán adaptar el maestro de tercero a nuestras necesidades.
 
 .. view:: party.party_configuration_view_form
    :field: party_lang
@@ -104,10 +104,10 @@ que nos permetran adaptar el maestro de tercero a nuestras necesidades.
 Idioma por defecto de los terceros
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-En el campo |party_lang| podemos especificar el idoma que se utilizará por
+En el campo |party_lang| podemos especificar el idioma que se utilizará por
 defecto para la creación de nuevos terceros. Esto sólo aplicará para los nuevos
 terceros creados a partir de este momento, y siempre podremos modificar
-manualmente el idioma en caso de que este deba ser distinto del idoma por
+manualmente el idioma en caso de que este deba ser distinto del idioma por
 defecto.
 
 Hacer editable el código del tercero

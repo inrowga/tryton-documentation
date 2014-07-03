@@ -46,10 +46,10 @@ Las opciones del |loc_type| de ubicación son:
 Recepción de mercaderia
 =======================
 
-Para recibir mercaderia debemos crear un albaran de proveedor desde la opción
+Para recibir mercaderia debemos crear un albarán de proveedor desde la opción
 |menu_shipment_in_form|.
 
-Un albaran de proveedor es un albarán de entrada que nos incrementará las
+Un albarán de proveedor es un albarán de entrada que nos incrementará las
 cantidades de productos en nuestros almacenes.
 Los albaranes de proveedor están formados por dos tipos de movimiento:
 
@@ -73,7 +73,7 @@ En este momento ya podremos introducir todos los |in_incoming_moves|, para
 especificar los productos que estamos recibiendo. Una vez introducidos todos
 los movimientos, pulsamos sobre el botón Recibir para realizar todos los
 |in_incoming_moves|. Una vez realizados, el sistema nos rellenará los
-|in_inventory_moves|, pudiendolos modificar para especificar en que ubiciación,
+|in_inventory_moves|, pudiéndolos modificar para especificar en que ubicación,
 los queremos almacenar. Una vez especificada podemos finalizar la recepción
 mediante el botón Realizado.
 
@@ -89,7 +89,7 @@ partir de la fecha que indiquemos.
 Devolución de mercadería
 ------------------------
 
-Para devolver mercadería debemos crear un albaran de devolución de proveedor
+Para devolver mercadería debemos crear un albarán de devolución de proveedor
 desde la opción |menu_shipment_in_return_form|.
 
 Un albarán de devolución proveedor puede estar en alguno de los siguientes
@@ -99,7 +99,7 @@ estados:
   vamos a devolver.
 * **Esperando**: A la espera que la mercadería este disponible en la ubicación
   desde dónde la vamos a enviar.
-* **Reservado**: Todos los movientos han sido reservados para que se puedan
+* **Reservado**: Todos los movimientos han sido reservados para que se puedan
   enviar al proveedor.
 * **Realizado**: La mercadería ha sido entregada al proveedor.
 * **Cancelado**: El albarán ha sido cancelado.
@@ -109,7 +109,7 @@ desde dónde vamos a devolver los productos en el campo |in_return_form_location
 y la ubicación dónde vamos a enviar los productos en el campo
 |in_return_to_location|. Una vez introducidos podemos introducir los
 |in_return_moves|. Una vez introducidos, utilizaremos el botón Esperando, para
-indicar que estamos a la espera de la mercaderia. Si necessitamos realizar
+indicar que estamos a la espera de la mercaderia. Si necesitamos realizar
 alguna modificación en el albarán, siempre podemos volver al estado borrador.
 
 En caso de que no haya suficiente stock en la ubicación para satisfacer todos
@@ -145,11 +145,11 @@ Realizar para finalizar la devolución.
 Envío de mercaderia
 ===================
 
-Para recibir mercadería debemos crear un albaran de cliente desde la opción
+Para recibir mercadería debemos crear un albarán de cliente desde la opción
 |menu_shipment_out_form|.
 
-Un albaran de cliente es un albarán de salida que nos decrementará las
-cantiadades de productos en nuestros almacenes.
+Un albarán de cliente es un albarán de salida que nos decrementará las
+cantidades de productos en nuestros almacenes.
 
 Los albaranes de cliente están formados por dos tipos de movimiento:
 
@@ -189,7 +189,7 @@ Un albarán de cliente puede estar en alguno de los siguientes estados.
 
 El primer paso para crear un albarán, es crear sus movimientos de salida.
 Una vez creados, podemos utilizar el botón En espera para crear los
-movimientos de inventario, automàticamente se nos crearán los movimientos de
+movimientos de inventario, automáticamente se nos crearán los movimientos de
 inventario necesarios para satisfacer los movimientos de salida.
 
 Al pulsar el botón Reservar el sistema intentará asignar todos los movimientos
@@ -201,7 +201,7 @@ los movimientos de inventario, el sistema nos mostrará el siguiente aviso:
 .. figure:: images/unable-to-assign-moves.png
 
 Dónde podremos visualizar de cada producto las cantidades que no se pueden
-reservar (porqué no hay suficiente estoc), junto con sus cantidades. El botóni
+reservar (porqué no hay suficiente estoc), junto con sus cantidades. El botón
 Forzar reserva nos permitirá asignar igualmente los movimientos, pero sólo nos
 aparecerá en caso de que nuestro usuario pertenezca al grupo
 |group_stock_force|. También podemos aceptar el aviso con el botón Aceptar.
@@ -214,7 +214,7 @@ Reservado, y los movimientos pendientes de reservar en estado Borrador.
 Podemos cancelar las reservas parciales, utilizando el botón En espera.
 Una vez asignados los movimientos de estoc, podemos utilizar el botón
 Realizar envió para marcar el envío cómo empaquetado.
-Los movimientos de inventario estarán completamente realizados, però los
+Los movimientos de inventario estarán completamente realizados, pero los
 movimientos de salida estarán reservados, a la espera de ser entregados al
 cliente. Una vez entregado al cliente, podemos marcar el albarán cómo
 realizado con el botón Realizado.
@@ -243,8 +243,8 @@ Para crear uno deberemos introducir el |out_return_customer| y el
 |out_return_incoming_moves|, para especificar los productos que estamos
 recibiendo. Una vez introducidos todos los movimientos, pulsamos sobre el botón
 Recibido para realizar todos los |in_incoming_moves|. Una vez realizados,
-el sistema nos rellenará los |in_inventory_moves|, pudiendolos modificar para
-especificar en que ubiciación los queremos almacenar. Una vez especificada
+el sistema nos rellenará los |in_inventory_moves|, pudiéndolos modificar para
+especificar en que ubicación los queremos almacenar. Una vez especificada
 podemos finalizar la recepción mediante el botón Realizado.
 
 .. |menu_shipment_out_return_form| tryref:: stock.menu_shipment_out_return_form/complete_name
@@ -258,13 +258,13 @@ podemos finalizar la recepción mediante el botón Realizado.
 Mover mercadería entre ubicaciones
 ==================================
 
-Para mover mercaderia entre ubicaciones podemos crear un albaran interno desde
+Para mover mercaderia entre ubicaciones podemos crear un albarán interno desde
 la opción |menu_shipment_internal_form|.
 
 
-Un albaran de interno no es un albarán ni de entrada ni de salida. Es un
-albarán que contine productos para un cambio de ubicación dentro de nuestra
-empresa, ya sea dentro de un mismo almacen o entre almacenes distintos.
+Un albarán de interno no es un albarán ni de entrada ni de salida. Es un
+albarán que contiene productos para un cambio de ubicación dentro de nuestra
+empresa, ya sea dentro de un mismo almacén o entre almacenes distintos.
 Un albarán de devolución proveedor puede estar en alguno de los siguientes
 estados:
 
@@ -272,17 +272,17 @@ estados:
   vamos a devolver.
 * **Esperando**: A la espera que la mercadería este disponible en la ubicación
   desde dónde la vamos a enviar.
-* **Reservado**: Todos los movientos han sido reservados para que se puedan
+* **Reservado**: Todos los movimientos han sido reservados para que se puedan
   enviar a la nueva ubicación.
 * **Realizado**: La mercadería ha sido entregada.
 * **Cancelado**: El albarán ha sido cancelado.
 
 Para crear un albarán interno debemos introducir la ubicación desde dónde
-estan actualmente los productos en el campo |internal_form_location| y la
+están actualmente los productos en el campo |internal_form_location| y la
 ubicación dónde vamos a enviar los productos en el campo
 |internal_to_location|. Una vez introducidos podemos introducir los
 |internal_moves|. Una vez introducidos, utilizaremos el botón Esperando, para
-indicar que estamos a la espera de la mercaderia. Si necessitamos realizar
+indicar que estamos a la espera de la mercaderia. Si necesitamos realizar
 alguna modificación en el albarán, siempre podemos volver al estado borrador.
 
 En caso de que no haya suficiente stock en la ubicación para satisfacer todos
@@ -351,7 +351,7 @@ En ambas opciones podremos consultar la siguiente información:
 * |product_forecast_quantity|
 * |product_cost_value|
 
-Ademas nos permiten obtener la información en una fecha en concreto. Esta fecha
+Además nos permiten obtener la información en una fecha en concreto. Esta fecha
 puede ser en el pasado, a día de hoy o en el futuro. La fechas futuras
 afectarán a la cantidad prevista y si dejamos la fecha en blanco la cantidad
 prevista se mostrará teniendo en cuenta todos los movimientos
@@ -363,10 +363,10 @@ cantidades, y abriendo la opción **Producto por ubicaciones** que encontraremos
 en la Flecha verde de la barra de acciones
 
 Para conocer los **Productos por ubicación** debemos abrir el listado de
-ubicaciones que encontraremos en |menu_location_tree| y hacer doble click sobre
+ubicaciones que encontraremos en |menu_location_tree| y hacer doble clic sobre
 la ubicación que deseamos.
 
-En ambás consultas podemos utilizar los filtros para realizar búsquedas en
+En ambas consultas podemos utilizar los filtros para realizar búsquedas en
 los resultados.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name
@@ -375,11 +375,11 @@ los resultados.
 .. |product_forecast_quantity| field:: product.product/forecast_quantity
 .. |product_cost_value| field:: product.product/cost_value
 
-Regularización de existenicas
+Regularización de existencias
 =============================
 
-A veces, es necesario realizar un recuento de las cantides de producto en el
-almacen para validar que la información del sistema se corresponde con la
+A veces, es necesario realizar un recuento de las cantidades de producto en el
+almacén para validar que la información del sistema se corresponde con la
 realidad. Este conteo se conoce como Inventarios, y los podemos generar desde
 la opción |menu_inventory_form|.
 
@@ -389,7 +389,7 @@ la opción |menu_inventory_form|.
 Un inventario puede estar en alguno de los siguientes estados:
 
 * **Borrador**: Estado inicial en que se introducen las cantidades.
-* **Realizado**: Se ha finalizado el inventario y las existèncias han sido
+* **Realizado**: Se ha finalizado el inventario y las existencias han sido
   regularizadas.
 * **Cancelado**: El inventario ha sido cancelado.
 
@@ -398,9 +398,9 @@ de dónde queremos realizar el inventario, la ubicación |inv_lost_found| y la
 |inv_date| a la que se corresponde.
 
 A partir de aquí podemos introducir los productos que queremos regularizar,
-junto con la cantidad actual que hay en el almacen. Una vez finalizado el
+junto con la cantidad actual que hay en el almacén. Una vez finalizado el
 recuento podemos utilizar el botón Confirmar, para marcar el albarán cómo
-realizado. En este momento tryton se encargará de realizar los movimientos
+realizado. En este momento Tryton se encargará de realizar los movimientos
 necesarios para regularizar las cantidades, cogiendo cómo ubicación de origen
 la que hayamos seleccionado en el campo |inv_lost_found|.
 
@@ -408,13 +408,13 @@ Inventario completo
 -------------------
 
 Al hacer un inventario podemos de cargar todos los productos para los cuales
-el sistema tiene existencías en la |inv_location| utilizando el botón Inventario
+el sistema tiene existencias en la |inv_location| utilizando el botón Inventario
 completo. Así el sistema, nos creará una linea para cada producto que se
 encuentre disponible, rellenando el campo |inv_expected_quantity| con la
 el número de existencias del sistema. Una vez llegados a este punto, solo
 nos hace falta modificar el campo |inv_quantity| para aquellas lineas en
-las que tengamos diferencias reflejando la cantidad real en el almacen.
-Cuando hayamos finalizado, utilizaremos el boton Confirmar, para regularizar
+las que tengamos diferencias reflejando la cantidad real en el almacén.
+Cuando hayamos finalizado, utilizaremos el botón Confirmar, para regularizar
 las existencias.
 
 .. |menu_inventory_form| tryref:: stock.menu_inventory_form/complete_name

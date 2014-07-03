@@ -32,7 +32,7 @@ campo deberá rellenar:
   * Selección
   * Texto
 
-Una vez diseñado los campos que desea que esten disponibles en los productos,
+Una vez diseñado los campos que desea que estén disponibles en los productos,
 abra el menú |menu_attribute_set| para añadir grupos y a cada grupo que campos
 van relacionados.
 

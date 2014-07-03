@@ -33,7 +33,7 @@ Traducción
 ----------
 
 Algunos campos de texto pueden disponer de una *bandera* que indican que son
-ampos traducibles.
+campos traducibles.
 
 .. figure:: images/tryton-translate.png
 
@@ -88,7 +88,7 @@ fecha del idioma (menú **Administración/Localización/Idiomas**)::
 Si sois amantes del teclado, podéis interactuar con las fechas con **+**, **-**
 e **=**
 
- * **+8d** añade 8 dias a la fecha
+ * **+8d** añade 8 días a la fecha
  * **=23w** Fija la fecha a la semana 23
  * **-2m** Quita 2 meses a la fecha
 

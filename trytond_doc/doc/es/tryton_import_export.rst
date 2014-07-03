@@ -18,7 +18,7 @@ iremos al listado productos. En el caso de importar terceros, deberemos abrir el
 Exportar datos
 ==============
 
-Una vez situados en el listado que deseamos exportar, usaremos el buscador para filrar
+Una vez situados en el listado que deseamos exportar, usaremos el buscador para filtrar
 los registros que deseamos exportar.
 
 Para exportar a CSV el icono de herramientas disponemos de la opción: **Exportar datos**.

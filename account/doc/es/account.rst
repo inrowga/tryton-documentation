@@ -139,7 +139,7 @@ Tendremos que especificar los siguientes datos:
   (esta última es una simplificación de la primera, no tiene las cuentas del grupo 8 y 9).
 * La compañía
 * El número de dígitos (Módulo Account Code Digits) que tendrán las cuentas (normalmente
-  entre 6 y 12, a una pyme le suelen bastar con 8). El número de dígitos viene definido
+  entre 6 y 12, a una PyME le suelen bastar con 8). El número de dígitos viene definido
   en la configuración de la contabilidad **Contabilidad/Configuración/Configuración
   contable/Número de dígitos cuenta**.
 

@@ -1,7 +1,7 @@
 Envío directo
 =============
 
-Dispone de la opción |drop_shipment| en la pesataña de proveedor del producto si está
+Dispone de la opción |drop_shipment| en la pestaña de proveedor del producto si está
 marcada la opción |purchasable| del producto. Cuando se activa, la solicitud de
 compra y la compra vinculada tienen la dirección del cliente como dirección de
 entrega; cuando se confirma la venta, se crea un envío directo y enlaza la

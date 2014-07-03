@@ -1,8 +1,8 @@
 #:before:purchase/purchase:section:estados#
 
------------------------------------
-Añdir líneas pendientes de facturar
------------------------------------
+------------------------------------
+Añadir líneas pendientes de facturar
+------------------------------------
 
 En sistemas de automatización de facturación se genera facturas a partir de líneas a facturar.
 Esto se muy común por ejemplo en el proceso de contratos de servicios se generen líneas, y

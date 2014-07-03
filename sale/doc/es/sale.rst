@@ -55,7 +55,7 @@ aparecerán en el informe permitiendo de esta forma una personalización más
 sencilla.
 
 Establecer un producto en un línea del pedido de venta es opcional, de todos
-modos, si queremos que estos productos esten en los albaranes, deberemos
+modos, si queremos que estos productos estén en los albaranes, deberemos
 seleccionar forzosamente un producto que no sea de tipo servicio.
 
 .. |sale_line_type| field:: sale.line/type
@@ -87,8 +87,8 @@ A continuación se detallan los pasos que pasa un pedido de venta:
 * **Borrador**: Representa aquellas ventas que aún no se han terminado de
   definir.
 * **Presupuesto**: Ventas sobre las que hemos presentado un presupuesto al
-  cliente però aún no tenemos respuesta.
-* **Confirmado**: El cliente nos ha confirmado la venta, però aún no se ha
+  cliente pero aún no tenemos respuesta.
+* **Confirmado**: El cliente nos ha confirmado la venta, pero aún no se ha
   iniciado la preparación de la misma.
 * **En proceso**: Se pasa al departamento de almacén y producción. A partir de
   este momento el sistema ya conoce de la necesidad de servir el producto y
@@ -103,7 +103,7 @@ A continuación se detallan los pasos que pasa un pedido de venta:
     podrán ser modificadas.
 
 Además también podemos saber el estado de las facturas relacionadas
-mediante el campo |invoice_state| y el estado de los alabaranes relacionados
+mediante el campo |invoice_state| y el estado de los albaranes relacionados
 mediante el campo |shipment_state|. Los posibles estados son:
 
 |invoice_state|
@@ -129,7 +129,7 @@ mediante el campo |shipment_state|. Los posibles estados son:
   de sus líneas). En el apartado :ref:`sale-exceptions` se detalla cómo
   corregir este estado.
 
-.. warning::  Se generan albaranes sólo si las linias del pedido de venta van
+.. warning::  Se generan albaranes sólo si las lineas del pedido de venta van
               relacionado con un producto y no sean del tipo servicio.
 
 .. |invoice_state| field:: sale.sale/invoice_state
@@ -152,7 +152,7 @@ ventas. Los métodos posibles son:
 * Al procesar el pedido: Una vez procesada la venta se generarán un factura
   con todas las líneas del pedido de venta en estado borrador.
 * Al envío: Se generará una factura cada vez que se realice el envío de un
-  albaran. Si el albarán no contiene todos los productos de la venta, sólo se
+  albarán. Si el albarán no contiene todos los productos de la venta, sólo se
   facturarán aquellos productos que hayan sido enviados.
 
 |shipment_method|
@@ -172,7 +172,7 @@ valor de los mismos desde la pestaña Información adicional.
 
 
 En :ref:`stock-partial-shipments` se detalla el proceso  necesario para
-realizar envios parciales dentro de una misma venta.
+realizar envíos parciales dentro de una misma venta.
 
 .. inheritref:: sale/sale:section:devolucion_venta
 
@@ -194,7 +194,7 @@ factura de cliente se creará un abono.
 
 .. note::
     Se pueden mezclar lineas con cantidades positivas y negativas en una misma
-    venta. En este caso, se generarn albaranes y facturas para las líneas
+    venta. En este caso, se generaran albaranes y facturas para las líneas
     con cantidades positivas y albaranes de devolucion y abonos para las
     negativas.
 
@@ -202,13 +202,13 @@ factura de cliente se creará un abono.
 Realizar una venta en distinta divisa
 =====================================
 
-Por defecto todas las ventas se realizan en la moneda de la compañia, aunque
-es possible realizar ventas en una moneda distinta.
+Por defecto todas las ventas se realizan en la moneda de la compañía, aunque
+es posible realizar ventas en una moneda distinta.
 
 En caso de que tengamos clientes que nos compren en una divisa específica,
 podemos utilizar el campo |currency| para determinar la divisa a utilizar para
 la venta. Esto provocará que los precios de los productos se conviertan a la
-moneda que hemos seleccionado de forma automàtica.
+moneda que hemos seleccionado de forma automática.
 
 .. |currency| field:: sale.sale/currency
 
@@ -219,7 +219,7 @@ Gestión de excepciones
 
 Una venta, puede estar en excepción ya por alguno de los siguientes motivos:
 
-* Alguno de sus movimientos de existèncias ha estado cancelado.
+* Alguno de sus movimientos de existencias ha estado cancelado.
 * Alguna de sus facturas ha estado cancelada.
 
 En ambos casos, el responsable de la venta deberá indicar cómo se va a
@@ -259,12 +259,12 @@ de envíos, aunque en vez de seleccionar aquellos movimientos que queremos
 recrear/ignorar, deberemos seleccionar aquellas líneas de factura que queremos
 recrear/ignorar.
 
-También podremos ver el històrico de facturas en la pestaña Facturas de la
+También podremos ver el histórico de facturas en la pestaña Facturas de la
 venta.
 
 .. _sale-configuration:
 
-.. inheritref:: sale/sale:section:configuracion
+.. inheritref:: sale/sale:section:configuración
 
 Configuración
 =============
@@ -276,7 +276,7 @@ junto con sus implicaciones.
 
 .. |menu_configuration| tryref:: sale.menu_configuration/complete_name
 
-Además tambien podremos definir la |conf_sequence| que será la utilizada para
+Además también podremos definir la |conf_sequence| que será la utilizada para
 generar el campo |reference|.
 
 .. |conf_sequence| field:: sale.configuration/sale_sequence

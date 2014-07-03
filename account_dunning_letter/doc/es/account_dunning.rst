@@ -10,7 +10,7 @@ reclamación:
 * Pagos pendientes recibidos. Importe y fecha si se han realizado pagos parciales.
 
 Para disponer de un informe es importante que en los procesamientos de las reclamaciones,
-a parte del número de dias de retraso, activar la opción |print_on_letter|. Si la opción
+a parte del número de días de retraso, activar la opción |print_on_letter|. Si la opción
 |print_on_letter| no está activa, no se mostrarán las reclamaciones en el informe.
 
 En el momento que desea "Procesar reclamación" (asistente) se nos abrirá el

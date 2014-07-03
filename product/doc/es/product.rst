@@ -52,7 +52,7 @@ será transparente para vosotros:
 ¿Cómo se calcula el precio de coste?
 ====================================
 
-El campo |cost_price_method| determina cómo se cálcula el |cost_price|  de
+El campo |cost_price_method| determina cómo se calcula el |cost_price|  de
 cada producto. Los posibles métodos son:
 
 .. inheritref:: product/product:bullet_list:cost_price_method_options
@@ -94,18 +94,18 @@ Desactivar productos
 ====================
 
 A veces es necesario poder desactivar un producto porqué ya no trabajamos con
-el mismo, pero esto no es posible porqué ya tenemos algun documento (factura,
+el mismo, pero esto no es posible porqué ya tenemos algún documento (factura,
 presupuesto, etc) que hace referencia al mismo.
 
-En este caso podremos desctivarlo tal cómo se explica en
+En este caso podremos desactivarlo tal cómo se explica en
 :ref:`desactivar-registros`.
 
-Classificar los productos
-=========================
+Clasificar los productos
+========================
 
 Los productos se pueden asociar a una categoria. Entonces podemos utilizar la
 opción |menu_product_categories| para consultar todos los productos de una
-categoria. Para ello, simplemente hace falta hacer doble click sobre la
+categoria. Para ello, simplemente hace falta hacer doble clic sobre la
 categoría y se nos abrirá el listado de todos los productos de la misma.
 
 .. |menu_product_categories| tryref:: product.menu_category_tree/complete_name
@@ -116,16 +116,16 @@ categoría y se nos abrirá el listado de todos los productos de la misma.
 Trabajar con productos en multicompañía
 =======================================
 
-Por defecto todos los productos se compraten entre la compañías. Esto significa
+Por defecto todos los productos se comparten entre la compañías. Esto significa
 que si creamos un producto en la empresa A, también lo veremos disponible en la
-empresa B. A pessar que los productos que vemos sean los mismos, no todos los
-datos de un determinado producto son los mismos en todas las compañias.
+empresa B. A pesar que los productos que vemos sean los mismos, no todos los
+datos de un determinado producto son los mismos en todas las compañías.
 
-Por ejemplo, podemos entrar en la compañia A y defeinir un precio de venta
+Por ejemplo, podemos entrar en la compañía A y definir un precio de venta
 para el producto y después entrar en la compañía B y ahí definir otro precio
 de venta.
 
-A continuación detallamos los campos que dependen de la compañia:
+A continuación detallamos los campos que dependen de la compañía:
 
 .. inheritref:: product/product:bullet_list:multicompany_fields
 

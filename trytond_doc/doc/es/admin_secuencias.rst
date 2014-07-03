@@ -21,7 +21,7 @@ En una secuencia, disponemos de los valores:
 * **Prefijo:** Podemos hacer uso de expresiones como ``%{year}``
 * **Dígitos de relleno:** La cantidad de números que dispondremos: 001
 * **Cantidad a incrementar:** El próximo número a dar de alta
-* **Sufijo:** Si queremos un identificador, por ejempo V de pedido de venta.
+* **Sufijo:** Si queremos un identificador, por ejemplo V de pedido de venta.
 * **Siguiente número**
 
 .. warning:: En el caso de Nereid o entorno web se recomineda que la numeración de

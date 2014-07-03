@@ -3,9 +3,9 @@
 Albaranes creados desde ventas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Al confirmar una venta que contengan productos de tipo Bienes automàticamente
-se nos crearà un albaràn de cliente en estado en espera. Este albaràn i
-contendrà en los movimientos de salida todos los movimientos generados por la i
+Al confirmar una venta que contengan productos de tipo Bienes automáticamente
+se nos creará un albarán de cliente en estado en espera. Este albarán i
+contendrá en los movimientos de salida todos los movimientos generados por la i
 venta y en los movimientos de inventario los movimientos necesarios para
 satisfacer los movimientos de salida.
 
@@ -17,7 +17,7 @@ Entregas parciales
 Para que las entregas parciales funcionen correctamente los albaranes de
 cliente deben haber sido creados a través de una venta, ya que a través de la
 misma el sistema podrá saber cuales son las cantidades de cada producto que
-todavía estàn pendientes de enviar.
+todavía están pendientes de enviar.
 
 En caso de que no haya suficiente stock de algún producto, podemos hacer una
 entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de

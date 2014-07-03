@@ -3,7 +3,7 @@ Producción
 ==========
 
 Las producciones se utilizan para la transformación de materias, por ejemplo
-para la fabricación de una pieza (material finalizado) a traves de la unión
+para la fabricación de una pieza (material finalizado) a través de la unión
 de varios componentes.
 
 .. inheritref:: production/production:section:producir_materiales
@@ -11,7 +11,7 @@ de varios componentes.
 Producir materiales
 ===================
 
-Para producir matariales debemos crear una orden de producción desde la opción
+Para producir materiales debemos crear una orden de producción desde la opción
 |menu_production_list|.
 
 .. view:: production.production_view_form
@@ -46,7 +46,7 @@ A continuación se detallan cada uno de ellos:
 * **Reservado**: Todas las entradas han sido reservadas pero la producción
   aún no ha empezado.
 * **En ejecución**: La producción esta en curso. Todas las entradas han sido
-  consumidas y se estan realizando las salidas.
+  consumidas y se están realizando las salidas.
 * **Realizado**: La producción ha sido terminada y todos los productos de
   salida han estado realizados.
 * **Cancelado**: La producción ha sido cancelada.
@@ -54,7 +54,7 @@ A continuación se detallan cada uno de ellos:
 Costes de producción
 --------------------
 
-Una vez finalizada la producción, se cálculan los costos de la misma y
+Una vez finalizada la producción, se calculan los costos de la misma y
 estos se reparten en las |outputs|, rellenando así el precio unitario de las
 |outputs|.
 
@@ -65,7 +65,7 @@ Consumo de materiales no previstos
 ----------------------------------
 En cualquier estado de la producción podemos añadir nuevos materiales en las
 |inputs| y las |outputs| de la producción, aunque no quitar las que ya
-están realizados. Esto nos permite añadir entradas addicionales y salidas no
+están realizados. Esto nos permite añadir entradas adicionales y salidas no
 previstas, por ejemplo desechos, mientras la producción esta en curso.
 
 Para introducir un desecho debemos introducir una nueva línea en las
@@ -91,7 +91,7 @@ En el formulario de un producto podremos definir que listas de materiales se
 pueden utilizar para producirlo.
 
 .. note:: En la ficha de producto sólo podremos seleccionar aquellas listas
-    de material que contegan el producto cómo alguna de sus salidas.
+    de material que contengan el producto cómo alguna de sus salidas.
 
 Utilizar listas de materiales en la orden de producción
 -------------------------------------------------------
@@ -102,7 +102,7 @@ que queremos producir se nos rellenaran las |inputs| y las |outputs| con
 los materiales necesarios para realizar la producción.
 
 .. note:: En caso de que tengamos listas de materiales definidas en el
-    producto el sistema nos cojerá la primera por defecto.
+    producto el sistema nos cojera la primera por defecto.
 
 .. |menu_bom_list| tryref:: production.menu_bom_list/complete_name
 .. |quantity| field:: production/quantity

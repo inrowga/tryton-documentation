@@ -18,7 +18,7 @@ El módulo de proyectos contiene como base el módulo `partes de trabajo
 <../timesheet/index.html>`_ y todas las funcionalidades de los partes de trabajo
 se ven reflejados en proyectos y tareas de proyecto.
 
-Toda la gestión de proyectos accedermos en el menú principal a: |menu_projects|.
+Toda la gestión de proyectos accederemos en el menú principal a: |menu_projects|.
 
 .. |menu_projects| tryref::  project.menu_project/complete_name
 
@@ -80,7 +80,7 @@ Para la gestión de tareas accederemos en el menú |menu_task|.
 Estados
 =======
 
-Los estados de un proyecto o tarea són:
+Los estados de un proyecto o tarea son:
 
 * Abierta a Realizada
 * Realizada a Abierta

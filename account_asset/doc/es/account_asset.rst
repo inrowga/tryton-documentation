@@ -7,7 +7,7 @@ Configuración
 ~~~~~~~~~~~~~
 
 Para poder contabilizar activos y su amortización es necesario definir productos
-de tipo "Activo" y en la pestaña "Contabilidad" marcar la casilla "Depreciable",
+de tipo "Activo" y en la pestaña "Contabilidad" marcar la casilla "Despreciable",
 indicando opcionalmente los meses que durará la amortización y estas 4 cuentas contables:
 
 * Cuenta de activo es la cuenta que será utilizada por la factura de proveedor
@@ -55,7 +55,7 @@ siguiente información:
 .. |quantity| field:: account.asset/quantity
 
 Para previsualizar las líneas de amortización podemos utilizar el botón
-`Crear Líneas`. Podemos cambiar el método de amortización y la frequencia de
+`Crear Líneas`. Podemos cambiar el método de amortización y la frecuencia de
 amortización desde la pestaña Información adicional.  Las líneas se pueden
 volver a calcular pulsando el botón `Borrar Lineas` y `Crear Lineas`.
 
@@ -68,20 +68,20 @@ Creación desde facturas
 
 Si introducimos una línea de factura de proveedor en el campo
 |supplier_invoice_line| el programa se encargará de rellenar todos los datos
-del activo a partir de la línea de factura. Los campos que se rellenaràn son
+del activo a partir de la línea de factura. Los campos que se rellenarán son
 los siguientes:
 
 |purchase_date|: Se utilizará el campo |invoice_date| de la factura.
-|value|: Se utilizarà el |invoice_amount| de la línea de factura
+|value|: Se utilizará el |invoice_amount| de la línea de factura
 |quantity|: Se utilizará la |invoice_quantity| de la línea de factura.
-|unit|: Se utilizarà la |invoice_unit| de la línea de factura
+|unit|: Se utilizará la |invoice_unit| de la línea de factura
 
 .. |invoice_unit| field:: account.invoice.line/unit
 .. |invoice_quantity| field:: account.invoice.line/quantity
 .. |invoice_amount| field:: account.invoice.line/amount
 .. |invoice_date| field:: account.invoice/invoice_date
 
-Processar amortizaciones
+Procesar amortizaciones
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Para generar los apuntes correspondientes a las amortizaciones debemos acceder

@@ -35,7 +35,7 @@ un lote, siga los siguientes pasos:
 
 Esto hará que cuando se procese un albarán (movimiento) sea obligatorio un lote
 dependiendo del tipo de lote en el producto. Por ejemplo, si a un producto añado
-que sea obligado un lote en "cliente", cuando realize un albarán de salida (a cliente)
+que sea obligado un lote en "cliente", cuando realice un albarán de salida (a cliente)
 deberé añadir un lote. En cambio, cuando sea un albarán de proveedor no hará falta
 ya que en el producto no le hemos marcado un lote requerido de proveedor.
 
@@ -55,4 +55,4 @@ Para añadir un lote a un movimiento de stock siga los siguientes pasos:
   correspondiente.
 
 En el caso de albaranes de cliente, en el momento de realizar el envío un albarán,
-el lote que disponemos del movimiento interno será asiganado al movimiento de salida.
+el lote que disponemos del movimiento interno será asignado al movimiento de salida.

@@ -24,6 +24,6 @@ Usuarios
 Una vez creadas la empresa es importante que los usuarios del sistema añadir las
 empresas que podrá operar ese usuario.
 
-Cada usuario, des del apartado de sus preferencies, podrá decidir que empresa opera
+Cada usuario, des del apartado de sus preferencias, podrá decidir que empresa opera
 en este momento. A la parte inferior izquierda del cliente de escritorio podrá ver
 el nombre de la empresa que está en ese momento.

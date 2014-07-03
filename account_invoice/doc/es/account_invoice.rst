@@ -50,7 +50,7 @@ líneas. Veamos algunos ejemplos: 22
 
 * Pago a 30 días. Sólo crearemos una línea:
 
-  * Tipo: Remanete
+  * Tipo: Remanente
   * Número de meses: 0
   * Número de semanas: 0
   * Número de días: 30
@@ -68,7 +68,7 @@ líneas. Veamos algunos ejemplos: 22
 
   * Segunda línea:
 
-    * Tipo: Remanete
+    * Tipo: Remanente
     * Número de meses: 0
     * Número de semanas: 0
     * Número de días: 30
@@ -84,7 +84,7 @@ Períodos fiscales
 -----------------
 
 Si es un nuevo año fiscal deberá crear los ejercicios fiscales con sus períodos
-(mensuales o trimestrales). Al crear una factura, la fecha de la factura debe concidir
+(mensuales o trimestrales). Al crear una factura, la fecha de la factura debe coincidir
 con un período y este esté abierto.
 
 .. inheritref:: account/account_invoice:section:cancelar
@@ -112,6 +112,6 @@ líneas antes de confirmarlo (para hacer un abono parcial).
 
 En el caso de disponer el abono hecho pendiente de conciliar, y lo que deseamos es simplemente como
 conciliar mutuamente una factura y su factura de abono, es lo mismo que conciliar facturas con pagos.
-Iremos al atajo/realación "Cuentas a cobrar" del tercero y veremos sus apuntes pendiente de conciliación,
+Iremos al atajo/relación "Cuentas a cobrar" del tercero y veremos sus apuntes pendiente de conciliación,
 de facturas, de abonos, de cobros o devolución de cobros. Marcamos los que la suma debe y haber coinciden
 y ejecutamos la acción "Conciliar apuntes".

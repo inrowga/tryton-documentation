@@ -37,8 +37,8 @@ Dependencias
 Hay módulo que dependen de otros. Revise la pestaña **Dependencias** para más
 información del módulo.
 
-* Si estan ya **instalados**, se omiten. No se vuelven a instalar.
-* Si **no estan instalados**, se instalaran ya que son requeridos.
+* Si están ya **instalados**, se omiten. No se vuelven a instalar.
+* Si **no están instalados**, se instalaran ya que son requeridos.
 * Si **no se encuentran**, los deberá buscar y instalar en el servidor de Tryton.
 
 Características
@@ -57,7 +57,7 @@ Desinstalación
 Aunque Trtyon dispone de esta funcionalidad, no se recomienda esta acción a base
 de datos de producción. Use una base de datos **test** para cualquier testeo.
 
-.. important:: Evite la opción de desintalar módulos en bases de datos de producción.
+.. important:: Evite la opción de desinstalar módulos en bases de datos de producción.
 
 La tablas de la base de datos dónde se guarden la información de los módulos
 instalados **no** se eliminan y esta información queda para siempre en nuestra
