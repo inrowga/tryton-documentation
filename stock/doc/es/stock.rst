@@ -46,7 +46,7 @@ Las opciones del |loc_type| de ubicación son:
 Recepción de mercaderia
 =======================
 
-Para recibir mercaderia debemos crear un albarán de proveedor desde la opción
+Para recibir mercadería debemos crear un albarán de proveedor desde la opción
 |menu_shipment_in_form|.
 
 Un albarán de proveedor es un albarán de entrada que nos incrementará las
@@ -62,7 +62,7 @@ Un albarán de proveedor puede estar en alguno de los siguientes estados:
 
 * **Borrador**: Estado inicial en que se introducen los movimientos que
   recibimos.
-* **Recibido**: Hemos recibido la mercaderia del |in_supplier| pero aún no
+* **Recibido**: Hemos recibido la mercadería del |in_supplier| pero aún no
   ha sido almacenada en nuestros almacenes.
 * **Realizado**: La mercadería ha sido recibida y almacenada en nuestros
   almacenes.
@@ -109,7 +109,7 @@ desde dónde vamos a devolver los productos en el campo |in_return_form_location
 y la ubicación dónde vamos a enviar los productos en el campo
 |in_return_to_location|. Una vez introducidos podemos introducir los
 |in_return_moves|. Una vez introducidos, utilizaremos el botón Esperando, para
-indicar que estamos a la espera de la mercaderia. Si necesitamos realizar
+indicar que estamos a la espera de la mercadería. Si necesitamos realizar
 alguna modificación en el albarán, siempre podemos volver al estado borrador.
 
 En caso de que no haya suficiente stock en la ubicación para satisfacer todos
@@ -265,7 +265,7 @@ la opción |menu_shipment_internal_form|.
 Un albarán de interno no es un albarán ni de entrada ni de salida. Es un
 albarán que contiene productos para un cambio de ubicación dentro de nuestra
 empresa, ya sea dentro de un mismo almacén o entre almacenes distintos.
-Un albarán de devolución proveedor puede estar en alguno de los siguientes
+Un albarán de interno puede estar en alguno de los siguientes
 estados:
 
 * **Borrador**: Estado inicial en que se introducen los movimientos que
@@ -278,7 +278,7 @@ estados:
 * **Cancelado**: El albarán ha sido cancelado.
 
 Para crear un albarán interno debemos introducir la ubicación desde dónde
-están actualmente los productos en el campo |internal_form_location| y la
+están actualmente los productos en el campo |internal_from_location| y la
 ubicación dónde vamos a enviar los productos en el campo
 |internal_to_location|. Una vez introducidos podemos introducir los
 |internal_moves|. Una vez introducidos, utilizaremos el botón Esperando, para
@@ -333,19 +333,41 @@ Movimientos
 Los albaranes de salida, entrada o internos crean movimientos. El listado de todos
 los movimientos los podemos consultar a |menu_move_form|.
 
+.. tip:: Podemos utilizar las pestañas para filtrar los movimientos según su
+    tipo. Así podemos utilizar los filtros Desde proveedor y Hacia clientes
+    para mostrar aquellos movimientos de proveedor o cliente.
+
+.. inheritref:: stock/stock:section:averiguar-terceros-movimiento
+
+Averiguar los terceros a los que hemos recibido o mandado un producto
+---------------------------------------------------------------------
+
+Para averiguar los terceros a los que hemos recibido o mandado un producto
+debemos realizar un filtro en la pantalla de movimientos, poniendo en el campo
+producto el producto que queramos buscar. Además, podemos filtrar por estado
+Realizado para excluir aquellos movimientos que todavía no han sido realizados.
+
+Llegados a este punto debemos abrir la vista de formulario de cada uno de los
+movimientos para abrir su albarán relacionado y allí podremos ver el tercero
+al que ha sido mandado.
+
+
+
 .. |menu_move_form| tryref:: stock.menu_move_form/complete_name
 
 Consultar la cantidad de un producto
 ====================================
 
-Tryton nos provee dos opciones para consultar la cantidad de productos:
+Tryton nos provee varias opciones para consultar la cantidad de productos:
+
+.. inheritref:: stock/stock:bullet_list:product-quantity
 
 * **Producto por ubicaciones**: Permite consultar la cantidad disponible de
   un producto para cada ubicación de la empresa.
 * **Productos en ubicación**: Permite obtener un listado de todos los
   productos disponibles en una ubicación.
 
-En ambas opciones podremos consultar la siguiente información:
+En todas opciones podremos consultar la siguiente información:
 
 * |product_quantity|
 * |product_forecast_quantity|
@@ -362,11 +384,13 @@ El listado de producto por ubicaciones lo podremos abrir desde la opción
 cantidades, y abriendo la opción **Producto por ubicaciones** que encontraremos
 en la Flecha verde de la barra de acciones
 
-Para conocer los **Productos por ubicación** debemos abrir el listado de
+Para conocer los **Productos en ubicación** debemos abrir el listado de
 ubicaciones que encontraremos en |menu_location_tree| y hacer doble clic sobre
 la ubicación que deseamos.
 
-En ambas consultas podemos utilizar los filtros para realizar búsquedas en
+.. inheritref:: stock/stock:paragraph:product-quantity
+
+En todas las consultas podemos utilizar los filtros para realizar búsquedas en
 los resultados.
 
 .. |menu_location_tree| tryref:: stock.menu_location_tree/complete_name

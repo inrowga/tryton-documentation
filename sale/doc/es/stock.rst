@@ -1,4 +1,4 @@
-#:inside:stock/stock:section:albaranes_de_cliente#
+#:inside:stock/stock:section:envio-de-mercaderia#
 
 Albaranes creados desde ventas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
