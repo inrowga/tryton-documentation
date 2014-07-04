@@ -7,28 +7,33 @@ de producto y el producto. Esta separación se usa para poder definir
 variantes de un producto (por ejemplo: tallas, colores...) definiendo los datos
 compartidos en la *plantilla* y los específicos en el *producto*.
 
-.. inheritref:: product/product:section:producto
-
-Producto
-========
-
 .. view:: product.template_view_form
    :field: name
 
-.. inheritref:: product/product:bullet_list:template_fields
+.. inheritref:: product/product:section:crear_un_producto
 
-* |name|
-* |type| Las opciones por defecto son: bienes, activos y servicios.
-* |category|. La categoría principal del producto.
-* |list_price|. Precio de venta.
-* |cost_price|. Precio de coste.
-* |cost_price_method|. Método del precio del coste
-* |default_uom|. La unidad de medida por defecto para este
-  producto, usado por ejemplo para expresar niveles de stock.
-* |active|. Activar o desactivar el producto sin borrarlo.
+¿Cómo crear un producto?
+========================
 
+Para crear un producto primero deberemos crear una plantilla desde la opción
+|menu_template|, especificando cómo mínimo su |name|, su |type|, el |list_price|
+el |cost_price|, el |cost_price_method| y su |default_uom|. Además podremos
+especificarle una |category| para clasificarlo.
+
+El |type| puede ser una de las siguientes opciones:
+
+* Bienes
+* Activos
+* Servicios
+
+Si seleccionamos el tipo Bienes, nos aparecerá el campo |consumable|, que
+debemos marcar si queremos que no se controlen el número de existencias de
+nuestro producto.
+
+.. |menu_template| tryref:: product.menu_main_product/complete_name
 .. |name| field:: product.template/name
 .. |type| field:: product.template/type
+.. |consumable| field:: product.template/consumable
 .. |category| field:: product.template/category
 .. |list_price| field:: product.template/list_price
 .. |cost_price| field:: product.template/cost_price
@@ -36,14 +41,20 @@ Producto
 .. |default_uom| field:: product.template/default_uom
 .. |active| field:: product.template/active
 
-Por cada plantilla, podrá crear sus variantes. Si no trabaja con variantes, este paso
-será transparente para vosotros:
 
-.. inheritref:: product/product:bullet_list:product_fields
+.. inheritref:: product/product:section:crear-variantes
 
-* |code|
-* |description|
+Crear variantes
+~~~~~~~~~~~~~~~
 
+Al crear la plantilla se nos creará por defecto una variante, de todos
+modos es muy posible que nos interesé especificar su |code| y su descripción.
+
+En caso de necesitar mas variantes los podemos hacer directamente desde el
+formulario de plantillas, utilizando el campo |products| y creando tantas
+variantes cómo necesitemos.
+
+.. |products| field:: product.template/products
 .. |code| field:: product.product/code
 .. |description| field:: product.product/description
 
@@ -103,9 +114,9 @@ En este caso podremos desactivarlo tal cómo se explica en
 Clasificar los productos
 ========================
 
-Los productos se pueden asociar a una categoria. Entonces podemos utilizar la
+Los productos se pueden asociar a una categoría. Entonces podemos utilizar la
 opción |menu_product_categories| para consultar todos los productos de una
-categoria. Para ello, simplemente hace falta hacer doble clic sobre la
+categoría. Para ello, simplemente hace falta hacer doble clic sobre la
 categoría y se nos abrirá el listado de todos los productos de la misma.
 
 .. |menu_product_categories| tryref:: product.menu_category_tree/complete_name

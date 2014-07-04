@@ -3,30 +3,23 @@
 Activos
 =======
 
-Configuración
-~~~~~~~~~~~~~
-
-Para poder contabilizar activos y su amortización es necesario definir productos
-de tipo "Activo" y en la pestaña "Contabilidad" marcar la casilla "Despreciable",
-indicando opcionalmente los meses que durará la amortización y estas 4 cuentas contables:
-
-* Cuenta de activo es la cuenta que será utilizada por la factura de proveedor
-  para anotar la compra del activo.
-* Cuenta de amortización es la cuenta donde se anota la depreciación del activo en
-  el haber, y el gasto en el debe de la cuenta de gastos.
-* (opcional) Cuenta de ingresos se utilizará para reflejar los posibles ingresos generados
-  por la venta del activo (en función de la depreciación ya realizada y el precio de venta).
-
-Por ejemplo:
-
-* Cuenta de activo: 213000 - Maquinaria
-* Cuenta de amortización: 281300 - Amortización acumulada de maquinaria
-* Cuenta de gastos: 681000 - Amortización del inmovilizado material
-* Cuenta de ingresos: 771000 - Beneficios procedentes del inmovilizado material
-
+Mediante la depreciación de activos podemos repartir el coste de las
+inversiones entre diferentes ejercicios fiscales en los que se produce su uso
+o disfrute en la actividad empresarial.
 
 Creación de activos
 ~~~~~~~~~~~~~~~~~~~
+
+Antes de crear un activo, debemos tener configurado un producto para
+poder gestionar su amortización. En el apartado
+:ref:`product-para-amortizacion-de-activos` se detalla cómo debemos crear
+el activo para poder gestionar la amortización de activos. Así en la
+creación de activos sólo podremos seleccionar aquellos productos que hayan
+sido marcados como |depreciable|
+
+.. |depreciable| field:: product.template/depreciable
+
+
 Para crear un activo debemos ir a la opción |menu_asset|.  En esta pantalla
 debemos introducir la información del activo, del que cabe destacar la
 siguiente información:
@@ -40,8 +33,8 @@ siguiente información:
 * |start_date|: Fecha en que se realizará el primer apunte de amortización.
 * |end_date|: Fecha en que se terminará la amortización del activo. Si hemos
   rellenado el número de meses que durará la amortización del producto, este
-  campo se calcularà en función de la fecha inicial, aunque podremos
-  modificarlo a posteriori.
+  campo se calculará en función de la fecha inicial, aunque podremos
+  modificarlo a posterior.
 
 .. |product| field:: account.asset/product
 .. |account_journal| field:: account.asset/account_journal
@@ -54,7 +47,7 @@ siguiente información:
 .. |unit| field:: account.asset/unit
 .. |quantity| field:: account.asset/quantity
 
-Para previsualizar las líneas de amortización podemos utilizar el botón
+Para pre visualizar las líneas de amortización podemos utilizar el botón
 `Crear Líneas`. Podemos cambiar el método de amortización y la frecuencia de
 amortización desde la pestaña Información adicional.  Las líneas se pueden
 volver a calcular pulsando el botón `Borrar Lineas` y `Crear Lineas`.
