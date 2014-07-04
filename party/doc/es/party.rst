@@ -6,30 +6,46 @@ Un **tercero** puede ser un cliente, un proveedor, una persona física o jurídi
 una entidad, una fundación, etc. Aquí encontraremos cualquier contacto relacionado
 con nuestra empresa, incluida esta misma y sus empleados.
 
+.. image:: images/party-menu.png
+
 .. view:: party.party_view_form
    :field: name
 
-.. inheritref:: party/party:section:direcciones
+.. inheritref:: party/party:section:crear-un-tercero
 
-Direcciones
-===========
+¿Cómo crear un tercero?
+======================
 
-Un tercero puede disponer de varios direcciones. Una dirección está compuesta
-del nombre, la calle, el código postal, la ciudad, el estado, una subdivisión (que en el caso de España puede ser la comunidad autónoma,
-la provincia o la comarca)
+Para crear un tercero simplemente debemos introducir un |name| para
+identificarlo. Además puede ser interesante introducir un |lang|, para
+los documentos relacionados con el mismo (por ejemplo las facturas que les
+podamos emitir), se generen en el idioma seleccionado. Para indicar su,
+|vat_code|, debemos irnos a la pestaña Contabilidad, y indicar el país en el
+campo |vat_country|, y el número en el campo |vat_number|.
 
-.. image:: images/party-menu.png
+También podremos indicar las |addresses| de un tercero, y sus
+|contact_mechanisms|.
 
-.. note:: Para eliminar una dirección, lo haremos con el botón de eliminar de la
-          dirección. No usaremos el menú desplegable que aparece cuando hacemos
-          clic sobre botón de herramientas superior, ya que en ese caso
-          eliminaríamos la empresa.
+.. note:: Para eliminar una dirección o un método de contacto, lo haremos con
+    el botón de eliminar de la dirección. No usaremos el menú desplegable que
+    aparece cuando hacemos clic sobre botón de herramientas superior, ya que
+    en ese caso eliminaríamos el tercero.
 
 .. figure:: images/party-m2o-delete.png
 
-   Eliminar campos dentro de la ficha
+También podemos clasificarlos por |categories|, tal cómo se explica en
+:ref:`party-classificar-terceros`.
 
-.. inheritref:: party/party:section:categoria
+.. |name| field:: party.party/name
+.. |lang| field:: party.party/lang
+.. |categories| field:: party.party/categories
+.. |addresses| field:: party.party/addresses
+.. |contact_mechanisms| field:: party.party/contact_mechanisms
+.. |vat_code| field:: party.party/vat_code
+.. |vat_country| field:: party.party/vat_country
+.. |vat_number| field:: party.party/vat_number
+
+.. inheritref:: party/party:section:desactivar-terceros
 
 Desactivar terceros
 ===================
@@ -41,6 +57,7 @@ presupuesto, etc) que hace referencia al mismo.
 En este caso podremos desactivarlo tal cómo se explica en
 :ref:`desactivar-registros`.
 
+.. _party-classificar-terceros:
 
 Clasificar los terceros
 ========================
@@ -58,6 +75,8 @@ terceros de la misma.
 .. figure:: images/categories-list.png
 
 .. |menu_party_categories| tryref:: party.menu_category_tree/complete_name
+
+.. inheritref:: party/party:section:terceros-multicompania
 
 Trabajar con terceros en multicompañía
 ======================================

@@ -1,6 +1,8 @@
-#:before:party/party:section:informes#
+#:inside:party/party:section:crear-un-tercero#
 
-* |sale_price_list|: Tarifa que se utilizará por defecto en los pedidos de
-  ventas para este tercero.
+.. inheritref:: party/party:paragraph:sale
+
+En la pestaña Ventas podemos especificar la |sale_price_list| que se utilizará
+por defecto para este cliente en los presupuestos/ventas.
 
 .. |sale_price_list| field:: party.party/sale_price_list
