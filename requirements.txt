@@ -1,2 +1,2 @@
-sphinxcontrib-inheritance==0.5
+sphinxcontrib-inheritance>=0.6
 trydoc>=0.5
