@@ -32,16 +32,23 @@ del cliente.
 Traducción
 ----------
 
-Algunos campos de texto pueden disponer de una *bandera* que indican que son
-campos traducibles.
+Los campos que contengan una bandera le permite la traducción en varios idiomas.
+Para traducir un campo, simplemente haga clic en el icono de la bandera i una ventana
+emergente se mostrará el texto en cada idioma.
+
+Si deseamos editar un idioma, le marcaremos la opción "Edita". Se nos activará la caja
+de texto para rellenar la traducción.
+
+Si en un idioma dispone del campo "Revisión" activado, esta traducción no estará
+pendiente hasta que la edite (revise).
 
 .. figure:: images/tryton-translate.png
 
    Campos traducibles en Tryton
 
-.. warning:: Si desea cambiar la información de este campo, recuerda hacerlo en
-             todos los idiomas disponibles
-
+.. warning:: Si es un nuevo registro, antes de la traducción deberá guardar. En el caso
+             que duplique un registro y cambie el contenido de un campo multi idioma,
+             acuérdese de cambiar/editar en todos los idiomas.
 
 --------
 TextArea
@@ -49,9 +56,9 @@ TextArea
 
 Campo de texto de múltiples líneas.
 
----------------------------
-SHA (Secure Hash Algorithm)
----------------------------
+--------
+Password
+--------
 
 Campo que contiene una cadena de texto que se almacenará encriptada mediante
 el algoritmo `secure hash algorithm`_
