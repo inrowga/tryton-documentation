@@ -264,7 +264,7 @@ venta.
 
 .. _sale-configuration:
 
-.. inheritref:: sale/sale:section:configuración
+.. inheritref:: sale/sale:section:configuracion
 
 Configuración
 =============
