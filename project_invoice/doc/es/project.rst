@@ -3,7 +3,7 @@
 Facturación de proyectos
 ========================
 
-#:inside:project/project:toctree:project_invoice#
+.. inheritref:: project/project:toctree:project_invoice
 
 .. toctree::
    :maxdepth: 2
