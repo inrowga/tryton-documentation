@@ -23,7 +23,3 @@ En una secuencia, disponemos de los valores:
 * **Cantidad a incrementar:** El próximo número a dar de alta
 * **Sufijo:** Si queremos un identificador, por ejemplo V de pedido de venta.
 * **Siguiente número**
-
-.. warning:: En el caso de Nereid o entorno web se recomineda que la numeración de
-               pedidos de venta, facturas, albaranes o cualquier modelo no incluya
-               la barra **/** para no confundir con las urls de la web (direcciones).
