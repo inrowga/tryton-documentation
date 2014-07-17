@@ -119,3 +119,26 @@ se iría directamente a ella, sin abrir una nueva. Este es el comportamiento por
 Sin embargo, también es posible abrir dos o más pestañas del mismo objeto. Para ellos
 únicamente es necesario pulsar la tecla **mayúsculas** y sin soltarla, hacer doble clic
 sobre el menú del objeto que se desea tener dos vistas abiertas a la vez.
+
+----------------------------------------------------
+Editar o visualizar información en una nueva pestaña
+----------------------------------------------------
+
+Ponemos un ejemplo: tenemos una factura. En una factura tenemos un campo
+relacionado con el tercero. Si deseamos editar este tercero o visualizar su información,
+una opción es abrir el registro con el icono de directorio y se nos abrirá una
+ventana flotante con esta vista. Esta opción es sólo eventual ya que cuando cerramos la ventana,
+ya no dispondremos de la información del tercero.
+
+Otra opción de abrir un tercero en este ejemplo, es en el campo tercero, con el botón
+derecho, la opción **Editar**. En vez de abrirse en una nueva ventana la ficha del tercero,
+se nos abrirá en una nueva pestaña. De este modo podemos continuar trabajando con el pedido
+de venta y al mismo tiempo disponemos de la ficha del tercero también abierta.
+
+Si a la vista del cliente queremos abrir un nuevo campo en una nueva pestaña, simplemente repetiremos
+la opción de **Editar** para el campo que deseamos y se nos irán abriendo nuevas pestañas (que las
+cerraremos cuando queramos).
+
+.. figure:: images/tryton-trucos-editar.png
+
+   Editar un campo en una nueva pestaña
