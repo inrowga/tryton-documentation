@@ -42,8 +42,7 @@ Por ejemplo, para borrar un cliente deberemos borrar antes sus pedidos.
 
    Eliminar registro
 
-
-Deshacer Borrar registro
+Deshacer borrar registro
 ------------------------
 
 **Botón Deshacer borrar registro:** Junto al botón de borrar registros descrito
