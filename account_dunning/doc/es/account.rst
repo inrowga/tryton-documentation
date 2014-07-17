@@ -3,7 +3,7 @@
 Reclamaciones
 =============
 
-#:inside:account/account:toctree:activos#
+.. inheritref:: account/account:toctree:dunning
 
 .. toctree::
    :maxdepth: 2

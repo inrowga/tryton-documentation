@@ -3,7 +3,7 @@
 Tarifas
 =======
 
-#:inside:product/product:toctree:tarifas#
+.. inheritref:: product/product:toctree:tarifas
 
 .. toctree::
    :maxdepth: 2

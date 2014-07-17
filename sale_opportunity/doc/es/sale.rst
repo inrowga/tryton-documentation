@@ -1,9 +1,9 @@
-#:after:sale/sale:section:estados#
+#:after:sale/sale:section:configuracion#
 
 Iniciativas y oportunidades comerciales
 =======================================
 
-#:inside:sale/sale:toctree:oportunidades#
+.. inheritref:: sale/sale:toctree:oportunidades
 
 .. toctree::
    :maxdepth: 2

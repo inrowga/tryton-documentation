@@ -1,9 +1,9 @@
-#:after:sale/sale:section:estados#
+#:after:sale/sale:section:configuracion#
 
 Venta por suministro
 ====================
 
-#:inside:sale/sale:toctree:venta_por_suministro#
+.. inheritref:: sale/sale:toctree:venta_por_suministro
 
 .. toctree::
    :maxdepth: 2

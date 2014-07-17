@@ -3,7 +3,7 @@
 Activos
 =======
 
-#:inside:account/account:toctree:activos#
+.. inheritref:: account/account:toctree:asset
 
 .. toctree::
    :maxdepth: 2
