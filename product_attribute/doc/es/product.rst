@@ -3,7 +3,7 @@
 Atributos del producto
 ======================
 
-#:inside:product/product:toctree:atributos#
+.. inheritref:: product/product:toctree:atributos
 
 .. toctree::
    :maxdepth: 2
