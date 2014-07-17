@@ -3,7 +3,7 @@
 Facturas
 ========
 
-#:inside:account/account:toctree:invoice#
+.. inheritref:: account/account:toctree:invoice
 
 .. toctree::
    :maxdepth: 2
