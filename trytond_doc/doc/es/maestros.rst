@@ -1,4 +1,4 @@
-.. inheritref:: trytond_doc/maestro:title:maestros
+.. inheritref:: trytond_doc/maestros:title:maestros
 
 Maestros
 ========

@@ -1,4 +1,4 @@
-#:after:trytond_doc/maestro:title:maestros#
+#:after:trytond_doc/maestros:title:maestros#
 
 -------
 Empresa
