@@ -83,7 +83,8 @@ Se establece el valor manualmente en la ficha de producto y éste no se
 actualiza automáticamente bajo ninguna circunstancia.
 
 Método de coste Promedio
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 Cuando se realiza un albarán de proveedor (o una devolución a proveedor) se
 recalcula el precio de coste del producto de forma ponderada; sumando (o
 restando) el precio al que se ha comprado teniendo en cuenta la cantidad que

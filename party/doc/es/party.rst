@@ -14,7 +14,7 @@ con nuestra empresa, incluida esta misma y sus empleados.
 .. inheritref:: party/party:section:crear-un-tercero
 
 ¿Cómo crear un tercero?
-======================
+=======================
 
 Para crear un tercero simplemente debemos introducir un |name| para
 identificarlo. Además puede ser interesante introducir un |lang|, para
@@ -60,7 +60,7 @@ En este caso podremos desactivarlo tal cómo se explica en
 .. _party-classificar-terceros:
 
 Clasificar los terceros
-========================
+=======================
 
 Tryton nos permite clasificar los terceros por categorías. Así podremos
 establecer tantas categorías cómo queramos para cada tercero.

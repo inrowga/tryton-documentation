@@ -118,7 +118,7 @@ mediante el campo |shipment_state|. Los posibles estados son:
   corregir este estado.
 
 |shipment_state|
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 * **Ninguno**: Todavía no se ha generado ningún albarán relacionada con esta
   venta.
 * **En espera**: Los albaranes están pendientes de ser procesados.
