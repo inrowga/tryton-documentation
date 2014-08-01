@@ -6,10 +6,9 @@ Un **tercero** puede ser un cliente, un proveedor, una persona física o jurídi
 una entidad, una fundación, etc. Aquí encontraremos cualquier contacto relacionado
 con nuestra empresa, incluida esta misma y sus empleados.
 
-.. image:: images/party-menu.png
-
 .. view:: party.party_view_form
    :field: name
+   :show_menu: party.menu_party_form
 
 .. inheritref:: party/party:section:crear-un-tercero
 
@@ -26,24 +25,22 @@ campo |vat_country|, y el número en el campo |vat_number|.
 También podremos indicar las |addresses| de un tercero, y sus
 |contact_mechanisms|.
 
-.. note:: Para eliminar una dirección o un método de contacto, lo haremos con
-    el botón de eliminar de la dirección. No usaremos el menú desplegable que
-    aparece cuando hacemos clic sobre botón de herramientas superior, ya que
-    en ese caso eliminaríamos el tercero.
-
-.. figure:: images/party-m2o-delete.png
+.. warning:: Para eliminar una dirección o un método de contacto, lo haremos
+   con el :ref:`botón de eliminar de la dirección<tryton-campos-one2many>`. No
+   usaremos el menú desplegable que aparece cuando hacemos clic sobre botón de
+   herramientas superior, ya que en ese caso eliminaríamos el tercero.
 
 También podemos clasificarlos por |categories|, tal cómo se explica en
 :ref:`party-classificar-terceros`.
 
 .. |name| field:: party.party/name
 .. |lang| field:: party.party/lang
-.. |categories| field:: party.party/categories
-.. |addresses| field:: party.party/addresses
-.. |contact_mechanisms| field:: party.party/contact_mechanisms
 .. |vat_code| field:: party.party/vat_code
 .. |vat_country| field:: party.party/vat_country
 .. |vat_number| field:: party.party/vat_number
+.. |addresses| field:: party.party/addresses
+.. |contact_mechanisms| field:: party.party/contact_mechanisms
+.. |categories| field:: party.party/categories
 
 .. inheritref:: party/party:section:desactivar-terceros
 

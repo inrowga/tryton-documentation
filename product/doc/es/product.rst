@@ -9,6 +9,7 @@ compartidos en la *plantilla* y los específicos en el *producto*.
 
 .. view:: product.template_view_form
    :field: name
+   :show_menu: product.menu_template
 
 .. inheritref:: product/product:section:crear_un_producto
 

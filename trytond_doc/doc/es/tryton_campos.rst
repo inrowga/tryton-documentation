@@ -157,13 +157,33 @@ resultado de la búsqueda que se realiza cuando se hace clic sobre el botón de 
 
    Múltiples registros en Tryton
 
+.. _tryton-campos-one2many:
 
-One2Many: De Uno a muchos
+One2Many: De Uno a Varios
 -------------------------
 
-Un ejemplo de campo One2Many es un tercero puede tener varios pedidos de venta.
-Este campo podría estar en la ficha del tercero, y mostrar todos los pedidos de
-compra que ha realizado el mismo.
+Un ejemplo de campo *One2Many* son las direcciones de un tercero. Un tercero
+puede tener varias direcciones y una dirección es solo de un tercero.
+
+.. figure:: images/tryton-o2m-delete.png
+
+En el formulario que incluye un campo de estos veremos una lista con una serie
+de botones para poder añadir, abrir, eliminar y recuperar el registre
+seleccionado (deshacer la eliminación de una línea si aún no se ha guardado el
+documento). Hay que tener en cuenta que cuando usamos este botón de eliminar,
+cuando guardemos el documento el registro se eliminará definitivamente, no solo
+se desligará del documento actual.
+
+También encontramos botones para movernos por los diferentes
+registros de la lista y para cambiar entre los tipos de vista (normalmente,
+entre listado y formulario).
+
+.. figure:: images/tryton-o2m-add_remove.png
+
+En algunos casos nos podemos encontrar que un campo de este tipo tiene unos
+controles adicionales: un campo de búsqueda y botones para añadir (+) y quitar
+(-) líneas. Estos controles sirven para vincular y desvincular registros ya
+existentes, comportándose en este caso como un campo *Many2Many*.
 
 ---------
 Selección
