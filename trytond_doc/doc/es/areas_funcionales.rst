@@ -1,4 +1,4 @@
-.. inheritref:: trytond_doc/areas_funcionale:title:areas_funcionales
+.. inheritref:: trytond_doc/areas_funcionales:title:areas_funcionales
 
 Áreas funcionales
 =================
