@@ -1,8 +1,4 @@
-#:after:trytond_doc/maestros:title:maestros#
-
--------
-Empresa
--------
+#:inside:trytond_doc/maestros:toctree:maestros#
 
 .. toctree::
    :maxdepth: 3

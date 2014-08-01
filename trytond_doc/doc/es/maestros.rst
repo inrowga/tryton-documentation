@@ -1,6 +1,8 @@
-.. inheritref:: trytond_doc/maestros:title:maestros
-
 Maestros
 ========
 
+.. inheritref:: trytond_doc/maestros:toctree:maestros
+
+.. toctree::
+   :maxdepth: 2
 
