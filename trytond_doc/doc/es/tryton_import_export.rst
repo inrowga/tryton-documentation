@@ -13,10 +13,9 @@ En todos los ejemplos para la importación/exportación de registros, nos situar
 en el lugar donde queremos hacer la acción. Por ejemplo, si deseamos exportar productos,
 iremos al listado productos. En el caso de importar terceros, deberemos abrir el listado de terceros
 
-.. inheritref:: trytond_doc/tryton_import_export:title:exportar_datos
-
+--------------
 Exportar datos
-==============
+--------------
 
 Una vez situados en el listado que deseamos exportar, usaremos el buscador para filtrar
 los registros que deseamos exportar.
@@ -48,10 +47,9 @@ con la aplicación que tenga asignado con los ficheros CSV.
 
 .. image:: images/tryton-export_csv.png
 
-.. inheritref:: trytond_doc/tryton_import_export:title:importar_datos
-
+--------------
 Importar datos
-==============
+--------------
 
 Muy similar con la acción *Exportar datos*. Esta acción importa **nuevos** registros
 en el modelo que nos situamos para la importación.
@@ -87,11 +85,13 @@ a importar*, como si lo deseamos, podemos especificar los campos de nuestro CSV.
              este campo en la exportación de datos, deberá eliminarlo o no seleccionar
              en la lista de campos a importar.
 
+----------
 Tutoriales
-==========
+----------
 
 * `Importación de terceros mediante CSV`_
 * `Importación de productos mediante CSV`_
 
 .. _`Importación de terceros mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-terceros-mediante-csv.html
 .. _`Importación de productos mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-productos-mediante-csv.html
+
