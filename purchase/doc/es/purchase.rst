@@ -100,7 +100,7 @@ Además también podemos saber el estado de la facturación y el estado de los a
   corregir este estado.
 
 |shipment_state|
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 * **Ninguno**: Todavía no se ha generado ningún albarán relacionada con esta
   compra.
 * **En espera**: Los albaranes están pendientes de ser procesados.
