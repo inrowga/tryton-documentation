@@ -106,8 +106,9 @@ Además también podemos saber el estado de las facturas relacionadas
 mediante el campo |invoice_state| y el estado de los albaranes relacionados
 mediante el campo |shipment_state|. Los posibles estados son:
 
-|invoice_state|
-~~~~~~~~~~~~~~~
+@field:sale.sale/invoice_state@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * **Ninguno**: Todavía no se ha generado ninguna factura relacionada con esta
   venta.
 * **En espera**: Se han generado las facturas pero estas en espera de ser
@@ -117,8 +118,9 @@ mediante el campo |shipment_state|. Los posibles estados son:
   cancelado la factura. En el apartado :ref:`sale-exceptions` se detalla cómo
   corregir este estado.
 
-|shipment_state|
-~~~~~~~~~~~~~~~~
+@field:sale.sale/shipment_state@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * **Ninguno**: Todavía no se ha generado ningún albarán relacionada con esta
   venta.
 * **En espera**: Los albaranes están pendientes de ser procesados.
@@ -145,8 +147,8 @@ Los campos |invoice_method| y |shipment_method| determinan, respectivamente,
 en qué momento se generarán las facturas y los albaranes relacionados con las
 ventas. Los métodos posibles son:
 
-|invoice_method|
-~~~~~~~~~~~~~~~~
+@field:sale.sale/invoice_method@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Manual: No se generará ninguna factura de forma automática.
 * Al procesar el pedido: Una vez procesada la venta se generarán un factura
@@ -155,17 +157,18 @@ ventas. Los métodos posibles son:
   albarán. Si el albarán no contiene todos los productos de la venta, sólo se
   facturarán aquellos productos que hayan sido enviados.
 
-|shipment_method|
-~~~~~~~~~~~~~~~~~
+@field:sale.sale/shipment_method@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Ninguno: No se generará ningún albarán de forma automática
 * Al procesar el pedido: Una vez procesada la venta se generará un albarán con
   todos los movimientos de existencias necesarios.
 * Al pagar la factura: Se generarán los albaranes de aquellos productos que
   sus respectivas facturas hayan sido pagados.
 
-Tal cómo se explica en :ref:`sale-configuration` se pueden definir valores
-por defecto para estos campos. Además, para cada venta, podremos modificar el
-valor de los mismos desde la pestaña Información adicional.
+Tal cómo se explica en :ref:`Configuración<sale-configuration>` se pueden
+definir valores por defecto para estos campos. Además, para cada venta,
+podremos modificar el valor de los mismos desde la pestaña Información
+adicional.
 
 .. |invoice_method| field:: sale.sale/invoice_method
 .. |shipment_method| field:: sale.sale/shipment_method

@@ -88,8 +88,9 @@ A continuación se detallan los pasos que pasa un pedido de compra:
 
 Además también podemos saber el estado de la facturación y el estado de los albaranes relacionados con una compra. Los posibles estados son
 
-|invoice_state|
-~~~~~~~~~~~~~~~
+@field:purchase.purchase/invoice_state@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * **Ninguno**: Todavía no se ha generado ninguna factura relacionada con esta
   compra.
 * **En espera**: Se han generado las facturas pero estas en espera de ser
@@ -99,8 +100,9 @@ Además también podemos saber el estado de la facturación y el estado de los a
   facturación. En el apartado :ref:`purchase-exceptions` se detalla cómo
   corregir este estado.
 
-|shipment_state|
-~~~~~~~~~~~~~~~~
+@field:purchase.purchase/shipment_state@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * **Ninguno**: Todavía no se ha generado ningún albarán relacionada con esta
   compra.
 * **En espera**: Los albaranes están pendientes de ser procesados.
@@ -111,9 +113,6 @@ Además también podemos saber el estado de la facturación y el estado de los a
 
 .. warning::  Se generan albaranes sólo si las lineas del pedido de compra van
               relacionado con un producto y no sean del tipo servicio.
-
-.. |invoice_state| field:: purchase.purchase/invoice_state
-.. |shipment_state| field:: purchase.purchase/shipment_state
 
 .. _purchase-generacion-albaranes-facturas:
 
@@ -138,9 +137,9 @@ facturas relacionadas con las compras.  Los métodos posibles son:
 * **Al procesar el pedido**: Una vez procesada la compra se generarán un factura con todas las líneas del pedido de compra en estado borrador.
 * **Al envío**: Se generará una factura cada vez que se realice el envío de un albarán. Si el albarán no contiene todos los productos de la compra, sólo se facturará aquellos productos que hayan sido recibidos.
 
-Tal cómo se explica en :ref:`purchase-configuration` se pueden definir valores
-por defecto para este campo. Además, para cada venta, podremos modificar el
-valor del mismo desde la pestaña Información adicional.
+Tal cómo se explica en :ref:`Configuración<purchase-configuration>` se pueden
+definir valores por defecto para este campo. Además, para cada venta, podremos
+modificar el valor del mismo desde la pestaña Información adicional.
 
 .. |invoice_method| field:: purchase.purchase/invoice_method
 
@@ -246,4 +245,3 @@ Además también podremos definir la |conf_sequence| que será la utilizada para
 generar el campo |reference|.
 
 .. |conf_sequence| field:: purchase.configuration/purchase_sequence
-.. |reference| field:: purchase.purchase/reference

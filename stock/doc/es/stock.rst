@@ -105,9 +105,9 @@ estados:
 * **Cancelado**: El albarán ha sido cancelado.
 
 Para crear un albarán de devolución a proveedor debemos introducir la ubicación
-desde dónde vamos a devolver los productos en el campo |in_return_form_location|
-y la ubicación dónde vamos a enviar los productos en el campo
-|in_return_to_location|. Una vez introducidos podemos introducir los
+desde dónde vamos a devolver los productos en el campo
+|in_return_from_location| y la ubicación dónde vamos a enviar los productos en
+el campo |in_return_to_location|. Una vez introducidos podemos introducir los
 |in_return_moves|. Una vez introducidos, utilizaremos el botón Esperando, para
 indicar que estamos a la espera de la mercadería. Si necesitamos realizar
 alguna modificación en el albarán, siempre podemos volver al estado borrador.
@@ -137,6 +137,7 @@ Realizar para finalizar la devolución.
 .. |in_warehouse| field:: stock.shipment.in/warehouse
 .. |in_incoming_moves| field:: stock.shipment.in/incoming_moves
 .. |in_inventory_moves| field:: stock.shipment.in/inventory_moves
+.. |in_return_from_location| field:: stock.shipment.in.return/from_location
 .. |in_return_to_location| field:: stock.shipment.in.return/to_location
 .. |in_return_moves| field:: stock.shipment.in.return/moves
 

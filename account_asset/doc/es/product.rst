@@ -12,7 +12,7 @@ de tipo "Activo" y en la pestaña "Contabilidad" marcar la casilla
 
 * |account_asset|:  Será utilizada por la factura de proveedor para anotar
   la compra del activo.
-* |account_depreciation|**: Donde se anota la depreciación del activo.
+* |account_depreciation|: Donde se anota la depreciación del activo.
 * |account_expense|: Cuenta dónde se anota la depreciación cómo gasto.
 
 Además opcionalmente podemos indiciar la |account_revenue| que se utilizará
