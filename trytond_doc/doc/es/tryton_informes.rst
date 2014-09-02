@@ -5,7 +5,7 @@ Informes
 Tryton dispone en muchos objetos de un informe general: **Imprimir pantalla**.
 Este informe imprime los registros y campos disponibles en la vista de lista.
 
-Además, muchos de los principales objetos, disponen de informes por defecto:
+Además, muchos de los principales objetos disponen de informes por defecto:
 
 * Venta
 * Factura
@@ -58,27 +58,28 @@ procesador de textos ideal para la lectura de este tipo de formatos.
 Si se desea que la salida de los documentos sea con el formato PDF, consulte
 con su administrador de sistema para activar esta opción.
 
-Imprimir varios informes en un sólo documento
----------------------------------------------
+Imprimir varios registros en un sólo fichero
+--------------------------------------------
 
-En el caso de desear un informe de todos los registros en un sólo fichero (agrupado)
-se debe activar esta opción.
+La mayoría de informes permiten imprimir varios registros en un sólo documento
+si se seleccionan varios registros antes de lanzar el informe.
 
-Por ejemplo, deseamos imprimir varias facturas y estas nos las agrupen en un sólo fichero
-(cada factura empezará en una nueva página y el fichero resultante contendrá múltiples
-páginas). 
+Algunos informes, como el de las facturas, imprimem varios registros en ficheros
+separados. Si, por ejemplo, deseamos imprimir varias facturas en un único
+fichero (cada factura empezará en una nueva página y el fichero resultante
+contendrá múltiples páginas), hay que configurarlo. 
 
-En la configuración del informe ( |menu_action_report| ) deberemos crear una acción
-de teclado relacionado con:
+En la configuración de informes ( |menu_action_report| ) deberemos editar el
+informe para añadirle una acción de teclado relacionado con:
 
 * Modelo. Por ejemplo si el informe es una factura, el modelo será "Factura".
 * Acción de teclado: Imprimir formulario
 
-Con esto lo dispondremos en el icono de impresión la acción por defecto y la nueva
-acción que hemos creado:
+Ahora, en el icono de impresión del modelo dispondremos de dos informes, la
+acción por defecto y la nueva acción que hemos creado:
 
 * Informe de cada registro en ficheros independientes (por defecto).
-* Informe de todos los registros en un sólo fichero (agrupado) - (la que hemos creado).
+* Informe de todos los registros en un sólo fichero (la que hemos creado).
 
 .. |menu_action_report| tryref:: ir.menu_action_report_form/complete_name
 
@@ -87,5 +88,5 @@ Personalizar informe
 --------------------
 
 La personalización de un informe es técnico. Contacte con su administrador
-para que se adapten los informes según sus necesidades, tanto ya sean a nivel
-gráfico (estética) como a nivel técnico (campos).
+para que se le adapte los informes según sus necesidades, tanto sea a nivel
+gráfico (estético) como a nivel técnico (campos e información a mostrar).
