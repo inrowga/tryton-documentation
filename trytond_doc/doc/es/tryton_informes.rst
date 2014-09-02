@@ -90,3 +90,15 @@ Personalizar informe
 La personalización de un informe es técnico. Contacte con su administrador
 para que se le adapte los informes según sus necesidades, tanto sea a nivel
 gráfico (estético) como a nivel técnico (campos e información a mostrar).
+
+Si el informe está definido en formato ODT se puede modificar siguiendo estos
+pasos:
+
+* En la configuración de informes ( |menu_action_report| ) abrimos el
+  informe a modificar y nos decargamos su contenido desde el campo
+  |report_content|.
+* Editamos el informe con un procesador de textos que pueda leer/escribir los
+  formatos ODT.
+* Subimos el fichero ODT modificado al campo |report_content| del informe.
+
+.. |report_content| field:: ir.action.report/report_content
