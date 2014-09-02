@@ -58,6 +58,30 @@ procesador de textos ideal para la lectura de este tipo de formatos.
 Si se desea que la salida de los documentos sea con el formato PDF, consulte
 con su administrador de sistema para activar esta opción.
 
+Imprimir varios informes en un sólo documento
+---------------------------------------------
+
+En el caso de desear un informe de todos los registros en un sólo fichero (agrupado)
+se debe activar esta opción.
+
+Por ejemplo, deseamos imprimir varias facturas y estas nos las agrupen en un sólo fichero
+(cada factura empezará en una nueva página y el fichero resultante contendrá múltiples
+páginas). 
+
+En la configuración del informe ( |menu_action_report| ) deberemos crear una acción
+de teclado relacionado con:
+
+* Modelo. Por ejemplo si el informe es una factura, el modelo será "Factura".
+* Acción de teclado: Imprimir formulario
+
+Con esto lo dispondremos en el icono de impresión la acción por defecto y la nueva
+acción que hemos creado:
+
+* Informe de cada registro en ficheros independientes (por defecto).
+* Informe de todos los registros en un sólo fichero (agrupado) - (la que hemos creado).
+
+.. |menu_action_report| tryref:: ir.menu_action_report_form/complete_name
+
 --------------------
 Personalizar informe
 --------------------
