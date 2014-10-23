@@ -9,4 +9,6 @@ Administración y configuración
 
    admin_modulos
    admin_secuencias
+   cambiar_formato_fecha
    admin_usuarios_grupos
+   instalacion_modulos
