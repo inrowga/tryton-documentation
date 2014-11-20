@@ -20,10 +20,10 @@ en las facturas relacionadas con el tercero. Ademas podremos definir la
 |customer_tax_rule| y la |supplier_tax_rule|, para especificar una regla de
 impuestos que se aplique al tercero.
 
-.. tip:: Si tenemos clientes/proveedores intracomunitarios, podemos utilizar
-    la regla de impuestos Régimen Intracomunitario para que el sistema nos
-    aplique automáticamente los impuestos intracomunitarios para las facturas
-    que se creen para este cliente.
+.. hint:: Si tenemos clientes/proveedores intracomunitarios, podemos utilizar
+          la regla de impuestos Régimen Intracomunitario para que el sistema nos
+          aplique automáticamente los impuestos intracomunitarios para las facturas
+          que se creen para este cliente.
 
 .. |receivable| field:: party.party/receivable
 .. |receivable_today| field:: party.party/receivable_today

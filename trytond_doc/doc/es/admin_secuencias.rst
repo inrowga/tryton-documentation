@@ -1,3 +1,5 @@
+.. _admin-secuencias:
+
 ===================
 Crear una secuencia
 ===================

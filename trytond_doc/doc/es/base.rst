@@ -19,8 +19,6 @@ obteniendo el máximo provecho de su uso.
    tryton_toolbar
    tryton_menus
    tryton_campos
-   tryton_idioma
-   tryton_acciones
    tryton_informes
    tryton_bookmarks
    tryton_buscador
