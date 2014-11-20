@@ -1,6 +1,6 @@
 #:inside:party/party:section:crear-un-tercero#
 
-Desde la pestaña |relations| podremos definir con que otros terceros esta
+Desde la pestaña |relations| podremos definir con que otros terceros está
 relacionado este tercero. Esto es útil para indicar, por ejemplo los contactos
 de una misma empresa, o incluso sus empleados. Para crear una relación basta
 con indicar el tipo de relación y el tercero relacionado.

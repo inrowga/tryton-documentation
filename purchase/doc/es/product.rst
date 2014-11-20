@@ -1,8 +1,8 @@
-#:before:product/product:section:crear-variantes#
+#:after:product/product:paragraph:compra-venta#
 
 En caso de que queramos que el producto este disponible para las compras,
 debemos marcar el campo |purchasable|. Una vez marcado nos aparecerá una nueva
-pestaña Proveedores, dónde podremos definir la |purchase_uom|, en caso de que
+pestaña **Proveedores**, dónde podremos definir la |purchase_uom|, en caso de que
 sea distinta de la |default_uom|. Ademas podemos definir los
 |product_suppliers| que nos subministran este producto, junto con el
 |supplier_name| y el |supplier_code| propios del Proveedor.

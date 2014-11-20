@@ -9,15 +9,15 @@
 .. |supplier_taxes| field:: product.template/supplier_taxes
 
 
-#:before:product/product:section:crear-variantes#
+#:before:product/product:section:pestañas#
 
-En la pestaña Contabilidad podremos especificar la configuración contable del
+En la pestaña **Contabilidad** podremos especificar la configuración contable del
 producto. Así podremos especificar la |account_revenue| y la |account_expense|.
 Además podremos especificar que impuestos se aplicarán por defecto para el
 producto en ventas en el campo |customer_taxes| y para compras en el campo
 |supplier_taxes|.
 
-.. tip:: En los impuestos por defecto podemos seleccionar más de un valor
+.. note:: En los impuestos por defecto podemos seleccionar más de un valor
     en caso de que sea necesario.
 
 Por ejemplo podemos utilizar los siguientes valores:

@@ -1,6 +1,6 @@
 #:inside:product/product:bullet_list:cost_price_method_options#
 
-* FIFO
+* **FIFO**
 
 #:inside:product/product:section:calculo_precio_coste#
 
@@ -8,9 +8,9 @@ Método de coste FIFO
 ~~~~~~~~~~~~~~~~~~~~
 
 Con esta opción, el precio de coste se actualiza de la misma forma que con la
-opción Promedio cuando el producto se compra o produce. Lo que aporta esta
-opción es que, cuando se mueven cantidades de este producto fuera de nuestro
-almacén (típicamente; las enviamos a un cliente, a la ubicación de
+opción de Método de coste Promedio cuando el producto se compra o produce.
+Lo que aporta esta opción es que, cuando se mueven cantidades de este producto
+fuera de nuestro almacén (las enviamos a un cliente, a la ubicación de
 Perdido/encontrado al hacer un inventario o las usamos en una producción),
 el precio de coste del producto también se actualiza restándole,
 de forma ponderada, el coste de la cantidad enviada.

@@ -1,4 +1,4 @@
-#:before:product/product:section:unidades_de_medida#
+#:after:product/product:section:crear-variantes#
 
 Historial del precio del coste
 ------------------------------

@@ -146,7 +146,7 @@ Realizar para finalizar la devolución.
 Envío de mercaderia
 ===================
 
-Para recibir mercadería debemos crear un albarán de cliente desde la opción
+Para enviar mercadería debemos crear un albarán de cliente desde la opción
 |menu_shipment_out_form|.
 
 Un albarán de cliente es un albarán de salida que nos decrementará las
