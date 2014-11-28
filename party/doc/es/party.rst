@@ -2,7 +2,7 @@
 Terceros (clientes, proveedores)
 ================================
 
-**Tryton** dispone de un mecanismo muy potente para la gestión de terceros y 
+**Tryton** dispone de un mecanismo muy potente para la gestión de terceros y
 contactos pero es necesario utilizarlo adecuadamente. un tercero será cualquier
 persona física o jurídica con la que la empresa tenga algún tipo de relación
 en algún momento. Así de genérico y así de amplio es el concepto. Por tanto,
@@ -13,14 +13,14 @@ La ventaja de trabajar de esta forma en lugar de tener una ficha para el
 proveedor y otra para el cliente es que permite tener una sola ficha cuando
 la empresa o persona física es cliente y proveedor al mismo tiempo. También
 puede ocurrir que un tercero sea cliente y empleado de la empresa al mismo
-tiempo. Además, para poder organizar mejor nuestra cartera de terceros, 
-podemos crear tantas catgegorias y subcategorias de terceros como queramos
+tiempo. Además, para poder organizar mejor nuestra cartera de terceros,
+podemos crear tantas categorías y subcategorías de terceros como queramos
 para agruparlos dependiendo de los criterios que queramos.
 
 
 .. inheritref:: party/party:section:crear-un-tercero
 
-crear un tercero
+Crear un tercero
 ================
 
 Para crear un tercero simplemente debemos introducir un |name| para
@@ -42,38 +42,38 @@ También podremos indicar las |addresses| de un tercero, y sus
    herramientas superior, ya que en ese caso eliminaríamos el tercero.
 
 Tryton nos permite clasificar los terceros por categorías, por lo que podremos
-establecer tantas categorías como queramos para cada tercero dependiendo de 
-la tipología de este. Podemos separarlos entre *clientes*, *proveedores*, 
+establecer tantas categorías como queramos para cada tercero dependiendo de
+la tipología de este. Podemos separarlos entre *clientes*, *proveedores*,
 *colaboradores*, *empleados*, etc. Posteriormente podremos acceder a la ruta
-|menu_party_categories| para consultar todos los terceros de una categoría. 
-Para ello, simplemente hace falta hacer doble clic sobre la categoría y se nos 
+|menu_party_categories| para consultar todos los terceros de una categoría.
+Para ello, simplemente hace falta hacer doble clic sobre la categoría y se nos
 abrirá el listado de todos los terceros de la misma.
 
 
-Categorias
+Categorías
 ==========
 
-Por medio de las categorías podemos agrupar terceros según los criterios que 
-queramos. Las categorías las podemos indicar en la parte inferior derecha de 
-la ficha de terceros. Desde este campo podemos añadir categorias previamente 
+Por medio de las categorías podemos agrupar terceros según los criterios que
+queramos. Las categorías las podemos indicar en la parte inferior derecha de
+la ficha de terceros. Desde este campo podemos añadir categorías previamente
 definidas o crear otras nuevas (un tercero podrá pertenecer a más de una
 categoría). De esta forma podremos clasificar los terceros fácilmente.
 Además, un tercero puede pertenecer a más de una categoría.
 
   ..Contest::
     Captura de pantalla
-    
 
-Por medio de la opción de menú |menu_category| podemos acceder a todas las 
+
+Por medio de la opción de menú |menu_category| podemos acceder a todas las
 categorías que hemos creado y haciendo doble clic sobre cualquiera de ellas
-se nos abrirá una nueva pestaña con todos los terceros pertenecientes a la 
+se nos abrirá una nueva pestaña con todos los terceros pertenecientes a la
 categoría seleccionada. Volviendo a la pestaña anterior, también es posible
 crear nuevas categorías y subcategorías para gestionar mejor nuestra cartera
 de terceros.
 
   ..Contest::
     Captura de pantalla
-    
+
 .. |menu_category| tryref:: party.menu_category_tree/complete_name
 
 
@@ -107,17 +107,14 @@ compañías.
 A continuación detallamos los campos que dependen de la compañía en terceros:
 
 
-
 .. inheritref:: party/party:section:informes
-
-
 
 Informes
 ========
 
 Dispone de dos informes:
 
-* El informe **Etiquetas** crea un documento con el nombre y direcciones de 
+* El informe **Etiquetas** crea un documento con el nombre y direcciones de
   todos los terceros seleccionados. Este informe está generado para ser
   imprimido en etiquetas que se puedan pegar en un sobre.
 
