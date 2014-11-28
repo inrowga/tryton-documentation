@@ -16,7 +16,7 @@
 
 En la pestaña Contabilidad, se puede definir |account_payable| y la
 |account_receivable| que se utilizarán cómo cuentas a cobrar/pagar por defecto
-en las facturas relacionadas con el tercero. Ademas podremos definir la
+en las facturas relacionadas con el tercero. Además podremos definir la
 |customer_tax_rule| y la |supplier_tax_rule|, para especificar una regla de
 impuestos que se aplique al tercero.
 

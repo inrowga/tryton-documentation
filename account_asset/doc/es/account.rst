@@ -1,3 +1,5 @@
+#:before:account/account:section:activos#
+
 =================
 Amortizar activos
 =================
@@ -10,10 +12,10 @@ Antes de crear un plan de amortización, debemos tener configurado el producto s
 el que realizaremos la amortización. En el apartado
 :ref:`product-para-amortizacion-de-activos` se detalla cómo debemos crear
 producto para poder gestionar su amortización. Así, como luego veremos, 
-cuando creermos el plan de amortización, sólo podremos seleccionar aquellos
+cuando creemos el plan de amortización, sólo podremos seleccionar aquellos
 productos de tipo activo que hayan sido marcados como |depreciable|.
 
-Una vez tengamos el producto ya crado, deberemos ir al menú |menu_asset|.
+Una vez tengamos el producto ya creado, deberemos ir al menú |menu_asset|.
 Una vez dentro tendremos una vista de todos los planes de amortización
 según su estado (*Borrador*: Planes que todavía no están confirmados; *En ejecución*:
 Activos cuyas amortizaciones se están llevando a cabo; *Cerrado*: Activos ya
@@ -81,7 +83,7 @@ Procesar amortizaciones
 =======================
 Una vez creadas las líneas sobre del plan de amortización podemos empezar a procesar
 la amortización. Este proceso consiste en asentar las líneas que ya han vencido 
-generarando los apuntes correspondientes a cada línea.
+generando los apuntes correspondientes a cada línea.
 
 Para ello accederemos al menú |menu_create_moves| y se nos abrirá un asistente donde
 deberemos indicar hasta que fecha queremos que se procese la amortización.
@@ -112,12 +114,12 @@ todos los apuntes de amortización pendiente ya que este proceso eliminará toda
 líneas que no hayan sido asentadas o procesadas en el momento del cierre, y generará
 un apunte reflejando el cierre del mismo con que quedaba pendiente de amortizar.
 En caso de perder el activo, o que este sea substraído, la finalización del activo se 
-deberá de realizar sin asentar las líneas posteriores a la pérdida o substacción, de 
+deberá de realizar sin asentar las líneas posteriores a la pérdida o substracción, de 
 esta manera la pérdida del activo se reflejará contablemente con un apunte por el 
 total de las líneas que quedaban por amortizar.
 
 Contablemente se recomienda no finalizar ningún activo hasta que no dejemos
-de disponer de él (ya sea porque prescindamos de él, haya sido substraido o dejado
+de disponer de él (ya sea porque prescindamos de él, haya sido substraído o dejado
 de funcionar, etc) y no cuando se finaliza la amortización.
 Esto se debe a que una vez finalizado, el activo no se puede modificar
 y si sufre alguna revalorización o actualización no podríamos reflejarlo en la ficha
