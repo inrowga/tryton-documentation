@@ -92,12 +92,31 @@ fecha del idioma (menú **Administración/Localización/Idiomas**)::
 
     %d/%m/%Y
 
-Si sois amantes del teclado, podéis interactuar con las fechas con **+**, **-**
-e **=**
+Si sois amantes del teclado, podéis interactuar con las fechas con los siguientes teclas (sin ":")
 
- * **+8d** añade 8 días a la fecha
- * **=23w** Fija la fecha a la semana 23
- * **-2m** Quita 2 meses a la fecha
+El día de hoy:
+
+ * **=:** el día de hoy
+
+Sumar fechas:
+
+ * **y:** suma un año
+ * **m:** suma un mes
+ * **w:** suma una semana
+ * **d:** suma un día
+ * **h:** suma una hora
+ * **i:** suma un minuto
+ * **s:** suma un segundo
+
+Restar fechas:
+
+ * **Y:** restar un año
+ * **M:** restar un mes
+ * **W:** restar una semana
+ * **D:** restar un día
+ * **H:** restar una hora
+ * **I:** restar un minuto
+ * **S:** restar un segundo
 
 .. figure:: images/tryton-data.png
 
