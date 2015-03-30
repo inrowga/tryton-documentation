@@ -1,3 +1,6 @@
+
+.. _gestion-moneda:
+
 ======
 Moneda
 ======
@@ -76,25 +79,6 @@ en el programa.
    Si en |mon_thousands_sep| dejamos el campo vacío, a la hora de introducir números por medio del teclado
    numérico, los puntos los reconocerá como comas, en caso contrario cuando introduzcamos el punto entenderá
    que estamos introduciendo un millar.
-
-
-Cálculo del cambio de divisa
-============================
-
-Cuando presupuestamos una venta con moneda extranjera, esta se mantiene durante todo el proceso
-de venta. Desde que creamos el borrador hasta el pago, los importes informados vienen reflejados
-en la moneda que hayamos seleccionado. Una vez nuestro cliente realiza el pago y nosotros lo informamos,
-el sistema realiza el cambio de divisa para reflejarlo en el diario correspondiente en euros.
-
-Por lo tanto, es cuando se genera el asiento del pago de una factura cuando el sistema realiza el cambio
-y refleja la cantidad en euros. Así pues, si un cliente inglés nos pide un presupuesto en libras, todo el
-proceso de venta se realizará en libras (borrador, presupuesto, confirmación y procesado). Cuando este
-cliente nos realice el pago en libras, el sistema calcula la conversión de la libra en euros en el momento
-del pago y una vez convertido el importe a euros realiza el asiento en el diario correspondiente en euros.
-
-En caso de que hubiese diferencias en la tasa de cambio del día de venta y la del día de pago, el
-sistema genera un asiento adicional en la cuenta contable *Diferencias negativas de cambio (668)* o
-*Diferencias positivas de cambio (768)* reflejando las diferencias o desajustes en el cambio de divisa.
 
 
 .. |active| field:: currency.currency/active
