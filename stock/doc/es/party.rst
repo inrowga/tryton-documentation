@@ -11,6 +11,6 @@
 #:inside:party/party:section:crear-un-tercero#
 
 
-En la pestanya Estoc podemos definir la |customer_location| y la
-|supplier_location| que se utilizará para los albaranes relacionados con
-este tercero.
+En la pestanya Logística podemos definir la |customer_location| y la
+|supplier_location| que se utilizará por defecto para los albaranes
+relacionados con este tercero.
