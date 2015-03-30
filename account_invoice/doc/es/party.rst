@@ -9,11 +9,9 @@
 .. |supplier_payment_term| field:: party.party/supplier_payment_term
 
 
-#:inside:party/party:section:crear-un-tercero#
+#:inside:party/party:bullet_list:campos_contabilidad#
 
-
-También podremos especificar el |customer_payment_term| y el
-|supplier_payment_term|, que se utilizará por defecto para este tercero en las
-facturas de Cliente y Proveedor respectivamente.
-
-
+* |customer_payment_term| y |supplier_payment_term|: en estos campos
+  indicaremos el plazo que se le dará al tercero cuando actúe como cliente
+  y el plazo que tendremos nosotros para realizar los pagos en caso de que el
+  tercero actúe como proveedor. 
