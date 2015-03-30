@@ -1,15 +1,22 @@
-#:inside:stock/stock:section:envio-de-mercaderia#
+#:after:stock/stock:paragraph:albaranes_espera#
 
-Albaranes creados desde ventas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Al confirmar una venta que contengan productos de tipo Bienes automáticamente
-se nos creará un albarán de cliente en estado en espera. Este albarán i
-contendrá en los movimientos de salida todos los movimientos generados por la i
+En este estado se generarán también los albaranes derivados de una venta
+(siempre que se venda algún producto de tipo *Bienes*). Estos albaranes
+contendrán en los movimientos de salida todos los movimientos generados por la
 venta y en los movimientos de inventario los movimientos necesarios para
 satisfacer los movimientos de salida.
 
-.. _stock-partial-shipments:
+
+
+#:after:stock/stock:paragraph:exception#
+
+En cambio, si cancelamos un albarán que procede de una venta, se generará una
+*Excepción en el envío* y la gestión pasará al departamento de ventas, por lo
+que el sistema no nos dejará volverlo a pasar a *Borrador*. Podemos ver cómo
+gestionar las excepciones en el envío desde :ref:`sale-exeptions`.
+
+
+#:before:stock/stock:section:cancelar#
 
 Entregas parciales
 ~~~~~~~~~~~~~~~~~~
@@ -35,4 +42,3 @@ como se muestra a continuación:
 
 Desde allí podemos ver los movimientos pendientes, aquellos con estado Borrador,
 junto con los albaranes pendientes, aquellos con estado En espera.
-
