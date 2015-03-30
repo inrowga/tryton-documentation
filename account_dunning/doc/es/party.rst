@@ -6,8 +6,7 @@
 .. |dunning_procedure| field:: party.party/dunning_procedure
 
 
-#:inside:party/party:section:crear-un-tercero#
+#:inside:party/party:bullet_list:campos_contabilidad#
 
-
-Mediante el |dunning_procedure| podemos indicar el |dunning_procedure| que
-se utilizará para procesar las reclamaciones hacia este tercero.
+* |dunning_procedure|: mediante el que podremos indicar procedimiento que
+  llevaremos a cabo en caso de impago por parte del tercero.
