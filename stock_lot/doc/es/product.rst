@@ -1,4 +1,4 @@
-#:before:product/product:section:crear-variantes#
+#:before:product/product:section:pestañas#
 
 Para indicar que un producto determinado debe tener asignado obligatoriamente
 un lote, debemos ir a la pestaña  **Lotes** y seleccionar los tipos de
