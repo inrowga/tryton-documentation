@@ -19,7 +19,7 @@ encuentran o no instalados y dos botones:
 
 * Marca para instalar
 
-view:: ir.module_view_tree
+.. view:: ir.module_view_tree
 
 
 Con un doble clic sobre cualquier módulo accederemos a información sobre los 
