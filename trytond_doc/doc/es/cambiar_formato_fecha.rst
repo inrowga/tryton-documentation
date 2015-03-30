@@ -15,7 +15,7 @@ Para cambiar estos parámetros por idioma debemos dirigirnos a |menu_lang|.
 Ahí nos aparecerá la lista de idiomas disponibles y podremos entrar en la ficha
 del idioma del cual queremos cambiar el formato.
 
-view:: ir.lang_view_form
+.. view:: ir.lang_view_form
 
 El formato de fecha
 ===================
