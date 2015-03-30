@@ -1,10 +1,3 @@
-#:after:product/procduct:paragraph:tipo-producto#
-
-Además, si indicamos que el |type| es *Activos*, en la pestaña
-*Contabilidad* se nos habilitará un campo para indicar si este bien es
-|depreciable|.
-
-
 #:after:product/product:section:crear-variantes#
 
 .. _product-para-amortizacion-de-activos:
