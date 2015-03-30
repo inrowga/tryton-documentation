@@ -63,7 +63,7 @@ donde podremos concretar qué tipo de permiso tendrá el grupo en cuestión.
 En la pestaña *Permisos de acceso* podremos diferenciar entro los siguientes cuatro
 campos:
 
-view:: res.group_view_form
+.. view:: res.group_view_form
    :field: model_access
    
 * |model_access|: Aquí seleccionaremos a qué modelos de los diferentes módulos
