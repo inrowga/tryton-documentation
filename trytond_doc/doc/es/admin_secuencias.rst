@@ -22,7 +22,7 @@ listado con todas las secuencias creadas. Para crear una nueva clicaremos en
 el icono *Nuevo* y se nos abrirá la vista detallada de secuencia, donde podremos
 editar los distintos campos:
 
-view:: ir.sequence_view_form
+.. view:: ir.sequence_view_form
   
 Entre los campos editables cabe destacar: 
 
