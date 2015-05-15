@@ -11,6 +11,8 @@ de varios componentes.
 Producir materiales
 ===================
 
+.. _produce-goods:
+
 Para producir materiales debemos crear una orden de producción desde la opción
 |menu_production_list|.
 
