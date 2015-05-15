@@ -78,14 +78,48 @@ Perdido/Encontrado para reflejar que hemos desechado esos productos.
 Lista de materiales
 ===================
 
+.. _production-bom:
+
 Las listas de materiales nos sirven para determinar la cantidad de materiales
 necesaria para la producción de un determinado producto. Haciendo un símil
 con el mundo de la cocina, las listas de materiales son las recetas que
 nos describen como debemos realizar un determinado plato.
 
+.. view:: production.bom_view_form
+   :field: name
+
+.. _production-create-bom:
+
+Crear una lista de materiales
+-----------------------------
+
 Para crear una lista de materiales nos deberemos dirigir a la opción
-|menu_bom_list|. Para ello, deberemos especificar su |bom_name|, sus
-|bom_inputs| y sus |bom_outputs|.
+|menu_bom_list|. Para ello, deberemos especificar su |bom_name|, que nos
+servirá para identificarla. Ademas deberemos introducir sus |bom_inputs| y sus
+|bom_outputs|, de la siguiente forma:
+
+ * |bom_inputs|: Indicaremos la cantidad de cada producto que utilizaremos
+   para realizar los productos resultantes. Siguiendo, el símil de la receta,
+   se correspondería con los ingredientes y sus cantidades.
+ * |bom_outputs|: Indicaderemos las cantidades de los productos resultantes.
+   Cómo mínimo deberemos tener una linea con el producto final.
+
+
+Por exemplo, si queremos definir la lista de materiales *Caja de 6 latas de
+refresco*, crearíamos las siguiente lista de materiales:
+
++---------------------+-----------------------+
+| |bom_inputs|        | |bom_outputs|         |
++=====================+=======================+
+| 6 Latas refresco    | 1 Caja latas refresco |
++---------------------+-----------------------+
+| 1 Caja              |                       |
++---------------------+-----------------------+
+| 1 Plastico embalaje |                       |
++---------------------+-----------------------+
+
+Listas de materiales de un producto
+-----------------------------------
 
 En el formulario de un producto podremos definir que listas de materiales se
 pueden utilizar para producirlo.
