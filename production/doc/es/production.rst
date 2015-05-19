@@ -75,7 +75,7 @@ Para introducir un desecho debemos introducir una nueva línea en las
 Perdido/Encontrado para reflejar que hemos desechado esos productos.
 
 
-.. inheritref:: company/company:section:lista_de_materiales
+.. inheritref:: production/production:section:lista_de_materiales
 
 Lista de materiales
 ===================

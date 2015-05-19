@@ -548,7 +548,7 @@ con los siguientes campos:
       esta tipología se nos habilitarán tres nuevos campos:
 
         * |loc_address|: En este campo, si lo deseamos, podemos indicar la
-          dirección postal donde se encuentra nuestro almacén.        
+          dirección postal donde se encuentra nuestro almacén.
         * |loc_input_location| y |loc_output_location|: En estos campos
           deberemos seleccionar las ubicaciones internas que se utilizarán
           como muelle de carga y de descarga, ya que cuando hagamos un
