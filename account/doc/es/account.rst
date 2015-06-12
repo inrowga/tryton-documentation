@@ -279,7 +279,7 @@ la |credit_note_account_tax| en las que realizaremos las anotaciones contables.
 Además, en caso de que el impuesto que estemos generando tenga otros
 dependientes de él, lo deberemos indicar en |child_tax|.
 
-.. inheritref:: account/account:paragraph:impuestos_pestañas
+.. inheritref:: account/account:paragraph:impuestos_pestanas
 
 Si accedemos a la pestaña *Código* podremos indica los distintos códigos de
 impuestos que utilizaremos para el impuesto.

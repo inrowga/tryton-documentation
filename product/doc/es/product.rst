@@ -44,7 +44,7 @@ el campo |consumable|, que debemos marcar si queremos que no se controle el
 número de existencias de nuestro producto. En caso de dejarlo sin marcar el
 sistema llevará un control de la cantidad que tengamos de este producto.
 
-.. inheritref:: product/product:section:pestañas
+.. inheritref:: product/product:section:pestanas
 
 Cálculo del precio de coste
 ---------------------------

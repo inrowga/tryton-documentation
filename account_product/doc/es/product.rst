@@ -4,7 +4,7 @@
 * |account_expense|
 
 
-#:before:product/product:section:pestañas#
+#:before:product/product:section:pestanas#
 
 En la pestaña **Contabilidad** podremos especificar la configuración contable
 del producto, pudiendo especificar la |account_revenue| y la |account_expense|.
