@@ -68,7 +68,7 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
 En la pestaña *Secuencias* deberemos introducir la secuencia que queramos que
 se utilice para los asientos y las distintas facturas confirmadas del periodo
 fiscal. Podemos elegir una secuencia creada previamente o crear una clicando 
-sobre el icono *Nuevo*(:ref:`admin-secuencias`). Es imprescindible a nivel 
+sobre el icono *Nuevo* (:ref:`admin-secuencias`). Es imprescindible a nivel 
 contable que la secuencia no se repita entre distintos ejercicios fiscales, por 
 lo que, para cada uno de los distintos ejercicios que vayamos abriendo a lo 
 largo del tiempo, deberemos crear nuevas secuencias.
