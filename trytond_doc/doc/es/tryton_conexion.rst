@@ -63,7 +63,7 @@ queremos trabajar. Esta selección se realiza desde la ventana de Administració
 de perfiles.
 
 Si deseamos trabajar con varias bases de datos, podemos abrir varios clientes de
-Tryton para conectarnos a cada una de las base de datos.
+Tryton para conectarnos a cada una de las bases de datos.
 
 Ventana flotante pidiendo la contraseña
 =======================================

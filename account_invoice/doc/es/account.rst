@@ -2,8 +2,8 @@
 
 Por otro lado, **Tryton** permite utilizar la misma secuencia de facturas para
 las facturas de cliente, proveedor, abonos de cliente y abonos de proveedor
-pero esto no es válido bajo la normativa española así que si nuestra empresa
-se rige por esta legislación deberemos crear una serie exclusiva para nuestra
+pero esto no es válido bajo la normativa española. Así que, si nuestra empresa
+se rige por esta legislación, deberemos crear una serie exclusiva para nuestra
 facturación.
 
 #:before:account/account:section:otras_tareas_contables#

@@ -4,10 +4,11 @@ Importar/Exportar datos
 
 Existen diferentes formas de exportar datos de nuestro ERP hacia otra aplicación.
 
-Tryton ofrece un sistema por defecto básico de Importación/Exportación para
-cualquier registro/modelo de nuestro ERP. Se usa ficheros CSV para la importación/exportación.
-Estos ficheros lo podrá abrir con cualquier herramienta de hoja de cálculo, como el
-LibreOffice.
+Tryton ofrece, por defecto, un sistema básico de Importación / Exportación para
+cualquier registro / modelo de nuestro ERP. Se usan ficheros CSV para la 
+importación / exportación.
+Estos ficheros los podras abrir con cualquier herramienta de hoja de cálculo, 
+como el LibreOffice.
 
 En todos los ejemplos para la importación/exportación de registros, nos situaremos
 en el lugar donde queremos hacer la acción. Por ejemplo, si deseamos exportar productos,
@@ -17,8 +18,6 @@ iremos al listado productos. En el caso de importar terceros, deberemos abrir el
 Exportar datos
 --------------
 
-Una vez situados en el listado que deseamos exportar, usaremos el buscador para filtrar
-los registros que deseamos exportar.
 
 Para exportar a CSV el icono de herramientas disponemos de la opción: **Exportar datos**.
 
@@ -32,7 +31,8 @@ Disponemos de 3 columnas:
 * Campos a exportar: Los campos que exportaremos.
 
 Seleccionaremos los campos de la columna de la izquierda (todos los campos) y con
-la opción de **Añadir** se activaran en la columna de la derecha (campos a exportar).
+la opción de **Añadir** se activarán en la columna de la derecha (campos a 
+exportar).
 
 También disponemos de más acciones:
 
@@ -42,10 +42,14 @@ También disponemos de más acciones:
 * Eliminar exportación. Permite un favorito ser eliminado.
 
 En las **opciones** nos permite si el fichero CSV se abrirá con nuestro editor
-favorito de CSV o guardar en el disco. En el caso de abrir un CSV, se abrirá
-con la aplicación que tenga asignado con los ficheros CSV.
+predeterminado de CSV o guardar en el disco. En el caso de abrir un CSV, se 
+abrirá con la aplicación que tenga asignado con los ficheros CSV.
+
 
 .. image:: images/tryton-export_csv.png
+
+   Exportación a CSV 
+
 
 --------------
 Importar datos

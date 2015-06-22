@@ -64,7 +64,7 @@ Imprimir varios registros en un sólo fichero
 La mayoría de informes permiten imprimir varios registros en un sólo documento
 si se seleccionan varios registros antes de lanzar el informe.
 
-Algunos informes, como el de las facturas, imprimem varios registros en ficheros
+Algunos informes, como el de las facturas, imprimen varios registros en ficheros
 separados. Si, por ejemplo, deseamos imprimir varias facturas en un único
 fichero (cada factura empezará en una nueva página y el fichero resultante
 contendrá múltiples páginas), hay que configurarlo. 
@@ -87,9 +87,9 @@ acción por defecto y la nueva acción que hemos creado:
 Personalizar informe
 --------------------
 
-La personalización de un informe es técnico. Contacte con su administrador
-para que se le adapte los informes según sus necesidades, tanto sea a nivel
-gráfico (estético) como a nivel técnico (campos e información a mostrar).
+La personalización de un informe es técnica. Contacte con su administrador
+para que se le adapte los informes según sus necesidades, tanto a nivel gráfico 
+(estético) como a nivel técnico (campos e información a mostrar).
 
 Si el informe está definido en formato ODT se puede modificar siguiendo estos
 pasos:

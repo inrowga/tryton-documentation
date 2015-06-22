@@ -1,3 +1,4 @@
+
 ==================
 Gestión de Compras
 ==================
@@ -32,6 +33,8 @@ compra.
 
 .. view:: purchase.purchase_view_form
    :field: party
+   
+   Captura de pantalla del |menu_purchase|
 
 La compra está compuesta por una parte en la que se define el proveedor con sus
 datos (Cabecera), y otra compuesta por varias pestañas que contendrán
@@ -98,7 +101,7 @@ compras.
 
 .. inheritref:: purchase/purchase:paragraph:la_opcion_de_producto
 
-Desde las pestañas **Facturas** y **Albaranes** podremos acceder a la
+Desde las pestañas **facturas** y **albaranes** podremos acceder a la
 información sobre las recepciones y facturación de la compra. Una vez se
 generen los albaranes o facturas, nos aparecerán en sus respectivas pestañas y
 podremos acceder a la información concreta de cada documento. En
@@ -121,6 +124,7 @@ documentos.
 .. |line_unit_price| field:: purchase.line/unit_price
 .. |line_amount| field:: purchase.line/amount
 .. |line_taxes| field:: purchase.line/taxes
+.. |menu_purchase| tryref:: purchase.menu_purchase_form/complete_name 
 .. |comment| field:: purchase.purchase/comment
 .. |invoice_method| field:: purchase.purchase/invoice_method
 
@@ -172,9 +176,9 @@ siguiente paso será la recepción de la mercancía. A partir de este momento, e
 sistema ya sabe que estamos pendientes de recibir la mercancía del |party|
 indicado y al |warehouse| indicado.
 
-En el momento en el que la desde los departamentos correspondientes, se le
-indique al sistema que se ha realizado la recepción de la mercancía y que la
-factura de la compra está pagada, el estado de la compra cambiará a
+En el momento en el que se le indique al sistema que se ha realizado la 
+recepción de la mercancía, desde los departamentos correspondientes, y que la
+factura de la compra está pagada, el estado de la compra cambiará a 
 **Realizada** y el proceso de compra se habrá completado. 
 
 
@@ -216,8 +220,8 @@ ser:
 
 .. note:: El sistema únicamente esperará la recepción de mercancía si
    realizamos la compra sobre un producto clasificado como *Bien* o como
-   *Activo*, por lo que si la compra se realiza solamente sobre servicios el
-   sistema unicamente generarán las facturas.
+   *Activo*, por lo que si la compra se realiza solamente sobre *Servicios* el
+   sistema únicamente generará las facturas.
 
 .. |invoice_state| field:: purchase.purchase/invoice_state
 .. |shipment_state| field:: purchase.purchase/shipment_state
@@ -242,7 +246,7 @@ para que los podamos adjuntar en otro albarán cuando los recibamos.
 
 En caso de recibir menos cantidad de un producto de la que esperamos,
 simplemente deberemos modificar la cantidad recibida en el albarán y al
-confirmarlo se nos crearan los movimientos pendientes para que los podamos
+confirmarlo se nos crearán los movimientos pendientes para que los podamos
 recibir en un futuro albarán.
 
 .. note:: Si tenemos que devolver productos a un proveedor podemos crear la

@@ -13,7 +13,7 @@ satisfacer los movimientos de salida.
 En cambio, si cancelamos un albarán que procede de una venta, se generará una
 *Excepción en el envío* y la gestión pasará al departamento de ventas, por lo
 que el sistema no nos dejará volverlo a pasar a *Borrador*. Podemos ver cómo
-gestionar las excepciones en el envío desde :ref:`sale-exeptions`.
+gestionar las excepciones en el envío desde :ref:`sale-exceptions`.
 
 
 #:before:stock/stock:section:cancelar#
@@ -34,7 +34,7 @@ actualizarán las cantidades de los movimientos de salida, reflejando las
 cantidades realmente asignadas.
 
 Una vez realizado el albarán, se generará un nuevo albarán en estado En espera
-con los movimientos pendientes de realizar. Podremos ver todas los movimientos
+con los movimientos pendientes de realizar. Podremos ver todos los movimientos
 y albaranes generados desde la pestaña Albaranes de la venta relacionada, tal
 como se muestra a continuación:
 

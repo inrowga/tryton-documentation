@@ -36,6 +36,8 @@ agrupar el producto que estamos creando con otros de similar tipología.
 
 .. view:: product.template_view_form
    :field: name
+   
+   Captura del menú productos 
 
 .. inheritref:: product/product:paragraph:compra-venta
 
@@ -90,7 +92,7 @@ variante e indicar también, si queremos, su |description| y su |code|.
 .. hint:: Dependiendo del momento en el que vayamos a crear la variante nos
    puede interesar más una opción que la otra: Si vamos a crear todas las
    variantes en el mismo momento en el que creamos la plantilla, nos resultará
-   más como crearlas desde la pantalla de edición de la plantilla. Por contra,
+   más cómodo crearlas desde la pantalla de edición de la plantilla. Por contra,
    si tan solo queremos añadir una variante más a una plantilla creada con
    anterioridad nos resultará más practico crear la variante desde
    |menu_prod|.

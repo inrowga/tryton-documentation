@@ -261,13 +261,13 @@ Realizar una venta con distinta divisa
 ======================================
 
 En caso de que tengamos clientes que nos compren con una divisa distinta a la
-que tenemos configurada por defecto (y con la que se realizamos toda la
-actividad contable), podemos indicarlo en el campo |currency| de la venta. Esto
-provocará que cuando seleccionemos el producto en la línea de venta, el precio
-que se indica en el campo |line_unit_price| refleje ya la conversión a la
-moneda indicada según la tasa de cambio informada para la fecha de la venta
-(podemos acceder a :ref:`gestion-moneda` para ver cómo configurar las tasas de
-cambio de las monedas extranjeras).
+que tenemos configurada por defecto (y con la que realizamos toda la actividad 
+contable), podemos indicarlo en el campo |currency| de la venta. Esto provocará 
+que cuando seleccionemos el producto en la línea de venta, el precio que se 
+indica en el campo |line_unit_price| refleje ya la conversión a la moneda 
+indicada según la tasa de cambio informada para la fecha de la venta (podemos 
+acceder a :ref:`gestion-moneda` para ver cómo configurar las tasas de cambio de 
+las monedas extranjeras).
 
 .. warning:: El sistema no recalcula el precio de líneas de venta si estas las
    hemos generado antes de escoger la moneda. Por lo que si queremos que haga
@@ -323,6 +323,8 @@ gestión de la excepción.
 
 .. figure:: images/sale-exceptions.png
 
+   Captura de pantalla de las excepciones 
+
 Gestión de la excepción
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -332,14 +334,16 @@ que indicar qué |invoices| se generarán de nuevo (en caso de que haya más de 
 y para la *excepción de envío* tendremos que indicar los productos que
 incluiremos en el nuevo albarán. Para llevar a cabo la gestión, clicaremos en
 el botón *Gestionar excepción de envío* o *Gestionar excepción de factura* y
-nos aparecerá una ventana donde podremos ver los movimientos (si se trata del
+nos aparecerá una ventana dónde podremos ver los movimientos (si se trata del
 envío) o las facturas (si se trata de la factura) que causan la
 excepción, o dicho de otro modo, los |moves| o |invoices| que han sido
 cancelados.
 
 .. figure:: images/sale-exception-moves.png
 
-Será desde esta ventana desde donde podremos seleccionar los productos que
+   Captura de pantalla de los movimientos a recrear
+
+Será desde esta ventana dónde podremos seleccionar los productos que
 queremos que se incluyan en el nuevo albarán, o las |invoices| que queremos que
 se vuelvan a crear. Por defecto, cuando se abra la ventana, aparecen todos los
 productos seleccionados, si clicamos sobre alguno de ellos los

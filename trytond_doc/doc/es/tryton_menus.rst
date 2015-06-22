@@ -24,12 +24,12 @@ Secciones por defecto al entrar
 Cuando un usuario inicia sesión, podemos personalizar que secciones se nos
 abrirán por defecto sin la necesidad de acceder a los menús.
 
-Por ejemplo, cuando iniciamos la sesión en nuestro ERP, ya por defecto nos abra
-los siguientes apartados:
+Por ejemplo, podemos definir que cuando iniciemos la sesión en nuestro ERP, ya 
+por defecto nos abra los siguientes apartados:
 
 * Ventas
 * Iniciativas y oportunidades de venta
 * Facturas de cliente
 
-En el apartado de "Acciones" de las preferencias del usuario, podremos seleccionar
-las secciones que nos abrirán cuando iniciamos sesión en nuestro ERP.
+En el apartado "Acciones" en las preferencias del usuario, podremos seleccionar
+las secciones que se nos abrirán cuando iniciamos sesión.

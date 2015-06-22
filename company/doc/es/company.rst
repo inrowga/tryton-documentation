@@ -7,10 +7,10 @@ Empresas
 Empresas
 --------
 
-La empresa es la nuestra compañía.
+La empresa es nuestra compañía. Los procedimientos a seguir para crearla son:
 
-* Abra el menú |menu_company_list| i cree un nueva empresa.
-* Seleccione el |party| y |currency|.
+* Abre el menú |menu_company_list| y crea una nueva empresa.
+* Selecciona el |party| y |currency|.
 
 .. |menu_company_list| tryref:: company.menu_company_list/complete_name
 .. |party| field:: company.company/party
@@ -21,9 +21,10 @@ La empresa es la nuestra compañía.
 Usuarios
 --------
 
-Una vez creadas la empresa es importante que los usuarios del sistema añadir las
-empresas que podrá operar ese usuario.
+Una vez creada la empresa es importante que los usuarios del sistema añadan las
+empresas con las que cada usuario podrá operar.
 
-Cada usuario, des del apartado de sus preferencias, podrá decidir que empresa opera
-en este momento. A la parte inferior izquierda del cliente de escritorio podrá ver
-el nombre de la empresa que está en ese momento.
+Cada usuario, des del apartado de sus preferencias, podrá decidir con que 
+empresa opera en cada momento. En la parte inferior izquierda, del cliente de 
+escritorio, podrá ver el nombre de la empresa que está en usando en todo 
+momento.

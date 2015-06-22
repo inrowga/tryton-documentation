@@ -189,7 +189,7 @@ Envío de mercancía
 De la misma forma que los albaranes de proveedor le indican al sistema cuando
 debe introducir qué producto, los albaranes de cliente funcionan como albaranes
 de salida que le indicarán al sistema cuando dejamos de disponer de un producto
-que se encuentra en nuestros almacenes. Para gestiona estos albaranes deberemos
+que se encuentra en nuestros almacenes. Para gestionar estos albaranes deberemos
 acceder al menú |menu_shipment_out_form|.
 
 Antes de ver como crear un nuevo albarán de cliente tenemos que tener claro que
@@ -289,13 +289,13 @@ pedidos enviados, deberemos crear un albarán de devolución de mercancía desde
 el menú |menu_shipment_out_return_form|. Estos albaranes cambiarán de estado
 según el punto en el que se encuentre la devolución:
 
-**Borrador**: Estado inicial en que se introducen los movimientos de lo
+**Borrador**: Estado inicial en que se introducen los movimientos de los 
 productos que nos van a devolver. Una vez abierta la pestaña deberemos
 introducir el |out_return_customer| y el |out_return_warehouse|. En este
 momento ya podremos introducir todos los |out_return_incoming_moves|, para
 especificar los productos que estamos recibiendo.
 
-**Recibido**: Al pulsar sobre el botón *Recibido* se realizarán todos os
+**Recibido**: Al pulsar sobre el botón *Recibido* se realizarán todos los
 |in_incoming_moves| y rellenará los |in_inventory_moves|, pudiéndolos
 modificar para especificar en que ubicación los queremos almacenar. En este
 estado el sistema entiende que hemos recibido la mercancía del

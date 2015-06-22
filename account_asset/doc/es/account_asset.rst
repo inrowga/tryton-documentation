@@ -1,8 +1,6 @@
 .. _amortizar-activos
 
-=================
-Amortizar activos
-=================
+
 Mediante la depreciación de activos podemos repartir el coste de las
 inversiones entre los diferentes ejercicios fiscales en los que se produce su uso
 o disfrute en la actividad empresarial. De esta forma se refleja más fielmente el
@@ -20,8 +18,8 @@ Una vez dentro tendremos una vista de todos los planes de amortización
 según su estado (*Borrador*: Planes que todavía no están confirmados; *En ejecución*:
 Activos cuyas amortizaciones se están llevando a cabo; *Cerrado*: Activos ya
 finalizados; y *Todo*: Todos los planes introducidos). Para introducir un nuevo
-plan de amortización deberemos clicar en el icono  *Nuevo* y nos llevara a la vista
-de edición, donde deberemos rellenar los siguiente campos:
+plan de amortización deberemos clicar en el icono  *Nuevo* y nos llevará a la 
+vista de edición, donde deberemos rellenar los siguiente campos:
 
 * |product|: Indicaremos el producto a amortizar. Podemos buscar entre los productos
   que ya tenemos informados como *activos* o generar uno nuevo siguiendo los pasos
@@ -46,7 +44,7 @@ pestaña *Información adicional* y tendremos acceso a los siguientes campos:
   estamos introduciendo. 
 
 * |method|: Si seleccionamos el método *Lineal* las cantidades de la amortización
-  serán iguales durante todos los periodos.
+  serán iguales durante todos los períodos.
 
 * |frequency|: Seleccionaremos aquí si queremos que la frecuencia sea mensual o anual.
 
@@ -98,7 +96,7 @@ En caso de que queramos realizar cualquier cambio en el valor del activo, el val
 residual o la fecha final de la amortización, podemos hacerlo por medio del
 botón *Actualizar activo* y se nos abrirá una ventana donde podremos
 seleccionar los nuevos valores para el activo. Una vez modificados los valores
-se recalcularán las líneas de de amortización con los nuevos valores.
+se recalcularán las líneas de amortización con los nuevos valores.
 
 .. note::
    Este proceso no modificará las líneas ya asentadas o procesadas, sino que sólo 

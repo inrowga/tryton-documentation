@@ -18,8 +18,8 @@ Activo
 ------
 
 Es un caso especial de campo booleano. Los campos **activo** (active) le permiten
-ocultar elementos que ya no desea usar. ES recomendable "desactivar" del campo
-*activo* del registro antes que eliminarlo.
+ocultar elementos que ya no desea usar. Es recomendable "desactivar" del campo
+activo del registro antes que eliminarlo.
 
 -----
 Texto
@@ -32,14 +32,14 @@ del cliente.
 Traducción
 ----------
 
-Los campos que contengan una bandera le permite la traducción en varios idiomas.
-Para traducir un campo, simplemente haga clic en el icono de la bandera i una ventana
-emergente se mostrará el texto en cada idioma.
+Los campos que contengan una bandera permiten la traducción en varios idiomas.
+Para traducir un campo, simplemente haz clic en el icono de la bandera y una 
+ventana emergente mostrará el texto en cada idioma.
 
-Si deseamos editar un idioma, le marcaremos la opción "Edita". Se nos activará la caja
-de texto para rellenar la traducción.
+Si deseamos editar un idioma, marcaremos la opción "Edita". Esto nos activará 
+la caja de texto para rellenar la traducción.
 
-Si en un idioma dispone del campo "Revisión" activado, esta traducción no estará
+Si un idioma dispone del campo "Revisión" activado, esta traducción no estará
 pendiente hasta que la edite (revise).
 
 .. figure:: images/tryton-translate.png
@@ -88,11 +88,12 @@ Fecha, Fecha y hora y Hora
 --------------------------
 
 Campo de fecha. La visualización de la fecha viene relacionada con el formato de
-fecha del idioma (menú **Administración/Localización/Idiomas**)::
+fecha del idioma (menú **Administración / Localización / Idiomas**)::
 
     %d/%m/%Y
 
-Si sois amantes del teclado, podéis interactuar con las fechas con los siguientes teclas (sin ":")
+Si sois amantes del teclado, podéis interactuar con las fechas con las 
+siguientes teclas (sin ":")
 
 El día de hoy:
 
@@ -168,8 +169,8 @@ Se refiere a registros que pueden estar relacionados a la vez con varios registr
 de otras tablas y viceversa. Por ejemplo: Una empresa puede pertenecer a una o a
 varias categorías y cada categoría de empresas puede tener asociadas varias empresas.
 
-Dispone de dos botones que permiten añadir registros a la relación (**+**) y quitar
-registros de la relación (**-**), así como de un campo que permite filtrar el
+Dispone de dos botones que permiten añadir registros a la relación (**+**) y 
+quitarlos de la relación (**-**), así como de un campo que permite filtrar el
 resultado de la búsqueda que se realiza cuando se hace clic sobre el botón de añadir.
 
 .. figure:: images/tryton-m2m.png
@@ -187,15 +188,15 @@ puede tener varias direcciones y una dirección es solo de un tercero.
 .. figure:: images/tryton-o2m-delete.png
 
 En el formulario que incluye un campo de estos veremos una lista con una serie
-de botones para poder añadir, abrir, eliminar y recuperar el registre
-seleccionado (deshacer la eliminación de una línea si aún no se ha guardado el
+de botones para poder añadir, abrir, eliminar y recuperar un registro
+eliminado (deshacer la eliminación de la línea, si aún no se ha guardado el
 documento). Hay que tener en cuenta que cuando usamos este botón de eliminar,
-cuando guardemos el documento el registro se eliminará definitivamente, no solo
-se desligará del documento actual.
+al guardai el documento, el registro se eliminará definitivamente, no solo se 
+desligará del documento actual.
 
-También encontramos botones para movernos por los diferentes
-registros de la lista y para cambiar entre los tipos de vista (normalmente,
-entre listado y formulario).
+También encontramos botones para movernos por los diferentes registros de la 
+lista y para cambiar entre los tipos de vista (normalmente, entre listado y 
+formulario).
 
 .. figure:: images/tryton-o2m-add_remove.png
 

@@ -12,7 +12,7 @@ Cómo se elimina un registro creado? A simple vista el botón de eliminación no
 está visible. El motivo es simple, evitar que el usuario haga cosas que no debiera.
 Si realmente desea eliminar un registro, la opción **eliminar** la encontrará en
 el botón de herramientas (al lado del título). O bien, con la combinación de
-teclado **Crt+D**. Una vez eliminado, no se hay vuelta atrás.
+teclado **Crt+D**. Una vez eliminado, no hay vuelta atrás.
 
 .. tip:: Ciertos registros disponen del campo **Activo**. Si desactiva este campo
          estará disponible en su ERP pero no será visible. De esta forma podrá
@@ -57,8 +57,8 @@ Acciones, Relacionado, Informes, etc. En cada momento únicamente aparecen habil
 ¿Cómo desactivar registros?
 ---------------------------
 
-A veces no es posible eliminar registro ya que debemos conservar documentos
-histórico que hacen referencia al mismos (por ejemplo una factura sobre un
+A veces no es posible eliminar registros ya que debemos conservar documentos
+históricos que hacen referencia a los mismos (por ejemplo una factura sobre un
 producto), pero queremos eliminarlo porqué sabemos que no lo vamos a
 necesitar mas. En estos casos, debemos **desactivarlo** desmarcando la casilla
 de verificación del campo **Activo**.
@@ -102,8 +102,9 @@ seleccionados con las teclas **Crtl + v**.
 Abrir el cliente GTK con valores por defecto
 --------------------------------------------
 
-En el caso de sistemas GNU/Linux, podemos que nuestro icono de cliente de Tryton
-disponer ya valores por defecto para acceder directamente a un servidor y base de datos.::
+En el caso de sistemas GNU/Linux, podemos hacer que nuestro icono de cliente de 
+Tryton disponga valores por defecto para acceder directamente a un servidor y 
+base de datos::
 
     $ tryton --user="demo" --port=8000 --server="demo2.4.tryton.org"
 
@@ -116,9 +117,10 @@ Cada vez que se hace doble clic en alguno de los menús de la izquierda del clie
 GTK de Tryton, se abre una pestaña si no estuviese ya abierta, y si ya estuviese abierta,
 se iría directamente a ella, sin abrir una nueva. Este es el comportamiento por defecto.
 
-Sin embargo, también es posible abrir dos o más pestañas del mismo objeto. Para ellos
-únicamente es necesario pulsar la tecla **mayúsculas** y sin soltarla, hacer doble clic
-sobre el menú del objeto que se desea tener dos vistas abiertas a la vez.
+Sin embargo, también es posible abrir dos o más pestañas del mismo objeto. Para 
+ello únicamente es necesario pulsar la tecla **mayúsculas** y sin soltarla, 
+hacer doble clic sobre el menú del objeto que se desea tener dos vistas abiertas 
+a la vez.
 
 ----------------------------------------------------
 Editar o visualizar información en una nueva pestaña
@@ -126,9 +128,10 @@ Editar o visualizar información en una nueva pestaña
 
 Ponemos un ejemplo: tenemos una factura. En una factura tenemos un campo
 relacionado con el tercero. Si deseamos editar este tercero o visualizar su información,
-una opción es abrir el registro con el icono de directorio y se nos abrirá una
-ventana flotante con esta vista. Esta opción es sólo eventual ya que cuando cerramos la ventana,
-ya no dispondremos de la información del tercero.
+una opción es abrir el registro con el icono de directorio (carpeta azul 
+al lateral del registro) y se nos abrirá una ventana flotante con esta vista. 
+Esta opción es sólo eventual ya que cuando cerramos la ventana, ya no 
+dispondremos de la información del tercero.
 
 Otra opción de abrir un tercero en este ejemplo, es en el campo tercero, con el botón
 derecho, la opción **Editar**. En vez de abrirse en una nueva ventana la ficha del tercero,

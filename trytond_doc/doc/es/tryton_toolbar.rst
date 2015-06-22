@@ -6,6 +6,8 @@ Sólo son visibles cuando se tiene abierta alguna de las vistas de alguna de las
 tablas de la base de datos:
 
 .. image:: images/tryton-toolbar-icon.jpg
+   
+   Barra de herramientas
 
 Nuevo registro
 --------------
@@ -41,6 +43,7 @@ Por ejemplo, para borrar un cliente deberemos borrar antes sus pedidos.
 .. figure:: images/tryton-delete.jpg
 
    Eliminar registro
+
 
 Deshacer borrar registro
 ------------------------
@@ -113,9 +116,10 @@ Acciones
 --------
 
 En muchas ocasiones los objetos llevan asociadas acciones que se pueden realizar
-con ellos. Mediante este botón, se ejecuta la acción o asistente para poder realizar
-una tarea en concreto sobre el objeto. Por ejemplo, en las empresas hay acciones
-para poder enviar correos electrónicos o SMS.
+con ellos. Entendemos por objeto un registro. Mediante este botón, se ejecuta 
+la acción o asistente para poder realizar una tarea en concreto sobre el objeto. 
+Por ejemplo, en las empresas hay acciones para poder enviar correos electrónicos 
+o SMS.
 
 Si a un objeto no se le han definido acciones, este botón no tendrá utilidad para
 dicho objeto.

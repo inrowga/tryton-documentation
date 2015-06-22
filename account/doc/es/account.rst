@@ -19,7 +19,7 @@ empresa/organización pues:
   reales.
 
 El sistema contable financiero de **Tryton** es en realidad un motor de
-contabilidad donde, una vez configurado adecuadamente, se le introduce sólo la
+contabilidad dónde, una vez configurado adecuadamente, se le introduce sólo la
 información imprescindible y él calcula de forma automática los resultados y
 balances. Podríamos hacer un símil con un robot de cocina: Una vez programado
 el robot de cocina (ejercicios, periodos, diarios, plan contable, impuestos,
@@ -60,17 +60,18 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
    fiscal en |name| y en |fis_start_date| y |fis_end_date|, la fecha de inicio
    y fin del año natural.
 
+   
 .. view:: account.fiscalyear_view_form
 
 .. inheritref:: account/account:paragraph:secuencias
 
 En la pestaña *Secuencias* deberemos introducir la secuencia que queramos que
 se utilice para los asientos y las distintas facturas confirmadas del periodo
-fiscal. Podemos elegir una secuencia creada previamente
-(:ref:`admin-secuencias`) o crear una clicando sobre el icono *Nuevo*. Es
-imprescindible a nivel contable que la secuencia no se repita entre distintos
-ejercicios fiscales, por lo que, para cada uno de los distintos ejercicios
-que vayamos abriendo a lo largo del tiempo, deberemos crear nuevas secuencia.
+fiscal. Podemos elegir una secuencia creada previamente o crear una clicando 
+sobre el icono *Nuevo*(:ref:`admin-secuencias`). Es imprescindible a nivel 
+contable que la secuencia no se repita entre distintos ejercicios fiscales, por 
+lo que, para cada uno de los distintos ejercicios que vayamos abriendo a lo 
+largo del tiempo, deberemos crear nuevas secuencias.
 
 Finalmente, una vez introducidos los parámetros generales y las secuencias,
 podemos volver a la pestaña *Períodos* y hacer clic en el botón *Crear períodos
@@ -411,7 +412,7 @@ Cierre de la actividad contable
 Cerrar períodos
 ---------------
 
-El cierre de períodos (sean mensuales o trimestrales) sirve para asegurarnos
+El cierre de |periods| (sean mensuales o trimestrales) sirve para asegurarnos
 que no modificamos la contabilidad de un período en el que ya no se deberían
 que hacer anotaciones. Por ejemplo, si a mediados del mes de abril damos por
 contabilizado completamente el mes de marzo (y con él todo el trimestre)
@@ -423,9 +424,9 @@ solamente un diario de un determinado período. Así, podemos asegurarnos que no
 imputamos más ingresos para el mes de marzo, mientras continuamos añadiendo
 gastos, por ejemplo.
 
-Para cerrar un |period| y no permitir ningún tipo de cambio en la
+Para cerrar un período y no permitir ningún tipo de cambio en la
 contabilidad de dicho mes debemos ir al menú |menu_periods|. Ahí deberemos
-seleccionar el mes que queremos cerrar y hacer clic en icono *Ejecutar
+seleccionar el mes que queramos cerrar y hacer clic en icono *Ejecutar
 acción* y seleccionar *Cerrar período*.
 
 Si lo que queremos es solamente evitar la creación y modificación de asientos
@@ -449,13 +450,13 @@ Cerrar ejercicio fiscal
 -----------------------
 
 En contabilidad, el cierre de un ejercicio fiscal suele constar del asiento de
-regularización, el asiento de cierre, el de apertura del nuevo año, así como el
+regularización, el asiento de cierre y el de apertura del nuevo año, así como el
 bloqueo para no permitir la contabilización de nuevos datos en el año cerrado.
 En **Tryton** solamente vamos a realizar la primera y la última acción: el
 asiento de regularización y el bloqueo del año pero el asiento de cierre y
 apertura no porque no son necesarios en el sistema, puesto que **Tryton**
-arrastrará los saldos de las cuentas al año siguiente y una vez cerrado el año,
-no arrastrará los saldos de las cuentas de ingresos y gastos si estas están
+arrastrará los saldos de las cuentas al año siguiente y una vez cerrado el año.
+No arrastrará los saldos de las cuentas de ingresos y gastos si estas están
 bien configuradas, tal y como veremos a continuación.
 
 .. Note:: Hay que tener en cuenta que sí que se van a arrastrar los saldos

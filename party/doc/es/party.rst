@@ -50,9 +50,13 @@ siguientes campos:
    con el :ref:`botón de eliminar de la dirección<tryton-campos-one2many>`. No
    usaremos el menú desplegable que aparece cuando hacemos clic sobre botón de
    herramientas superior, ya que en ese caso eliminaríamos el tercero.
+   
 
 .. view:: party.party_view_form
    :field: name
+   
+   Vista formulario de un Tercero
+
 
 Si accedemos a la pestaña **Contabilidad** podremos seguir introduciendo
 información sobre nuestro cliente. Los campos que deberemos indicar en esta
@@ -74,7 +78,11 @@ con todos los terceros pertenecientes a la categoría seleccionada. Volviendo a
 la pestaña anterior, también es posible crear nuevas categorías y subcategorías
 para gestionar mejor nuestra cartera de terceros.
 
+
 .. view:: party.category_view_form
+
+   Vista de categorias
+
 
 Desactivar terceros
 ===================
@@ -128,6 +136,9 @@ que nos permitirán adaptar la gestión de los terceros a nuestras necesidades.
 
 .. view:: party.party_configuration_view_form
    :field: party_lang
+   
+   Configuración de terceros
+
 
 En |party_sequence| podremos indicar el tipo de secuencia que queremos que
 sigan los terceros. Podemos elegir una de las creadas anteriormente o crear una

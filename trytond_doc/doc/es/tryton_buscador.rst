@@ -9,12 +9,12 @@ Tryton incorpora un buscador inteligente para buscar/filtrar registros. Este bus
 
    Buscador de Tryton: Agrupaciones, filtros y filtros extendidos
 
-Su funcionamiento, pese a no ser muy intuitivo, es muy potente y con las opciones
-contextuales que se muestran mientras se va escribiendo el contenido del filtro,
-no es tan difícil como podría parecer en un principio.
+Tiene un funcionamiento muy potente, sugeriendo opciones contextuales que se 
+muestran mientras vamos escribiendo el contenido en el filtro, facilitando la 
+búsqueda o filtrado de datos. 
 
-También disponemos de un listado de las opciones de búsqueda por defecto si no
-queremos escribir directamente en el campo de filtro:
+Si no queremos escribir directamente en el campo de filtro, también disponemos 
+de un listado de las opciones de búsqueda por defecto.
 
 .. figure:: images/tryton-buscar-opciones.png
 
@@ -53,12 +53,10 @@ fecha, basta con escribir::
 Donde:
 
 * Fecha creación: Es el nombre del campo por el que se desea hacer la búsqueda.
-  Se puede utilizar cualquiera de los campos que aparecen en la parte superior
-  de la lista.
+  
 * >07/09/2011: La fecha desde la que se quieren los registros
 
 
-.. _encontrar-inactivos:
 
 ------------------------------------
 ¿Cómo encontrar registros inactivos?
@@ -70,6 +68,9 @@ podemos utilizar el filtro activo:
 
 
 .. figure:: images/tryton-buscar-inactivos.png
+   
+   Buscar registros inactivos
+
 
 O directamente escribiendo el siguiente filtro::
 
@@ -79,11 +80,13 @@ Aplicando este filtro veremos todos los registros que hayan sido desactivados.
 
 .. figure:: images/tryton-resultado-inactivo.png
 
+   Resultado de búsqueda de registros inactivos
+
 
 Filtrar por más de un criterio
 ==============================
 
-Restringir la búsqueda con **and**
+Restringir la búsqueda con "and"
 ----------------------------------
 
 Si se quiere depurar más la búsqueda de un determinado registro, se pueden ir añadiendo
@@ -91,16 +94,18 @@ nombres de campos y sus contenidos uno detrás del otro para ir reduciendo el co
 de los registros encontrados. Esto es equivalente a ir añadiendo criterios de búsqueda
 con el operador "**and**" (y).
 
-Por ejemplo, y volviendo al ejemplo de las ordenes de venta filtradas por una determinada
-fecha, si se quisiese ver, de las ordenes de venta mostradas, únicamente las ya han
-sido confirmadas y se han convertido ya en una venta efectiva, podríamos escribir::
+Por ejemplo, y volviendo al ejemplo de las órdenes de venta filtradas por una 
+determinada fecha, si se quisiese ver, de las órdenes de venta mostradas,
+únicamente las que ya han sido confirmadas y se han convertido ya en una venta 
+efectiva, podríamos escribir::
 
     "Fecha creación": >07/09/2012 Estado: Confirmada
 
-De esta forma, además de filtrar (ocultar) las ordenes de venta creadas con anterioridad
+De esta forma, además de filtrar (ocultar) las órdenes de venta creadas con 
+anterioridad
 a la fecha indicada, también filtraría las que su estado es distinto de "Confirmada".
 
-Suavizar la búsqueda con **or**
+Suavizar la búsqueda con "or"
 -------------------------------
 
 Sin embargo, también es posible que se necesite "suavizar" el criterio de búsqueda
@@ -137,7 +142,7 @@ En las búsquedas podemos usar operadores para filtrar registros:
 * <=: menor o igual que
 * >: más grande que
 * >=: más grande o igual que
-* !=: no igual
+* !=: no igual a
 * !: no igual o no como (dependiendo del tipo de campo)
 
 Ejemplo de uso::
