@@ -144,6 +144,8 @@ mostrará el siguiente aviso:
 
 .. figure:: images/unable-to-assign-moves.png
 
+   Captura de pantalla del aviso por falta de stock
+
 Podremos visualizar de cada producto las cantidades que no se pueden
 reservar porque no hay suficiente stock. Si tenemos los permisos
 necesarios nos aparecerá también el botón *Forzar reserva*, que nos
@@ -225,9 +227,7 @@ todos los |out_inventory_moves| teniendo en cuenta el stock del almacén
 indicado. En caso de haber stock suficiente cambiarán a estado *Reservado* y
 con ellos la cantidad de productos indicado en cada movimiento. Si no hay
 suficiente stock en el almacén para satisfacer todos los movimientos de
-inventario, el sistema nos mostrará el siguiente aviso:
-
-.. figure:: images/unable-to-assign-moves.png
+inventario, el sistema nos mostrará el mensaje de aviso.
 
 Podremos visualizar de cada producto las cantidades que no se pueden
 reservar porque no hay suficiente stock. Si tenemos los permisos
@@ -337,6 +337,8 @@ stock en la ubicación para satisfacer todos los movimientos, el sistema nos
 mostrará el siguiente aviso:
 
 .. figure:: images/unable-to-assign-moves.png
+
+   Captura de pantalla del aviso por falta de stock
 
 Podremos visualizar de cada producto las cantidades que no se pueden
 reservar porque no hay suficiente stock. En caso de tener los permisos

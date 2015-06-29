@@ -17,6 +17,9 @@ del idioma del cual queremos cambiar el formato.
 
 .. view:: ir.lang_view_form
 
+   Captura pantalla del menu Idioma
+
+
 El formato de fecha
 ===================
 

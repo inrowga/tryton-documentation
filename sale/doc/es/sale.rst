@@ -31,6 +31,9 @@ deberemos rellenar para crear la venta.
 .. view:: sale.sale_view_form
    :field: party
 
+   Captura de pantalla de una venta
+
+
 La venta está compuesta por una parte en la que se define el cliente con sus
 datos (Cabecera), y otra compuesta por varias pestañas que contendrán
 información concreta sobre la venta en sí. En la cabecera, una vez indiquemos

@@ -279,6 +279,8 @@ cabo la gestión de la excepción.
 
 .. figure:: images/purchase-exceptions.png
 
+   Captura de pantalla de excepciones en la compra
+
 Gestión de la excepción
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -294,6 +296,8 @@ causan la excepción, o dicho de otro modo, los |moves| o |invoices| que han
 sido cancelados.
 
 .. figure:: images/purchase-exception-moves.png
+
+   Captura de pantalla de las excepciones en los movimientos de compra
 
 Por defecto, cuando se abra la ventana, aparecen todos los productos
 seleccionados, si clicamos sobre alguno de ellos los deseleccionaremos, y si

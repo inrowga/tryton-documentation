@@ -23,6 +23,8 @@ el icono *Nuevo* y se nos abrirá la vista detallada de secuencia, donde podremo
 editar los distintos campos:
 
 .. view:: ir.sequence_view_form
+
+   Captura de pantalla de secuencias
   
 Entre los campos editables cabe destacar: 
 

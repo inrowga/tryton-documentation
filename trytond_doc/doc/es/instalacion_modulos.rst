@@ -19,7 +19,10 @@ encuentran o no instalados y dos botones:
 
 * Marca para instalar
 
-.. view:: ir.module_view_tree
+
+.. view:: ir.module_view_list
+
+  Captura de pantalla de la lista de módulos
 
 
 Con un doble clic sobre cualquier módulo accederemos a información sobre los 
@@ -28,6 +31,8 @@ Por ejemplo el módulo *account* depende de los módulos *company*, *currency*, 
 *party* y *res*.
 
 .. view:: ir.module_view_form
+
+   Captura de pantalla de un módulo en vista formulario
 
 Desde las dos pantallas dispondremos del botón *Marca para instalar*. Esta acción 
 no instala directamente el módulo sino que lo prepara para ser instalado junto 
