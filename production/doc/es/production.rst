@@ -19,6 +19,9 @@ Para producir materiales debemos crear una orden de producción desde la opción
 .. view:: production.production_view_form
    :field: code
 
+   Captura de pantalla de vista de producción
+
+
 Las ordenes de producción están formados por dos tipos de movimiento:
 
 * |inputs|: En ellas introduciremos todos los productos que se necessitan
@@ -89,6 +92,8 @@ nos describen como debemos realizar un determinado plato.
 
 .. view:: production.bom_view_form
    :field: name
+
+   Captura de pantalla de 
 
 .. _production-create-bom:
 

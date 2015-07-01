@@ -97,6 +97,11 @@ Diferencias en la terminología
    encontrarás en inglés), aquí detallamos la correspondencia entre los
    conceptos de Tryton y los de otros autores.
 
-* **Tryton | Otros términos**		
-* Iniciativa | Lead sin cualificar | Unqualified lead | Lead
-* Oportunidad | Lead cualificado | Qualified lead | Opportunity
+
++-------------------+------------------------------------------------------+
+|    **Tryton**     |  **Otros términos**                                  |
++===================+======================================================+
+|    Iniciativa     | Lead sin cualificar | Unqualified lead | Lead        |
++-------------------+------------------------------------------------------+
+|    Oportunidad    | Lead cualificado    | Qualified lead   | Opportunity |
++-------------------+------------------------------------------------------+

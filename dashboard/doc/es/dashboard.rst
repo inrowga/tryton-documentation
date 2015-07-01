@@ -3,7 +3,7 @@ Escritorio
 ==========
 
 **Tryton** nos permite crear una pestaña que funcione como escritotio donde
-podremos elegir qué queremos que aparezca en él y adaptar estas seccione a
+podremos elegir qué queremos que aparezca en él y adaptar estas secciones a
 nuestras nedesidades y a nuestros intereses. Esta funcionalidad es habitual
 en entornos que el usuario del ERP recibe constantemente notificaciones y debe
 controlar diferentes áreas de la gestión empresarial.
@@ -16,15 +16,17 @@ nos aparezcan en el escritorio. Para saber cómo, podemos acceder a:
 Configuración
 =============
 
-Una vez tengamos creadas las acciones que queremos que nos aparezcan en el
+Una vez tenemos creadas las acciones que queremos que nos aparezcan en el
 escritorio tenemos que asociarlas a él. De todas las acciones, solo podremos
-seleccionar aquellas que están indicadas como |usage| dashboard. Para ello
+seleccionar aquellas que están indicadas como |usage| *dashboard*. Para ello
 accederemos  al menú |menu_user| y nos iremos a la pestaña *Escritorio*. Desde
 allí podremos indicar qué |dash_act| queremos que nos aparezcan en el
-Escritorio y también la |dash_lay| que queramos que nos presente el escritorio.
+*Escritorio* y también la |dash_lay| que queramos que nos presente.
 
 .. view:: res.user_view_form
    :field: dashboard_layout
+
+   Vista del Escritorio 
 
 .. Note:: El sistema solo permite tener un escritorio por usuario, por lo que no es
    posible tener varios con diferentes acciones.

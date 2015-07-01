@@ -89,6 +89,8 @@ variante e indicar también, si queremos, su |description| y su |code|.
 
 .. view:: product.product_view_form
 
+   Captura de la vista formulario del producto
+
 .. hint:: Dependiendo del momento en el que vayamos a crear la variante nos
    puede interesar más una opción que la otra: Si vamos a crear todas las
    variantes en el mismo momento en el que creamos la plantilla, nos resultará
@@ -155,6 +157,8 @@ en más categorías.
 
 .. view:: product.category_view_form
 
+  Captura de pantalla del formulario de la categoria del producto
+
 
 .. inheritref:: product/product:section:unidades_de_medida
 
@@ -166,6 +170,8 @@ que queramos modificar o clicando en el botón *Nuevo* para crear una nueva
 unidad. Los campos que deberemos rellenar son:
 
 .. view:: product.uom_view_form
+
+   Captura de pantalla del formulario de las unidades de medida del producto
 
 * |name_uom|: Nombre que recibe la unidad.
 * |symbol_uom|: Símbolo que se utiliza para designar a la unidad.

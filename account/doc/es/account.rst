@@ -63,6 +63,9 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
    
 .. view:: account.fiscalyear_view_form
 
+   Vista del formulario del Ejercicio fiscal
+
+
 .. inheritref:: account/account:paragraph:secuencias
 
 En la pestaña *Secuencias* deberemos introducir la secuencia que queramos que
@@ -108,6 +111,8 @@ nueva cuenta debemos dirigirnos al menú |menu_account| y clicar en el botón
 *Nuevo*.
 
 .. view:: account.account_view_form
+
+   Vista formulario de la cuentas contable
 
 .. inheritref:: account/account:paragraph:cabecera_cuenta
 
@@ -197,6 +202,8 @@ icono *Nuevo*.
 
 .. view:: account.journal_view_form
 
+   Vista del formulario de un nuevo Diario
+
 En el formulario que se nos abrirá, deberemos seleccionar el |name_journal|,
 el |type_journal|, elegir qué clase de |sequence| se seguirá (podemos crear una
 nueva secuencia o elegir una ya creada (:ref:`admin-secuencias`)), la
@@ -268,6 +275,9 @@ la *venta*, la *compra* o durante *ambos*.
 
 .. view:: account.tax_view_form
 
+   Vista de formulario de un Impuesto
+
+   
 Para crear un nuevo impuesto, deberemos acceder a |tax_menu| y al clicar en
 *Nuevo* se nos abrirá la vista de edición donde deberemos rellenar los
 distintos campos para poder configurar el impuesto. Deberemos rellenar el
@@ -392,6 +402,8 @@ haciendo doble clic sobre ellas.
 
 .. view:: account.open_chart_start_view_form
 
+   Vista formulario del submenú Abrir plan contable
+
 Además, también podemos consultar el *Plan de código de impuestos* para saber
 la cantidad de impuestos soportados y devengados. Para ello accederemos a
 |menu_cimp| y en el asistente que se nos abrirá seleccionaremos el/los
@@ -476,6 +488,8 @@ En la pantalla que nos muestra el programa debemos indicarle el ejercicio a
 cerrar, el diario y el período donde contabilizarlo.
 
 .. view:: account.fiscalyear_balance_non_deferral_start_view_form
+
+   Vista con el formulario a rellenar para crear el asiento de regularización
 
 * El |bal_non_journal| deberá ser de tipo *Situación* y, en caso de no tener
   ninguno creado, podremos generarlo desde la misma pantalla haciendo clic en
