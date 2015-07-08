@@ -15,6 +15,18 @@ uno. Para ello accederemos a |menu_payment_journal| y en la pestaña que se nos
 abrirá clicaremos en *Nuevo*. En el formulario que se nos abrirá tendremos que
 indicar el |name|, la |company|, la |currency| y el |process_method|.
 
+Dentro del listado de Métodos de proceso entre otros podemos encontrar los 
+siguientes: 
+
+  MANUAL -> Pagaré
+  SEPA CORE DIRECT DEBIT -> Giro
+  SEPA CREDIT TRANSFER -> Transferencia
+
+Los anteriores son los más comunes pero, como vemos, cada uno de estos métodos 
+va vinculado a un tipo de pago del emisor. Al asignar un método y un tipo de 
+pago a un diario de pago los pagos creados en grupos de pago solo podrán ser 
+del mismo tipo que los del diario.
+
 Una vez ya tengamos configurado al menos un diario, podremos acceder al listado
 de los efectos a pagar o cobrar y también podremos informar pagos o cobros en
 el sistema.
@@ -67,7 +79,7 @@ seguirá apareciendo en el listado.
 .. |currency| field:: account.payment.journal/currency
 .. |process_method| field:: account.payment.journal/process_method
 .. |menu_efects| tryref:: account_payment.menu_move_line_form/complete_name
-.. |menu_payment| tryref:: account_payment.menu_payment_journal_form/complete_name
+.. |menu_payment| tryref:: account_payment.menu_payment_form/complete_name
 .. |party| field:: account.payment/party
 .. |kind| field:: account.payment/kind
 .. |line| field:: account.payment/line
