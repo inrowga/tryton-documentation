@@ -1,8 +1,8 @@
-.. _gestion-facturas:
+.. inheritref:: account_invoice/account_invoice:title:invoicing
 
---------
-Facturas
---------
+-----------
+Facturación
+-----------
 
 Desde |menu_account_invoice| podremos gestionar toda la facturación de nuestra
 empresa, tanto las facturas que emitimos a nuestros clientes, como las que

@@ -6,15 +6,7 @@ pero esto no es válido bajo la normativa española. Así que, si nuestra empres
 se rige por esta legislación, deberemos crear una serie exclusiva para nuestra
 facturación.
 
-#:before:account/account:section:otras_tareas_contables#
 
-.. inheritref:: account/account:toctree:invoice
-
-.. toctree::
-   :maxdepth: 2
-
-   account_invoice
-   
 #:after:account/account:section:impuestos#
 
 .. _configurar-plazos:

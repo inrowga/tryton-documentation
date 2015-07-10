@@ -18,9 +18,9 @@ indicar el |name|, la |company|, la |currency| y el |process_method|.
 Dentro del listado de Métodos de proceso entre otros podemos encontrar los 
 siguientes: 
 
-  MANUAL -> Pagaré
-  SEPA CORE DIRECT DEBIT -> Giro
-  SEPA CREDIT TRANSFER -> Transferencia
+ - MANUAL -> Pagaré  
+ - SEPA CORE DIRECT DEBIT -> Giro  
+ - SEPA CREDIT TRANSFER -> Transferencia
 
 Los anteriores son los más comunes pero, como vemos, cada uno de estos métodos 
 va vinculado a un tipo de pago del emisor. Al asignar un método y un tipo de 
@@ -39,7 +39,12 @@ Listar efectos pendientes de cobro o pago
 Cuando se confirma un asiento, ya sea porque lo introducimos manualmente o
 porque se genera a partir de una factura, se crea a su vez en el sistema un
 efecto. Si accedemos a |menu_efects| podremos ver listados todos los efectos
-que tenemos pendientes de pagar y cobrar separados por pestañas. 
+que tenemos pendientes de pagar y cobrar separados por pestañas. Además también 
+tenemos las pestañas *A pagar con apuntes inversos* y *A cobrar con apuntes 
+inversos* dónde encontraremos listados los efectos los cuales teniendo el mismo 
+tercereo tenemos efectos tanto a cobrar como a pagar. Y las pestañas *A pagar 
+con mandato* y *A cobrar con mandato* que, como bien dice el nombre, son los 
+efectos de pago o cobro a través de mandatos.  
 
 .. inheritref:: account_payment/account_payment:section:pagos
 
