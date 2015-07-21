@@ -453,7 +453,7 @@ contabilizado nada, podemos crear un registro nuevo indicando diario, período
 así como un nombre. Una vez creado, podremos proceder a cerrarlo con la acción
 *Cerrar diarios - períodos* antes mencionada.
 
-.. |period| field:: account.fiscalyear/periods
+.. |periods| field:: account.fiscalyear/periods
 .. |menu_periods| tryref:: account.menu_period_form2/complete_name
 .. |menu_jornals| tryref:: account.menu_journal_period_form/complete_name
 
