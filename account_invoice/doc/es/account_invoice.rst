@@ -140,17 +140,23 @@ original.
 Abonar una factura
 ------------------
 
-Tanto en las facturas de cliente como en las de proveedor, disponemos de un
-asistente que nos facilita la tarea de abonar una factura. Para acceder a él
-clicaremos en el botón *Acciones* y, seleccionando *Abono*, se nos abrirá una
-ventana donde deberemos indicar si el abono de la factura se hará con
-devolución o sin. Si queremos realizar un abono total de la factura
-seleccionamos *Con devolución*, ya que así la factura de abono se confirmará y
-se conciliará automáticamente con la factura abonada. En cambio si tan solo
-queremos hacer un abono parcial de una factura deberemos deseleccionar la
-opción *Con devolución*, de esta manera se nos generará una factura de abono
-en estado borrador, donde podremos modificar o eliminar las líneas que queramos
-antes de confirmar la factura.
+En las facturas de cliente disponemos de un asistente que nos facilita la tarea 
+de abonar una factura. Para acceder a él clicaremos en el botón *Acciones* y, 
+seleccionando *Abono*, se nos abrirá una ventana donde deberemos indicar si el 
+abono de la factura se hará con devolución o sin. Si queremos realizar un abono 
+total de la factura seleccionamos *Con devolución*, ya que así la factura de 
+abono se confirmará y se conciliará automáticamente con la factura abonada. En 
+cambio si tan solo queremos hacer un abono parcial de una factura deberemos 
+deseleccionar la opción *Con devolución*, de esta manera se nos generará una 
+factura de abono en estado borrador, dónde podremos modificar o eliminar las 
+líneas que queramos antes de confirmar la factura.
+
+En las facturas de proveedor el procedimiento es más corto y rápido. En el 
+momento que queremos abonar la factura, abrimos el desplegable *Accions* y 
+seleccionamos la acción *Cancelar*. Este movimiento provocará que 
+automáticamente se abone la factura. Cancelándose cualquier movimiento de 
+inventario y creando, por defecto, los asientos contables de abono, 
+conciliándolos con la factura de proveedor que queríamos abonar. 
 
 
 .. |menu_account_invoice| tryref:: account_invoice.menu_invoices/complete_name
