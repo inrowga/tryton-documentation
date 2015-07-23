@@ -376,12 +376,22 @@ Consultar movimientos de stock
 ==============================
 
 Como hemos dicho anteriormente, los albaranes internos, de salida y de entrada
-crean varios tipos de movimiento. Si queremos acceder a consular los
+crean varios tipos de movimiento. Si queremos acceder a consultar los
 movimientos que hemos realizado, lo podemos hacer por medio de |menu_move_form|.
 En la pestaña que se nos abrirá nos aparecerán todos los movimientos
 que se han realizado, podremos filtrar por medio de las pestañas y del
 campo de búsqueda en caso de que queramos concretar los registros que se
 muestran.
+
+En este caso nos interesa remarcar las pestañas *"Desde proveedor"* y *"En 
+espera desde proveedor"*, para el control de las entradas de nuestros productos, 
+y *"Hacia clientes"*, para las salidas. En la pestaña "Desde proveedor" veremos 
+todos los movimientos de compras y albaranes, tanto en borrador (pendientes de 
+confirmar) como los recibidos. En cambio en la pestaña "En espera desde 
+proveedor" tendremos únicamente los movimientos, generados por una compra, que 
+estan en estado borrador. En el momento que se genera el albarán de esta 
+compra, aunque el estado del albarán sea en borrador, los movimientos de la 
+pestaña desaparecerán y solo los tendremos en la pestaña "Desde proveedor".   
 
 .. inheritref:: stock/stock:paragraph:averiguar-terceros-movimiento
 

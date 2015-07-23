@@ -2,7 +2,7 @@
 Banca
 =====
 
-Em el menu |menu_banking| podrás gestionar los bancos y números bancarios de 
+En el menu |menu_banking| podrás gestionar los bancos y números bancarios de 
 los terceros.
 
 .. inheritref:: bank/bank:section:cuenta
