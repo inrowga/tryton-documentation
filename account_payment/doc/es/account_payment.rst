@@ -70,12 +70,83 @@ vez nos contesten del banco, podremos indicar en la pestaña *En proceso* si los
 pagos se han realizado *Con éxito*, o si nos lo han rechazado y por tanto ha 
 *Fallado*.
 
+Como es el proceso del pago
+---------------------------
+
+Un ejemplo del flujo natural a seguir seria el siguiente:
+Tenemos dos facturas con Tipo de pago Pagare, ya sean del mismo o diferente 
+Tercero, y queremos indicar que nos ha llegado el pagare al banco. Nos 
+dirigiremos a la pestaña *A cobrar* y seleccionamos las dos facturas. Una vez 
+seleccionadas hacemos clic en el botón acción y, entre otras, tendremos dos 
+acciones posibles: 
+
+ * *Pagar efectos*  
+ * *Crear grupos de pago*
+
+Con la primera opción pasaremos ambas facturas a pagos sin necesidad de aprobar 
+ni procesar, así indicaremos que los pagares han sido recibidos en el banco 
+pero sin aprobar ni procesar (tenemos la opción de marcar el checkbox *Aprobar 
+pagos*). En este momento seguirá en borrador el pago, así que podemos modificar 
+todos los datos e información del efecto, como la data efectiva, además de 
+añadir una descripción.
+Pero el paso previo será seleccionar un diario de pago y si queremos, marcar el 
+check *Aprobar pagos*. Si no aprobamos los pagos de las facturas su estado será 
+borrador en el menu *Pagos*, y des del mismo menu nos da la opción de aprobar 
+este pago.
+Una vez aprobados los pagos los procesaremos y un asistente nos preguntará si 
+queremos unir las líneas **(si hacemos grupos de pago no)** y la fecha única en 
+la que los planificamos, lo que provocará la actualización de la fecha de todos 
+los pagos antes de crear el grupo de pago.
+
+Con la segunda opción creamos un grupo de pago directamente. Cuando creamos el 
+grupo de pago cada una de las líneas de pagos que habíamos seleccionado 
+(facturas) forma parte de este grupo. Hasta que el pago no esta en proceso no 
+forma parte de ningún grupo, pero aún y estando en proceso seguimos teniendo los 
+pagos por separado en la pestaña *En proceso* dónde podremos clasificar como 
+*Fallado* o *Con éxito* cada uno de los pagos del grupo.
+
+El flujo que sigue un pago
+--------------------------
+
+Pasos que siguen los efectos en el flujo de pagos:
+
+1.- Se selecciona el efecto a pagar/cobrar se ejecuta la acción *Pagar efectos*
+
+2.- Escogemos un *Diario*, creado previamente, y podemos escoger aprobar estos 
+pagos o dejarlos en borrador, para poderlos modificar posteriormente
+
+3.- Si no lo hemos hecho, aprovamos los pagos. Esto significa que ya no 
+podremos hacer ninguna modificación en la fecha, línea o tercero.
+
+4.- Una vez aprovado, lo procesamos. En este paso, podremos unir más de un 
+pago/cobro y asignar una fecha de planificación para el grupo que se creará (se 
+creará un grupo ya sea uno o cinco pagos)
+
+5.- En cuanto esté el grupo creado podremos marcar el pago como *Fallado* o 
+*Con éxito*. Aunque el grupo sume el total de los pagos que lo conforman, 
+siempre podremos marcarlos como fallo o éxito de forma individual
+
+6.- El efecto una vez marcado como fallado volverá a la lista de Efectos a 
+pagar/cobrar, dónde se regitra el histórico de ese pago
+
+
+Una alternativa a esto, saltándose pasos intermedios, si estamos seguros de que 
+todos los datos del efecto son los definitivos es:
+
+1.- Seleccionar los efectos que queremos pagar y ejecutamos la acción *Crear 
+grupos de pago*, nuevamente podremos indicar el diario que queramos, unir la 
+líneas e indicar una fecha de planificación
+
+2.- Una vez realizado este paso ya tendremos el grupo creado y tan solo restará 
+marcar los pagos como Fallado o Con éxito.
+
 .. note:: Posteriormente podremos acceder a |menu_payment_groups| para acceder
           a la información de la remesa y los pagos de esta. 
 
-Si el pago se ha realizado con éxito, el efecto dejara de aparecer en el
-listado de *Efectos a pagar/cobrar* y si le indicamos que el pago ha fallado
-seguirá apareciendo en el listado.
+Si el pago se ha procesado , el efecto dejara de aparecer en el
+listado de *Efectos a pagar/cobrar* y si se ha realizado con éxito tampoco 
+aparecerá en los grupos de pago. Pero si le indicamos que el pago ha fallado
+volverá a aparecer en el listado de efectos.
 
 .. |payment_journal| tryref:: account_payment.menu_payment_journal_form/name
 .. |menu_payment_journal| tryref:: account_payment.menu_payment_journal_form/complete_name

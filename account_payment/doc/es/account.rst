@@ -1,9 +1,7 @@
 #:inside:account/account:section:gestion#
 
-Pagos y cobros
-**************
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    account_payment
