@@ -79,7 +79,7 @@ tantas líneas como productos distintos vayamos a comprar. Para generar una lín
    información indicada en el producto, si no, deberemos indicar qué impuesto
    gravará la línea de la compra.
 
-.. _generacion-albaranesfacturas:
+.. inheritref:: purchase/purchase:paragraph:generar_albaranes_y_facturas
 
 Si accedemos a la pestaña **Información adicional** podremos indicar en el
 campo |invoice_method| en qué punto de la compra queremos que se genere la
@@ -166,9 +166,17 @@ Si respondemos afirmativamente al presupuesto, podremos cambiar el estado de
 la compra a **Confirmado**. Con ello indicamos que hemos aceptado el
 presupuesto, pero que todavía no se ha procesado la compra. Tenemos que
 tener presente que una vez confirmada la compra, no la podremos cancelar ni
-podremos hacer que esta pase a un estado anterior. Podremos dejar la compra en
-estado **Confirmado** hasta que nos indiquen que se ha empezado a procesar la
-compra, momento en el que deberemos dar al botón *Procesar*.
+podremos hacer que esta pase a un estado anterior. 
+
+Una vez confirmada una compra esta nos generará los movimientos de existencias 
+relacionados, pero no nos creará ningún albarán de proveedor, que deberemos 
+crear manualmente. De todos modos, en el albarán de proveedor podremos 
+seleccionar el botón + en los movimientos de entrada para buscar movimientos 
+pendientes de recibir del proveedor y añadirlos automáticamente al albarán.
+
+Otra opción es dejar la compra en estado **Confirmado** hasta que nos indiquen 
+que se ha empezado a procesar la compra, momento en el que deberemos dar al 
+botón *Procesar*.
 
 Con el estado **En proceso** indicamos que nuestro proveedor está procesando la
 compra, por lo que la gestión dejará de depender de nosotros, ya que el
@@ -249,9 +257,12 @@ simplemente deberemos modificar la cantidad recibida en el albarán y al
 confirmarlo se nos crearán los movimientos pendientes para que los podamos
 recibir en un futuro albarán.
 
-.. note:: Si tenemos que devolver productos a un proveedor podemos crear la
-   compra con las cantidades negativas. Esto nos generará el correspondiente
-   albarán de devolución y las facturas de abono de proveedor.
+Devolución de la compra
+-----------------------
+
+Si tenemos que devolver productos a un proveedor podemos crear la compra con 
+las cantidades negativas. Esto nos generará el correspondiente albarán de 
+devolución y las facturas de abono de proveedor.
 
 .. _purchase-exceptions:
 
