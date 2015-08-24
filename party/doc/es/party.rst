@@ -107,7 +107,12 @@ compañía en las que han sido creados.
 
 A pesar que los terceros sean los mismos en todas la compañías esto no significa
 que  todos los datos de un determinado tercero sean los mismos en todas las
-compañías.
+compañías. Y lo mismo ocurre para el producto.
+
+Por ejemplo, las cuentas contables asociadas al producto son únicas por 
+compañía. Podemos entrar en la compañía A y definir la cuenta de gastos del 
+producto a la 60000001 y después entrar en la compañía B y ahí definir la cuenta 
+de gastos del mismo producto como 60000002.
 
 A continuación detallamos los campos que dependen de la compañía en terceros:
 
