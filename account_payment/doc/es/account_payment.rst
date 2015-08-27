@@ -12,19 +12,24 @@ Configuración
 **Tryton** gestiona los cobros y los pagos a través de los |payment_journal|,
 por lo que antes de realizar cualquier gestión, deberemos configurar al menos
 uno. Para ello accederemos a |menu_payment_journal| y en la pestaña que se nos
-abrirá clicaremos en *Nuevo*. En el formulario que se nos abrirá tendremos que
-indicar el |name|, la |company|, la |currency| y el |process_method|.
+abrirá clicaremos en *Nuevo*. Cumplimentaremos un formulario que se nos 
+mostrará, como el que sigue en la imagen. 
+
+.. figure:: images/tryton-payment-journal-form.png
+
+   Formulario para crear un diario de pago
 
 Dentro del listado de Métodos de proceso entre otros podemos encontrar los 
 siguientes: 
 
- - MANUAL -> Pagaré  
- - SEPA CORE DIRECT DEBIT -> Giro  
- - SEPA CREDIT TRANSFER -> Transferencia
-
+ - SEPA CORE DIRECT DEBIT: Método usado para giros  
+ - SEPA CREDIT TRANSFER: Método usado para hacer transferencias
+ - MANUAL: Usaremos este proceso, siempre y cuando no tengamos que generar 
+   ningún formato electrónico, normalmente en la gestión de pagares o xeques
+ 
 Los anteriores son los más comunes pero, como vemos, cada uno de estos métodos 
 va vinculado a un tipo de pago del emisor. Al asignar un método y un tipo de 
-pago a un diario de pago los pagos creados en grupos de pago solo podrán ser 
+pago a un diario de pago, los pagos creados en grupos de pago solo podrán ser 
 del mismo tipo que los del diario.
 
 Una vez ya tengamos configurado al menos un diario, podremos acceder al listado
