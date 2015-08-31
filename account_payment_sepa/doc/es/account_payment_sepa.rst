@@ -36,12 +36,13 @@ Aunque este no es un campo realzado como obligatorio, por defecto uno u otro
 tipo esta seleccionado. En cambio el *Tercero*, la *Empresa* y el *Esquema* sí 
 son campos obligatorios. Es posible modificar todos estos campos mientras 
 tengamos el mandato en formato borrador. Así mismo, cuando pasamos de borrador 
-a solicitud, aún podemos modificar el esquema y el tipo, además de añadir el 
+a 
+solicitud, aún podemos modificar el esquema y el tipo, además de añadir el 
 *Número de cuenta*, la *Identificación* y la *Fecha de firma*.  
 
 .. view:: account.payment.sepa.mandate_view_form
 
-   Vista formulario del Mandato SEPA
+   Vista formulario del Mando SEPA
 
 La solicitud no se confirma hasta que no la validamos. Ahora bien, para 
 validarla hay que introducir la fecha de firma, la identificación y el número 
