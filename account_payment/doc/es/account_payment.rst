@@ -19,6 +19,8 @@ mostrará, como el que sigue en la imagen.
 
    Formulario para crear un diario de pago
 
+.. view:: account_payment.payment_journal_view_form
+
 Dentro del listado de Métodos de proceso entre otros podemos encontrar los 
 siguientes: 
 
