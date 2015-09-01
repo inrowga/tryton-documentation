@@ -1,10 +1,7 @@
 .. inheritref:: account_dunning/account_dunning:section:reclamaciones
 
-Reclamaciones
-=============
-
-Con las reclamaciones podrá controlar los pagos de los clientes y notificar a los clientes
-de los pagos pendientes.
+Con las reclamaciones podrá controlar los pagos de los clientes y notificar a 
+los clientes de los pagos pendientes.
 
 Para consultar las reclamaciones que se van creando con un tercero puede consultar
 des del tercero mediante la acción Reclamaciones.
