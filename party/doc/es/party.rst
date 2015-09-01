@@ -70,13 +70,15 @@ pestaña son:
 
 Categorías
 ==========
+
 Como ya hemos visto anteriormente, por medio de las categorías podemos agrupar
-terceros según los criterios que queramos. Por medio de la opción de menú
-|menu_categories| podemos acceder a todas las categorías que hemos creado y
-haciendo doble clic sobre cualquiera de ellas se nos abrirá una nueva pestaña
-con todos los terceros pertenecientes a la categoría seleccionada. Volviendo a
-la pestaña anterior, también es posible crear nuevas categorías y subcategorías
-para gestionar mejor nuestra cartera de terceros.
+terceros según los criterios que queramos, veremos la categoria en la parte 
+inferior derecha. Por medio de la opción de menú |menu_categories| podemos 
+acceder a todas las categorías que hemos creado y haciendo doble clic sobre 
+cualquiera de ellas se nos abrirá una nueva pestaña con todos los terceros 
+pertenecientes a la categoría seleccionada. Volviendo a la pestaña anterior, 
+también es posible crear nuevas categorías y subcategorías para gestionar mejor 
+nuestra cartera de terceros.
 
 
 .. view:: party.category_view_form

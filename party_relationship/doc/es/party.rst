@@ -18,7 +18,7 @@ terceros.
 
 Un tipo de relación, puede tener una relación inversa. Una relación inversa
 nos define otra relación que se aplica para todos los terceros que tienen
-una relación en pero en sentido inverso. Por ejemplo, si definimos la relación
+una relación pero en sentido inverso. Por ejemplo, si definimos la relación
 "tiene como empleado" cómo relación inversa de "es empleado de" y definimos
 que el tercero A es empleado del tercero B, con la relación inversa
 automáticamente obtendremos que el el tercero B tiene como empleado al tercero
