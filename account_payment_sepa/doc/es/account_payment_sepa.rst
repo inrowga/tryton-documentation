@@ -56,7 +56,6 @@ Una vez validado el mandato habremos finalizado el proceso.
 
 
 
-.. |menu_payment_sepa| tryref:: 
-account.menu_payment_sepa_mandate_form/complete_name
+.. |menu_payment_sepa| tryref:: account.menu_payment_sepa_mandate_form/complete_name
 .. |party| field:: company.company/party
 .. _link: http://www.sepaesp.es/sepa/es/faqs/elmandato/
