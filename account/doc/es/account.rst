@@ -381,11 +381,29 @@ de que queramos desconciliar dos apuntes conciliados previamente, lo
 realizaríamos de la misma manera, pero seleccionando *Desconciliar apuntes* en
 el menú.
 
+Otros formas de conciliar apuntes són:
+
+* Desde |menu_reconcile| se ejecuta un asistente que te va mostrando distintas
+  propuestas con posibles apuntes a conciliar, pudiendo saltarlas si hace falta.
+  Las propuestas las hace el programa, tu solo debes clicar botones de conciliar
+  y saltar.
+* A |menu_move_line_form| se puedes buscar apuntes por tercero y/o cuenta y conciliar.
+  También se disponde de la pestaña de "Efectos con apuntes inversos" que solo muestra
+  posibles conciliaciones.
+* Abrir los apuntes a pagar-cobrar desde un tercero en concreto, con el botón "Relacionado".
+  Y a partir de ahí podemos conciliar.
+* Si se trabaja con extractos bancarios, una vez importados, se hacen las conciliaciones
+  automáticas cuando se contabiliza una línea de extracto bancario.
+
+
 .. Note:: Tenemos que tener en cuenta, tal y como hemos visto en
    :ref:`cuenta-nueva`, que solo podremos conciliar apuntes de cuentas
    contables que tengan marcado el campo |reconcile_account|.
 
 .. tryref:: account.menu_open_reconcile_lines/complete_name
+
+.. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
+.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_forme/complete_name
 
 
 Consulta planes contables
