@@ -1,3 +1,6 @@
+
+.. inheritref:: account_payment/account_payment:section:pagos
+
 Pagos y cobros
 **************
 
