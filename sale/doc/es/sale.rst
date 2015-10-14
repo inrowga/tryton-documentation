@@ -198,8 +198,8 @@ se habrá completado.
 
 .. _estados-fac-alb:
 
-@field:sale.sale/invoice_state@ y @field:sale.sale/shipment_state@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|invoice_state| y |shipment_state|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Como hemos comentado anteriormente, desde las pestañas **Facturas** y
 **Albaranes** veremos en todo momento el estado en el que se encuentran
@@ -304,6 +304,7 @@ el diario correspondiente en euros.
 
 Excepciones en la venta
 =======================
+
 Aunque no es muy frecuente, es posible que se dé el caso de que cuando
 procesemos una venta, y se generen los correspondientes documentos (facturas
 y/o albaranes), desde el departamento correspondiente nos cancelen alguno
