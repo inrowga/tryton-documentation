@@ -7,6 +7,8 @@ disponen de acceso a nuestro ERP y los que disponen de acceso no tiene
 porque tener los mismos permisos. Por tanto, sólo deberemos dar de alta 
 usuarios que dispondrá acceso a nuestro ERP.
 
+.. inheritref:: trytond_doc/admin_usuarios_grupos:section:usuarios
+
 Usuarios
 ========
 
