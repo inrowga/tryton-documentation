@@ -56,7 +56,7 @@ tercereo tenemos efectos tanto a cobrar como a pagar. Y las pestañas *A pagar
 con mandato* y *A cobrar con mandato* que, como bien dice el nombre, son los 
 efectos de pago o cobro a través de mandatos.  
 
-.. inheritref:: account_payment/account_payment:section:pagos
+.. inheritref:: account_payment/account_payment:section:informar-pagos
 
 Informar un pago o un cobro
 ---------------------------
