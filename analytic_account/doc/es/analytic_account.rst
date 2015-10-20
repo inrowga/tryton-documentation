@@ -1,5 +1,7 @@
 #:after:account/account:section:otras_tareas_contables#
 
+.. inheritref:: analytic_account/analytic_account:section:planes
+
 Definir planes analíticos
 =========================
 
@@ -7,6 +9,7 @@ Los planes analíticos nos permiten controlar y analizar las cuentas de nuestra
 empresa (entradas, salidas y balances) siguiendo una estructura de cuentas 
 definida por nosotros. Un ejemplo típico es estructurar las cuentas por 
 departamento y , por ejemplo, el departamento comercial dividido por comercial.
+
 .. Captura de árbol de cuentas analíticas con más de una jerarquía, 
    preferiblemente siguiendo el ejemplo comentado. Listado jerárquico de 
    cuentas analíticas que encontramos en Contabilidad/ Configuración/ 
@@ -29,6 +32,7 @@ Crear una nueva cuenta
 Crearemos las cuentas nuevas des del listado *normal* de cuentas analíticas que 
 encontramos en la entrada de menú *Contabilidad/ Configuración/ Contabilidad 
 analítica/ Cuentas analíticas/ Cuentas analíticas*.
+
 .. Captura de imagen de formulario de nueva cuenta analítica.
 
 Si estamos creando una jerarquía nueva elegiremos el **tipo** de cuenta 
