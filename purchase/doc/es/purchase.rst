@@ -338,7 +338,7 @@ o *Confirmada*).
 .. |purchase_exception_state| field:: stock.move/purchase_exception_state
 .. |invoices| field:: purchase.purchase/invoices
 
-.. _purchase-configuration:
+.. inheritref:: purchase/purchase:section:configuracion
 
 Configuración
 =============

@@ -1,4 +1,4 @@
-#before:purchase/purchase:section:configuracion#
+#:before:purchase/purchase:section:configuracion#
 
 =================================
 Proceso de cancelación de compras
@@ -7,7 +7,7 @@ Proceso de cancelación de compras
 Al querer cancelar una compra podemos encontrarnos ante los siguientes casos 
 de cancelación, que salvo excepción serán la mayoría:
 
-1. **Cancelar una compra que ha sido introducida y procesada**. Esta compra nos 
+*  **Cancelar una compra que ha sido introducida y procesada**. Esta compra nos 
    generará uno o más movimientos de producto (en función de la compra) que nos 
    aparecerá en la pestaña *Albaranes* en el campo Movimientos. 
    Para cancelar la compra tan sólo necesitaremos crear un albarán nuevo del 
@@ -24,7 +24,7 @@ de cancelación, que salvo excepción serán la mayoría:
    movimiento y el albarán tienen el estado *Cancelado* y el estado de 
    excepción *Ignorado*. 
    
-2. **Cancelar una compra que ha sido recibida y tiene un albarán con el 
+*  **Cancelar una compra que ha sido recibida y tiene un albarán con el 
    movimiento vinculado**. Si el albarán aún está en estado *Borrador* podremos 
    cancelar tanto la compra como el albarán siguiendo los pasos del punto (1). 
    Ahora bien, si el albarán está *Recibido* lo único que podremos hacer es 
@@ -44,7 +44,7 @@ de cancelación, que salvo excepción serán la mayoría:
    cerrado, así, el circuito de la cancelación de la compra o devolución de
    la mercancía; sin la creación de una nueva línea de factura. 
    
-3. **Cancelar una compra que ha sido recibida y no tiene albarán vinculado, 
+*  **Cancelar una compra que ha sido recibida y no tiene albarán vinculado, 
    pero sí que ha generado una línea de factura**. Repetiremos parte de los 
    pasos enumerados anteriormente, creando una factura de proveedor dónde 
    añadiremos la línea de factura para cancelarla. Realizaremos todas los pasos 

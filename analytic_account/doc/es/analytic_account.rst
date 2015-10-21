@@ -1,7 +1,6 @@
 #:after:account/account:section:otras_tareas_contables#
 
-.. inheritref:: analytic_account/analytic_account:section:planes
-
+=========================
 Definir planes analíticos
 =========================
 
