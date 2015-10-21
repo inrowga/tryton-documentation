@@ -346,6 +346,8 @@ todos los apuntes contables del |open_period| y |open_journal| elegidos.
 .. |open_period| field:: account.move.open_journal.ask/period
 
 
+.. inheritref:: account/account:section:consulta_asientos
+
 Consultar asientos contables
 ----------------------------
 

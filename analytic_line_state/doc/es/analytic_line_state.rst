@@ -1,4 +1,4 @@
-#inside:analytic_account/analytic_account:section:planes
+#:before:account/account:section:consulta_asientos#
 
 Definir la obligatoriedad de la analítica de las cuentas contables
 ==================================================================
