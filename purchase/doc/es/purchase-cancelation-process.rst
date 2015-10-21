@@ -1,4 +1,4 @@
-#:before:purchase/purchase:section:configuracion#
+#:before:purchase/purchase:section:excepciones#
 
 =================================
 Proceso de cancelación de compras

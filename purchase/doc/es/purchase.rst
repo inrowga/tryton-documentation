@@ -264,7 +264,7 @@ Si tenemos que devolver productos a un proveedor podemos crear la compra con
 las cantidades negativas. Esto nos generará el correspondiente albarán de 
 devolución y las facturas de abono de proveedor.
 
-.. _purchase-exceptions:
+.. inheritref:: purchase/purchase:section:excepciones
 
 Excepciones en la compra
 ========================
@@ -338,7 +338,7 @@ o *Confirmada*).
 .. |purchase_exception_state| field:: stock.move/purchase_exception_state
 .. |invoices| field:: purchase.purchase/invoices
 
-.. inheritref:: purchase/purchase:section:configuracion
+.. _purchase-configuracion:
 
 Configuración
 =============
