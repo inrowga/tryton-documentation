@@ -363,23 +363,28 @@ de cancelación, que salvo excepción serán la mayoría:
    
 *  **Cancelar una compra que ha sido recibida y tiene un albarán con el 
    movimiento vinculado**. Si el albarán aún está en estado *Borrador* podremos 
-   cancelar tanto la compra como el albarán siguiendo los pasos del punto (1). 
+   cancelar tanto la compra como el albarán siguiendo los pasos del primer punto. 
    Ahora bien, si el albarán está *Recibido* lo único que podremos hacer es 
    cancelar el albarán pero la compra ya tendrá el estado *Realizado*, así que 
-   deberemos pasar el albarán a *Borrador* para confirmarlo y acabar marcándolo 
-   como *Realizado*. Esto nos generará una línea de factura en la compra, 
+   no debemos cancelar el albarán sino confirmarlo y acabar marcándolo  como 
+   *Realizado*. Esto nos generará una línea de factura en la compra, 
    llevándonos al siguiente paso: crear una factura de este proveedor, dónde 
    añadiremos la línea de factura de la compra y cancelaremos la factura. Una 
    vez cancelada esta factura nos quedará todo el circuito cerrado ahora bien 
    si queremos hacer la devolución de la mercadería deberemos hacer una copia 
    exacta de la compra inicial con cantidad negativa y procesarla, pero antes 
    de ello es recomendable dirigirnos a la pestaña *Información adicional* y 
-   marcar el método de facturación como *Manual*. 
+   marcar el método de facturación como *Manual*, así nos evitamos que genere una 
+   factura. 
    
    Una vez que hayamos procesado la compra, se generará un movimiento de 
    producto. Este lo añadiremos a un albarán que procesaremos, dando por
    cerrado, así, el circuito de la cancelación de la compra o devolución de
    la mercancía; sin la creación de una nueva línea de factura. 
+   
+   Si queremos lo contrario, que todo quede registrado en la misma factura, 
+   dejaremos el método de facturación igual y en la pirmera línia de factura la 
+   añadiremos a la misma factura que la línia generada del albarán de devolución.
    
 *  **Cancelar una compra que ha sido recibida y no tiene albarán vinculado, 
    pero sí que ha generado una línea de factura**. Repetiremos parte de los 
