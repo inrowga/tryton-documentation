@@ -17,7 +17,11 @@ teclado **Crt+D**. Una vez eliminado, no hay vuelta atrás.
 .. tip:: Ciertos registros disponen del campo **Activo**. Si desactiva este campo
          estará disponible en su ERP pero no será visible. De esta forma podrá
          ocultar información y siempre después la podrá activar de nuevo si
-         fuera necesario.
+         fuera necesario. A partir de este momento, si algún usuario intenta 
+         buscar el tercero (producto o cualquiera que sea el dato que hemos 
+         desactivado) ya no lo va a encontrar. Si lo desa, podrá buscarlo 
+         explícitamente indicando que el campo *Activo* esté a *Falso*, ya sea 
+         en la línea de filtro o en el filtro avanzado. 
 
 -----------------
 Atajos de teclado
