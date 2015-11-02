@@ -51,6 +51,9 @@ siguientes campos:
    usaremos el menú desplegable que aparece cuando hacemos clic sobre botón de
    herramientas superior, ya que en ese caso eliminaríamos el tercero.
    
+.. note:: Para poder editar manualmente el código del tercero, sólo hay que
+   quitar del apartado de **configuración** el campo *Secuencia del tercero*. 
+   Así cuando creemos el tercero nos dejará poner manualmente el código. 
 
 .. view:: party.party_view_form
    :field: name
@@ -66,6 +69,15 @@ pestaña son:
 
 * |vat_number|:  donde indicaremos el número fiscal del tercero.
 * |vat_country|: en el que indicaremos el país de procedencia del tercero.
+
+
+Encontrar terceros sin NIF
+==========================
+
+Si deseamos encontrar todos los terceros para los que no hayamos introducido un 
+NIF podemos hacerlo introduciendo el siguiente filtro en la pantalla de 
+terceros: **CIF/NIF: =""**. Es importante no olvidarse de las dos dobles 
+comillas al final que indican al programa que el campo debe estar vacío.
 
 
 Categorías
