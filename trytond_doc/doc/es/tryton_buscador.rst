@@ -42,6 +42,33 @@ se está creando un filtro. Para ello únicamente es necesario escribir la prime
 letra del nombre del campo por el que se desea buscar y automáticamente aparece
 un menú contextual con los posibles candidatos para efectuar la búsqueda
 
+-----------------
+Guardar un filtro
+-----------------
+
+En Tryton es posible guardar una búsqueda o filtro para reutilizarlo siempre que 
+se necesite. Los filtros son individuales para cada usuario.
+
+En primer lugar debemos escribir o crear el filtro, pulsar enter y una vez 
+tenemos los datos filtrados, podemos hacer clic en la estrella que podemos 
+encontrar a la derecha del recuadro de búsqueda:
+
+.. figure:: images/tryton-filtro.png
+
+Esto nos mostrará un cuadro de diálogo para dar nombre al filtro:
+
+.. figure:: images/tryton-bookmark-filter.png
+
+Podemos acceptar y a partir de ese momento tendremos disponible el filtro 
+siempre que lo necesitemos, en el icono que podemos encontrara a la derecha de 
+la estrella:
+
+Una vez seleccionado el filtro veremos como la estrella se nos muestra en 
+amarillo (en vez de blanca):
+
+En este momento podremos eliminar el filtro simplemente pulsando de nuevo sobre 
+la estrella.
+
 Filtrar por fechas
 ==================
 
