@@ -65,6 +65,29 @@ de perfiles.
 Si deseamos trabajar con varias bases de datos, podemos abrir varios clientes de
 Tryton para conectarnos a cada una de las bases de datos.
 
+Crea base de datos
+==================
+
+Tryton nos permite crear fácilmente nuevas bases sin información ni módulo 
+alguno instalado pero con acceso a todos los módulos disponibles.  
+
+Para crear una base de datos en Tryton debemos acceder al menú general de la 
+aplicación (esquina superior izquierda) en Fichero > Base de datos > Nueva base 
+datos
+
+Tras seleccionar la opción, aparecerá una pantalla donde nos solicitará la 
+siguiente información:
+
+ * Contraseña del servidor Tryton (deberemos disponer de dicha contraseña para 
+ poder instalar la nueva base de datos en el servidor)
+ * Nombre de la nueva base de datos
+ * El idioma inicial de la base de datos
+ * La contraseña y la confirmación de la contraseña para el administrador 
+ (deberá ser la misma pero más adelante puede modificarse)
+
+Presionando el botón *Crear* iniciaremos el proceso de creación de una nueva 
+base de datos vacía y sin módulos dónde podremos empezar a trabajar.
+
 Ventana flotante pidiendo la contraseña
 =======================================
 
@@ -74,3 +97,24 @@ de nuevo la contraseña para entrar de nuevo sin cerrar el cliente.
 
 Por defecto son 600 segundos de inactividad hasta que le pide de nuevo una contraseña.
 Contacte con nuestros técnicos si desean un tiempo mayor de inactividad.
+
+Modificar la contraseña del usuario
+===================================
+
+La seguridad de Tryton obliga a la identificación mediante usuario y contraseña 
+para acceder a la aplicación así como tras un periodo de inactividad. Dicha 
+contraseña puede modificarse en cualquier momento por el usuario.
+
+Para modificar la contraseña deberemos acceder al menú general del programa 
+(esquina superior izquierda) en Usuario > Preferencias. Esta acción nos 
+solicitará cerrar las pestañas que tengamos abiertas.
+
+Dentro del menú Preferencias deberemos entrar en la pestaña Usuario donde 
+encontraremos varios campos rellenados y el campo contraseña en la esquina 
+superior derecha oculta bajo puntos (el número de punto de coincide con el 
+número de caracteres de la contraseña)
+
+Podemos modificar la contraseña borrando el contenido del campo y escribiendo 
+la nueva contraseña que deseemos (también se escribirá oculta). En validar los 
+cambios con el botón De acuerdo nos solicitará la por última vez la antigua 
+contraseña.
