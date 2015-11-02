@@ -27,6 +27,7 @@ Configurar desde cuentas analíticas
 Este es el procedimiento recomendado, debido a que, es el más rápido para 
 configurar un gran número de cuentas contables (cuando configuramos la analítica 
 por primera vez). Ahora bien, el plan contable debe estar creado. 
+
 .. Imagen de la pestaña en comentada con el formulario de cuentas analíticas
 
 Debemos ir al formulario de la cuenta analítica que sea raíz de cada jerarquía, 
@@ -46,6 +47,7 @@ contable específica porque este acabada de crear, porque nos demos cuenta que
 está mal configurada, etc. Aunque también lo podríamos hacer con el 
 procedimiento anterior. La única condición para no hacer trabajo en vano es que 
 debemos tener todas las jerarquías analíticas ya creadas.
+
 .. Imagen pestaña configuración analítica del formulario de cuenta contable
 
 En el formulario de cuenta contable tenemos la pestaña **Configuración 
