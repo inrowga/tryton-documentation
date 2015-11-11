@@ -18,6 +18,15 @@ La empresa es nuestra compañía. Los procedimientos a seguir para crearla son:
 
 .. inheritref:: company/company:section:usuarios
 
+
+Multicompañía
+-------------
+
+Para poder trabajar en multicompañía deberemos crear una empresa la cual 
+utilizaremos como empresa padre, y de ella  dependerán las distintas compañías 
+con las que sí trabajaremos.
+
+
 Usuarios
 --------
 
