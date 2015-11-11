@@ -3,7 +3,7 @@ Buscador
 ========
 
 Tryton incorpora un buscador inteligente para buscar/filtrar registros. Este buscador
-únicamente se puede utilizar en la vista de lista.
+únicamente se puede utilizar en la vista de lista y en el menu global.
 
 .. figure:: images/tryton-buscar.png
 
@@ -19,6 +19,19 @@ de un listado de las opciones de búsqueda por defecto.
 .. figure:: images/tryton-buscar-opciones.png
 
    Buscador de Tryton. Listado de campos y opciones a listar
+  
+---------------
+Buscador global
+---------------
+
+Por defecto la búsqueda sobre el menu sólo actua sobre las carpetas de menu 
+pero se puede configurar la opción de búsqueda sobre otros registros de la 
+aplicación. 
+
+Hace falta definir que queremos que busque y lo haremos desde Administración / 
+Modelos / Modelos. Dónde buscaremos el registro en el cual nos interese hacer 
+búsquedas y, dentro del formulario de este registro, marcaremos la opción 
+*Búsqueda global*
 
 -------------
 Filtro básico
