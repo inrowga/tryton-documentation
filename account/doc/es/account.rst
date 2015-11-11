@@ -173,6 +173,40 @@ el carácter que le queramos dar a la nueva cuenta contable:
    podremos ir al menú |menu_contable| y configurar las cuentas que
    utilizaremos por defecto para los pagos y los ingresos.
 
+Modificar el campo "Padre"
+--------------------------
+
+En Tryton es habitual encontrar datos estructurados en forma de “padres e hijos” 
+o “árbol”. Esto lo podemos encontrar, por ejemplo, en:
+
+ * La estructura de empresas (menú Terceros > Configuración > Empresas)
+ * El plan de cuentas (menú Configuración > Planes contables > Cuentas)
+ * En categorías de terceros (menú Terceros > Categorías) y productos (menú 
+ Productos > Categorías)
+
+En todos estos casos podremos ver que podemos acceder a la información mediante 
+dos entradas de menú. La primera con un icono escalado, en forma de árbol, y la 
+segunda, que la encontramos dentro de la primera, con un icono normal de 
+formulario. 
+
+Entrando en el primer caso, podremos ver la información en forma de árbol:
+
+.. captura de la imagen
+
+Mientras que en la segunda podremos verla en forma de lista:
+
+.. captura de la imagen
+
+Desde ambas pantallas podremos consultar y modificar información pero el 
+comportamiento de ambas es distinto:
+
+ * En la vista tipo árbol podremos arrastrar y soltar (drag&drop) para 
+ establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
+ * En la vista tipo árbol no podremos cambiar el padre cuando entremos en la 
+ ficha / formulario.
+ * En la vista tipo árbol solamente nos buscará en los elementos del primer 
+ nivel. En los subniveles aparecerán todos.
+
 
 .. |menu_account| tryref:: account.menu_account_list/complete_name
 .. |name_account| field:: account.account/name
