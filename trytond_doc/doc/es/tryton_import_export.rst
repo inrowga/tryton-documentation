@@ -52,16 +52,52 @@ editor predeterminado de CSV o guardar el archivo en nuestro disco. En el caso
 de abrir un CSV, se abrirá con la aplicación predeterminada que tenga asignado 
 a este tipo de ficheros.
 
-Si tu aplicación predeterminada no abre CSV (por ejemplo, según que versión de 
-Office Excel) los pasos a seguir son los siguientes:
+Exportar más de 1000 registros
+==============================
 
- * Guardar el fichero en tu disco, en formato CSV
- 
- * Abrir tu aplicación o editor (el ejemplo anterior, una versión de Excel que 
-   no permita abrir el archivo directamente)
- 
- * Desde la aplicación abre el archivo (sin haberlo abierto previamente) y 
-   delimita las columnas y el formato del texto. 
+Por defecto tryton muestra siempre 1000 registros en pantalla. Si se quiere ir 
+a los 1000 siguientes hay que hacer clic sobre las flechas verdes de la parte 
+inferior derecha de la imagen para ir a la siguiente página:
+
+
+Esto permite que la aplicación sea suficientemente ágil y no tenga que cargar 
+decenas de miles de datos innecesariamente.
+
+Hay que tener en cuenta que las exportaciones que realicemos se limitarán 
+también a estos 1000 registros. Sin embargo, es posible cambiar este límite de 
+registros para realizar una exportación extraordinaria en un momento 
+determinado. 
+
+Para ello, debemos dirigirnos al menú superior, a la parte izquierda “Opciones 
+> Límite de búsqueda…” y cambiar el número de registros que queremos visualizar 
+por cada página.
+
+Abrir la exportación con Excel 2010
+===================================
+
+Si la exportación se debe abrir con office 2010 podemos encontrarnos que Office 
+2010 no lo abra bien directamente. Tenemos dos posibilidades:
+
+* Una vez se abre Excel automáticamente desde la exportación veremos que nos 
+  sale el contenido en una sola columna. Debemos seleccionarla toda y nos 
+  dirigimos al menú Datos / Texto en columnas. Nos aparecerá un asistente y 
+  deberemos indicarle que el separador utilizado es la coma. No acostumbra a 
+  ser problemático dejar el resto de separadores como válidos. La codificación
+  / locale deberá ser “UTF-8”. Una vez finalizado el asistente ya nos saldrá 
+  cada campo en una columna distinta.
+  
+* En lugar de abrir directamente, también podemos indicarle a Tryton que en 
+  lugar de abrir queremos guardar. Si guardamos el fichero en formato texto y 
+  lo abrimos posteriormente con Excel, veremos el mismo asistente indicado en 
+  el punto anterior, completaremos los mismos campos, obteniendo de forma 
+  directa cada campo en una columna distinta.
+  
+.. Note:: Al menos en Excel 2003 no es posible indicar la codificación del
+  texto (en este caso, Unicode UTF-8) cuando Excel se abre automáticamente. En 
+  este caso la única opción válida es la número 2. Es importante tenerlo en 
+  cuenta porque no sólo puede afectar a la visualización de símbolos raros sino 
+  que además puede que algunos datos (líneas enteras) no sean importados con 
+  los graves problemas que esto significa. 
 
 .. image:: images/tryton-export_csv.png
 
