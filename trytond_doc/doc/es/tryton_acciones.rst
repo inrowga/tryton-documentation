@@ -33,7 +33,7 @@ Desde la vista de formulario, sólo se puede ejecutar acciones para el registro
 que esté abierto en ese momento, y el procedimiento es el mismo que desde la
 vista de lista.
 
-.. figure:: images/tryton-action.png
+.. figure:: images/tryton-action1.png
 
    Acción desde un pedido de venta para el envío de correo electrónico en Tryton
 
