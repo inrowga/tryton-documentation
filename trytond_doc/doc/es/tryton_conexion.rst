@@ -80,8 +80,11 @@ siguiente información:
 
  * Contraseña del servidor Tryton (deberemos disponer de dicha contraseña para 
  poder instalar la nueva base de datos en el servidor)
+ 
  * Nombre de la nueva base de datos
+ 
  * El idioma inicial de la base de datos
+ 
  * La contraseña y la confirmación de la contraseña para el administrador 
  (deberá ser la misma pero más adelante puede modificarse)
 
