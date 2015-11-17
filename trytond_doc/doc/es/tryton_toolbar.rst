@@ -5,7 +5,7 @@ Barra de herramientas
 Sólo son visibles cuando se tiene abierta alguna de las vistas de alguna de las
 tablas de la base de datos:
 
-.. image:: images/tryton-toolbar-icon.jpg
+.. figure:: images/tryton-toolbar-icon.jpg
    
    Barra de herramientas
 
