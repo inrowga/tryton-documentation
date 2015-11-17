@@ -99,7 +99,7 @@ Si la exportación se debe abrir con office 2010 podemos encontrarnos que Office
   que además puede que algunos datos (líneas enteras) no sean importados con 
   los graves problemas que esto significa. 
 
-.. image:: images/tryton-export_csv.png
+.. figure:: images/tryton-export_csv.png
 
    Exportación a CSV 
 
@@ -130,7 +130,7 @@ También disponemos de más acciones:
 Para importar deberemos seleccionar el archivo de nuestro disco duro en *Archivos
 a importar*, como si lo deseamos, podemos especificar los campos de nuestro CSV.
 
-.. image:: images/tryton-import_csv.png
+.. figure:: images/tryton-import_csv.png
 
    Importación desde CSV
 
