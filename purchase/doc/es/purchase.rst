@@ -208,8 +208,9 @@ ser:
     están a la espera de ser gestionadas y pagadas.
   * *Pagada*: Todas las facturas relacionadas con esta compra han sido pagadas.
   * *Excepción*: El sistema había generado una factura pero un usuario ha
-    cancelado la factura. En el apartado :ref:`purchase-exceptions` se detalla
-    cómo corregir este estado.
+    cancelado la factura. 
+    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>` 
+    se detalla cómo corregir este estado.
 
 * |shipment_state|
 
@@ -223,8 +224,9 @@ ser:
     recibidos.
   * *Excepción*: Como en el caso de las facturas, se ha generado un albarán
     para la recepción de la mercancía pero un usuario ha cancelado el albarán
-    (o algunas de sus líneas). En el apartado :ref:`purchase-exceptions` se
-    detalla cómo corregir este estado.
+    (o algunas de sus líneas). 
+    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>` 
+    se detalla cómo corregir este estado.
 
 .. note:: El sistema únicamente esperará la recepción de mercancía si
    realizamos la compra sobre un producto clasificado como *Bien* o como
@@ -268,6 +270,9 @@ devolución y las facturas de abono de proveedor.
 
 Excepciones en la compra
 ========================
+
+.. _purchase-exceptions:
+
 Aunque no es muy frecuente, es posible que se dé el caso de que cuando
 procesemos una compra, y se generen o generemos los correspondientes documentos
 (facturas y/o albaranes), desde el departamento correspondiente nos cancelen
@@ -393,7 +398,7 @@ de cancelación, que salvo excepción serán la mayoría:
    anteriores hasta llegar de nuevo a la gestión de la excepción de la factura 
    en la compra. Ignorando esta excepción como hemos hecho en casos anteriores.
    
-.. _purchase-configuracion:
+.. _purchase-configuration:
 
 Configuración
 =============
