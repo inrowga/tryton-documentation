@@ -21,6 +21,8 @@ documentos, una vez cancelado.
 Para cualquier duda legal relacionada con el mandato SEPA, en este `link`_ 
 encontrarás toda la información oficial. 
 
+.. inheritref:: account_payment_sepa/account_payment_sepa:section:generar
+
 Procedimientos para generar un mandato
 ======================================
 
