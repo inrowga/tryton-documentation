@@ -25,7 +25,7 @@ Procedimientos para generar un mandato
 ======================================
 
 Para empezar los pasos y generar la solicitud SEPA al Tercero al que 
-pretendamos girar una o más facturas deberemos abrir el |menu_payment_sepa|. 
+pretendamos girar una o más facturas deberemos abrir el menu Banca / Mandatos SEPA. 
 Escogiendo el tipo entre:
 
  * Una vez
@@ -40,7 +40,7 @@ a
 solicitud, aún podemos modificar el esquema y el tipo, además de añadir el 
 *Número de cuenta*, la *Identificación* y la *Fecha de firma*.  
 
-.. view:: account.payment.sepa.mandate_view_form
+.. view:: account_payment_sepa.mandate_view_form
 
    Vista formulario del Mando SEPA
 
@@ -56,6 +56,5 @@ Una vez validado el mandato habremos finalizado el proceso.
 
 
 
-.. |menu_payment_sepa| tryref:: account.menu_payment_sepa_mandate_form/complete_name
 .. |party| field:: company.company/party
 .. _link: http://www.sepaesp.es/sepa/es/faqs/elmandato/
