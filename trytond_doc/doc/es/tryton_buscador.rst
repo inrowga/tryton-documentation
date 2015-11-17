@@ -96,7 +96,7 @@ Donde:
   
 * >07/09/2011: La fecha desde la que se quieren los registros
 
-
+.. _encontrar-inactivos:
 
 ------------------------------------
 ¿Cómo encontrar registros inactivos?

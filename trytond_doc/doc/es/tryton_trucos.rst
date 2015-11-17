@@ -72,8 +72,9 @@ de verificación del campo **Activo**.
     desactivar no dispone del campo activo, no se puede desactiva.
 
 Una vez desactivado un registro este no nos aparecerá en las búsquedas, aunque
-realimente exista en la base de datos. En :ref:`encontrar-inactivos` se
-explica cómo buscar registros que hayan sido desactivados.
+realmente exista en la base de datos. 
+En :ref:`¿Cómo encontrar registros inactivos?<encontrar-inactivos>` se explica 
+cómo buscar registros que hayan sido desactivados.
 
 ------------
 Copiar/pegar
