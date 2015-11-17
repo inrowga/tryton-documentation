@@ -4,6 +4,8 @@
 Facturación
 -----------
 
+.. _gestion-facturas:
+
 Desde |menu_account_invoice| podremos gestionar toda la facturación de nuestra
 empresa, tanto las facturas que emitimos a nuestros clientes, como las que
 nos emiten nuestros proveedores, ya que el sistema distingue entre distintos
