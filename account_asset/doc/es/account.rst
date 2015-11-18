@@ -1,6 +1,5 @@
 #:inside:account/account:section:gestion#
 
-
 Amortización de activos
 =======================
 
