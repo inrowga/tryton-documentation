@@ -123,7 +123,7 @@ En este asistente le podemos especificar el tipo de factura:
 * *Entrante*. Nos generará facturas de los agentes que el tipo sea "principal".
 * *Saliente*. Nos generará facturas de los agentes que el tipo sea "agente de".
 * *Ambos*. Nos generará facturas de los agentes que sean "principal" y "agente 
-de".
+  de".
 
 Para generar las facturas de la comisión es importante que los agentes 
 dispongan 
