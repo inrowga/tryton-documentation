@@ -29,8 +29,8 @@ Crear una nueva cuenta
 ----------------------
 
 Crearemos las cuentas nuevas des del listado *normal* de cuentas analíticas que 
-encontramos en la entrada de menú *Contabilidad/ Configuración/ Contabilidad 
-analítica/ Cuentas analíticas/ Cuentas analíticas*.
+encontramos en la entrada de menú Contabilidad/ Configuración/ Contabilidad 
+analítica/ Cuentas analíticas/ Cuentas analíticas.
 
 .. Captura de imagen de formulario de nueva cuenta analítica.
 
