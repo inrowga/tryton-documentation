@@ -1,14 +1,8 @@
 
 .. inheritref:: account_payment/account_payment:section:pagos
 
-Pagos y cobros
-**************
-
-.. TODO 
-   Desenvolupar algunes coses massa esquemàtiques i eliminar possibles errors.
-
-Configuración
--------------
+Configuración de los pagos y cobros
+-----------------------------------
 
 .. inheritref:: account_payment/account_payment:paragraph:configuracion
 
