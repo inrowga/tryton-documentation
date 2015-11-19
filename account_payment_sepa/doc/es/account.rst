@@ -1,5 +1,7 @@
 #:inside:account/account:section:gestion#
 
+SEPA
+====
 
 .. toctree::
    :maxdepth: 3
