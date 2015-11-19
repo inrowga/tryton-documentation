@@ -30,16 +30,20 @@ Cuando accedamos a crear una nueva línea, los campos que tendremos que
 rellenar son:
 
 * |type|: Donde podemos escoger entre:
+
     * *Fijo*: Es un valor fijo, siempre será el mismo sea cual sea el importe
       total a pagar, por lo que no dependerá de nada. Al seleccionar esta
       opción aparecerán dos campos nuevos:
+      
            * |amount|: Indicaremos el importe fijo que se deberá de pagar.
            * |currency|: La moneda que se usará para realizar el pago.
+           
     * *Porcentaje sobre remanente*: Calculará el importe a pagar según un
       porcentaje aplicado sobre la cantidad que queda pendiente de pago.
     * *Porcentaje sobre total*: Calculará el importe a pagar según un
       porcentaje sobre el valor total de la factura. Al seleccionar esta opción
       o la anterior aparecerán dos campos nuevos:
+      
            * |percentage|: Indicaremos aquí el valor en % de 0 a 100 que
              queremos que se aplique al total o al remanente.
            * |divisor|: Este campo se nos rellenará automáticamente si
@@ -54,11 +58,13 @@ rellenar son:
              |percentage| que se calcule sobre el 50 %, el campo |divisor| se
              nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
              a un importe que dividirlo por 2.
+             
     * Remanente: El total de lo que queda por pagar, le resta del total lo ya
       pagado. Siempre que configuremos los plazos con una sola línea, deberemos 
       escoger esta tipología, ya que al no haber ningún pago previo se realizará
       el pago sobre el total. Además, cuando creemos plazos con varias |lines|,
       la última siempre deberá ser de esta tipología.
+      
 * |months|, |weeks| y |days|: Indicaremos cuántos meses, semanas y días pasarán
   para generar el pago de la línea del plazo que estamos creando.
 * |month|, |weekday| y |day|: Indicaremos el mes, día de la semana o día del
