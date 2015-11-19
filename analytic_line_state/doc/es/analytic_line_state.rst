@@ -18,8 +18,8 @@ contable (y cada vez que se modifica), la obligatoriedad se comprueba cuando el
 apunte se contabiliza. 
 
 .. Warning:: para poder operar sin errores, debemos tener todas las cuentas 
-configuradas para todas las jerarquías. En caso contrario, nos saldrá un error 
-cuando intentemos crear un apunte en una cuenta no configurada. 
+   configuradas para todas las jerarquías. En caso contrario, nos saldrá un 
+   error cuando intentemos crear un apunte en una cuenta no configurada. 
 
 Configurar desde cuentas analíticas
 -----------------------------------
