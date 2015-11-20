@@ -1,5 +1,7 @@
 #:before:product/product:section:pestanas#
 
+.. inheritref:: product/product:paragraph:required_lot
+
 Para indicar que un producto determinado debe tener asignado obligatoriamente
 un lote, debemos ir a la pestaña  **Lotes** y seleccionar los tipos de
 ubicaciones en que queremos que este lote sea obligatorio.
