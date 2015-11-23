@@ -1,8 +1,8 @@
 
 .. inheritref:: account_asset/account_asset:section:amortizacion
 
-Amortización 
-============
+Amortización contable
+=====================
 
 Mediante la depreciación de activos podemos repartir el coste de las
 inversiones entre los diferentes ejercicios fiscales en los que se produce su uso

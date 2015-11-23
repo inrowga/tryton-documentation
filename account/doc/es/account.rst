@@ -182,7 +182,7 @@ o “árbol”. Esto lo podemos encontrar, por ejemplo, en:
  * La estructura de empresas (menú Terceros > Configuración > Empresas)
  * El plan de cuentas (menú Configuración > Planes contables > Cuentas)
  * En categorías de terceros (menú Terceros > Categorías) y productos (menú 
- Productos > Categorías)
+   Productos > Categorías)
 
 En todos estos casos podremos ver que podemos acceder a la información mediante 
 dos entradas de menú. La primera con un icono escalado, en forma de árbol, y la 
@@ -201,11 +201,11 @@ Desde ambas pantallas podremos consultar y modificar información pero el
 comportamiento de ambas es distinto:
 
  * En la vista tipo árbol podremos arrastrar y soltar (drag&drop) para 
- establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
+   establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
  * En la vista tipo árbol no podremos cambiar el padre cuando entremos en la 
- ficha / formulario.
+   ficha / formulario.
  * En la vista tipo árbol solamente nos buscará en los elementos del primer 
- nivel. En los subniveles aparecerán todos.
+   nivel. En los subniveles aparecerán todos.
 
 
 .. |menu_account| tryref:: account.menu_account_list/complete_name
@@ -436,10 +436,9 @@ Otros formas de conciliar apuntes són:
    :ref:`cuenta-nueva`, que solo podremos conciliar apuntes de cuentas
    contables que tengan marcado el campo |reconcile_account|.
 
-.. tryref:: account.menu_open_reconcile_lines/complete_name
 
 .. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
-.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_forme/complete_name
+.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_form/complete_name
 
 
 Consulta planes contables
@@ -467,7 +466,7 @@ periodo/s sobre los que queramos realizar la consulta.
 .. |menu_cimp| tryref:: account.menu_code_tax_open_chart/complete_name
 
 
-.. inheritref:: account/account:section:activos
+.. inheritref:: account/account:section:cierre
 
 -------------------------------
 Cierre de la actividad contable
