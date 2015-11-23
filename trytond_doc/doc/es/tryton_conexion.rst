@@ -79,14 +79,14 @@ Tras seleccionar la opción, aparecerá una pantalla donde nos solicitará la
 siguiente información:
 
  * Contraseña del servidor Tryton (deberemos disponer de dicha contraseña para 
- poder instalar la nueva base de datos en el servidor)
+   poder instalar la nueva base de datos en el servidor)
  
  * Nombre de la nueva base de datos
  
  * El idioma inicial de la base de datos
  
  * La contraseña y la confirmación de la contraseña para el administrador 
- (deberá ser la misma pero más adelante puede modificarse)
+   (deberá ser la misma pero más adelante puede modificarse)
 
 Presionando el botón *Crear* iniciaremos el proceso de creación de una nueva 
 base de datos vacía y sin módulos dónde podremos empezar a trabajar.
