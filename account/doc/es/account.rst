@@ -423,9 +423,9 @@ Otros formas de conciliar apuntes són:
   propuestas con posibles apuntes a conciliar, pudiendo saltarlas si hace falta.
   Las propuestas las hace el programa, tu solo debes clicar botones de conciliar
   y saltar.
-* A |menu_move_line_form| se puedes buscar apuntes por tercero y/o cuenta y conciliar.
-  También se disponde de la pestaña de "Efectos con apuntes inversos" que solo muestra
-  posibles conciliaciones.
+* A |menu_move_line_form| puedes buscar apuntes por tercero y/o cuenta y 
+  conciliar. También se disponde de la pestaña de "Efectos con apuntes inversos" 
+  que solo muestra posibles conciliaciones.
 * Abrir los apuntes a pagar-cobrar desde un tercero en concreto, con el botón "Relacionado".
   Y a partir de ahí podemos conciliar.
 * Si se trabaja con extractos bancarios, una vez importados, se hacen las conciliaciones
