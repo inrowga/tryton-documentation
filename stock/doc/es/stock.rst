@@ -256,73 +256,73 @@ enviados al cliente y por lo tanto ya no disponemos de ellos.
 Albaranes creados desde ventas
 ------------------------------
 
-Al confirmar una venta que contengan productos de tipo *Bienes* automàticamente 
-se nos crearà un albaràn de cliente en estado en espera. Este albaràn contendrà 
-en los movimientos de salida todos los movimientos generados por la venta y en 
-los movimientos de inventario los movimientos necesarios para satisfacer los 
+Al confirmar una venta que contengan productos de tipo *Bienes* automàticamente
+se nos crearà un albaràn de cliente en estado en espera. Este albaràn contendrà
+en los movimientos de salida todos los movimientos generados por la venta y en
+los movimientos de inventario los movimientos necesarios para satisfacer los
 movimientos de salida.
 
 
 Flujo de albaranes
 ------------------
 
-El primer paso para crear un albarán, es crear sus movimientos de salida. Una 
-vez creados, podemos utilizar el botón En espera para crear los movimientos de 
-inventario, automàticamente se nos crearán los movimientos de inventario 
-necesarios para satisfacer los movimientos de salida. 
+El primer paso para crear un albarán, es crear sus movimientos de salida. Una
+vez creados, podemos utilizar el botón En espera para crear los movimientos de
+inventario, automàticamente se nos crearán los movimientos de inventario
+necesarios para satisfacer los movimientos de salida.
 
 ---------------------------------------
 Asignación de movimientos de inventario
 ---------------------------------------
 
-Al pulsar el botón *Reservar* el sistema intentarà asignar todos los 
+Al pulsar el botón *Reservar* el sistema intentarà asignar todos los
 movimientos de inventario, teniendo en cuenta el stock del almacén.
 
-En caso de que no haya suficiente stock en el almacén para satisfacer todos los 
+En caso de que no haya suficiente stock en el almacén para satisfacer todos los
 movimientos de inventario, el sistema nos mostrará un aviso.
 
 .. captura de pantalla de aviso "No se puede reservar"
 
-Dónde podremos visualizar de cada producto las cantidades que no se pueden 
-reservar, junto con sus cantidades. El botón *Forzar reserva* nos permitirá 
-asignar igualmente los movimientos, però sólo nos aparecerá en caso de que 
-nuestro usuario pertenezca al grupo *Forzar reserva* en la logística. También 
+Dónde podremos visualizar de cada producto las cantidades que no se pueden
+reservar, junto con sus cantidades. El botón *Forzar reserva* nos permitirá
+asignar igualmente los movimientos, però sólo nos aparecerá en caso de que
+nuestro usuario pertenezca al grupo *Forzar reserva* en la logística. También
 podemos aceptar el aviso con el botón *Aceptar*.
 
-En caso de que no hayamos forzado las reservas, el albarán quedará en estado en 
-espera, con los movimientos que se hayan podido reservar en estado *Reservado*, 
-y los movimientos pendientes de reservar en estado *Borrador*. Podemos cancelar 
+En caso de que no hayamos forzado las reservas, el albarán quedará en estado en
+espera, con los movimientos que se hayan podido reservar en estado *Reservado*,
+y los movimientos pendientes de reservar en estado *Borrador*. Podemos cancelar
 las reservas parciales, utilizando el botón *En espera*.
 
-Una vez asignados los movimientos de estoc, podemos utilizar el botón *Realizar 
-envió* para marcar el envío cómo empaquetado. Los movimientos de inventario 
-estarán completamente realizados, però los movimientos de salida estarán 
-reservados, a la espera de ser entregados al cliente. Una vez entregado al 
+Una vez asignados los movimientos de estoc, podemos utilizar el botón *Realizar
+envió* para marcar el envío cómo empaquetado. Los movimientos de inventario
+estarán completamente realizados, però los movimientos de salida estarán
+reservados, a la espera de ser entregados al cliente. Una vez entregado al
 cliente, podemos marcar el albarán cómo realizado con el botón
 *Realizado*.
 
 Entregas parciales
 ------------------
 
-Para que las entregas parciales funcionen correctamente los albaranes de cliente 
-deben haber sido creados a travès de una venta, ya que a través de la misma el 
-sistema podrá saber cuales son las cantidades de cada producto que todavía estàn 
-pendientes de enviar. 
+Para que las entregas parciales funcionen correctamente los albaranes de cliente
+deben haber sido creados a travès de una venta, ya que a través de la misma el
+sistema podrá saber cuales son las cantidades de cada producto que todavía estàn
+pendientes de enviar.
 
-En caso de que no haya suficiente stock de algún producto, podemos hacer una 
-entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de 
-las líneas de inventario. Una vez eliminadas, podemos reservar el albarán ya que 
-todos los movimientos estarán reservados. Cuando se realice el envío se 
-actualizarán las cantidades de los movimientos de salida, reflejando las 
-cantidades realmente asignadas. 
+En caso de que no haya suficiente stock de algún producto, podemos hacer una
+entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de
+las líneas de inventario. Una vez eliminadas, podemos reservar el albarán ya que
+todos los movimientos estarán reservados. Cuando se realice el envío se
+actualizarán las cantidades de los movimientos de salida, reflejando las
+cantidades realmente asignadas.
 
-Una vez realizado el albarán, se generará un nuevo albarán en estado En espera 
-con los movimientos pendientes de realizar. Podremos ver todas los movimientos y 
+Una vez realizado el albarán, se generará un nuevo albarán en estado En espera
+con los movimientos pendientes de realizar. Podremos ver todas los movimientos y
 albaranes generados desde la pestaña Albaranes de la venta relacionada.
 
 .. mostrar captura de pantalla de ejemplo
 
-Desde ahí podremos ver los movimientos pendientes, aquellos con estado 
+Desde ahí podremos ver los movimientos pendientes, aquellos con estado
 *Borrador*, junto con los albaranes pendientes, aquellos con estado *En espera*.
 
 Cancelar albaranes
@@ -361,7 +361,7 @@ pedidos enviados, deberemos crear un albarán de devolución de mercancía desde
 el menú |menu_shipment_out_return_form|. Estos albaranes cambiarán de estado
 según el punto en el que se encuentre la devolución:
 
-**Borrador**: Estado inicial en que se introducen los movimientos de los 
+**Borrador**: Estado inicial en que se introducen los movimientos de los
 productos que nos van a devolver. Una vez abierta la pestaña deberemos
 introducir el |out_return_customer| y el |out_return_warehouse|. En este
 momento ya podremos introducir todos los |out_return_incoming_moves|, para
@@ -455,15 +455,15 @@ que se han realizado, podremos filtrar por medio de las pestañas y del
 campo de búsqueda en caso de que queramos concretar los registros que se
 muestran.
 
-En este caso nos interesa remarcar las pestañas *"Desde proveedor"* y *"En 
-espera desde proveedor"*, para el control de las entradas de nuestros productos, 
-y *"Hacia clientes"*, para las salidas. En la pestaña "Desde proveedor" veremos 
-todos los movimientos de compras y albaranes, tanto en borrador (pendientes de 
-confirmar) como los recibidos. En cambio en la pestaña "En espera desde 
-proveedor" tendremos únicamente los movimientos, generados por una compra, que 
-estan en estado borrador. En el momento que se genera el albarán de esta 
-compra, aunque el estado del albarán sea en borrador, los movimientos de la 
-pestaña desaparecerán y solo los tendremos en la pestaña "Desde proveedor".   
+En este caso nos interesa remarcar las pestañas *"Desde proveedor"* y *"En
+espera desde proveedor"*, para el control de las entradas de nuestros productos,
+y *"Hacia clientes"*, para las salidas. En la pestaña "Desde proveedor" veremos
+todos los movimientos de compras y albaranes, tanto en borrador (pendientes de
+confirmar) como los recibidos. En cambio en la pestaña "En espera desde
+proveedor" tendremos únicamente los movimientos, generados por una compra, que
+estan en estado borrador. En el momento que se genera el albarán de esta
+compra, aunque el estado del albarán sea en borrador, los movimientos de la
+pestaña desaparecerán y solo los tendremos en la pestaña "Desde proveedor".
 
 .. inheritref:: stock/stock:paragraph:averiguar-terceros-movimiento
 
@@ -595,6 +595,7 @@ empresa.
 .. |menu_configuration| tryref:: stock.menu_configuration/complete_name
 .. |menu_conf_stock| tryref:: stock.menu_stock_configuration/complete_name
 
+.. inheritref:: stock/stock:section:location_configuration
 
 Configurar las ubicaciones de nuestra empresa
 ---------------------------------------------

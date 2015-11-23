@@ -103,7 +103,7 @@ nos describen como debemos realizar un determinado plato.
 .. view:: production.bom_view_form
    :field: name
 
-   Captura de pantalla de 
+   Captura de pantalla de
 
 .. _production-create-bom:
 
@@ -164,3 +164,19 @@ los materiales necesarios para realizar la producción.
 .. |bom_outputs| field:: production.bom/outputs
 
 
+.. inheritref:: production/production:section:configuration
+
+Configuracion
+=============
+
+.. _production-configuration:
+
+En el menú |menu_configuration| podemos definir la configuración de las
+producciones.
+
+Mediante el campo |production_sequence| podemos personalizar la sequencia
+que se utilizará para
+
+
+.. |menu_configuration| tryref:: production.menu_configuration/complete_name
+.. |production_sequence| field:: production.configuration/production_sequence
