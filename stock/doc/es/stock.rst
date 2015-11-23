@@ -594,7 +594,6 @@ empresa.
 
 .. |menu_configuration| tryref:: stock.menu_configuration/complete_name
 .. |menu_conf_stock| tryref:: stock.menu_stock_configuration/complete_name
-.. |menu_conf_location| tryref:: stock.menu_location_form/complete_name
 
 
 Configurar las ubicaciones de nuestra empresa
@@ -616,6 +615,7 @@ con los siguientes campos:
   depende la nueva que estamos creando.
 * |loc_type|: Aquí indicaremos la tipología que tendrá la nueva ubicación,
   pudiendo elegir entre:
+  
     * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
     * *Proveedor*: Es una ubicación virtual que representa los almacenes de
       nuestros proveedores.
