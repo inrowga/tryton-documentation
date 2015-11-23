@@ -62,9 +62,9 @@ podemos aprovechar las distintas formas que Tryton nos facilita:
     rellenará los cuatro dígitos restantes con el año actual.
   
  * También es posible utilizar el calendario que nos aparecerà si pulsamos F2 o 
- bien si hacemos click en la lupa de la derecha del campo. En este caso, es 
- posible ir a meses y años anteriores y siguientes con el ratón y hacer doble 
- click sobre la fecha deseada para seleccionarla.
+   bien si hacemos click en la lupa de la derecha del campo. En este caso, es 
+   posible ir a meses y años anteriores y siguientes con el ratón y hacer doble 
+   click sobre la fecha deseada para seleccionarla.
  
  * Finalmente, si ya hay una fecha introducida, podremos incrementar de uno en 
    uno los diferentes componentes de la fecha apretando las siguientes letras de 
