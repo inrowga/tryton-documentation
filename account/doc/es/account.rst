@@ -278,12 +278,12 @@ deberemos indicar la empresa sobre la que queremos crear el plan y la
 |account_template| que utilizaremos para crearlo (por defecto el sistema tiene
 ya generada la plantilla *Plan de tipos de cuenta mínimo* aunque también
 podemos instalar el *Plan General de Contabilidad* o crear una plantilla
-personalizada por medio del menú |menu_template_account|).
+personalizada por medio del menú |menu_template_account|). Una vez indicados 
+estos campos, clicamos en *Crear* y se nos abrirá una nueva ventana donde 
+podremos indicar la |plan_account_payable| y la |plan_account_receivable| que 
+utilizaremos para el plan contable. 
 
-Una vez indicados estos campos, clicamos en *Crear* y se nos abrirá una nueva
-ventana donde podremos indicar la |plan_account_payable| y la
-|plan_account_receivable| que utilizaremos para el plan contable. Si clicamos
-de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
+Si clicamos de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
 posteriormente, podremos consultar por medio de |menu_open_chart|.
 
 .. |menu_create_chart| tryref:: account.menu_create_chart/complete_name
