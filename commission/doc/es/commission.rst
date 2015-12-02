@@ -100,14 +100,15 @@ asociado al agente.
 En el caso de que la factura provenga de una venta y tengamos más de una venta 
 con diferentes agentes deberemos realizar una factura para cada Agente, si este 
 es diferente. 
-“En el caso que la factura provenga de una venta, por ejemplo, en una factura 
-disponemos
-de diferentes líneas que pueden que el origen sean de diferentes ventas, y por 
-tanto,
-de diferentes agentes. En el caso que las líneas de la factura tengan un agente,
-tendrá preferencia este agente respecto el agente global de la factura o de si 
-no disponemos de agente, y las comisiones que se generarán serán respecto a la 
-línea de la factura.”
+
+  **Ejemplo:**
+
+  Una factura provenga de una venta en esta factura disponemos  de diferentes 
+  líneas dónde puede que el origen sea de diferentes ventas, y por tanto, de 
+  diferentes agentes. En el caso que las líneas de la factura tengan un agente,
+  tendrá preferencia este respecto al agente global de la factura o de si no 
+  disponemos de agente, las comisiones que se generarán serán respecto a la 
+  línea de la factura.
 
 .. inheritref:: commission/commission:section:facturar_comisiones
 
