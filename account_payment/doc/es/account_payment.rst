@@ -63,16 +63,16 @@ campos se rellenarán con la información del efecto. Si estamos introduciendo u
 anticipo, por ejemplo, y no hay un efecto como contrapartida, tendremos que
 rellenar manualmente en resto de campos.
 
-Cuando tengamos toda la información introducida deberemos clicar en *Aprobar*,
-con esto indicamos al sistema que el pago o el cobro del efecto ha sido
-aceptado por el responsable de la empresa. Para procesar un pago (lo que
-representa que hemos mandado la orden de pago o cobro al banco) tendremos que
-acceder a la pestaña *Aprobado*, seleccionar todos los pagos que se realizarán
-en la remesa (o uno solo si la orden solo se realiza por un pago) y tras clicar
-en el icono *Ejecutar acción* seleccionaremos la opción *Procesar pagos*. Una
-vez nos contesten del banco, podremos indicar en la pestaña *En proceso* si los
-pagos se han realizado *Con éxito*, o si nos lo han rechazado y por tanto ha 
-*Fallado*.
+.. inheritref:: account_payment/account_payment:paragraph:aprobar
+
+Para procesar un pago (paso que hacemos después de haber mandado la orden de 
+pago o cobro al banco) tendremos que acceder a la pestaña *Aprobado*, si hemos 
+marcado la marca *Aprobar* sino en la pestaña *Borrador*, seleccionar todos los 
+pagos que se realizarán en la remesa (o uno solo si la orden solo se realiza por 
+un pago) y tras clicar en el icono *Ejecutar acción* seleccionaremos la opción 
+*Procesar pagos*. Una vez nos contesten del banco, podremos indicar en la 
+pestaña *En proceso* si los pagos se han realizado *Con éxito*, o si nos lo han 
+rechazado y por tanto ha *Fallado*.
 
 Como es el proceso del pago
 ---------------------------
