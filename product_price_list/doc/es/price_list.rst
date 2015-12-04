@@ -2,7 +2,7 @@
 Tarifas de productos
 ====================
 
-.. inheritref:: product_price_list/price_list:section:tarifas
+.. inheritref:: product_price_list/price_list:paragraph:tarifas
 
 Por defecto el sistema de tarifas usa el campo **unit_price** (precio de venta) y
 a partir de él podemos hacer operaciones.
