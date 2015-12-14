@@ -419,13 +419,12 @@ el menú.
 
 Otros formas de conciliar apuntes són:
 
+.. inheritref:: account/account:bullet_list:formas-de-conciliar
+
 * Desde |menu_reconcile| se ejecuta un asistente que te va mostrando distintas
   propuestas con posibles apuntes a conciliar, pudiendo saltarlas si hace falta.
   Las propuestas las hace el programa, tu solo debes clicar botones de conciliar
   y saltar.
-* A |menu_move_line_form| puedes buscar apuntes por tercero y/o cuenta y 
-  conciliar. También se disponde de la pestaña de "Efectos con apuntes inversos" 
-  que solo muestra posibles conciliaciones.
 * Abrir los apuntes a pagar-cobrar desde un tercero en concreto, con el botón "Relacionado".
   Y a partir de ahí podemos conciliar.
 * Si se trabaja con extractos bancarios, una vez importados, se hacen las conciliaciones
@@ -438,7 +437,6 @@ Otros formas de conciliar apuntes són:
 
 
 .. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
-.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_form/complete_name
 
 
 Consulta planes contables
