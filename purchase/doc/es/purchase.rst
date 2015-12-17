@@ -31,8 +31,6 @@ compra.
 
 .. view:: purchase.purchase_view_form
    :field: party
-   
-   Captura de pantalla del |menu_purchase|
 
 La compra está compuesta por una parte en la que se define el proveedor con sus
 datos (Cabecera), y otra compuesta por varias pestañas que contendrán
