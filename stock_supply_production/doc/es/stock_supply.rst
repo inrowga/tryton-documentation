@@ -45,8 +45,8 @@ Para ello, siga los siguientes pasos:
 * Abra la pestaña **LdM**
 * Añada la *Lista de materiales* de fabricación de este producto.
 * Si no existe ninguna lista de materiales puede crearla desde esta misma
-  pestaña, o desde el menú |menu_bom_list| como se explica en la `configuración
-  de las lista de materiales <../production/index.html>`_
+  pestaña, o desde el menú |menu_bom_list| como se explica en la :ref:`configuración
+  de las lista de materiales <production-bom>`
 
 .. |menu_main_product| tryref:: product.menu_main_product/complete_name
 .. |menu_bom_list| tryref:: production.menu_bom_list/complete_name
