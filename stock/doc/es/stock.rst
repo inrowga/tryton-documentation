@@ -309,6 +309,8 @@ deben haber sido creados a travès de una venta, ya que a través de la misma el
 sistema podrá saber cuales son las cantidades de cada producto que todavía estàn
 pendientes de enviar.
 
+.. inheritref:: stock/stock:paragraph:eliminacion_lineas_no_entregadas
+
 En caso de que no haya suficiente stock de algún producto, podemos hacer una
 entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de
 las líneas de inventario. Una vez eliminadas, podemos reservar el albarán ya que
