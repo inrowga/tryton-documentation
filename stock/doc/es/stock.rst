@@ -99,6 +99,7 @@ ubicación configurada como *Zona de entrada* hasta la configurada como
    Así los productos de la recepción constarán, a todos los efectos, en
    nuestros almacenes desde la fecha indicada.
 
+
 Cancelar albaranes
 ------------------
 
@@ -118,8 +119,12 @@ botón *Borrador*.
    los productos indicados en el albarán cancelado, deberemos hacer una
    devolución de mercancía como si se tratase de una devolución normal.
 
+
 Devolución de mercancía recibida
 --------------------------------
+
+.. inheritref:: stock/stock:paragraph:crear_devolucion_mercancia_recibida
+
 Para devolver una mercancía que hemos recibido debemos crear un albarán de
 devolución de proveedor desde la opción |menu_shipment_in_return_form|.
 Al igual que un albarán de proveedor, un albarán de devolución puede estar
