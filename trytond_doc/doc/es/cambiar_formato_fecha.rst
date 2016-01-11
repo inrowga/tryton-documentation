@@ -40,8 +40,8 @@ por medio de:
   
 
 .. note:: Aunque es poco habitual, se pueden utilizar otros símbolos para indicar
-   el formato de la fecha. Podemos encontrar un listado más extendido
-   `aquí <https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior/>`_.
+          el formato de la fecha. Podemos encontrar un listado más extendido
+          `aquí <https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior/>`_.
 
 -------------------------   
 Cómo introducir una fecha
@@ -51,28 +51,28 @@ En todos los sitios dónde la aplicación necesite que introduzcamos una fecha
 podemos aprovechar las distintas formas que Tryton nos facilita:
 
  * Siempre y cuando no cambiemos la configuración del idioma y éste esté en 
- español, podremos introducir una fecha manualmente con el teclado indicando 
- día/mes/año (cuatro dígitos para el año). Además:
+   español, podremos introducir una fecha manualmente con el teclado indicando 
+   día/mes/año (cuatro dígitos para el año). Además:
  
   - Podemos pulsar el signo igual “=” y Tryton lo sustituirà inmediatamente por 
-  la fecha del día de hoy.
+    la fecha del día de hoy.
   - Podemos introducir solamente el día del mes y al pulsar tabulación para 
-  saltar al siguiente campo Tryton lo rellenará con el mes y año actuales.
+    saltar al siguiente campo Tryton lo rellenará con el mes y año actuales.
   - Podemos introducir solamente el día y el mes y al cambiar de campo Tryton 
-  rellenará los cuatro dígitos restantes con el año actual.
+    rellenará los cuatro dígitos restantes con el año actual.
   
  * También es posible utilizar el calendario que nos aparecerà si pulsamos F2 o 
- bien si hacemos click en la lupa de la derecha del campo. En este caso, es 
- posible ir a meses y años anteriores y siguientes con el ratón y hacer doble 
- click sobre la fecha deseada para seleccionarla.
+   bien si hacemos click en la lupa de la derecha del campo. En este caso, es 
+   posible ir a meses y años anteriores y siguientes con el ratón y hacer doble 
+   click sobre la fecha deseada para seleccionarla.
  
  * Finalmente, si ya hay una fecha introducida, podremos incrementar de uno en 
- uno los diferentes componentes de la fecha apretando las siguientes letras de 
- nuestro teclado: **d** para el día, **m** para el mes y **y** para el año. 
- Para decrementar el valor deberemos combinar estas teclas con la de Mayúsculas 
- (como en cualquier atajo, el Mayúsculas no es equivalente al Bloq Mayús). Si 
- al usar estos atajos se sobrepasa el último día del mes o el último mes del 
- año, el mes y el año cambiarán al que corresponda.
+   uno los diferentes componentes de la fecha apretando las siguientes letras de 
+   nuestro teclado: **d** para el día, **m** para el mes y **y** para el año. 
+   Para decrementar el valor deberemos combinar estas teclas con la de Mayúsculas 
+   (como en cualquier atajo, el Mayúsculas no es equivalente al Bloq Mayús). Si 
+   al usar estos atajos se sobrepasa el último día del mes o el último mes del 
+   año, el mes y el año cambiarán al que corresponda.
    
    
 El formato de número

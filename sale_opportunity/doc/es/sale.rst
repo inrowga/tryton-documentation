@@ -5,4 +5,4 @@ Iniciativas y oportunidades comerciales
 
 .. toctree::
 
-   sale_opportunity_bak
+   sale_opportunity

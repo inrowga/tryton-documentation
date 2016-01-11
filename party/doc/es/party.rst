@@ -60,15 +60,12 @@ siguientes campos:
    
    Vista formulario de un Tercero
 
+.. inheritref:: party/party:paragraph:identificadores
 
-Si accedemos a la pestaña **Contabilidad** podremos seguir introduciendo
-información sobre nuestro cliente. Los campos que deberemos indicar en esta
-pestaña son:
 
-.. inheritref:: party/party:bullet_list:campos_contabilidad
-
-* |vat_number|:  donde indicaremos el número fiscal del tercero.
-* |vat_country|: en el que indicaremos el país de procedencia del tercero.
+A la pestaña **Identificadores** introduciremos los códigos del tercero
+como CIF/NIF. En el caso de ser un CIF/NIF europeo, seleccionaremos la opción
+"VAT" (y nos validará el número introducido).
 
 
 Encontrar terceros sin NIF
@@ -174,9 +171,6 @@ defecto.
 .. |menu_party| tryref:: party.menu_party_form/complete_name
 .. |name| field:: party.party/name
 .. |lang| field:: party.party/lang
-.. |vat_code| field:: party.party/vat_code
-.. |vat_country| field:: party.party/vat_country
-.. |vat_number| field:: party.party/vat_number
 .. |addresses| field:: party.party/addresses
 .. |contact_mechanisms| field:: party.party/contact_mechanisms
 .. |categories| field:: party.party/categories

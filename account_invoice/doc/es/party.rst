@@ -1,7 +1,5 @@
 #:inside:party/party:section:terceros-multicompania#
 
-
-
 * |customer_payment_term|
 * |supplier_payment_term|
 
@@ -9,7 +7,7 @@
 .. |supplier_payment_term| field:: party.party/supplier_payment_term
 
 
-#:inside:party/party:bullet_list:campos_contabilidad#
+#:inside:account/party:bullet_list:campos_contabilidad#
 
 * |customer_payment_term| y |supplier_payment_term|: en estos campos
   indicaremos el plazo que se le dará al tercero cuando actúe como cliente

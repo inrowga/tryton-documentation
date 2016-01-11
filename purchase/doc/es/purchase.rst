@@ -29,8 +29,6 @@ una compra nueva deberemos clicar sobre el icono *Nuevo* y se nos abrirá el
 formulario de edición con los campos que deberemos rellenar para crear la
 compra.
 
-.. |menu_purchase| tryref:: purchase.menu_purchase_form/complete_name
-
 .. view:: purchase.purchase_view_form
    :field: party
    
@@ -105,7 +103,7 @@ Desde las pestañas **facturas** y **albaranes** podremos acceder a la
 información sobre las recepciones y facturación de la compra. Una vez se
 generen los albaranes o facturas, nos aparecerán en sus respectivas pestañas y
 podremos acceder a la información concreta de cada documento. En
-:ref:`estados-fac-alb` se indica en qué estados nos podemos encontrar estos dos
+:ref:`compra-estados-fac-alb` se indica en qué estados nos podemos encontrar estos dos
 documentos.
 
 .. |party| field:: purchase.purchase/party
@@ -190,7 +188,7 @@ factura de la compra está pagada, el estado de la compra cambiará a
 **Realizada** y el proceso de compra se habrá completado. 
 
 
-.. _estados-fac-alb:
+.. _compra-estados-fac-alb:
 
 @field:purchase.purchase/invoice_state@ y @field:purchase.purchase/shipment_state@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

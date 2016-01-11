@@ -33,32 +33,39 @@ rellenar son:
     * *Fijo*: Es un valor fijo, siempre será el mismo sea cual sea el importe
       total a pagar, por lo que no dependerá de nada. Al seleccionar esta
       opción aparecerán dos campos nuevos:
-           * |amount|: Indicaremos el importe fijo que se deberá de pagar.
-           * |currency|: La moneda que se usará para realizar el pago.
+
+      * |amount|: Indicaremos el importe fijo que se deberá de pagar.
+      * |currency|: La moneda que se usará para realizar el pago.
+
     * *Porcentaje sobre remanente*: Calculará el importe a pagar según un
       porcentaje aplicado sobre la cantidad que queda pendiente de pago.
     * *Porcentaje sobre total*: Calculará el importe a pagar según un
       porcentaje sobre el valor total de la factura. Al seleccionar esta opción
       o la anterior aparecerán dos campos nuevos:
-           * |percentage|: Indicaremos aquí el valor en % de 0 a 100 que
-             queremos que se aplique al total o al remanente.
-           * |divisor|: Este campo se nos rellenará automáticamente si
-             indicamos previamente el |percentage|. En caso de rellenar este
-             campo primero, el que se rellenará automáticamente será el campo
-             |percentage|. Esto se debe a que ambos campos están relacionados e
-             indican lo mismo pero desde distintos puntos de vista. En este
-             campo podremos indicar el divisor que se utilizará para realizar
-             el cálculo del importe, o, dicho de otro modo, deberemos indicar
-             por qué número queremos que se divida el total o remanente para
-             calcular el importe a pagar. Por ejemplo, si indicamos en el campo
-             |percentage| que se calcule sobre el 50 %, el campo |divisor| se
-             nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
-             a un importe que dividirlo por 2.
+
+      * |percentage|: Indicaremos aquí el valor en % de 0 a 100 que
+        queremos que se aplique al total o al remanente.
+      * |divisor|: Este campo se nos rellenará automáticamente si
+        indicamos previamente el |percentage|. En caso de rellenar este
+        campo primero, el que se rellenará automáticamente será el campo
+        |percentage|. Esto se debe a que ambos campos están relacionados e
+        indican lo mismo pero desde distintos puntos de vista. En este
+        campo podremos indicar el divisor que se utilizará para realizar
+        el cálculo del importe, o, dicho de otro modo, deberemos indicar
+        por qué número queremos que se divida el total o remanente para
+        calcular el importe a pagar. Por ejemplo, si indicamos en el campo
+        |percentage| que se calcule sobre el 50 %, el campo |divisor| se
+        nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
+        a un importe que dividirlo por 2.
+
     * Remanente: El total de lo que queda por pagar, le resta del total lo ya
       pagado. Siempre que configuremos los plazos con una sola línea, deberemos 
       escoger esta tipología, ya que al no haber ningún pago previo se realizará
       el pago sobre el total. Además, cuando creemos plazos con varias |lines|,
       la última siempre deberá ser de esta tipología.
+
+Y por cada tipo de línea de pago, indicaremos sus *Incrementos*:
+
 * |months|, |weeks| y |days|: Indicaremos cuántos meses, semanas y días pasarán
   para generar el pago de la línea del plazo que estamos creando.
 * |month|, |weekday| y |day|: Indicaremos el mes, día de la semana o día del
@@ -110,9 +117,9 @@ realicemos.
 .. |currency| field:: account.invoice.payment_term.line/currency
 .. |percentage| field:: account.invoice.payment_term.line/percentage
 .. |divisor| field:: account.invoice.payment_term.line/divisor
-.. |months| field:: account.invoice.payment_term.line/months
-.. |weeks| field:: account.invoice.payment_term.line/weeks
-.. |days| field:: account.invoice.payment_term.line/days
-.. |month| field:: account.invoice.payment_term.line/month
-.. |weekday| field:: account.invoice.payment_term.line/weekday
-.. |day| field:: account.invoice.payment_term.line/day
+.. |months| field:: account.invoice.payment_term.line.relativedelta/months
+.. |weeks| field:: account.invoice.payment_term.line.relativedelta/weeks
+.. |days| field:: account.invoice.payment_term.line.relativedelta/days
+.. |month| field:: account.invoice.payment_term.line.relativedelta/month
+.. |weekday| field:: account.invoice.payment_term.line.relativedelta/weekday
+.. |day| field:: account.invoice.payment_term.line.relativedelta/day

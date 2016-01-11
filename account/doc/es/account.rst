@@ -182,7 +182,7 @@ o “árbol”. Esto lo podemos encontrar, por ejemplo, en:
  * La estructura de empresas (menú Terceros > Configuración > Empresas)
  * El plan de cuentas (menú Configuración > Planes contables > Cuentas)
  * En categorías de terceros (menú Terceros > Categorías) y productos (menú 
- Productos > Categorías)
+   Productos > Categorías)
 
 En todos estos casos podremos ver que podemos acceder a la información mediante 
 dos entradas de menú. La primera con un icono escalado, en forma de árbol, y la 
@@ -201,11 +201,11 @@ Desde ambas pantallas podremos consultar y modificar información pero el
 comportamiento de ambas es distinto:
 
  * En la vista tipo árbol podremos arrastrar y soltar (drag&drop) para 
- establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
+   establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
  * En la vista tipo árbol no podremos cambiar el padre cuando entremos en la 
- ficha / formulario.
+   ficha / formulario.
  * En la vista tipo árbol solamente nos buscará en los elementos del primer 
- nivel. En los subniveles aparecerán todos.
+   nivel. En los subniveles aparecerán todos.
 
 
 .. |menu_account| tryref:: account.menu_account_list/complete_name
@@ -431,15 +431,11 @@ Otros formas de conciliar apuntes són:
 * Si se trabaja con extractos bancarios, una vez importados, se hacen las conciliaciones
   automáticas cuando se contabiliza una línea de extracto bancario.
 
-
-.. Note:: Tenemos que tener en cuenta, tal y como hemos visto en
-   :ref:`cuenta-nueva`, que solo podremos conciliar apuntes de cuentas
-   contables que tengan marcado el campo |reconcile_account|.
-
-.. tryref:: account.menu_open_reconcile_lines/complete_name
+.. Note:: Tenemos que tener en cuenta, tal y como hemos visto en :ref:`cuenta-nueva`, que solo
+          podremos conciliar apuntes de cuentas contables que tengan marcado el campo |reconcile_account|.
 
 .. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
-.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_forme/complete_name
+.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_form/complete_name
 
 
 Consulta planes contables
@@ -526,9 +522,9 @@ No arrastrará los saldos de las cuentas de ingresos y gastos si estas están
 bien configuradas, tal y como veremos a continuación.
 
 .. Note:: Hay que tener en cuenta que sí que se van a arrastrar los saldos
-   de las cuentas de ingresos y gastos mientras no se haya cerrado el año,
-   puesto que el sistema intenta garantizar que el balance de situación está
-   siempre cuadrado.
+          de las cuentas de ingresos y gastos mientras no se haya cerrado el año,
+          puesto que el sistema intenta garantizar que el balance de situación está
+          siempre cuadrado.
 
 
 El asiento de regularización

@@ -50,7 +50,7 @@ proyectos que no esten relacionados a ningún cliente (internos, por ejemplo).
 En proyectos disponemos de campos que nos informarán sobre el tiempo empleado en
 el proyecto:
 
-* |effort|: Tiempo total empleado en este trabajo.
+* |effort_duration|: Tiempo total empleado en este trabajo.
 * |total_effort|: El tiempo total estimado para este trabajo y subtrabajos.
 
 .. |party| field:: project.work/party
@@ -58,7 +58,7 @@ el proyecto:
 .. |children| field:: project.work/children
 .. |sequence| field:: project.work/sequence
 .. |work| field:: project.work/work
-.. |effort| field:: project.work/effort
+.. |effort_duration| field:: project.work/effort_duration
 .. |total_effort| field:: project.work/total_effort
 
 .. inheritref:: project/project:section:tarea

@@ -76,7 +76,7 @@ Abrir la exportación con Excel 2010
 ===================================
 
 Si la exportación se debe abrir con office 2010 podemos encontrarnos que Office 
-2010 no lo abra bien directamente. Tenemos dos posibilidades:
+2010 no lo abra como lo deseamos. Tenemos dos posibilidades:
 
 * Una vez se abre Excel automáticamente desde la exportación veremos que nos 
   sale el contenido en una sola columna. Debemos seleccionarla toda y nos 
@@ -94,10 +94,11 @@ Si la exportación se debe abrir con office 2010 podemos encontrarnos que Office
   
 .. Note:: Al menos en Excel 2003 no es posible indicar la codificación del
   texto (en este caso, Unicode UTF-8) cuando Excel se abre automáticamente. En 
-  este caso la única opción válida es la número 2. Es importante tenerlo en 
-  cuenta porque no sólo puede afectar a la visualización de símbolos raros sino 
+  este caso la única opción válida es la segunda opción. Es importante tenerlo en 
+  cuenta porque no sólo puede afectar a la visualización de símbolos sino 
   que además puede que algunos datos (líneas enteras) no sean importados con 
-  los graves problemas que esto significa. 
+  los graves problemas que esto significa. O bien, usar LibreOffice que dispone
+  de más compatibilidad con los ficheros CSV.
 
 .. figure:: images/tryton-export_csv.png
 

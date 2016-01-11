@@ -156,7 +156,7 @@ los materiales necesarios para realizar la producción.
 
 .. inheritref:: production/production:section:configuration
 
-Configuracion
+Configuración
 =============
 
 .. _production-configuration:

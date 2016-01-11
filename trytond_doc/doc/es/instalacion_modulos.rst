@@ -20,7 +20,7 @@ encuentran o no instalados y dos botones:
 * Marca para instalar
 
 
-.. view:: ir.module_view_list
+.. view:: ir.module_view_tree
 
   Captura de pantalla de la lista de módulos
 

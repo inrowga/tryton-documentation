@@ -1,6 +1,3 @@
-.. _amortizar-activos
-
-
 Mediante la depreciación de activos podemos repartir el coste de las
 inversiones entre los diferentes ejercicios fiscales en los que se produce su uso
 o disfrute en la actividad empresarial. De esta forma se refleja más fielmente el
@@ -180,7 +177,6 @@ Una vez generada la factura se realizará el apunte para esta venta en la cuenta
 .. |purchase_date| field:: account.asset/purchase_date
 .. |start_date| field:: account.asset/start_date
 .. |end_date| field:: account.asset/end_date
-.. |supplier_invoice_line| field:: account.asset/supplier_invoice_line
 .. |unit| field:: account.asset/unit
 .. |quantity| field:: account.asset/quantity
 .. |company| field:: account.asset/company
@@ -201,7 +197,6 @@ Una vez generada la factura se realizará el apunte para esta venta en la cuenta
 .. |product_inv| field:: account.invoice.line/product
 .. |asset_inv| field:: account.invoice.line/asset
 .. |account_inv| field:: account.invoice.line/account
-.. |quantity| field:: account.invoice.line/quantity
 .. |unit_price| field:: account.invoice.line/unit_price
 .. |menu_asset| tryref:: account_asset.menu_asset_form/complete_name
 .. |menu_create_moves| tryref:: account_asset.menu_create_moves/complete_name

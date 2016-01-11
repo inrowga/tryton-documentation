@@ -38,12 +38,6 @@ pedirá confirmación. También se puede borrar uno o más registros desde la vi
 lista, seleccionándolo(s) previamente y pulsando las teclas Ctrl + D.
 Nota: Sólo permitirá borrar aquellos elementos que no tengan objetos relacionados.
 
-Por ejemplo, para borrar un cliente deberemos borrar antes sus pedidos.
-
-.. figure:: images/tryton-delete.jpg
-
-   Eliminar registro
-
 
 Deshacer borrar registro
 ------------------------

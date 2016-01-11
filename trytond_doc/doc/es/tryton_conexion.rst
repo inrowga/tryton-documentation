@@ -19,6 +19,9 @@ Para el uso de Tryton necesitamos:
 Clientes
 ========
 
+Cliente de escritorio
+---------------------
+
 Para conectarse a Tryton debemos utilizar el cliente GTK. La descarga se puede
 realizar desde `descarga de Tryton`_
 
@@ -27,6 +30,15 @@ realizar desde `descarga de Tryton`_
 .. warning:: Consulte con su técnico que versión de Tryton debe usar. Debe usar
              la misma versión que la del servidor de Tryton. No podrá conectar
              si las versiones entre cliente y servidor no coinciden. 
+
+Cliente web
+-----------
+
+También para conectarse a Tryton podemos utilizar el cliente web. Este cliente es
+adaptable a los dispositivos (smartphones, tablets o escritorios) y sólo se requiere
+un navegador web (Firefox, Chrome, ...)
+
+.. warning:: Consulte con su técnico la URL para acceder con el cliente web y si está disponible.
 
 Conexión
 ========
@@ -44,7 +56,8 @@ botón Añade de la parte inferior izquierda y rellenar los siguientes datos:
 
 * **Dirección IP o dominio del servidor**
 * **Puerto** Por defecto 8000
-* **Base de datos**: Seleccionar una del menú desplegable.
+* **Base de datos**: Seleccionar una del menú desplegable o bien introducir
+  el nombre de la base de datos.
 * **Usuario**
 
 .. figure:: images/tryton-profile.png
@@ -79,14 +92,14 @@ Tras seleccionar la opción, aparecerá una pantalla donde nos solicitará la
 siguiente información:
 
  * Contraseña del servidor Tryton (deberemos disponer de dicha contraseña para 
- poder instalar la nueva base de datos en el servidor)
+   poder instalar la nueva base de datos en el servidor)
  
  * Nombre de la nueva base de datos
  
  * El idioma inicial de la base de datos
  
  * La contraseña y la confirmación de la contraseña para el administrador 
- (deberá ser la misma pero más adelante puede modificarse)
+   (deberá ser la misma pero más adelante puede modificarse)
 
 Presionando el botón *Crear* iniciaremos el proceso de creación de una nueva 
 base de datos vacía y sin módulos dónde podremos empezar a trabajar.

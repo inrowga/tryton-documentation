@@ -1,4 +1,8 @@
-#:inside:party/party:bullet_list:campos_contabilidad#
+#:after:party/party:paragraph:identificadores#
+
+Si accedemos a la pestaña **Contabilidad** podremos seguir introduciendo
+información sobre nuestro cliente. Los campos que deberemos indicar en esta
+pestaña son:
 
 * |account_payable| y |account_receivable|: indicaremos las cuentas que se
   utilizarán cómo cuentas a cobrar/pagar por defecto en las facturas

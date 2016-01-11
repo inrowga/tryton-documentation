@@ -116,7 +116,7 @@ configurar los métodos por defecto que se mostrarán en las ventas.
 Desde las pestañas **Facturas** y **Albaranes** podremos acceder a la
 información sobre los envíos y facturación de la venta. Una vez se generen los
 albaranes o facturas, nos aparecerán en sus respectivas pestañas y podremos
-acceder a la información concreta de cada documento. En :ref:`estados-fac-alb`
+acceder a la información concreta de cada documento. En :ref:`venta-estados-fac-alb`
 se indica en qué estados nos podemos encontrar estos dos documentos.
 
 .. |party| field:: sale.sale/party
@@ -196,7 +196,7 @@ mercancía, el estado de la venta cambiará a **Realizada** y el proceso de vent
 se habrá completado.
 
 
-.. _estados-fac-alb:
+.. _venta-estados-fac-alb:
 
 |invoice_state| y |shipment_state|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -297,8 +297,6 @@ el diario correspondiente en euros.
    cuenta contable *Diferencias negativas de cambio (668)* o *Diferencias
    positivas de cambio (768)* reflejando las diferencias o desajustes en el
    cambio de divisa.
-
-.. |currency| field:: sale.sale/currency
 
 .. _sale-exceptions:
 

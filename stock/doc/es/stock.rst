@@ -617,34 +617,34 @@ con los siguientes campos:
   depende la nueva que estamos creando.
 * |loc_type|: Aquí indicaremos la tipología que tendrá la nueva ubicación,
   pudiendo elegir entre:
-    * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
-    * *Proveedor*: Es una ubicación virtual que representa los almacenes de
-      nuestros proveedores.
-    * *Cliente*: Al igual que la ubicación *Proveedor*, se trata de una
-      ubicación virtual que simula los movimientos de stock hacía el cliente.
-    * *Perdido/encontrado*: Es la ubicación virtual que el sistema utiliza
-      para los productos que perdemos o encontramos.
-    * *Producción*: Ubicación virtual que utilizaremos en caso de tener un
-      proceso de producción.
-    * *Interna*: Es la ubicación concreta donde se almacenan (definitiva o
-      temporalmente) nuestra mercancía.
-    * *Almacén*: Representa la ubicación genérica de nuestros almacenes. En su
-      interior alberga varias ubicaciones internas, por eso, al seleccionar
-      esta tipología se nos habilitarán tres nuevos campos:
 
-        * |loc_address|: En este campo, si lo deseamos, podemos indicar la
-          dirección postal donde se encuentra nuestro almacén.
-        * |loc_input_location| y |loc_output_location|: En estos campos
-          deberemos seleccionar las ubicaciones internas que se utilizarán
-          como muelle de carga y de descarga, ya que cuando hagamos un
-          movimiento de stock, el sistema automáticamente realiza el movimiento
-          interno hasta la zona de salida o entrada (dependiendo de la
-          dirección del envío).
-        * |loc_storage_location|: Es la ubicación interna del almacén.
-          Correspondería a la zona de almacenaje dentro del almacén
-          (diferenciándola del muelle de carga y descarga).
+  * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
+  * *Proveedor*: Es una ubicación virtual que representa los almacenes de
+    nuestros proveedores.
+  * *Cliente*: Al igual que la ubicación *Proveedor*, se trata de una
+    ubicación virtual que simula los movimientos de stock hacía el cliente.
+  * *Perdido/encontrado*: Es la ubicación virtual que el sistema utiliza
+    para los productos que perdemos o encontramos.
+  * *Producción*: Ubicación virtual que utilizaremos en caso de tener un
+    proceso de producción.
+  * *Interna*: Es la ubicación concreta donde se almacenan (definitiva o
+    temporalmente) nuestra mercancía.
+  * *Almacén*: Representa la ubicación genérica de nuestros almacenes. En su
+    interior alberga varias ubicaciones internas, por eso, al seleccionar
+    esta tipología se nos habilitarán tres nuevos campos:
 
-.. |menu_conf_location| tryref:: stock.menu_location_form/complete_name
+    * |loc_address|: En este campo, si lo deseamos, podemos indicar la
+      dirección postal donde se encuentra nuestro almacén.
+    * |loc_input_location| y |loc_output_location|: En estos campos
+      deberemos seleccionar las ubicaciones internas que se utilizarán
+      como muelle de carga y de descarga, ya que cuando hagamos un
+      movimiento de stock, el sistema automáticamente realiza el movimiento
+      interno hasta la zona de salida o entrada (dependiendo de la
+      dirección del envío).
+    * |loc_storage_location|: Es la ubicación interna del almacén.
+      Correspondería a la zona de almacenaje dentro del almacén
+      (diferenciándola del muelle de carga y descarga).
+
 .. |loc_name| field:: stock.location/name
 .. |loc_code| field:: stock.location/code
 .. |loc_address| field:: stock.location/address
