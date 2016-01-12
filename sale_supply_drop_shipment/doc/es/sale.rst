@@ -3,7 +3,7 @@
 Envios directos
 ===============
 
-#:inside:sale/sale:toctree:venta_pr_suministro#
+.. inheritref:: sale/sale:toctree:envio_directo
 
 .. toctree::
    :maxdepth: 2
