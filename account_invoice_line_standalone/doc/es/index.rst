@@ -1,6 +1,6 @@
-======================================
-Facturar a partir de líneas de factura
-======================================
+==================================================
+Facturación. Añadir líneas de factura ya generadas
+==================================================
 
 Permite crear una factura manualmente y en ella seleccionar líneas de factura ya
 creadas y añadirlas en la nueva factura que está creando.
