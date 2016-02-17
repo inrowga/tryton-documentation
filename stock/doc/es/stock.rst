@@ -544,20 +544,20 @@ Para la generación de un nuevo inventario deberemos seleccionar la
 material (para saber como funcionan estas ubicaciones podemos acceder a la
 introducción de la sección :ref:`intro-logística`), y la |inv_date| a la que
 se corresponde. Una vez indicados los parámetros generales, deberemos clicar en
-el botón *Inventario completo* y se nos rellenarán las lineas con los productos
-y existencias que el sistema indica que tiene en la |inv_location| indicada. En
-cada una de las líneas generadas podremos ver la |inv_expected_quantity| que
-indica la cantidad que el sistema cree que tiene, y la |inv_quantity|, que
-podremos modificar con el número de existencias de nuestro recuento. Hay que
-tener en cuenta que al clicar sobre *Inventario completo* el sistema no creará
-líneas por los productos para los cuales no tiene existencias informadas. Para
-añadir nuevos productos en el inventario, simplemente tendremos que generar una
+el botón *Inventario completo* si deseamos que se incorporen todos los productos
+de esta ubicación, o añadir los productos que deseamos, ya en las líneas.
+En el momento de guardar, cada una de las líneas generadas podremos ver la
+|inv_expected_quantity| que indica la cantidad que el sistema cree que tiene,
+y la |inv_quantity|, que podremos modificar con el número de existencias de nuestro
+recuento. Hay que tener en cuenta que al clicar sobre *Inventario completo* el
+sistema no creará líneas por los productos para los cuales no tiene existencias informadas.
+Para añadir nuevos productos en el inventario, simplemente tendremos que generar una
 línea nueva desde el botón *Nuevo* del campo |inv_lines|. Cuando hayamos
 finalizado, utilizaremos el botón Confirmar, para regularizar las existencias.
 
-Cuando confirmemos el inventario, **Tryton** se encargará de realizar los
-movimientos necesarios para regularizar las cantidades, cogiendo cómo ubicación
-de origen o destino la que hayamos seleccionado en el campo |inv_lost_found|.
+Cuando confirmemos el inventario, se encargará de realizar los movimientos necesarios
+para regularizar las cantidades, cogiendo cómo ubicación de origen o destino la que
+hayamos seleccionado en el campo |inv_lost_found|.
 
 .. Note::
    Si queremos indicar algún producto nuevo o sin existencias en el almacén
