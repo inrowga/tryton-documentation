@@ -187,4 +187,7 @@ En las búsquedas podemos usar operadores para filtrar registros:
 
 Ejemplo de uso::
 
-    Tercero: !trytonerp
+* Nombre: TrytonERP (buscará todos los nombres con "TrytonERP")
+* Nombre: !TrytonERP (buscará todos los nombres que NO contenga "TrytonERP")
+* Nombre: = (buscará todos los registros que el nombre sea vacío)
+* Nombre: != (buscará todos los registros que el nombre NO sea vacío)
