@@ -107,6 +107,8 @@ nos describen como debemos realizar un determinado plato.
 
 .. _production-create-bom:
 
+.. inheritref:: production/production:section:crear_lista_de_materiales
+
 Crear una lista de materiales
 -----------------------------
 
