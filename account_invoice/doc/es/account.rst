@@ -11,6 +11,8 @@ facturación.
 
 .. _configurar-plazos:
 
+.. inheritref:: account_invoice/account:section:payment_term
+
 Configurar plazos de pago
 -------------------------
 
