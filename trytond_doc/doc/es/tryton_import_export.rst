@@ -153,6 +153,6 @@ Tutoriales
 * `Importación de terceros mediante CSV`_
 * `Importación de productos mediante CSV`_
 
-.. _`Importación de terceros mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-terceros-mediante-csv.html
-.. _`Importación de productos mediante CSV`: http://www.tryton-erp.es/posts/importacion-de-productos-mediante-csv.html
+.. _`Importación de terceros mediante CSV`: http://www.tryton-erp.es/blog/importacion-de-terceros-mediante-csv.html
+.. _`Importación de productos mediante CSV`: http://www.tryton-erp.es/blog/importacion-de-productos-mediante-csv.html
 
