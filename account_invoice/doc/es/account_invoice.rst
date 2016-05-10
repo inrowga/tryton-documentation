@@ -58,6 +58,8 @@ en lo que podremos encontrar una factura son:
 
 Los campos que podemos encontrar en una factura son:
 
+.. inheritref:: account_invoice/account_invoice:bullet_list:fields
+
 * |party|: Al seleccionarlo se nos rellenarán varios campos como |account| o
   |currency| con la información que tengamos registrada del |party|.
 * |number|: Cuando confirmemos la factura se rellenará automáticamente este
@@ -81,7 +83,7 @@ Los campos que podemos encontrar en una factura son:
   la factura. Para ello clicaremos en el botón *Nuevo* del propio campo y se
   nos abrirá una ventana donde podremos rellenar los distintos campos que
   componen la línea:
-  
+
    * |line_type|: Dependiendo de la tipología que elijamos, la
      línea funcionará como un título, añadirá un comentario, reflejará un
      subtotal o actuará de línea de factura propiamente dicha. De estas cuatro
@@ -109,7 +111,7 @@ Los campos que podemos encontrar en una factura son:
   |line_taxes| con la base imponible total de todos los productos por impuesto.
 
 .. inheritref:: account_invoice/account_invoice:paragraph:prevent_duplicates
-  
+
 Si cambiamos a la pestaña **Información adicional** podremos acceder a la
 información contable de la factura, y, una vez confirmada, podremos acceder
 por medio del icono en forma de carpeta del campo |move| a la información
