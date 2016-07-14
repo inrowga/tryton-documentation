@@ -43,23 +43,23 @@ rellenar son:
       porcentaje sobre el valor total de la factura. Al seleccionar esta opción
       o la anterior aparecerán dos campos nuevos:
 
-      * |percentage|: Indicaremos aquí el valor en % de 0 a 100 que
+      * |ratio|: Indicaremos aquí el valor en % de 0 a 100 que
         queremos que se aplique al total o al remanente.
       * |divisor|: Este campo se nos rellenará automáticamente si
-        indicamos previamente el |percentage|. En caso de rellenar este
+        indicamos previamente el |ratio|. En caso de rellenar este
         campo primero, el que se rellenará automáticamente será el campo
-        |percentage|. Esto se debe a que ambos campos están relacionados e
+        |ratio|. Esto se debe a que ambos campos están relacionados e
         indican lo mismo pero desde distintos puntos de vista. En este
         campo podremos indicar el divisor que se utilizará para realizar
         el cálculo del importe, o, dicho de otro modo, deberemos indicar
         por qué número queremos que se divida el total o remanente para
         calcular el importe a pagar. Por ejemplo, si indicamos en el campo
-        |percentage| que se calcule sobre el 50 %, el campo |divisor| se
+        |ratio| que se calcule sobre el 50 %, el campo |divisor| se
         nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
         a un importe que dividirlo por 2.
 
     * Remanente: El total de lo que queda por pagar, le resta del total lo ya
-      pagado. Siempre que configuremos los plazos con una sola línea, deberemos 
+      pagado. Siempre que configuremos los plazos con una sola línea, deberemos
       escoger esta tipología, ya que al no haber ningún pago previo se realizará
       el pago sobre el total. Además, cuando creemos plazos con varias |lines|,
       la última siempre deberá ser de esta tipología.
@@ -85,7 +85,7 @@ Veamos algunos ejemplos de cómo configurar estas |lines|:
   * Primera línea:
 
     * |type|: Porcentaje sobre total
-    * |percentage|: 50
+    * |ratio|: 50
     * |divisor|: 2
     * |months|: 0
     * |weeks|: 0
@@ -115,7 +115,7 @@ realicemos.
 .. |type| field:: account.invoice.payment_term.line/type
 .. |amount| field:: account.invoice.payment_term.line/amount
 .. |currency| field:: account.invoice.payment_term.line/currency
-.. |percentage| field:: account.invoice.payment_term.line/percentage
+.. |ratio| field:: account.invoice.payment_term.line/ratio
 .. |divisor| field:: account.invoice.payment_term.line/divisor
 .. |months| field:: account.invoice.payment_term.line.relativedelta/months
 .. |weeks| field:: account.invoice.payment_term.line.relativedelta/weeks
