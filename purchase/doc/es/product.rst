@@ -13,7 +13,7 @@ entrega del producto por cada proveedor.
 .. |purchasable| field:: product.template/purchasable
 .. |purchase_uom| field:: product.template/purchase_uom
 .. |default_uom| field:: product.template/default_uom
-.. |lead_time| field:: purchase.product.supplier/lead_time
+.. |lead_time| field:: purchase.product_supplier/lead_time
 .. |product_suppliers| field:: product.template/product_suppliers
 .. |supplier_name| field:: purchase.product_supplier/name
 .. |supplier_code| field:: purchase.product_supplier/code

@@ -31,13 +31,13 @@ deberemos especificar los campos |name|, |type| (indicando si se trata de un
 *bien*, un *servicio* o un *activo*), el |list_price|, el |cost_price|, el
 |cost_price_method| (que veremos a continuación más detenidamente) y la
 |default_uom| (donde indicaremos la medida que utilizaremos para cuantificar el
-producto). Además, si lo deseamos, le podemos indicar una |category| para
+producto). Además, si lo deseamos, le podemos indicar varias |categories| para
 agrupar el producto que estamos creando con otros de similar tipología.
 
 .. view:: product.template_view_form
    :field: name
-   
-   Captura del menú productos 
+
+   Captura del menú productos
 
 .. inheritref:: product/product:paragraph:compra-venta
 
@@ -99,7 +99,7 @@ variante e indicar también, si queremos, su |description| y su |code|.
    anterioridad nos resultará más practico crear la variante desde
    |menu_prod|.
 
-.. inheritref:: product/product:section:relacionado_con_los_productos   
+.. inheritref:: product/product:section:relacionado_con_los_productos
 
 Trabajar con productos en multicompañía
 ---------------------------------------
@@ -196,7 +196,7 @@ unidad. Los campos que deberemos rellenar son:
   0,01), o que se redondee el tercer decimal de 5 en 5 (modificando el valor a
   0,005 e indicando en |digits_uom| un valor de 3).
 * |active_uom|: Permite desactivar el registro sin borrarlo para aquellas
-  unidades con las que no vayamos a trabajar. 
+  unidades con las que no vayamos a trabajar.
 
 .. |menu_template| tryref:: product.menu_template/complete_name
 .. |menu_prod| tryref:: product.menu_product/complete_name
@@ -204,7 +204,7 @@ unidad. Los campos que deberemos rellenar son:
 .. |menu_product_categories| tryref:: product.menu_category_tree/complete_name
 .. |type| field:: product.template/type
 .. |consumable| field:: product.template/consumable
-.. |category| field:: product.template/category
+.. |categories| field:: product.template/categories
 .. |list_price| field:: product.template/list_price
 .. |cost_price| field:: product.template/cost_price
 .. |cost_price_method| field:: product.template/cost_price_method

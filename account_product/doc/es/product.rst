@@ -19,7 +19,7 @@ estos campos:
 * |supplier_taxes|: 21% IVA Soportado (operaciones corrientes)
 
 Para simplificar la configuración contable de los productos, podemos marcar
-los campos |account_category| y |taxes_category| para que se le aplique
+los campos |accounts_category| y |taxes_category| para que se le aplique
 al producto la |account_revenue|, la |account_expense|, los |customer_taxes| y
 los |supplier_taxes| definidos en la |category| del producto que hayamos
 seleccionado en la pestaña anterior. En :ref:`cat-productos` podemos ver
@@ -30,7 +30,7 @@ como configurar la contabilidad de las categorías.
 
 Desde la pestaña **contabilidad** podremos indicar la |cat_account_revenue| y
 la |cat_account_expense|, así como los |cat_supplier_taxes| y los
-|cat_customer_taxes| por defecto que se utilizarán en la |category|. De esta 
+|cat_customer_taxes| por defecto que se utilizarán en la |category|. De esta
 forma, cuando configuremos un producto podremos indicarle que utilice las
 cuentas e impuestos por defecto de la categoría a la que pertenece, y
 simplificar así nuestra tarea. En caso de que en el producto se indiquen unas
@@ -41,10 +41,10 @@ los indicados en la categoría del producto no tendrán efecto.
 .. |account_expense| field:: product.template/account_expense
 .. |customer_taxes| field:: product.template/customer_taxes
 .. |supplier_taxes| field:: product.template/supplier_taxes
-.. |account_category| field:: product.template/account_category
+.. |accounts_category| field:: product.template/accounts_category
 .. |taxes_category| field:: product.template/taxes_category
 .. |cat_account_revenue| field:: product.category/account_revenue
 .. |cat_account_expense| field:: product.category/account_expense
 .. |cat_supplier_taxes| field:: product.category/supplier_taxes
 .. |cat_customer_taxes| field:: product.category/customer_taxes
-.. |category| field:: product.template/category
+.. |category| field:: product.template/account_category

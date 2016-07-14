@@ -50,14 +50,14 @@ siguientes campos:
    con el :ref:`botón de eliminar de la dirección<tryton-campos-one2many>`. No
    usaremos el menú desplegable que aparece cuando hacemos clic sobre botón de
    herramientas superior, ya que en ese caso eliminaríamos el tercero.
-   
+
 .. note:: Para poder editar manualmente el código del tercero, sólo hay que
-   quitar del apartado de **configuración** el campo *Secuencia del tercero*. 
-   Así cuando creemos el tercero nos dejará poner manualmente el código. 
+   quitar del apartado de **configuración** el campo *Secuencia del tercero*.
+   Así cuando creemos el tercero nos dejará poner manualmente el código.
 
 .. view:: party.party_view_form
    :field: name
-   
+
    Vista formulario de un Tercero
 
 .. inheritref:: party/party:paragraph:identificadores
@@ -71,9 +71,9 @@ como CIF/NIF. En el caso de ser un CIF/NIF europeo, seleccionaremos la opción
 Encontrar terceros sin NIF
 ==========================
 
-Si deseamos encontrar todos los terceros para los que no hayamos introducido un 
-NIF podemos hacerlo introduciendo el siguiente filtro en la pantalla de 
-terceros: **CIF/NIF: =""**. Es importante no olvidarse de las dos dobles 
+Si deseamos encontrar todos los terceros para los que no hayamos introducido un
+NIF podemos hacerlo introduciendo el siguiente filtro en la pantalla de
+terceros: **CIF/NIF: =""**. Es importante no olvidarse de las dos dobles
 comillas al final que indican al programa que el campo debe estar vacío.
 
 
@@ -81,12 +81,12 @@ Categorías
 ==========
 
 Como ya hemos visto anteriormente, por medio de las categorías podemos agrupar
-terceros según los criterios que queramos, veremos la categoria en la parte 
-inferior derecha. Por medio de la opción de menú |menu_categories| podemos 
-acceder a todas las categorías que hemos creado y haciendo doble clic sobre 
-cualquiera de ellas se nos abrirá una nueva pestaña con todos los terceros 
-pertenecientes a la categoría seleccionada. Volviendo a la pestaña anterior, 
-también es posible crear nuevas categorías y subcategorías para gestionar mejor 
+terceros según los criterios que queramos, veremos la categoria en la parte
+inferior derecha. Por medio de la opción de menú |menu_categories| podemos
+acceder a todas las categorías que hemos creado y haciendo doble clic sobre
+cualquiera de ellas se nos abrirá una nueva pestaña con todos los terceros
+pertenecientes a la categoría seleccionada. Volviendo a la pestaña anterior,
+también es posible crear nuevas categorías y subcategorías para gestionar mejor
 nuestra cartera de terceros.
 
 
@@ -120,9 +120,9 @@ A pesar que los terceros sean los mismos en todas la compañías esto no signifi
 que  todos los datos de un determinado tercero sean los mismos en todas las
 compañías. Y lo mismo ocurre para el producto.
 
-Por ejemplo, las cuentas contables asociadas al producto son únicas por 
-compañía. Podemos entrar en la compañía A y definir la cuenta de gastos del 
-producto a la 60000001 y después entrar en la compañía B y ahí definir la cuenta 
+Por ejemplo, las cuentas contables asociadas al producto son únicas por
+compañía. Podemos entrar en la compañía A y definir la cuenta de gastos del
+producto a la 60000001 y después entrar en la compañía B y ahí definir la cuenta
 de gastos del mismo producto como 60000002.
 
 A continuación detallamos los campos que dependen de la compañía en terceros:
@@ -151,8 +151,8 @@ En |menu_party_configuration| podemos encontrar distintas opciones
 que nos permitirán adaptar la gestión de los terceros a nuestras necesidades.
 
 .. view:: party.party_configuration_view_form
-   :field: party_lang
-   
+   :field: party_sequence
+
    Configuración de terceros
 
 
@@ -162,12 +162,6 @@ nueva desde aquí (para ver como configurar secuencias:
 :ref:`admin-secuencias`). Para poder editar manualmente el código del tercero,
 sólo hay que dejar en blanco el campo.
 
-En el campo |party_lang| podemos especificar el idioma que se utilizará por
-defecto para la creación de nuevos terceros. Esto solo aplicará para los nuevos
-terceros creados a partir de este momento, y siempre podremos modificar
-manualmente el idioma en caso de que este deba ser distinto del idioma por
-defecto.
-
 .. |menu_party| tryref:: party.menu_party_form/complete_name
 .. |name| field:: party.party/name
 .. |lang| field:: party.party/lang
@@ -176,5 +170,4 @@ defecto.
 .. |categories| field:: party.party/categories
 .. |menu_categories| tryref:: party.menu_category_tree/complete_name
 .. |party_sequence| field:: party.configuration/party_sequence
-.. |party_lang| field:: party.configuration/party_lang
 .. |menu_party_configuration| tryref:: party.menu_party_configuration/complete_name
