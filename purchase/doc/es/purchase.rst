@@ -103,7 +103,7 @@ Desde las pestañas **facturas** y **albaranes** podremos acceder a la
 información sobre las recepciones y facturación de la compra. Una vez se
 generen los albaranes o facturas, nos aparecerán en sus respectivas pestañas y
 podremos acceder a la información concreta de cada documento. En
-:ref:`estados-fac-alb-compra` se indica en qué estados nos podemos encontrar
+:ref:`compra-estados-fac-alb` se indica en qué estados nos podemos encontrar
 estos dos documentos.
 
 .. |party| field:: purchase.purchase/party
