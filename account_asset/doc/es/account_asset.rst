@@ -194,7 +194,7 @@ Una vez generada la factura se realizará el apunte para esta venta en la cuenta
 .. |invoice_quantity| field:: account.invoice.line/quantity
 .. |invoice_amount| field:: account.invoice.line/amount
 .. |invoice_date| field:: account.invoice/invoice_date
-.. |invoice_menu| tryref:: account_invoice.menu_invoice_out_invoice_form/complete_name
+.. |invoice_menu| tryref:: account_invoice.menu_invoice_out_form/complete_name
 .. |party_inv| field:: account.invoice/party
 .. |journal_inv| field:: account.invoice/journal
 .. |payment_term_inv| field:: account.invoice/payment_term

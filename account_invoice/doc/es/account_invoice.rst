@@ -14,9 +14,7 @@ una devolución de estas. Desde el menú de facturación podremos acceder a
 cualquiera de los tipos de factura:
 
 * |factura_cliente|
-* |factura_devolucion_cliente|
 * |factura_proveedor|
-* |factura_devolucion_proveedor|
 
 Para cada una de las distintas tipologías, el funcionamiento que
 encontraremos será el mismo: Podremos encontrar la factura en distintos estados
@@ -78,7 +76,7 @@ Los campos que podemos encontrar en una factura son:
   proveedor nos emitió la factura.
 * |payment_term|: Aquí deberemos seleccionar el plazo de pago que tendrá la
   factura, entre los tipo de plazos que hayamos configurado previamente
-  (:ref:`Configurar plazos de pago<configurar-plazos>`). 
+  (:ref:`Configurar plazos de pago<configurar-plazos>`).
 * |lines|: En este campo es donde indicaremos las líneas de las que se compone
   la factura. Para ello clicaremos en el botón *Nuevo* del propio campo y se
   nos abrirá una ventana donde podremos rellenar los distintos campos que
@@ -129,7 +127,7 @@ Cancelar una factura
 
 .. inheritref:: account_invoice/account_invoice:paragraph:excepciones
 
-Si una factura ya está confirmada, **Tryton** no nos permitirá cancelarla o 
+Si una factura ya está confirmada, **Tryton** no nos permitirá cancelarla o
 anularla. Para poder hacerlo deberemos generar una factura de abono que anule
 contablemente la que queremos cancelar, de la misma forma que si el cliente nos
 hiciera una devolución de material (solo que esta no quedará reflejada en los
@@ -144,30 +142,28 @@ original.
 Abonar una factura
 ------------------
 
-En las facturas de cliente disponemos de un asistente que nos facilita la tarea 
-de abonar una factura. Para acceder a él clicaremos en el botón *Acciones* y, 
-seleccionando *Abono*, se nos abrirá una ventana donde deberemos indicar si el 
-abono de la factura se hará con devolución o sin. Si queremos realizar un abono 
-total de la factura seleccionamos *Con devolución*, ya que así la factura de 
-abono se confirmará y se conciliará automáticamente con la factura abonada. En 
-cambio si tan solo queremos hacer un abono parcial de una factura deberemos 
-deseleccionar la opción *Con devolución*, de esta manera se nos generará una 
-factura de abono en estado borrador, dónde podremos modificar o eliminar las 
+En las facturas de cliente disponemos de un asistente que nos facilita la tarea
+de abonar una factura. Para acceder a él clicaremos en el botón *Acciones* y,
+seleccionando *Abono*, se nos abrirá una ventana donde deberemos indicar si el
+abono de la factura se hará con devolución o sin. Si queremos realizar un abono
+total de la factura seleccionamos *Con devolución*, ya que así la factura de
+abono se confirmará y se conciliará automáticamente con la factura abonada. En
+cambio si tan solo queremos hacer un abono parcial de una factura deberemos
+deseleccionar la opción *Con devolución*, de esta manera se nos generará una
+factura de abono en estado borrador, dónde podremos modificar o eliminar las
 líneas que queramos antes de confirmar la factura.
 
-En las facturas de proveedor el procedimiento es más corto y rápido. En el 
-momento que queremos abonar la factura, abrimos el desplegable *Accions* y 
-seleccionamos la acción *Cancelar*. Este movimiento provocará que 
-automáticamente se abone la factura. Cancelándose cualquier movimiento de 
-inventario y creando, por defecto, los asientos contables de abono, 
-conciliándolos con la factura de proveedor que queríamos abonar. 
+En las facturas de proveedor el procedimiento es más corto y rápido. En el
+momento que queremos abonar la factura, abrimos el desplegable *Accions* y
+seleccionamos la acción *Cancelar*. Este movimiento provocará que
+automáticamente se abone la factura. Cancelándose cualquier movimiento de
+inventario y creando, por defecto, los asientos contables de abono,
+conciliándolos con la factura de proveedor que queríamos abonar.
 
 
 .. |menu_account_invoice| tryref:: account_invoice.menu_invoices/complete_name
-.. |factura_cliente| tryref:: account_invoice.menu_invoice_out_invoice_form/name
-.. |factura_devolucion_cliente| tryref:: account_invoice.menu_invoice_out_credit_note_form/name
-.. |factura_proveedor| tryref:: account_invoice.menu_invoice_in_invoice_form/name
-.. |factura_devolucion_proveedor| tryref:: account_invoice.menu_invoice_in_credit_note_form/name
+.. |factura_cliente| tryref:: account_invoice.menu_invoice_out_form/name
+.. |factura_proveedor| tryref:: account_invoice.menu_invoice_in_form/name
 .. |party| field:: account.invoice/party
 .. |reference| field:: account.invoice/reference
 .. |invoice_date| field:: account.invoice/invoice_date
