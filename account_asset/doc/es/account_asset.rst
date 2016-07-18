@@ -1,3 +1,9 @@
+
+.. inheritref:: account_asset/account_asset:section:amortizacion
+
+Amortización contable
+=====================
+
 Mediante la depreciación de activos podemos repartir el coste de las
 inversiones entre los diferentes ejercicios fiscales en los que se produce su uso
 o disfrute en la actividad empresarial. De esta forma se refleja más fielmente el
@@ -6,7 +12,7 @@ estado contable de nuestra empresa.
 Antes de crear un plan de amortización, debemos tener configurado el producto sobre
 el que realizaremos la amortización. En el apartado
 :ref:`product-para-amortizacion-de-activos` se detalla cómo debemos crear
-producto para poder gestionar su amortización. Así, como luego veremos, 
+producto para poder gestionar su amortización. Así, como luego veremos,
 cuando creemos el plan de amortización, sólo podremos seleccionar aquellos
 productos de tipo activo que hayan sido marcados como |depreciable|.
 
@@ -15,7 +21,7 @@ Una vez dentro tendremos una vista de todos los planes de amortización
 según su estado (*Borrador*: Planes que todavía no están confirmados; *En ejecución*:
 Activos cuyas amortizaciones se están llevando a cabo; *Cerrado*: Activos ya
 finalizados; y *Todo*: Todos los planes introducidos). Para introducir un nuevo
-plan de amortización deberemos clicar en el icono  *Nuevo* y nos llevará a la 
+plan de amortización deberemos clicar en el icono  *Nuevo* y nos llevará a la
 vista de edición, donde deberemos rellenar los siguiente campos:
 
 * |product|: Indicaremos el producto a amortizar. Podemos buscar entre los productos
@@ -38,7 +44,7 @@ Para poder introducir más información en el nuevo activo, seleccionaremos la
 pestaña *Información adicional* y tendremos acceso a los siguientes campos:
 
 * |company|: Donde indicaremos a cuál de nuestras empresas corresponde el activo que
-  estamos introduciendo. 
+  estamos introduciendo.
 
 * |method|: Si seleccionamos el método *Lineal* las cantidades de la amortización
   serán iguales durante todos los períodos.
@@ -77,7 +83,7 @@ Los campos que se rellenarán son los siguientes:
 Procesar amortizaciones
 =======================
 Una vez creadas las líneas sobre del plan de amortización podemos empezar a procesar
-la amortización. Este proceso consiste en asentar las líneas que ya han vencido 
+la amortización. Este proceso consiste en asentar las líneas que ya han vencido
 generando los apuntes correspondientes a cada línea.
 
 Para ello accederemos al menú |menu_create_moves| y se nos abrirá un asistente donde
@@ -96,7 +102,7 @@ seleccionar los nuevos valores para el activo. Una vez modificados los valores
 se recalcularán las líneas de amortización con los nuevos valores.
 
 .. note::
-   Este proceso no modificará las líneas ya asentadas o procesadas, sino que sólo 
+   Este proceso no modificará las líneas ya asentadas o procesadas, sino que sólo
    afectará a las líneas pendientes de amortizar.
 
 
@@ -108,9 +114,9 @@ pantalla de activos. Antes de finalizar un activo debemos asegurarnos de haber g
 todos los apuntes de amortización pendiente ya que este proceso eliminará todas las
 líneas que no hayan sido asentadas o procesadas en el momento del cierre, y generará
 un apunte reflejando el cierre del mismo con que quedaba pendiente de amortizar.
-En caso de perder el activo, o que este sea substraído, la finalización del activo se 
-deberá de realizar sin asentar las líneas posteriores a la pérdida o substracción, de 
-esta manera la pérdida del activo se reflejará contablemente con un apunte por el 
+En caso de perder el activo, o que este sea substraído, la finalización del activo se
+deberá de realizar sin asentar las líneas posteriores a la pérdida o substracción, de
+esta manera la pérdida del activo se reflejará contablemente con un apunte por el
 total de las líneas que quedaban por amortizar.
 
 .. Note:: Contablemente se recomienda no finalizar ningún activo hasta que no dejemos

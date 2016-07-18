@@ -60,7 +60,7 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
    fiscal en |name| y en |fis_start_date| y |fis_end_date|, la fecha de inicio
    y fin del año natural.
 
-   
+
 .. view:: account.fiscalyear_view_form
 
    Vista del formulario del Ejercicio fiscal
@@ -70,10 +70,10 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
 
 En la pestaña *Secuencias* deberemos introducir la secuencia que queramos que
 se utilice para los asientos y las distintas facturas confirmadas del periodo
-fiscal. Podemos elegir una secuencia creada previamente o crear una clicando 
-sobre el icono *Nuevo* (:ref:`admin-secuencias`). Es imprescindible a nivel 
-contable que la secuencia no se repita entre distintos ejercicios fiscales, por 
-lo que, para cada uno de los distintos ejercicios que vayamos abriendo a lo 
+fiscal. Podemos elegir una secuencia creada previamente o crear una clicando
+sobre el icono *Nuevo* (:ref:`admin-secuencias`). Es imprescindible a nivel
+contable que la secuencia no se repita entre distintos ejercicios fiscales, por
+lo que, para cada uno de los distintos ejercicios que vayamos abriendo a lo
 largo del tiempo, deberemos crear nuevas secuencias.
 
 Finalmente, una vez introducidos los parámetros generales y las secuencias,
@@ -176,18 +176,18 @@ el carácter que le queramos dar a la nueva cuenta contable:
 Modificar el campo "Padre"
 --------------------------
 
-En Tryton es habitual encontrar datos estructurados en forma de “padres e hijos” 
+En Tryton es habitual encontrar datos estructurados en forma de “padres e hijos”
 o “árbol”. Esto lo podemos encontrar, por ejemplo, en:
 
  * La estructura de empresas (menú Terceros > Configuración > Empresas)
  * El plan de cuentas (menú Configuración > Planes contables > Cuentas)
- * En categorías de terceros (menú Terceros > Categorías) y productos (menú 
+ * En categorías de terceros (menú Terceros > Categorías) y productos (menú
    Productos > Categorías)
 
-En todos estos casos podremos ver que podemos acceder a la información mediante 
-dos entradas de menú. La primera con un icono escalado, en forma de árbol, y la 
-segunda, que la encontramos dentro de la primera, con un icono normal de 
-formulario. 
+En todos estos casos podremos ver que podemos acceder a la información mediante
+dos entradas de menú. La primera con un icono escalado, en forma de árbol, y la
+segunda, que la encontramos dentro de la primera, con un icono normal de
+formulario.
 
 Entrando en el primer caso, podremos ver la información en forma de árbol:
 
@@ -197,14 +197,14 @@ Mientras que en la segunda podremos verla en forma de lista:
 
 .. captura de la imagen
 
-Desde ambas pantallas podremos consultar y modificar información pero el 
+Desde ambas pantallas podremos consultar y modificar información pero el
 comportamiento de ambas es distinto:
 
- * En la vista tipo árbol podremos arrastrar y soltar (drag&drop) para 
+ * En la vista tipo árbol podremos arrastrar y soltar (drag&drop) para
    establecer el padre. Esto no será posible en la vista tipo lista (la segunda)
- * En la vista tipo árbol no podremos cambiar el padre cuando entremos en la 
+ * En la vista tipo árbol no podremos cambiar el padre cuando entremos en la
    ficha / formulario.
- * En la vista tipo árbol solamente nos buscará en los elementos del primer 
+ * En la vista tipo árbol solamente nos buscará en los elementos del primer
    nivel. En los subniveles aparecerán todos.
 
 
@@ -278,12 +278,12 @@ deberemos indicar la empresa sobre la que queremos crear el plan y la
 |account_template| que utilizaremos para crearlo (por defecto el sistema tiene
 ya generada la plantilla *Plan de tipos de cuenta mínimo* aunque también
 podemos instalar el *Plan General de Contabilidad* o crear una plantilla
-personalizada por medio del menú |menu_template_account|).
+personalizada por medio del menú |menu_template_account|). Una vez indicados
+estos campos, clicamos en *Crear* y se nos abrirá una nueva ventana donde
+podremos indicar la |plan_account_payable| y la |plan_account_receivable| que
+utilizaremos para el plan contable.
 
-Una vez indicados estos campos, clicamos en *Crear* y se nos abrirá una nueva
-ventana donde podremos indicar la |plan_account_payable| y la
-|plan_account_receivable| que utilizaremos para el plan contable. Si clicamos
-de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
+Si clicamos de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
 posteriormente, podremos consultar por medio de |menu_open_chart|.
 
 .. |menu_create_chart| tryref:: account.menu_create_chart/complete_name
@@ -311,7 +311,7 @@ la *venta*, la *compra* o durante *ambos*.
 
    Vista de formulario de un Impuesto
 
-   
+
 Para crear un nuevo impuesto, deberemos acceder a |tax_menu| y al clicar en
 *Nuevo* se nos abrirá la vista de edición donde deberemos rellenar los
 distintos campos para poder configurar el impuesto. Deberemos rellenar el
@@ -431,8 +431,9 @@ Otros formas de conciliar apuntes són:
 * Si se trabaja con extractos bancarios, una vez importados, se hacen las conciliaciones
   automáticas cuando se contabiliza una línea de extracto bancario.
 
-.. Note:: Tenemos que tener en cuenta, tal y como hemos visto en :ref:`cuenta-nueva`, que solo
-          podremos conciliar apuntes de cuentas contables que tengan marcado el campo |reconcile_account|.
+.. Note:: Tenemos que tener en cuenta, tal y como hemos visto en
+   :ref:`cuenta-nueva`, que solo podremos conciliar apuntes de cuentas
+   contables que tengan marcado el campo |reconcile_account|.
 
 .. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
 .. |menu_move_line_form|  tryref:: account_payment.menu_move_line_form/complete_name
@@ -463,7 +464,7 @@ periodo/s sobre los que queramos realizar la consulta.
 .. |menu_cimp| tryref:: account.menu_code_tax_open_chart/complete_name
 
 
-.. inheritref:: account/account:section:activos
+.. inheritref:: account/account:section:cierre
 
 -------------------------------
 Cierre de la actividad contable
@@ -522,9 +523,9 @@ No arrastrará los saldos de las cuentas de ingresos y gastos si estas están
 bien configuradas, tal y como veremos a continuación.
 
 .. Note:: Hay que tener en cuenta que sí que se van a arrastrar los saldos
-          de las cuentas de ingresos y gastos mientras no se haya cerrado el año,
-          puesto que el sistema intenta garantizar que el balance de situación está
-          siempre cuadrado.
+   de las cuentas de ingresos y gastos mientras no se haya cerrado el año,
+   puesto que el sistema intenta garantizar que el balance de situación está
+   siempre cuadrado.
 
 
 El asiento de regularización

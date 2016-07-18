@@ -11,6 +11,8 @@ facturación.
 
 .. _configurar-plazos:
 
+.. inheritref:: account_invoice/account:section:payment_term
+
 Configurar plazos de pago
 -------------------------
 
@@ -34,8 +36,8 @@ rellenar son:
       total a pagar, por lo que no dependerá de nada. Al seleccionar esta
       opción aparecerán dos campos nuevos:
 
-      * |amount|: Indicaremos el importe fijo que se deberá de pagar.
-      * |currency|: La moneda que se usará para realizar el pago.
+           * |amount|: Indicaremos el importe fijo que se deberá de pagar.
+           * |currency|: La moneda que se usará para realizar el pago.
 
     * *Porcentaje sobre remanente*: Calculará el importe a pagar según un
       porcentaje aplicado sobre la cantidad que queda pendiente de pago.
@@ -43,20 +45,20 @@ rellenar son:
       porcentaje sobre el valor total de la factura. Al seleccionar esta opción
       o la anterior aparecerán dos campos nuevos:
 
-      * |ratio|: Indicaremos aquí el valor en % de 0 a 100 que
-        queremos que se aplique al total o al remanente.
-      * |divisor|: Este campo se nos rellenará automáticamente si
-        indicamos previamente el |ratio|. En caso de rellenar este
-        campo primero, el que se rellenará automáticamente será el campo
-        |ratio|. Esto se debe a que ambos campos están relacionados e
-        indican lo mismo pero desde distintos puntos de vista. En este
-        campo podremos indicar el divisor que se utilizará para realizar
-        el cálculo del importe, o, dicho de otro modo, deberemos indicar
-        por qué número queremos que se divida el total o remanente para
-        calcular el importe a pagar. Por ejemplo, si indicamos en el campo
-        |ratio| que se calcule sobre el 50 %, el campo |divisor| se
-        nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
-        a un importe que dividirlo por 2.
+          * |ratio|: Indicaremos aquí el valor en % de 0 a 100 que
+            queremos que se aplique al total o al remanente.
+          * |divisor|: Este campo se nos rellenará automáticamente si
+            indicamos previamente el |ratio|. En caso de rellenar este
+            campo primero, el que se rellenará automáticamente será el campo
+            |ratio|. Esto se debe a que ambos campos están relacionados e
+            indican lo mismo pero desde distintos puntos de vista. En este
+            campo podremos indicar el divisor que se utilizará para realizar
+            el cálculo del importe, o, dicho de otro modo, deberemos indicar
+            por qué número queremos que se divida el total o remanente para
+            calcular el importe a pagar. Por ejemplo, si indicamos en el campo
+            |ratio| que se calcule sobre el 50 %, el campo |divisor| se
+            nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
+            a un importe que dividirlo por 2.
 
     * Remanente: El total de lo que queda por pagar, le resta del total lo ya
       pagado. Siempre que configuremos los plazos con una sola línea, deberemos

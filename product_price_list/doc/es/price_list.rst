@@ -1,13 +1,10 @@
-=======
-Tarifas
-=======
+====================
+Tarifas de productos
+====================
 
-.. inheritref:: product_price_list/price_list:section:tarifas
+.. inheritref:: product_price_list/price_list:paragraph:tarifas
 
-Tarifas
--------
-
-Por defecto el módulo de tarifas usa el campo **unit_price** (precio de venta) y
+Por defecto el sistema de tarifas usa el campo **unit_price** (precio de venta) y
 a partir de él podemos hacer operaciones.
 
 Por ejemplo, si queremos crear una *Tarifa venta Navidad* y aplicar un descuento
@@ -20,6 +17,8 @@ del 10% al precio de venta:::
    Diseño de una tarifa de precios en Tryton
 
 También dispone de variables extras para calcular su precio final:
+
+.. inheritref:: product_price_list/price_list:bullet_list:product_price_list
 
 * **product**: Acceder a los campos del producto. Por ejemplo, el precio de coste:
   product.cost_price

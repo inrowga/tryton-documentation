@@ -46,9 +46,7 @@ Características
 
 Una vez instalado el módulo ya dispondrá de nuevos campos o nuevos comportamientos
 o funcionalidad de los módulos instalados. Consulte la documentación de cada módulo
-en el `listado completo de módulos de Tryton`_
-
-.. _listado completo de módulos de Tryton: modules.html
+en el :ref:`listado completo de módulos de Tryton<module-list>`
 
 --------------
 Desinstalación

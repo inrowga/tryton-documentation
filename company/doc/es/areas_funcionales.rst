@@ -2,4 +2,5 @@
 
 .. toctree::
 
-   sale
+   human_resources
+

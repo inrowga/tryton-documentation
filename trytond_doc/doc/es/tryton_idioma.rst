@@ -25,9 +25,7 @@ Campos traducibles
 ------------------
 
 Los campos traducibles disponen de una "banderita" para indicar que ese
-`campo es traducible`_.
-
-.. _campo es traducible: tryton_campos.html#traduccion
+:ref:`campo es traducible<field-translate>`.
 
 -----------------------------
 Comunicación con los clientes

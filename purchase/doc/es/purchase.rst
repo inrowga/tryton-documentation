@@ -31,7 +31,7 @@ compra.
 
 .. view:: purchase.purchase_view_form
    :field: party
-   
+
    Captura de pantalla del |menu_purchase|
 
 La compra está compuesta por una parte en la que se define el proveedor con sus
@@ -103,8 +103,8 @@ Desde las pestañas **facturas** y **albaranes** podremos acceder a la
 información sobre las recepciones y facturación de la compra. Una vez se
 generen los albaranes o facturas, nos aparecerán en sus respectivas pestañas y
 podremos acceder a la información concreta de cada documento. En
-:ref:`compra-estados-fac-alb` se indica en qué estados nos podemos encontrar estos dos
-documentos.
+:ref:`estados-fac-alb-compra` se indica en qué estados nos podemos encontrar
+estos dos documentos.
 
 .. |party| field:: purchase.purchase/party
 .. |invoice_address| field:: purchase.purchase/invoice_address
@@ -122,7 +122,7 @@ documentos.
 .. |line_unit_price| field:: purchase.line/unit_price
 .. |line_amount| field:: purchase.line/amount
 .. |line_taxes| field:: purchase.line/taxes
-.. |menu_purchase| tryref:: purchase.menu_purchase_form/complete_name 
+.. |menu_purchase| tryref:: purchase.menu_purchase_form/complete_name
 .. |comment| field:: purchase.purchase/comment
 .. |invoice_method| field:: purchase.purchase/invoice_method
 
@@ -164,16 +164,16 @@ Si respondemos afirmativamente al presupuesto, podremos cambiar el estado de
 la compra a **Confirmado**. Con ello indicamos que hemos aceptado el
 presupuesto, pero que todavía no se ha procesado la compra. Tenemos que
 tener presente que una vez confirmada la compra, no la podremos cancelar ni
-podremos hacer que esta pase a un estado anterior. 
+podremos hacer que esta pase a un estado anterior.
 
-Una vez confirmada una compra esta nos generará los movimientos de existencias 
-relacionados, pero no nos creará ningún albarán de proveedor, que deberemos 
-crear manualmente. De todos modos, en el albarán de proveedor podremos 
-seleccionar el botón + en los movimientos de entrada para buscar movimientos 
+Una vez confirmada una compra esta nos generará los movimientos de existencias
+relacionados, pero no nos creará ningún albarán de proveedor, que deberemos
+crear manualmente. De todos modos, en el albarán de proveedor podremos
+seleccionar el botón + en los movimientos de entrada para buscar movimientos
 pendientes de recibir del proveedor y añadirlos automáticamente al albarán.
 
-Otra opción es dejar la compra en estado **Confirmado** hasta que nos indiquen 
-que se ha empezado a procesar la compra, momento en el que deberemos dar al 
+Otra opción es dejar la compra en estado **Confirmado** hasta que nos indiquen
+que se ha empezado a procesar la compra, momento en el que deberemos dar al
 botón *Procesar*.
 
 Con el estado **En proceso** indicamos que nuestro proveedor está procesando la
@@ -182,10 +182,10 @@ siguiente paso será la recepción de la mercancía. A partir de este momento, e
 sistema ya sabe que estamos pendientes de recibir la mercancía del |party|
 indicado y al |warehouse| indicado.
 
-En el momento en el que se le indique al sistema que se ha realizado la 
+En el momento en el que se le indique al sistema que se ha realizado la
 recepción de la mercancía, desde los departamentos correspondientes, y que la
-factura de la compra está pagada, el estado de la compra cambiará a 
-**Realizada** y el proceso de compra se habrá completado. 
+factura de la compra está pagada, el estado de la compra cambiará a
+**Realizada** y el proceso de compra se habrá completado.
 
 
 .. _compra-estados-fac-alb:
@@ -206,8 +206,8 @@ ser:
     están a la espera de ser gestionadas y pagadas.
   * *Pagada*: Todas las facturas relacionadas con esta compra han sido pagadas.
   * *Excepción*: El sistema había generado una factura pero un usuario ha
-    cancelado la factura. 
-    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>` 
+    cancelado la factura.
+    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>`
     se detalla cómo corregir este estado.
 
 * |shipment_state|
@@ -222,8 +222,8 @@ ser:
     recibidos.
   * *Excepción*: Como en el caso de las facturas, se ha generado un albarán
     para la recepción de la mercancía pero un usuario ha cancelado el albarán
-    (o algunas de sus líneas). 
-    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>` 
+    (o algunas de sus líneas).
+    En el apartado :ref:`Excepciones de la compra<purchase-exceptions>`
     se detalla cómo corregir este estado.
 
 .. note:: El sistema únicamente esperará la recepción de mercancía si
@@ -260,8 +260,8 @@ recibir en un futuro albarán.
 Devolución de la compra
 -----------------------
 
-Si tenemos que devolver productos a un proveedor podemos crear la compra con 
-las cantidades negativas. Esto nos generará el correspondiente albarán de 
+Si tenemos que devolver productos a un proveedor podemos crear la compra con
+las cantidades negativas. Esto nos generará el correspondiente albarán de
 devolución y las facturas de abono de proveedor.
 
 .. inheritref:: purchase/purchase:section:excepciones
@@ -341,61 +341,62 @@ o *Confirmada*).
 .. |purchase_exception_state| field:: stock.move/purchase_exception_state
 .. |invoices| field:: purchase.purchase/invoices
 
+
 Proceso de cancelación de compras
 =================================
 
-Al querer cancelar una compra podemos encontrarnos ante los siguientes casos 
+Al querer cancelar una compra podemos encontrarnos ante los siguientes casos
 de cancelación, que salvo excepción serán la mayoría:
 
-*  **Cancelar una compra que ha sido introducida y procesada**. Esta compra nos 
-   generará uno o más movimientos de producto (en función de la compra) que nos 
-   aparecerá en la pestaña *Albaranes* en el campo Movimientos. 
-   Para cancelar la compra tan sólo necesitaremos crear un albarán nuevo del 
-   tercero, seleccionando el almacén desde el cuál hacemos la recepción. 
-   Finalmente, añadiremos la línea de la compra que queremos **Cancelar**, la 
-   cancelamos y al volver a la compra (y recargar la ventana) veremos que nos 
-   aparece la opción de *gestionar la excepción de envío*. Haremos clic en el 
-   botón que nos devolverá un asistente dónde podremos seleccionar los 
-   movimientos que queremos recrear. En este caso los **deseleccionaremos** 
-   todos, haciendo clic sobre las líneas que por defecto vendrán seleccionadas, 
-   y aceptaremos. 
-   
-   A la conclusión de estos pasos veremos como en la pestaña Albaranes el 
-   movimiento y el albarán tienen el estado *Cancelado* y el estado de 
-   excepción *Ignorado*. 
-   
-*  **Cancelar una compra que ha sido recibida y tiene un albarán con el 
-   movimiento vinculado**. Si el albarán aún está en estado *Borrador* podremos 
-   cancelar tanto la compra como el albarán siguiendo los pasos del primer punto. 
-   Ahora bien, si el albarán está *Recibido* lo único que podremos hacer es 
-   cancelar el albarán pero la compra ya tendrá el estado *Realizado*, así que 
-   no debemos cancelar el albarán sino confirmarlo y acabar marcándolo  como 
-   *Realizado*. Esto nos generará una línea de factura en la compra, 
-   llevándonos al siguiente paso: crear una factura de este proveedor, dónde 
-   añadiremos la línea de factura de la compra y cancelaremos la factura. Una 
-   vez cancelada esta factura nos quedará todo el circuito cerrado ahora bien 
-   si queremos hacer la devolución de la mercadería deberemos hacer una copia 
-   exacta de la compra inicial con cantidad negativa y procesarla, pero antes 
-   de ello es recomendable dirigirnos a la pestaña *Información adicional* y 
-   marcar el método de facturación como *Manual*, así nos evitamos que genere una 
-   factura. 
-   
-   Una vez que hayamos procesado la compra, se generará un movimiento de 
+*  **Cancelar una compra que ha sido introducida y procesada**. Esta compra nos
+   generará uno o más movimientos de producto (en función de la compra) que nos
+   aparecerá en la pestaña *Albaranes* en el campo Movimientos.
+   Para cancelar la compra tan sólo necesitaremos crear un albarán nuevo del
+   tercero, seleccionando el almacén desde el cuál hacemos la recepción.
+   Finalmente, añadiremos la línea de la compra que queremos **Cancelar**, la
+   cancelamos y al volver a la compra (y recargar la ventana) veremos que nos
+   aparece la opción de *gestionar la excepción de envío*. Haremos clic en el
+   botón que nos devolverá un asistente dónde podremos seleccionar los
+   movimientos que queremos recrear. En este caso los **deseleccionaremos**
+   todos, haciendo clic sobre las líneas que por defecto vendrán seleccionadas,
+   y aceptaremos.
+
+   A la conclusión de estos pasos veremos como en la pestaña Albaranes el
+   movimiento y el albarán tienen el estado *Cancelado* y el estado de
+   excepción *Ignorado*.
+
+*  **Cancelar una compra que ha sido recibida y tiene un albarán con el
+   movimiento vinculado**. Si el albarán aún está en estado *Borrador* podremos
+   cancelar tanto la compra como el albarán siguiendo los pasos del primer punto.
+   Ahora bien, si el albarán está *Recibido* lo único que podremos hacer es
+   cancelar el albarán pero la compra ya tendrá el estado *Realizado*, así que
+   no debemos cancelar el albarán sino confirmarlo y acabar marcándolo  como
+   *Realizado*. Esto nos generará una línea de factura en la compra,
+   llevándonos al siguiente paso: crear una factura de este proveedor, dónde
+   añadiremos la línea de factura de la compra y cancelaremos la factura. Una
+   vez cancelada esta factura nos quedará todo el circuito cerrado ahora bien
+   si queremos hacer la devolución de la mercadería deberemos hacer una copia
+   exacta de la compra inicial con cantidad negativa y procesarla, pero antes
+   de ello es recomendable dirigirnos a la pestaña *Información adicional* y
+   marcar el método de facturación como *Manual*, así nos evitamos que genere una
+   factura.
+
+   Una vez que hayamos procesado la compra, se generará un movimiento de
    producto. Este lo añadiremos a un albarán que procesaremos, dando por
    cerrado, así, el circuito de la cancelación de la compra o devolución de
-   la mercancía; sin la creación de una nueva línea de factura. 
-   
-   Si queremos lo contrario, que todo quede registrado en la misma factura, 
-   dejaremos el método de facturación igual y en la pirmera línia de factura la 
+   la mercancía; sin la creación de una nueva línea de factura.
+
+   Si queremos lo contrario, que todo quede registrado en la misma factura,
+   dejaremos el método de facturación igual y en la pirmera línia de factura la
    añadiremos a la misma factura que la línia generada del albarán de devolución.
-   
-*  **Cancelar una compra que ha sido recibida y no tiene albarán vinculado, 
-   pero sí que ha generado una línea de factura**. Repetiremos parte de los 
-   pasos enumerados anteriormente, creando una factura de proveedor dónde 
-   añadiremos la línea de factura para cancelarla. Realizaremos todas los pasos 
-   anteriores hasta llegar de nuevo a la gestión de la excepción de la factura 
+
+*  **Cancelar una compra que ha sido recibida y no tiene albarán vinculado,
+   pero sí que ha generado una línea de factura**. Repetiremos parte de los
+   pasos enumerados anteriormente, creando una factura de proveedor dónde
+   añadiremos la línea de factura para cancelarla. Realizaremos todas los pasos
+   anteriores hasta llegar de nuevo a la gestión de la excepción de la factura
    en la compra. Ignorando esta excepción como hemos hecho en casos anteriores.
-   
+
 .. _purchase-configuration:
 
 Configuración

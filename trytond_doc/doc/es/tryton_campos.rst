@@ -29,6 +29,8 @@ Campo de texto de una única línea que permite almacenar cualquier carácter
 alfanumérico. El tamaño se aplica en el nivel de almacenamiento y la entrada
 del cliente.
 
+.. _field-translate:
+
 Traducción
 ----------
 

@@ -124,7 +124,6 @@ se indica en qué estados nos podemos encontrar estos dos documentos.
 .. |shipment_address| field:: sale.sale/shipment_address
 .. |sale_date| field:: sale.sale/sale_date
 .. |warehouse| field:: sale.sale/warehouse
-.. |currency| field:: sale.sale/currency
 .. |payment_term| field:: sale.sale/payment_term
 .. |lines| field:: sale.sale/lines
 .. |line_type| field:: sale.line/type

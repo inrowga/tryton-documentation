@@ -151,7 +151,7 @@ En |menu_party_configuration| podemos encontrar distintas opciones
 que nos permitirán adaptar la gestión de los terceros a nuestras necesidades.
 
 .. view:: party.party_configuration_view_form
-   :field: party_sequence
+   :field: party_lang
 
    Configuración de terceros
 

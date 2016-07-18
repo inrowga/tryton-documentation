@@ -2,9 +2,13 @@
 Producción
 ==========
 
-Las producciones se utilizan para la transformación de materias, por ejemplo
-para la fabricación de una pieza (material finalizado) a través de la unión
-de varios componentes.
+Las producciones se utilizan para la transformación de materias, por ejemplo,
+para conseguir la fabricación de una pieza (material finalizado o en progreso)
+a través de la unión de varios componentes.
+
+Una producción esta definida básicamente por un *producto*, una *lista de
+materiales*, *costes material*, la *localización*, la *cantidad* y los
+*movimientos* de las órdenes de trabajo.
 
 .. inheritref:: production/production:section:producir_materiales
 
@@ -22,7 +26,7 @@ Para producir materiales debemos crear una orden de producción desde la opción
    Captura de pantalla de vista de producción
 
 
-Las ordenes de producción están formados por dos tipos de movimiento:
+Las órdenes de producción están formados por dos tipos de movimiento:
 
 * |inputs|: En ellas introduciremos todos los productos que se necessitan
   **consumir** para realizar la producción.
@@ -46,11 +50,11 @@ A continuación se detallan cada uno de ellos:
   automáticamente por el sistema para satisfacer necesidades.
 * **Borrador**: Estado inicial en que se introducen las entrada y salidas
   previstas.
-* **En espera**: La producción esta a la espera de recibir los productos
+* **En espera**: La producción está a la espera de recibir los productos
   necesarios para consumir sus entradas.
 * **Reservado**: Todas las entradas han sido reservadas pero la producción
   aún no ha empezado.
-* **En ejecución**: La producción esta en curso. Todas las entradas han sido
+* **En ejecución**: La producción está en curso. Todas las entradas han sido
   consumidas y se están realizando las salidas.
 * **Realizado**: La producción ha sido terminada y todos los productos de
   salida han estado realizados.
@@ -63,6 +67,12 @@ Una vez finalizada la producción, se calculan los costos de la misma y
 estos se reparten en las |outputs|, rellenando así el precio unitario de las
 |outputs|.
 
+El cálculo del coste de la producción se hará a través del sumatorio de los
+precios de coste de todos los productos, que forman esta producción. En el
+momento en que seleccionemos un producto, este tendrá un precio de coste
+individual. La producción verifica que todo el coste está repartido en el
+precio de la unidad de los |outputs|.
+
 En la pestaña Información Adicional podremos ver el |cost| total de la
 producción.
 
@@ -71,7 +81,7 @@ Consumo de materiales no previstos
 En cualquier estado de la producción podemos añadir nuevos materiales en las
 |inputs| y las |outputs| de la producción, aunque no quitar las que ya
 están realizados. Esto nos permite añadir entradas adicionales y salidas no
-previstas, por ejemplo desechos, mientras la producción esta en curso.
+previstas, por ejemplo desechos, mientras la producción está en curso.
 
 Para introducir un desecho debemos introducir una nueva línea en las
 |outputs| utilizando cómo ubicación destino una ubicación de tipo
@@ -96,6 +106,8 @@ nos describen como debemos realizar un determinado plato.
    Captura de pantalla de
 
 .. _production-create-bom:
+
+.. inheritref:: production/production:section:crear_lista_de_materiales
 
 Crear una lista de materiales
 -----------------------------

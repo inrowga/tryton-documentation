@@ -2,6 +2,8 @@
 Módulos de Tryton
 =================
 
+.. _module-list:
+
 Módulos incluidos en el manual
 ==============================
 

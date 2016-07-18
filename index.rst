@@ -7,8 +7,6 @@ tengan **instalados y disponibles** en su servidor de Tryton. Por este motivo,
 la documentación es según estos módulos que dispone, pudiéndose **ampliar** si
 dispone de otros módulos que amplíen nuevas funcionalidades.
 
-Contenidos:
-
 .. toctree::
    :maxdepth: 2
 

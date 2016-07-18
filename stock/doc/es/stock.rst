@@ -99,6 +99,7 @@ ubicación configurada como *Zona de entrada* hasta la configurada como
    Así los productos de la recepción constarán, a todos los efectos, en
    nuestros almacenes desde la fecha indicada.
 
+
 Cancelar albaranes
 ------------------
 
@@ -118,8 +119,12 @@ botón *Borrador*.
    los productos indicados en el albarán cancelado, deberemos hacer una
    devolución de mercancía como si se tratase de una devolución normal.
 
+
 Devolución de mercancía recibida
 --------------------------------
+
+.. inheritref:: stock/stock:paragraph:crear_devolucion_mercancia_recibida
+
 Para devolver una mercancía que hemos recibido debemos crear un albarán de
 devolución de proveedor desde la opción |menu_shipment_in_return_form|.
 Al igual que un albarán de proveedor, un albarán de devolución puede estar
@@ -308,6 +313,8 @@ Para que las entregas parciales funcionen correctamente los albaranes de cliente
 deben haber sido creados a travès de una venta, ya que a través de la misma el
 sistema podrá saber cuales son las cantidades de cada producto que todavía estàn
 pendientes de enviar.
+
+.. inheritref:: stock/stock:paragraph:eliminacion_lineas_no_entregadas
 
 En caso de que no haya suficiente stock de algún producto, podemos hacer una
 entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de
@@ -544,20 +551,20 @@ Para la generación de un nuevo inventario deberemos seleccionar la
 material (para saber como funcionan estas ubicaciones podemos acceder a la
 introducción de la sección :ref:`intro-logística`), y la |inv_date| a la que
 se corresponde. Una vez indicados los parámetros generales, deberemos clicar en
-el botón *Inventario completo* si deseamos que se incorporen todos los productos
-de esta ubicación, o añadir los productos que deseamos, ya en las líneas.
-En el momento de guardar, cada una de las líneas generadas podremos ver la
-|inv_expected_quantity| que indica la cantidad que el sistema cree que tiene,
-y la |inv_quantity|, que podremos modificar con el número de existencias de nuestro
-recuento. Hay que tener en cuenta que al clicar sobre *Inventario completo* el
-sistema no creará líneas por los productos para los cuales no tiene existencias informadas.
-Para añadir nuevos productos en el inventario, simplemente tendremos que generar una
+el botón *Inventario completo* y se nos rellenarán las lineas con los productos
+y existencias que el sistema indica que tiene en la |inv_location| indicada. En
+cada una de las líneas generadas podremos ver la |inv_expected_quantity| que
+indica la cantidad que el sistema cree que tiene, y la |inv_quantity|, que
+podremos modificar con el número de existencias de nuestro recuento. Hay que
+tener en cuenta que al clicar sobre *Inventario completo* el sistema no creará
+líneas por los productos para los cuales no tiene existencias informadas. Para
+añadir nuevos productos en el inventario, simplemente tendremos que generar una
 línea nueva desde el botón *Nuevo* del campo |inv_lines|. Cuando hayamos
 finalizado, utilizaremos el botón Confirmar, para regularizar las existencias.
 
-Cuando confirmemos el inventario, se encargará de realizar los movimientos necesarios
-para regularizar las cantidades, cogiendo cómo ubicación de origen o destino la que
-hayamos seleccionado en el campo |inv_lost_found|.
+Cuando confirmemos el inventario, **Tryton** se encargará de realizar los
+movimientos necesarios para regularizar las cantidades, cogiendo cómo ubicación
+de origen o destino la que hayamos seleccionado en el campo |inv_lost_found|.
 
 .. Note::
    Si queremos indicar algún producto nuevo o sin existencias en el almacén
@@ -594,7 +601,6 @@ empresa.
 
 .. |menu_configuration| tryref:: stock.menu_configuration/complete_name
 .. |menu_conf_stock| tryref:: stock.menu_stock_configuration/complete_name
-.. |menu_conf_location| tryref:: stock.menu_location_form/complete_name
 
 .. inheritref:: stock/stock:section:location_configuration
 
@@ -618,32 +624,34 @@ con los siguientes campos:
 * |loc_type|: Aquí indicaremos la tipología que tendrá la nueva ubicación,
   pudiendo elegir entre:
 
-  * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
-  * *Proveedor*: Es una ubicación virtual que representa los almacenes de
-    nuestros proveedores.
-  * *Cliente*: Al igual que la ubicación *Proveedor*, se trata de una
-    ubicación virtual que simula los movimientos de stock hacía el cliente.
-  * *Perdido/encontrado*: Es la ubicación virtual que el sistema utiliza
-    para los productos que perdemos o encontramos.
-  * *Producción*: Ubicación virtual que utilizaremos en caso de tener un
-    proceso de producción.
-  * *Interna*: Es la ubicación concreta donde se almacenan (definitiva o
-    temporalmente) nuestra mercancía.
-  * *Almacén*: Representa la ubicación genérica de nuestros almacenes. En su
-    interior alberga varias ubicaciones internas, por eso, al seleccionar
-    esta tipología se nos habilitarán tres nuevos campos:
+    * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
+    * *Proveedor*: Es una ubicación virtual que representa los almacenes de
+      nuestros proveedores.
+    * *Cliente*: Al igual que la ubicación *Proveedor*, se trata de una
+      ubicación virtual que simula los movimientos de stock hacía el cliente.
+    * *Perdido/encontrado*: Es la ubicación virtual que el sistema utiliza
+      para los productos que perdemos o encontramos.
+    * *Producción*: Ubicación virtual que utilizaremos en caso de tener un
+      proceso de producción.
+    * *Interna*: Es la ubicación concreta donde se almacenan (definitiva o
+      temporalmente) nuestra mercancía.
+    * *Almacén*: Representa la ubicación genérica de nuestros almacenes. En su
+      interior alberga varias ubicaciones internas, por eso, al seleccionar
+      esta tipología se nos habilitarán tres nuevos campos:
 
-    * |loc_address|: En este campo, si lo deseamos, podemos indicar la
-      dirección postal donde se encuentra nuestro almacén.
-    * |loc_input_location| y |loc_output_location|: En estos campos
-      deberemos seleccionar las ubicaciones internas que se utilizarán
-      como muelle de carga y de descarga, ya que cuando hagamos un
-      movimiento de stock, el sistema automáticamente realiza el movimiento
-      interno hasta la zona de salida o entrada (dependiendo de la
-      dirección del envío).
-    * |loc_storage_location|: Es la ubicación interna del almacén.
-      Correspondería a la zona de almacenaje dentro del almacén
-      (diferenciándola del muelle de carga y descarga).
+        * |loc_address|: En este campo, si lo deseamos, podemos indicar la
+          dirección postal donde se encuentra nuestro almacén.
+        * |loc_input_location| y |loc_output_location|: En estos campos
+          deberemos seleccionar las ubicaciones internas que se utilizarán
+          como muelle de carga y de descarga, ya que cuando hagamos un
+          movimiento de stock, el sistema automáticamente realiza el movimiento
+          interno hasta la zona de salida o entrada (dependiendo de la
+          dirección del envío).
+        * |loc_storage_location|: Es la ubicación interna del almacén.
+          Correspondería a la zona de almacenaje dentro del almacén
+          (diferenciándola del muelle de carga y descarga).
+
+.. |menu_conf_location| tryref:: stock.menu_location_form/complete_name
 
 .. |loc_name| field:: stock.location/name
 .. |loc_code| field:: stock.location/code
