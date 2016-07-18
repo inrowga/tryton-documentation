@@ -55,7 +55,7 @@ el icono *Nuevo* del campo |lines| y se nos abrirá un ventana emergente con los
 siguientes campos:
 
  * |line_type|: Mediante este campo podremos definir distintos tipos de línea.
-   El valor por defecto es *Línea*, si mantenemos este |line_type| deberemos 
+   El valor por defecto es *Línea*, si mantenemos este |line_type| deberemos
    rellenar también los campos que siguen a este en la explicación. Los otros
    valores son *Comentario*, *Subtotal* y *Título* que se utilizan para añadir
    líneas extras que aparecerán en el informe permitiendo de esta forma una
@@ -138,6 +138,7 @@ se indica en qué estados nos podemos encontrar estos dos documentos.
 .. |comment| field:: sale.sale/comment
 .. |invoice_method| field:: sale.sale/invoice_method
 .. |shipment_method| field:: sale.sale/shipment_method
+.. |currency| field:: sale.sale/currency
 
 
 .. inheritref:: sale/sale:section:estados
@@ -263,12 +264,12 @@ Realizar una venta con distinta divisa
 ======================================
 
 En caso de que tengamos clientes que nos compren con una divisa distinta a la
-que tenemos configurada por defecto (y con la que realizamos toda la actividad 
-contable), podemos indicarlo en el campo |currency| de la venta. Esto provocará 
-que cuando seleccionemos el producto en la línea de venta, el precio que se 
-indica en el campo |line_unit_price| refleje ya la conversión a la moneda 
-indicada según la tasa de cambio informada para la fecha de la venta (podemos 
-acceder a :ref:`gestion-moneda` para ver cómo configurar las tasas de cambio de 
+que tenemos configurada por defecto (y con la que realizamos toda la actividad
+contable), podemos indicarlo en el campo |currency| de la venta. Esto provocará
+que cuando seleccionemos el producto en la línea de venta, el precio que se
+indica en el campo |line_unit_price| refleje ya la conversión a la moneda
+indicada según la tasa de cambio informada para la fecha de la venta (podemos
+acceder a :ref:`gestion-moneda` para ver cómo configurar las tasas de cambio de
 las monedas extranjeras).
 
 .. warning:: El sistema no recalcula el precio de líneas de venta si estas las
@@ -324,7 +325,7 @@ gestión de la excepción.
 
 .. figure:: images/sale-exceptions.png
 
-   Captura de pantalla de las excepciones 
+   Captura de pantalla de las excepciones
 
 Gestión de la excepción
 ~~~~~~~~~~~~~~~~~~~~~~~
