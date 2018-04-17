@@ -532,6 +532,20 @@ los resultados.
 .. |product_forecast_quantity| field:: product.product/forecast_quantity
 .. |product_cost_value| field:: product.product/cost_value
 
+Stock inicial
+=============
+
+Cuando creamos un producto, podemos esperar a realizar una compra o bien que nos
+llege un albarán de proveedor para entrar la mercancía en nuestro almacén y
+disponer de stock de los productos nuevos.
+
+Si ya disponemos de productos y no nos llegaran mediante albaranes de proveedor,
+podemos inicializar el stock creando directamente de movimientos.
+
+Crearemos un nuevo movimiento desde la ubicación, "proveedor", y la ubicación destino,
+"zona de almacenamiento". Debemos finalizar este moviento para indicar que lo hemos
+recepcionado a la ubicación de almacenamiento.
+
 Regularización de existencias
 =============================
 
