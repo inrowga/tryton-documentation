@@ -48,16 +48,16 @@ podamos introducir en el sistema, de manera que hasta que no se abra
 el ejercicio fiscal (y los correspondientes periodos) no se podrá confirmar
 ninguna factura (ni ningún asiento contable) fechada en ese año. Por ejemplo,
 no se podrá confirmar ninguna factura fechada en el 2015 hasta que no se abra
-un ejercicio fiscal con |fis_start_date| 01/01/2015 y |fis_end_date|
+un ejercicio fiscal con inicio fiscal 01/01/2015 y fianl fiscal
 31/12/2015.
 
-Para abrir un ejercicio fiscal debemos dirigirnos al menú |menu_fiscalyear|,
+Para abrir un ejercicio fiscal debemos dirigirnos al menú año fiscal,
 hacemos clic en el botón nuevo y rellenamos todos los campos obligatorios:
-|name|, |fis_start_date| y |fis_end_date|. Si lo deseamos, también podemos dar
+nombre, inicio fiscal y final fiscal. Si lo deseamos, también podemos dar
 un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
 
 .. Note:: Normalmente, solemos poner el año al que corresponde el ejercicio
-   fiscal en |name| y en |fis_start_date| y |fis_end_date|, la fecha de inicio
+   fiscal en nombre y en inicio fiscal y final fiscal, la fecha de inicio
    y fin del año natural.
 
 
@@ -80,7 +80,7 @@ Finalmente, una vez introducidos los parámetros generales y las secuencias,
 podemos volver a la pestaña *Períodos* y hacer clic en el botón *Crear períodos
 mensuales*. Con esto se nos generará un período para cada mes del año fiscal y,
 cuando desarrollemos nuestra actividad contable, todo asiento será siempre
-clasificado dentro de un período teniendo en cuenta su |ac_date|.
+clasificado dentro de un período teniendo en cuenta su data.
 
 .. Note:: No es recomendable utilizar períodos trimestrales porque en varios
           informes contables **Tryton** solamente nos permitirá seleccionar por
@@ -89,13 +89,6 @@ clasificado dentro de un período teniendo en cuenta su |ac_date|.
           necesitamos hacer alguna declaración trimestral, tan solo tendremos
           que unir periodos de tres en tres.
 
-.. |menu_fiscalyear| tryref:: account.menu_fiscalyear_form/complete_name
-.. |name| field:: account.fiscalyear/name
-.. |fis_start_date| field:: account.fiscalyear/start_date
-.. |fis_end_date| field:: account.fiscalyear/end_date
-.. |ac_date| field:: account.move/date
-
-.. _cuenta-nueva:
 
 Crear una nueva cuenta contable
 -------------------------------
@@ -107,7 +100,7 @@ nuestros activos o pasivos durante un periodo concreto. Estos cambios suelen
 ser agrupados en distintas cuentas contables según su naturaleza, por lo que,
 por medio de las cuentas, podemos analizar la evolución de nuestros activos,
 nuestras obligaciones o las variaciones de nuestro capital. Para crear una
-nueva cuenta debemos dirigirnos al menú |menu_account| y clicar en el botón
+nueva cuenta debemos dirigirnos al menú contabilidad y clicar en el botón
 *Nuevo*.
 
 .. view:: account.account_view_form
@@ -117,8 +110,8 @@ nueva cuenta debemos dirigirnos al menú |menu_account| y clicar en el botón
 .. inheritref:: account/account:paragraph:cabecera_cuenta
 
 En primer lugar deberemos rellenar la cabecera del formulario que se nos
-abrirá, indicando el |name_account| y el |code_account| de esta nueva cuenta.
-Si le ponemos un código numérico, el |code_account| nos servirá para
+abrirá, indicando el nombre y el código de esta nueva cuenta.
+Si le ponemos un código numérico, el código  nos servirá para
 clasificar la cuenta e indicarle al sistema de qué grupos va a depender.
 
 Una vez completada la cabecera, podemos ir rellenando el resto de campos según
@@ -126,51 +119,51 @@ el carácter que le queramos dar a la nueva cuenta contable:
 
 .. inheritref:: account/account:bullet_list:cuenta_contable
 
-* |company_account|: Indicaremos para cual de nuestras empresas crearemos la
+* Empresa: Indicaremos para cual de nuestras empresas crearemos la
   cuenta.
 
-* |parent_account|: En caso de que la cuenta que estamos creando dependa de
+* Padre: En caso de que la cuenta que estamos creando dependa de
   otra, lo deberemos indicar aquí.
-
+#Modificar
 * |kind_account|:  En este campo seleccionaremos de qué tipo será esta
   nueva cuenta. Si indicamos en este campo *Vista* le estaremos indicando al
   sistema que esta cuenta agrupará otras cuentas. El resto de tipologías que
   podemos seleccionar son: *A cobrar*, *A pagar*, *Existencias*, *Gastos*,
   *Ingresos* y *Otros*.
 
-* |deferral_account|: Marcaremos el *tick* en caso de que la cuenta sea
+* Cierre: Marcaremos el *tick* en caso de que la cuenta sea
   prorrogable tras el cierre del ejercicio fiscal. Este campo nos permite
   indicar si el saldo de la cuenta debe ser arrastrado al período siguiente
   una vez cerrado el año.
 
-* |reconcile_account|: En caso de que queramos que la cuenta sea conciliable.
+* Conciliar: En caso de que queramos que la cuenta sea conciliable.
 
-* |party_requ_account|: Marcaremos el *tick* en caso de que queramos que sea
+* Tercer obligatorio: Marcaremos el *tick* en caso de que queramos que sea
   obligatorio que se indique el tercero al hacer apuntes.
 
-* |currency_account|: Por defecto nos indicará la moneda configurada por
+* Moneda: Por defecto nos indicará la moneda configurada por
   defecto para la contabilidad de la empresa.
 
-* |sec_currency_account|: Si indicamos una |sec_currency_account|, cuando
+* Moneda secundaria: Si indicamos una moneda secundaria, cuando
   vayamos a ver los extractos de la cuenta que estamos creando, además de los
   importes con la moneda principal, nos aparecerán también una columna
-  indicando la conversión de los importes a la |sec_currency_account|
+  indicando la conversión de los importes a la moneda secundaria
   seleccionada.
 
-* |taxes_account|: Seleccionaremos aquí, en caso de que queramos informar de
+* Impuestos: Seleccionaremos aquí, en caso de que queramos informar de
   impuestos específicos para los apuntes que se añadan a la cuenta.
 
-* |childs_account|: En caso de que queramos que otras cuentas dependan de la
+* Hijos: En caso de que queramos que otras cuentas dependan de la
   que estamos creando lo podremos indicar o crear otras cuentas nuevas por
   medio de este campo.
 
-* |deferrals_account|: En esta pestaña se nos irán indicando, en caso de tener
-  marcado el tick del campo |deferral_account| y conforme vayamos cerrando
+* Cierres: En esta pestaña se nos irán indicando, en caso de tener
+  marcado el tick del campo cierre y conforme vayamos cerrando
   ejercicios fiscales, los importes del debe y haber del ejercicio fiscal al
   cierre de este.
 
 .. Important:: Una vez tengamos creadas las cuentas contables que necesitemos,
-   podremos ir al menú |menu_contable| y configurar las cuentas que
+   podremos ir al menú contable y configurar las cuentas que
    utilizaremos por defecto para los pagos y los ingresos.
 
 Modificar el campo "Padre"
@@ -208,25 +201,6 @@ comportamiento de ambas es distinto:
    nivel. En los subniveles aparecerán todos.
 
 
-.. |menu_account| tryref:: account.menu_account_list/complete_name
-.. |name_account| field:: account.account/name
-.. |code_account| field:: account.account/code
-.. |company_account| field:: account.account/company
-.. |parent_account| field:: account.account/parent
-.. |kind_account| field:: account.account/kind
-.. |type_account| field:: account.account/type
-.. |deferral_account| field:: account.account/deferral
-.. |reconcile_account| field:: account.account/reconcile
-.. |party_requ_account| field:: account.account/party_required
-.. |currency_account| field:: account.account/currency
-.. |sec_currency_account| field:: account.account/second_currency
-.. |taxes_account| field:: account.account/taxes
-.. |childs_account| field:: account.account/childs
-.. |deferrals_account| field:: account.account/deferrals
-.. |menu_contable| tryref:: account.menuitem_account_configuration/complete_name
-
-.. inheritref:: account/account:section:nuevo_diario
-
 Crear un nuevo diario
 ---------------------
 Los libros diarios son libros donde se van estableciendo cronológicamente los
@@ -238,31 +212,13 @@ icono *Nuevo*.
 
    Vista del formulario de un nuevo Diario
 
-En el formulario que se nos abrirá, deberemos seleccionar el |name_journal|,
-el |type_journal|, elegir qué clase de |sequence| se seguirá (podemos crear una
+En el formulario que se nos abrirá, deberemos seleccionar el nombre,
+el tipo , elegir qué clase de secuencia se seguirá (podemos crear una
 nueva secuencia o elegir una ya creada (:ref:`admin-secuencias`)), la
-|credit_account| y la |debit_account|. Además podemos elegir también si en este
+haber y la debe. Además podemos elegir también si en este
 diario permitiremos que se cancelen asientos.
 Una vez rellenados los campos podremos guardar el diario y ya lo tendremos
 operativo para empezar a realizar apuntes contables en él.
-
-A parte de los distintos |journal_type| que vienen por defecto en **Tryton**,
-podemos crear nuevas tipologías según nuestras necesidades accediendo al menú
-|jour_type_menu| y, tras clicar en *Nuevo*, indicar un |name_jour_type| y un
-|code_jour_type| para la nueva tipología de diario. Posteriormente, podemos
-modificar o crear uno o varios diarios nuevos configurándolos con la nueva
-tipología.
-
-.. |menu_journal| tryref:: account.menu_journal_form/complete_name
-.. |name_journal| field:: account.journal/name
-.. |type_journal| field:: account.journal/type
-.. |sequence| field:: account.journal/sequence
-.. |credit_account| field:: account.journal/credit_account
-.. |debit_account| field:: account.journal/debit_account
-.. |journal_type| tryref:: account.menu_journal_type_form/name
-.. |jour_type_menu| tryref:: account.menu_journal_type_form/complete_name
-.. |name_jour_type| field:: account.journal.type/name
-.. |code_jour_type| field:: account.journal.type/code
 
 
 Crear un plan contable
@@ -273,15 +229,15 @@ El plan contable es aquello que clasifica y organiza las distintas cuentas
 donde se irá recogiendo el registro contable de las operaciones que realice
 nuestra empresa. Es por esto que una vez definidos los pasos previos según
 nuestros intereses, podremos crear nuestro plan contable. Para ello
-accederemos por medio de |menu_create_chart| y se nos abrirá un asistente donde
-deberemos indicar la empresa sobre la que queremos crear el plan y la
-|account_template| que utilizaremos para crearlo (por defecto el sistema tiene
+accederemos por medio de |menu_create_chart| y se nos abrirá un asistente 
+donde deberemos indicar la empresa sobre la que queremos crear el plan y la
+plantilla que utilizaremos para crearlo (por defecto el sistema tiene
 ya generada la plantilla *Plan de tipos de cuenta mínimo* aunque también
 podemos instalar el *Plan General de Contabilidad* o crear una plantilla
 personalizada por medio del menú |menu_template_account|). Una vez indicados
 estos campos, clicamos en *Crear* y se nos abrirá una nueva ventana donde
-podremos indicar la |plan_account_payable| y la |plan_account_receivable| que
-utilizaremos para el plan contable.
+podremos indicar la cuenta a pagar por defecto  y la cuenta a cobrar por defecto
+que utilizaremos para el plan contable.
 
 Si clicamos de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
 posteriormente, podremos consultar por medio de |menu_open_chart|.
@@ -315,14 +271,14 @@ la *venta*, la *compra* o durante *ambos*.
 Para crear un nuevo impuesto, deberemos acceder a |tax_menu| y al clicar en
 *Nuevo* se nos abrirá la vista de edición donde deberemos rellenar los
 distintos campos para poder configurar el impuesto. Deberemos rellenar el
-|name_tax|, la |description_tax|, el |group_tax| al que pertenece, el
-|type_tax| (si indicamos aquí que es un impuesto con importe fijo también
-deberemos indicar el |amount_tax|, si, por el contrario, seleccionamos
-*Porcentaje* deberemos indicar el |rate_tax| sobre el que se calculará el
-impuesto). También deberemos indicar la |invoice_account_tax| y
-la |credit_note_account_tax| en las que realizaremos las anotaciones contables.
+nombre, la descripción, el grupo al que pertenece, el
+tipo (si indicamos aquí que es un impuesto con importe fijo también
+deberemos indicar el importe, si, por el contrario, seleccionamos
+*Porcentaje* deberemos indicar el pordentaje sobre el que se calculará el
+impuesto). También deberemos indicar la cuenta de factura y
+la cuenta de abono en las que realizaremos las anotaciones contables.
 Además, en caso de que el impuesto que estemos generando tenga otros
-dependientes de él, lo deberemos indicar en |child_tax|.
+dependientes de él, lo deberemos indicar en los hijos.
 
 .. inheritref:: account/account:paragraph:impuestos_pestanas
 
@@ -359,7 +315,7 @@ Gestión contable
 Consultar libros diario
 -----------------------
 
-Si accedemos al menú |menu_journal_period| se nos abrirá una pestaña donde nos
+Si accedemos al menú Diarios - Períodos  se nos abrirá una pestaña donde nos
 aparecerá un listado con todos los diarios, divididos en periodos, en los que
 que hemos realizado algún apunte y permanecen todavía abiertos (hay que tener
 en cuenta que si en algún periodo de algún diario no hay ninguna anotación, o
@@ -368,19 +324,12 @@ clicamos en cualquiera de ellos se nos abrirá una nueva pestaña con todos los
 apuntes contables anotados en el diario.
 
 En caso de que queramos acceder a algún diario cerrado, o a algún periodo
-cerrado de un diario, accederemos por medio de |menu_open_journal| y se nos
-abrirá una asistente donde deberemos rellenar el campo |open_journal| con el
-nombre del diario y |open_period| con el periodo que queramos consultar. Una
-vez lo hayamos seleccionado se nos abrirá una pestaña en la que nos aparecerán
-todos los apuntes contables del |open_period| y |open_journal| elegidos.
+cerrado de un diario, accederemos por medio del menu diario y se nos
+abrirá una asistente donde deberemos rellenar el campo diario con el
+nombre del diario y el periodo inicial con el periodo que queramos consultar. 
+Una vez lo hayamos seleccionado se nos abrirá una pestaña en la que nos 
+aparecerán todos los apuntes contables del periodo inicial y diarios elegidos.
 
-.. |menu_journal_period| tryref:: account.menu_journal_period_tree2/complete_name
-.. |menu_open_journal| tryref:: account.menu_open_journal/complete_name
-.. |open_journal| field:: account.move.open_journal.ask/journal
-.. |open_period| field:: account.move.open_journal.ask/period
-
-
-.. inheritref:: account/account:section:consulta_asientos
 
 Consultar asientos contables
 ----------------------------
@@ -475,7 +424,7 @@ Cierre de la actividad contable
 Cerrar períodos
 ---------------
 
-El cierre de |periods| (sean mensuales o trimestrales) sirve para asegurarnos
+El cierre de período (sean mensuales o trimestrales) sirve para asegurarnos
 que no modificamos la contabilidad de un período en el que ya no se deberían
 que hacer anotaciones. Por ejemplo, si a mediados del mes de abril damos por
 contabilizado completamente el mes de marzo (y con él todo el trimestre)
@@ -488,12 +437,12 @@ imputamos más ingresos para el mes de marzo, mientras continuamos añadiendo
 gastos, por ejemplo.
 
 Para cerrar un período y no permitir ningún tipo de cambio en la
-contabilidad de dicho mes debemos ir al menú |menu_periods|. Ahí deberemos
+contabilidad de dicho mes debemos ir al menú Períodos Ahí deberemos
 seleccionar el mes que queramos cerrar y hacer clic en icono *Ejecutar
 acción* y seleccionar *Cerrar período*.
 
 Si lo que queremos es solamente evitar la creación y modificación de asientos
-en un diario y período determinados debemos dirigirnos al menú |menu_jornals|.
+en un diario y período determinados debemos dirigirnos al menú Diarios.
 Ahí veremos todos los diarios - períodos que han sido ya abiertos (normalmente
 porque hemos hecho algún asiento en el mismo). Si encontramos el
 diario - período que queremos cerrar debemos seleccionarlo cerrar por medio del
@@ -503,10 +452,6 @@ Si por el contrario queremos cerrar un diario - período en el cual no hemos
 contabilizado nada, podemos crear un registro nuevo indicando diario, período
 así como un nombre. Una vez creado, podremos proceder a cerrarlo con la acción
 *Cerrar diarios - períodos* antes mencionada.
-
-.. |periods| field:: account.fiscalyear/periods
-.. |menu_periods| tryref:: account.menu_period_form2/complete_name
-.. |menu_jornals| tryref:: account.menu_journal_period_form/complete_name
 
 
 Cerrar ejercicio fiscal
@@ -532,9 +477,9 @@ El asiento de regularización
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 El primer paso para el cierre del ejercicio es realizar el asiento de
-regularización. Para ello debemos acceder al menú |menu_regularizacion|. Este
+regularización. Para ello debemos acceder al menú regularización. Este
 asistente creará el asiento de regularización, cerrando el saldo de todas las
-cuentas que no tienen el campo |acc_deferral| marcado (:ref:`cuenta-nueva`).
+cuentas que no tienen el campo cierre marcado (:ref:`cuenta-nueva`).
 En la pantalla que nos muestra el programa debemos indicarle el ejercicio a
 cerrar, el diario y el período donde contabilizarlo.
 
@@ -542,22 +487,22 @@ cerrar, el diario y el período donde contabilizarlo.
 
    Vista con el formulario a rellenar para crear el asiento de regularización
 
-* El |bal_non_journal| deberá ser de tipo *Situación* y, en caso de no tener
+* El diario deberá ser de tipo *Situación* y, en caso de no tener
   ninguno creado, podremos generarlo desde la misma pantalla haciendo clic en
-  el botón *Nuevo* del campo |bal_non_journal|. Si tenemos en **Tryton** un
+  el botón *Nuevo* del campo diario. Si tenemos en **Tryton** un
   año anterior cerrado, podremos escoger el mismo diario que se utilizó para el
   anterior cierre.
 
-* El |bal_non_period| también podemos crearlo clicando en el botón *Nuevo* del
-  propio campo. La |per_start_date| y la |per_end_date| deberán ser la misma y
+* El período también podemos crearlo clicando en el botón *Nuevo* del
+  propio campo. La fecha de inicio y la fecha final deberán ser la misma y
   coincidir con el último día del año fiscal al que pertenece. De nuevo, el
-  |type| del período deberá ser especial, en concreto deberá ser de tipo
+  tipo del período deberá ser especial, en concreto deberá ser de tipo
   *Ajuste*, que es el único tipo al que el sistema le permite que las fechas
   propias del período se solapen con las fechas de otro período.
 
 * Por último deberemos indicar la cuenta a la cual se contabilizará el saldo de
-  las cuentas de ingresos y gastos en los campos |bal_non_credit| y
-  |bal_non_debit|. Como podemos ver, **Tryton** admite poner el saldo en una
+  las cuentas de ingresos y gastos en los campos cuenta haber y
+  cuenta deber. Como podemos ver, **Tryton** admite poner el saldo en una
   cuenta distinta dependiendo de si el resultado es creditor o deudor, aunque
   si lo preferimos podemos poner la misma cuenta en ambos campos para que no se
   realice esta distinción.
@@ -575,18 +520,6 @@ nuevos datos en periodos o meses concretos.
 
 A parte de esto, **Tryton** provee una opción para realizar dicho cierre para
 todos los períodos del año a la vez. Para ello debemos ir al menú
-|menu_cierres| y se nos abrirá un asistente donde solamente tendremos que
+cierres y se nos abrirá un asistente donde solamente tendremos que
 indicar el ejercicio fiscal y pulsar en *Cerrar*, una vez realizado esto ya no
 se podrán introducir apuntes contables en ningún periodo del ejercicio fiscal.
-
-
-.. |menu_regularizacion| tryref:: account.menu_balance_non_deferral/complete_name
-.. |acc_deferral| field:: account.account/deferral
-.. |per_start_date| field:: account.period/start_date
-.. |per_end_date| field:: account.period/end_date
-.. |type| field:: account.period/type
-.. |bal_non_journal| field:: account.fiscalyear.balance_non_deferral.start/journal
-.. |bal_non_period| field:: account.fiscalyear.balance_non_deferral.start/period
-.. |bal_non_credit| field:: account.fiscalyear.balance_non_deferral.start/credit_account
-.. |bal_non_debit| field:: account.fiscalyear.balance_non_deferral.start/debit_account
-.. |menu_cierres| tryref:: account.menu_close_fiscalyear/complete_name

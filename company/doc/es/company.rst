@@ -9,14 +9,8 @@ Empresas
 
 La empresa es nuestra compañía. Los procedimientos a seguir para crearla son:
 
-* Abre el menú |menu_company_list| y crea una nueva empresa.
-* Selecciona el |party| y |currency|.
-
-.. |menu_company_list| tryref:: company.menu_company_list/complete_name
-.. |party| field:: company.company/party
-.. |currency| field:: company.company/currency
-
-.. inheritref:: company/company:section:usuarios
+* Abre el menú empresa  y crea una nueva empresa.
+* Selecciona el tercero y la moneda.
 
 
 Multicompañía

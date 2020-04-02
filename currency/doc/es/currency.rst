@@ -5,7 +5,7 @@
 Moneda
 ======
 
-Accederemos al menú por medio de |currency_menu|.
+Accederemos al menú por medio de moneda.
 
 Una vez abierta la pestaña, dentro nos encontraremos ante un listado con todas las monedas con las
 que podemos trabajar. Podemos realizar búsquedas por medio del filtro para poder localizar cualquier
@@ -18,7 +18,7 @@ cada moneda.
 .. Note::
    Podemos indicar si la moneda está activa para nuestras gestiones, si la dejamos inactiva no
    nos aparecerá en la vista anterior pero la podremos encontrar utilizando la barra de búsqueda y
-   buscando por el campo |active| y poniendo *Falso* como condición.
+   buscando por el campo activo y poniendo *Falso* como condición.
 
 
 Tasas de cambio
@@ -48,49 +48,35 @@ Formato de la divisa
 En esta pestaña podemos modificar varios campos relativos al formato que presentará la moneda
 en el programa.
 
-* |digits|: Podemos decidir los decimales que se mostrarán cuando trabajemos con la moneda.
+* Decimales: Podemos decidir los decimales que se mostrarán cuando trabajemos con la moneda.
+#Modificar a ir.lang
+* Agrupación: Podemos indicar como agrupar los dígitos de la moneda.
 
-* |mon_grouping|: Podemos indicar como agrupar los dígitos de la moneda.
-
-* |mon_thousands_sep|: Signo que separará el dígito de las centenas del de los millares. En caso
+* Separador de miles: Signo que separará el dígito de las centenas del de los millares. En caso
   de dejar el campo en blanco los dos dígitos estarán separado por un espacio (1 000, con espacio,
   1.000 si introducimos un ".", 1,000 si introducimos una “,”, etc.).
 
-* |mon_decimal_point|: A diferencia de campo anterior, este no lo podemos dejar en blanco y
+* Separador de decimales: A diferencia de campo anterior, este no lo podemos dejar en blanco y
   debemos elegir qué signo utilizaremos para la separación de decimales, siendo en Europa más habitual
   utilizar la *coma* para ello.
 
-* |positive_sign|: Si utilizamos algún signo para informar que la cantidad es positiva
+* Signo positivo: Si utilizamos algún signo para informar que la cantidad es positiva
   (por defecto este campo está en blanco).
 
-* |negative_sign|: Si utilizamos algún signo para indicar que la cantidad es negativa
+* Signo negativo: Si utilizamos algún signo para indicar que la cantidad es negativa
   (por defecto este campo está rellenado con el signo "-").
 
-* |p_cs_precedes|: Indicar, en caso de haber signo positivo, si se expresará al
+* El signo positivo va delante: Indicar, en caso de haber signo positivo, si se expresará al
   inicio de la cifra o no.
   
-* |n_cs_precedes|: Indicar si el signo negativo se expresará delante de la cifra.
+* El signo negativo va delante: Indicar si el signo negativo se expresará delante de la cifra.
 
-* |p_sep_by_space|: Si este signo irá separado del número por un  espacio o inmediatamente antes.
+* Signo positivo separado por espacio: Si este signo irá separado del número por un  espacio o inmediatamente antes.
 
-* |n_sep_by_space|: Si este signo irá separado del número por un  espacio o inmediatamente antes.
+* Signo negativo separado por espacio: Si este signo irá separado del número por un  espacio o inmediatamente antes.
 
 .. Note::
-   Si en |mon_thousands_sep| dejamos el campo vacío, a la hora de introducir números por medio del teclado
+   Si en separador de miles dejamos el campo vacío, a la hora de introducir números por medio del teclado
    numérico, los puntos los reconocerá como comas, en caso contrario cuando introduzcamos el punto entenderá
    que estamos introduciendo un millar.
 
-
-.. |active| field:: currency.currency/active
-.. |currency_menu| tryref:: currency.menu_currency_form/complete_name
-.. |rate| field:: currency.currency.rate/rate
-.. |digits| field:: currency.currency/digits
-.. |mon_grouping| field:: currency.currency/mon_grouping
-.. |mon_thousands_sep| field:: currency.currency/mon_thousands_sep
-.. |mon_decimal_point| field:: currency.currency/mon_decimal_point
-.. |positive_sign| field:: currency.currency/positive_sign
-.. |negative_sign| field:: currency.currency/negative_sign
-.. |p_cs_precedes| field:: currency.currency/p_cs_precedes
-.. |n_cs_precedes| field:: currency.currency/n_cs_precedes
-.. |p_sep_by_space|  field:: currency.currency/p_sep_by_space
-.. |n_sep_by_space| field:: currency.currency/n_sep_by_space

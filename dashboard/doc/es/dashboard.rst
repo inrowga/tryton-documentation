@@ -18,8 +18,8 @@ Configuración
 
 Una vez tenemos creadas las acciones que queremos que nos aparezcan en el
 escritorio tenemos que asociarlas a él. De todas las acciones, solo podremos
-seleccionar aquellas que están indicadas como |usage| *dashboard*. Para ello
-accederemos  al menú |menu_user| y nos iremos a la pestaña *Escritorio*. Desde
+seleccionar aquellas que están indicadas como uso *dashboard*. Para ello
+accederemos  al menú de usuario y nos iremos a la pestaña *Escritorio*. Desde
 allí podremos indicar qué |dash_act| queremos que nos aparezcan en el
 *Escritorio* y también la |dash_lay| que queramos que nos presente.
 

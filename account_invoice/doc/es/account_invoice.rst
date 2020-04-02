@@ -6,15 +6,15 @@ Facturación
 
 .. _gestion-facturas:
 
-Desde |menu_account_invoice| podremos gestionar toda la facturación de nuestra
+Desde facturación podremos gestionar toda la facturación de nuestra
 empresa, tanto las facturas que emitimos a nuestros clientes, como las que
 nos emiten nuestros proveedores, ya que el sistema distingue entre distintos
 tipos de facturas dependiendo de si se generan por una venta, una compra o por
 una devolución de estas. Desde el menú de facturación podremos acceder a
 cualquiera de los tipos de factura:
 
-* |factura_cliente|
-* |factura_proveedor|
+* factura cliente
+* factura proveedor
 
 Para cada una de las distintas tipologías, el funcionamiento que
 encontraremos será el mismo: Podremos encontrar la factura en distintos estados
@@ -26,7 +26,7 @@ en lo que podremos encontrar una factura son:
 * **Borrador**: Será el estado en el que se genere la factura y el único en
   el que se permita su edición, por lo que mientras factura se encuentre en
   este estado podremos modificar cualquier campo que deseemos (excepto el
-  campo |number| que se rellenará automáticamente cuando confirmemos la
+  campo número que se rellenará automáticamente cuando confirmemos la
   factura). Cuando ya tengamos todos los campos rellenados
   podremos modificar el estado de la factura clicando en el botón *Validar* o
   en el botón *Confirmar*.
@@ -58,66 +58,66 @@ Los campos que podemos encontrar en una factura son:
 
 .. inheritref:: account_invoice/account_invoice:bullet_list:fields
 
-* |party|: Al seleccionarlo se nos rellenarán varios campos como |account| o
-  |currency| con la información que tengamos registrada del |party|.
-* |number|: Cuando confirmemos la factura se rellenará automáticamente este
+* Tercer: Al seleccionarlo se nos rellenarán varios campos como cuenta o
+  moneda con la información que tengamos registrada del tercero.
+* Nùmero : Cuando confirmemos la factura se rellenará automáticamente este
   campo siguiendo la secuencia que le hayamos indicado previamente
   (:ref:`admin-secuencias`).
-* |reference|: En este campo podremos indicar cualquier referencia que nos pueda
+* Referencia: En este campo podremos indicar cualquier referencia que nos pueda
   ayudar en nuestra gestión. En las factura de proveedor solemos utilizar este
   campo para indicar la numeración que le da el proveedor a la factura, y que
-  será diferente al campo |number|.
-* |invoice_date|: Se utilizará como referencia para el registro contable,
+  será diferente al campo nùmero.
+* Data factura: Se utilizará como referencia para el registro contable,
   contabilizándose en el mes y año indicado el asiento contable que genere la
   factura. En las facturas de cliente, en caso de que no rellenemos nosotros
   el campo, el sistema lo hará de forma automática con la fecha actual en el
   momento de confirmar la factura. En cambio, en las facturas de proveedor no
   nos permitirá avanzar mientras no le indiquemos la fecha en la que el
   proveedor nos emitió la factura.
-* |payment_term|: Aquí deberemos seleccionar el plazo de pago que tendrá la
-  factura, entre los tipo de plazos que hayamos configurado previamente
+* Termini de pagament : Aquí deberemos seleccionar el plazo de pago que tendrá
+  la factura, entre los tipo de plazos que hayamos configurado previamente
   (:ref:`Configurar plazos de pago<configurar-plazos>`).
-* |lines|: En este campo es donde indicaremos las líneas de las que se compone
+* Linies: En este campo es donde indicaremos las líneas de las que se compone
   la factura. Para ello clicaremos en el botón *Nuevo* del propio campo y se
   nos abrirá una ventana donde podremos rellenar los distintos campos que
   componen la línea:
 
-   * |line_type|: Dependiendo de la tipología que elijamos, la
+   * Tipo de linia: Dependiendo de la tipología que elijamos, la
      línea funcionará como un título, añadirá un comentario, reflejará un
      subtotal o actuará de línea de factura propiamente dicha. De estas cuatro
      tipologías, las tres primeras se componen únicamente de los campos
-     |line_description| y |line_sequence|. Si seleccionamos como |line_type|
+     descripción y secuencia. Si seleccionamos como tipo de
      línea, también tendremos que rellenar los siguientes campos:
-   * |line_product|: Aquí seleccionaremos el producto del cual será objeto la
+   * Producto: Aquí seleccionaremos el producto del cual será objeto la
      línea de la factura.
-   * |line_description|: En este campo reflejaremos aquello que aparecerá
+   * Descripción: En este campo reflejaremos aquello que aparecerá
      como descripción de la línea en la factura. Si indicamos previamente el
-     |line_product|, este campo se rellenará automáticamente con el nombre
+     producto , este campo se rellenará automáticamente con el nombre
      del producto, aunque podremos modificarlo.
-   * |line_account|: Deberemos indicar la cuenta contable donde se
+   * Cuenta: Deberemos indicar la cuenta contable donde se
      contabilizará la línea.
-   * |line_quantity| y |line_unit|: Indicaremos la cantidad y la unidad de
+   * Quantitat y unitat: Indicaremos la cantidad y la unidad de
      medida del producto que estamos introduciendo.
-   * |line_unit_price|: Cuando indiquemos aquí el precio por unidad al que
+   * Precio unidad: Cuando indiquemos aquí el precio por unidad al que
      vendemos/compramos el producto, se nos rellenará de forma automática el
-     campo |line_amount| con el total de la línea.
-   * |line_taxes|: Si tenemos configurados los productos con el impuesto que
+     campo cuenta con el total de la línea.
+   * Impuestos: Si tenemos configurados los productos con el impuesto que
      les corresponde, este campo se nos rellenará automáticamente con la
      información indicada en el producto.
 
-* |taxes|: Refleja toda la información que le hemos indicado en los
-  |line_taxes| con la base imponible total de todos los productos por impuesto.
+* Impuestos: Refleja toda la información que le hemos indicado en los
+  impuestos con la base imponible total de todos los productos por impuesto.
 
 .. inheritref:: account_invoice/account_invoice:paragraph:prevent_duplicates
 
 Si cambiamos a la pestaña **Información adicional** podremos acceder a la
 información contable de la factura, y, una vez confirmada, podremos acceder
-por medio del icono en forma de carpeta del campo |move| a la información
+por medio del icono en forma de carpeta del campo asientos a la información
 detallada de los apuntes contables generados por la factura.
 
 En la pestaña **Pago**, también una vez confirmada la factura, se nos
-rellenarán automáticamente los campos |amount_to_pay_today| y |amount_to_pay|,
-teniendo en cuenta el |total_amount| de la factura y el |payment_term| que le
+rellenarán automáticamente los campos importe a pagar hoy y importe a pagar,
+teniendo en cuenta el total de la factura y el plazo de pago que le
 hayamos indicado.
 
 .. inheritref:: account_invoice/account_invoice:section:cancelar
@@ -159,33 +159,3 @@ seleccionamos la acción *Cancelar*. Este movimiento provocará que
 automáticamente se abone la factura. Cancelándose cualquier movimiento de
 inventario y creando, por defecto, los asientos contables de abono,
 conciliándolos con la factura de proveedor que queríamos abonar.
-
-
-.. |menu_account_invoice| tryref:: account_invoice.menu_invoices/complete_name
-.. |factura_cliente| tryref:: account_invoice.menu_invoice_out_form/name
-.. |factura_proveedor| tryref:: account_invoice.menu_invoice_in_form/name
-.. |party| field:: account.invoice/party
-.. |reference| field:: account.invoice/reference
-.. |invoice_date| field:: account.invoice/invoice_date
-.. |account| field:: account.invoice/account
-.. |currency| field:: account.invoice/currency
-.. |number| field:: account.invoice/number
-.. |payment_term| field:: account.invoice/payment_term
-.. |lines| field:: account.invoice/lines
-.. |taxes| field:: account.invoice/taxes
-.. |move| field:: account.invoice/move
-.. |amount_to_pay_today| field:: account.invoice/amount_to_pay_today
-.. |amount_to_pay| field:: account.invoice/amount_to_pay
-.. |total_amount| field:: account.invoice/total_amount
-.. |line_type| field:: account.invoice.line/type
-.. |line_description| field:: account.invoice.line/description
-.. |line_sequence| field:: account.invoice.line/sequence
-.. |line_product| field:: account.invoice.line/product
-.. |line_account| field:: account.invoice.line/account
-.. |line_quantity| field:: account.invoice.line/quantity
-.. |line_unit| field:: account.invoice.line/unit
-.. |line_unit_price| field:: account.invoice.line/unit_price
-.. |line_amount| field:: account.invoice.line/amount
-.. |line_taxes| field:: account.invoice.line/taxes
-
-

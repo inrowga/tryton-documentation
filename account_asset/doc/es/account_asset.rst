@@ -14,7 +14,7 @@ el que realizaremos la amortización. En el apartado
 :ref:`product-para-amortizacion-de-activos` se detalla cómo debemos crear
 producto para poder gestionar su amortización. Así, como luego veremos,
 cuando creemos el plan de amortización, sólo podremos seleccionar aquellos
-productos de tipo activo que hayan sido marcados como |depreciable|.
+productos de tipo activo que hayan sido marcados como amortizable.
 
 Una vez tengamos el producto ya creado, deberemos ir al menú |menu_asset|.
 Una vez dentro tendremos una vista de todos los planes de amortización
@@ -24,18 +24,18 @@ finalizados; y *Todo*: Todos los planes introducidos). Para introducir un nuevo
 plan de amortización deberemos clicar en el icono  *Nuevo* y nos llevará a la
 vista de edición, donde deberemos rellenar los siguiente campos:
 
-* |product|: Indicaremos el producto a amortizar. Podemos buscar entre los productos
+* Producto: Indicaremos el producto a amortizar. Podemos buscar entre los productos
   que ya tenemos informados como *activos* o generar uno nuevo siguiendo los pasos
   indicados anteriormente.
-* |account_journal|: Elegiremos el diario contable en el que queramos que se queden
+* Diario: Elegiremos el diario contable en el que queramos que se queden
   reflejados los apuntes relacionados con el activo.
-* |supplier_invoice_line|: En caso de que se haya generado una factura con la
+* Línea de factura de proveedor: En caso de que se haya generado una factura con la
   compra del activo introduciremos aquí la línea.
-* |purchase_date|: Fecha de cuando se compró el activo
-* |value|: Valor del activo en la fecha inicial de la amortización
-* |residual_value|: Valor del activo en la fecha final de la amortización.
-* |start_date|: Fecha en que se realizará el primer apunte de amortización.
-* |end_date|: Fecha en que se terminará la amortización del activo. Si hemos
+* Fecha de compra: Fecha de cuando se compró el activo
+* Valor: Valor del activo en la fecha inicial de la amortización
+* Valor residual: Valor del activo en la fecha final de la amortización.
+* Data Inicio: Fecha en que se realizará el primer apunte de amortización.
+* Data Final: Fecha en que se terminará la amortización del activo. Si hemos
   rellenado, al crear el producto, el número de meses que durará la amortización,
   este campo se calculará en función de la fecha inicial, aunque podremos
   modificarlo.
@@ -43,18 +43,18 @@ vista de edición, donde deberemos rellenar los siguiente campos:
 Para poder introducir más información en el nuevo activo, seleccionaremos la
 pestaña *Información adicional* y tendremos acceso a los siguientes campos:
 
-* |company|: Donde indicaremos a cuál de nuestras empresas corresponde el activo que
+* Empresa: Donde indicaremos a cuál de nuestras empresas corresponde el activo que
   estamos introduciendo.
 
-* |method|: Si seleccionamos el método *Lineal* las cantidades de la amortización
+* Metodo: Si seleccionamos el método *Lineal* las cantidades de la amortización
   serán iguales durante todos los períodos.
 
-* |frequency|: Seleccionaremos aquí si queremos que la frecuencia sea mensual o anual.
+* Frecuencia: Seleccionaremos aquí si queremos que la frecuencia sea mensual o anual.
 
-* |move|: En caso de venta, se rellenará automáticamente el asiento contable en el
+* Asiento contable: En caso de venta, se rellenará automáticamente el asiento contable en el
   que se indica la venta.
 
-* |customer_invoice_line|: En caso de que facturemos la venta, se introducirá
+* Línea de factura de cliente: En caso de que facturemos la venta, se introducirá
   aquí automáticamente la línea en la que se factura.
 
 Una vez rellenados todos los campos, o como mínimo, todos los obligatorios, podremos
@@ -70,14 +70,14 @@ podrán modificar.
 Creación desde facturas
 =======================
 Si hemos generado una factura de proveedor por la compra del activo e introducimos
-en el campo |supplier_invoice_line| una línea por esta factura, el programa se
+en el campo línea de factura del proveedor una línea por esta factura, el programa se
 encargará de rellenar todos los datos del activo a partir de la línea de factura.
 Los campos que se rellenarán son los siguientes:
 
-* |purchase_date|: Se utilizará el campo |invoice_date| de la factura.
-* |value|: Se utilizará el |invoice_amount| de la línea de factura
-* |quantity|: Se utilizará la |invoice_quantity| de la línea de factura.
-* |unit|: Se utilizará la |invoice_unit| de la línea de factura
+* Fecha de compra : Se utilizará el campo fecha de la factura.
+* Valor: Se utilizará el inporte  de la línea de factura
+* Cantidad: Se utilizará la cantidad de la línea de factura.
+* Unidad: Se utilizará la unidad de la línea de factura
 
 
 Procesar amortizaciones
@@ -134,20 +134,20 @@ Una vez iniciada la amortización del activo puede ser que tengamos la necesidad
 la oportunidad de venderlo. Para ello accedemos al menú *facturas* por medio de la
 ruta: |invoice_menu| y generamos una nueva factura clicando en el botón *Nuevo*.
 Se nos abrirá la ficha de edición de factura y deberemos rellenar los
-campos obligatorios (|party_inv|, |journal_inv|, |payment_term_inv| y
-|currency_inv|) e indicar en las |lines_inv| de la factura el activo que queremos
+campos obligatorios (tercero, diario, plazo de pago y
+moneda) e indicar en las lineas de la factura el activo que queremos
 vender.
 
-Para ello clicaremos en el botón *Nuevo registro* en la sección |lines_inv| y se nos abrirá
-una ventana flotante en la que tendremos que elegir en |product_inv| el tipo de activo que
-queremos vender. Una vez hecho aparecerá, inmediatamente debajo de |product_inv|, el campo
-|asset_inv| donde tendremos que seleccionar el activo concreto que queremos vender (en caso
-de querer vender un vehículo por ejemplo, en |product_inv| seleccionaríamos la plantilla
-de producto *Vehículo* y en |asset_inv| el vehículo en cuestión que queremos vender).
-Con la selección del activo en el campo |product_inv| también se nos habrá rellenado
-automáticamente el campo |account_inv| con la cuenta 77100000 (*Beneficios procedentes
-del inmovilizado material*). Deberemos rellenar los campos obligatorios |quantity| y
-|unit_price| y generar el campo para el impuesto en caso necesario. Aceptamos y se nos
+Para ello clicaremos en el botón *Nuevo registro* en la sección linias  y se nos abrirá
+una ventana flotante en la que tendremos que elegir en producto el tipo de activo que
+queremos vender. Una vez hecho aparecerá, inmediatamente debajo del producto, el campo
+activo  donde tendremos que seleccionar el activo concreto que queremos vender (en caso
+de querer vender un vehículo por ejemplo, en producto| seleccionaríamos la plantilla
+de producto *Vehículo* y en activo el vehículo en cuestión que queremos vender).
+Con la selección del activo en el campo producto  también se nos habrá rellenado
+automáticamente el campo cuenta con la cuenta 77100000 (*Beneficios procedentes
+del inmovilizado material*). Deberemos rellenar los campos obligatorios cantidad y
+precio unidad y generar el campo para el impuesto en caso necesario. Aceptamos y se nos
 cerrará la ventana flotante.
 
 Una vez rellenados todos los campos podemos validar la factura y posteriormente
@@ -163,7 +163,7 @@ de amortización que no se habían hecho efectivas han desaparecido y solo queda
 que ya han sido asentadas y el estado del activo es *Cerrado*.
 
 Si accedemos a la pestaña *Información adicional* y clicamos con el botón derecho en el
-campo |move_inv| y seleccionamos *Editar*, accederemos a la pestaña de los asientos
+campo assiento contable y seleccionamos *Editar*, accederemos a la pestaña de los asientos
 contables con los apuntes que se han generado.
 
 Una vez generada la factura se realizará el apunte para esta venta en la cuenta 7710000
@@ -173,37 +173,3 @@ Una vez generada la factura se realizará el apunte para esta venta en la cuenta
    Para reflejar la pérdida, en caso de que se venda por debajo de su valor, se deberá
    crear un asiento manual por la diferencia entre el valor del activo en la fecha de
    la venta y el precio de venta para cuadrar los importes.
-
-.. |depreciable| field:: product.template/depreciable
-.. |product| field:: account.asset/product
-.. |account_journal| field:: account.asset/account_journal
-.. |supplier_invoice_line| field:: account.asset/supplier_invoice_line
-.. |value| field:: account.asset/value
-.. |residual_value| field:: account.asset/residual_value
-.. |purchase_date| field:: account.asset/purchase_date
-.. |start_date| field:: account.asset/start_date
-.. |end_date| field:: account.asset/end_date
-.. |unit| field:: account.asset/unit
-.. |quantity| field:: account.asset/quantity
-.. |company| field:: account.asset/company
-.. |method| field:: account.asset/depreciation_method
-.. |frequency| field:: account.asset/frequency
-.. |move| field:: account.asset/move
-.. |customer_invoice_line| field:: account.asset/customer_invoice_line
-.. |invoice_unit| field:: account.invoice.line/unit
-.. |invoice_quantity| field:: account.invoice.line/quantity
-.. |invoice_amount| field:: account.invoice.line/amount
-.. |invoice_date| field:: account.invoice/invoice_date
-.. |invoice_menu| tryref:: account_invoice.menu_invoice_out_form/complete_name
-.. |party_inv| field:: account.invoice/party
-.. |journal_inv| field:: account.invoice/journal
-.. |payment_term_inv| field:: account.invoice/payment_term
-.. |currency_inv| field:: account.invoice/currency
-.. |lines_inv| field:: account.invoice/lines
-.. |product_inv| field:: account.invoice.line/product
-.. |asset_inv| field:: account.invoice.line/asset
-.. |account_inv| field:: account.invoice.line/account
-.. |unit_price| field:: account.invoice.line/unit_price
-.. |menu_asset| tryref:: account_asset.menu_asset_form/complete_name
-.. |menu_create_moves| tryref:: account_asset.menu_create_moves/complete_name
-.. |move_inv| field:: account.asset.line/move

@@ -7,9 +7,9 @@ Configuración
 
 .. inheritref:: account_payment/account_payment:paragraph:configuracion
 
-**Tryton** gestiona los cobros y los pagos a través de los |payment_journal|,
+**Tryton** gestiona los cobros y los pagos a través de los diarios ,
 por lo que antes de realizar cualquier gestión, deberemos configurar al menos
-uno. Para ello accederemos a |menu_payment_journal| y en la pestaña que se nos
+uno. Para ello accederemos al menu diario y en la pestaña que se nos
 abrirá clicaremos en *Nuevo*. Cumplimentaremos un formulario que se nos
 mostrará, como el que sigue en la imagen.
 
@@ -56,9 +56,9 @@ efectos de pago o cobro a través de mandatos.
 Informar un pago o un cobro
 ---------------------------
 
-Aunque hay muchas formas de hacerlo, desde el menú |menu_payment| también
+Aunque hay muchas formas de hacerlo, desde el menú pagamen también
 podremos informar al sistema del pago o cobro de un efecto. Si introducimos el
-|party| y el |kind| de pago, en el campo |line| nos aparecerán todos los efectos
+tercero y el tipo de pago, en el campo línea nos aparecerán todos los efectos
 pendientes de pagar del cliente. Una vez seleccionado el efecto el resto de
 campos se rellenarán con la información del efecto. Si estamos introduciendo un
 anticipo, por ejemplo, y no hay un efecto como contrapartida, tendremos que
@@ -145,23 +145,10 @@ líneas e indicar una fecha de planificación
 2.- Una vez realizado este paso ya tendremos el grupo creado y tan solo restará
 marcar los pagos como Fallado o Con éxito.
 
-.. note:: Posteriormente podremos acceder a |menu_payment_groups| para acceder
+.. note:: Posteriormente podremos acceder al meu pagament en grupos para acceder
           a la información de la remesa y los pagos de esta.
 
 Si el pago se ha procesado , el efecto dejara de aparecer en el
 listado de *Efectos a pagar/cobrar* y si se ha realizado con éxito tampoco
 aparecerá en los grupos de pago. Pero si le indicamos que el pago ha fallado
 volverá a aparecer en el listado de efectos.
-
-.. |payment_journal| tryref:: account_payment.menu_payment_journal_form/name
-.. |menu_payment_journal| tryref:: account_payment.menu_payment_journal_form/complete_name
-.. |name| field:: account.payment.journal/name
-.. |company| field:: account.payment.journal/company
-.. |currency| field:: account.payment.journal/currency
-.. |process_method| field:: account.payment.journal/process_method
-.. |menu_efects| tryref:: account_payment.menu_move_line_form/complete_name
-.. |menu_payment| tryref:: account_payment.menu_payment_form/complete_name
-.. |party| field:: account.payment/party
-.. |kind| field:: account.payment/kind
-.. |line| field:: account.payment/line
-.. |menu_payment_groups| tryref:: account_payment.menu_payment_group_form/complete_name
