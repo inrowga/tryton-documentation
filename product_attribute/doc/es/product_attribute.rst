@@ -16,7 +16,7 @@ variante del producto los campos que desea. Por ejemplo:
 Atributos
 ---------
 
-Abra el menú |menu_attribute| y crea un nuevo atributo o campo. Para crear un nuevo
+Abra el menú atributo y crea un nuevo atributo o campo. Para crear un nuevo
 campo deberá rellenar:
 
 * Nombre: Nombre interno del campo
@@ -33,7 +33,7 @@ campo deberá rellenar:
   * Texto
 
 Una vez diseñado los campos que desea que estén disponibles en los productos,
-abra el menú |menu_attribute_set| para añadir grupos y a cada grupo que campos
+abra el menú atributo para añadir grupos y a cada grupo que campos
 van relacionados.
 
 .. inheritref:: product_attribute/product_attribute:section:producto
@@ -41,10 +41,7 @@ van relacionados.
 Producto
 --------
 
-Abra el menú |menu_template| y crea un nuevo producto. Seleccione el grupo de
+Abra el menú producto y crea un nuevo producto. Seleccione el grupo de
 atributos que desea en el producto. Una vez seleccionado, en la variante del producto,
 podrá añadir los campos extras del producto relacionado con el grupo de atributos.
 
-.. |menu_attribute| tryref:: product_attribute.menu_attribute/complete_name
-.. |menu_attribute_set| tryref:: product_attribute.menu_attribute_set/complete_name
-.. |menu_template| tryref:: product.menu_template/complete_name

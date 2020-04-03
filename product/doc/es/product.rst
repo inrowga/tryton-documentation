@@ -3,8 +3,8 @@ Productos
 =========
 
 El concepto *producto* en **Tryton** está compuesto de dos modelos: *la
-plantilla de producto* (|menu_template|) y *la variante del producto*
-(|menu_prod|). Esta separación se usa para poder definir un producto genérico
+plantilla de producto* (Producto) y *la variante del producto*
+(producto). Esta separación se usa para poder definir un producto genérico
 (plantilla) y las diferentes tipologías que pudieran haber de este producto
 (variante). Podemos tener tantas variantes de una plantilla como queramos y
 cada plantilla tendrá como mínimo una variante. Esto se debe a que, en nuestra
@@ -25,13 +25,13 @@ Crear un producto nuevo
 =======================
 
 El primer paso para crear un producto desde cero es crear una plantilla de
-producto. Para ello accederemos al menú |menu_template| y ,clicando en *Nuevo*,
+producto. Para ello accederemos al menú producto y ,clicando en *Nuevo*,
 se nos abrirá el formulario de edición de la plantilla. En este formulario
-deberemos especificar los campos |name|, |type| (indicando si se trata de un
-*bien*, un *servicio* o un *activo*), el |list_price|, el |cost_price|, el
-|cost_price_method| (que veremos a continuación más detenidamente) y la
-|default_uom| (donde indicaremos la medida que utilizaremos para cuantificar el
-producto). Además, si lo deseamos, le podemos indicar varias |categories| para
+deberemos especificar los campos nombre, tipo (indicando si se trata de un
+*bien*, un *servicio* o un *activo*), el precio venta, el preciod e coste, el
+método de coste (que veremos a continuación más detenidamente) y la
+UdM por defecto (donde indicaremos la medida que utilizaremos para cuantificar el
+producto). Además, si lo deseamos, le podemos indicar varias categorías para
 agrupar el producto que estamos creando con otros de similar tipología.
 
 .. view:: product.template_view_form
@@ -41,8 +41,8 @@ agrupar el producto que estamos creando con otros de similar tipología.
 
 .. inheritref:: product/product:paragraph:compra-venta
 
-Si seleccionamos en el campo |type| la opción *Bienes*, nos aparecerá también
-el campo |consumable|, que debemos marcar si queremos que no se controle el
+Si seleccionamos en el campo tipo la opción *Bienes*, nos aparecerá también
+el campo consumible, que debemos marcar si queremos que no se controle el
 número de existencias de nuestro producto. En caso de dejarlo sin marcar el
 sistema llevará un control de la cantidad que tengamos de este producto.
 
@@ -51,8 +51,8 @@ sistema llevará un control de la cantidad que tengamos de este producto.
 Cálculo del precio de coste
 ---------------------------
 
-En el campo |cost_price_method| indicaremos como se va a calcular el
-|cost_price| de cada producto. Podemos elegir entre varios posibles métodos:
+En el campo metodo de coste indicaremos como se va a calcular el
+precio de coste de cada producto. Podemos elegir entre varios posibles métodos:
 
 .. inheritref:: product/product:bullet_list:cost_price_method_options
 
@@ -79,13 +79,13 @@ Crear variantes
 ---------------
 
 Al crear la plantilla se nos generará por defecto una variante a la que le
-podremos especificar su |code| y |description|. Dándole al botón *Nuevo* del
-campo |products| podremos crear tantas variantes como necesitemos e introducir
-un |code| y una |description| para cada una de ellas.
+podremos especificar su codigo y descripión. Dándole al botón *Nuevo* del
+campo productos podremos crear tantas variantes como necesitemos e introducir
+un codigo y una descripción  para cada una de ellas.
 
-Otra opción para crear variantes es acceder por medio de la ruta |menu_prod| y,
-tras clicar en *Nuevo*, elegir la |template| sobre la que queremos generar la
-variante e indicar también, si queremos, su |description| y su |code|.
+Otra opción para crear variantes es acceder por medio de la ruta producto y,
+tras clicar en *Nuevo*, elegir la plantilla sobre la que queremos generar la
+variante e indicar también, si queremos, su descripción y su código.
 
 .. view:: product.product_view_form
 
@@ -97,7 +97,7 @@ variante e indicar también, si queremos, su |description| y su |code|.
    más cómodo crearlas desde la pantalla de edición de la plantilla. Por contra,
    si tan solo queremos añadir una variante más a una plantilla creada con
    anterioridad nos resultará más practico crear la variante desde
-   |menu_prod|.
+   producto.
 
 .. inheritref:: product/product:section:relacionado_con_los_productos
 
@@ -120,9 +120,9 @@ empresas que podamos tener:
 
 .. inheritref:: product/product:bullet_list:multicompany_fields
 
-* |list_price|
-* |cost_price|
-* |cost_price_method|
+* Precio de venta
+* Precio de coste
+* Método de coste
 
 
 Desactivar productos
@@ -145,12 +145,12 @@ Crear categorías de productos
 
 **Tryton** nos permite agrupar los productos según nuestras necesidades
 o intereses por medio de las categorías. Para crear una nueva deberemos acceder
-a |menu_product_categories| y al clicar en el icono *Nuevo* se nos abrirá la
+a categorías y al clicar en el icono *Nuevo* se nos abrirá la
 vista de edición de las categorías. En este formulario deberemos rellenar el
-campo |cat_name| con el nombre que le daremos y, si esta va a pertenecer a su
-vez a otra categoría, lo indicaremos también en el campo |cat_parent|. En
+campo nombre con el nombre que le daremos y, si esta va a pertenecer a su
+vez a otra categoría, lo indicaremos también en el campo padre. En
 cambio, si son otras categorías las que dependerán de esta lo tendremos que
-reflejar en el campo |cat_childs| de la pestaña **Hijos**. De esta manera,
+reflejar en el campo hijos de la pestaña **Hijos**. De esta manera,
 podremos agrupar los productos en categorías y a su vez agrupar las categorías
 en más categorías.
 
@@ -161,11 +161,11 @@ en más categorías.
 
 
 .. inheritref:: product/product:section:unidades_de_medida
-
+#Revisar
 Unidades de medida
 ==================
 Podemos configurar las unidades de medida que utilizaremos para gestionar
-nuestros productos accediendo a |menu_uom| y haciendo doble clic en la unidades
+nuestros productos accediendo a unidad y haciendo doble clic en la unidades
 que queramos modificar o clicando en el botón *Nuevo* para crear una nueva
 unidad. Los campos que deberemos rellenar son:
 
@@ -173,10 +173,10 @@ unidad. Los campos que deberemos rellenar son:
 
    Captura de pantalla del formulario de las unidades de medida del producto
 
-* |name_uom|: Nombre que recibe la unidad.
-* |symbol_uom|: Símbolo que se utiliza para designar a la unidad.
-* |category_uom|: Agrupa las distintas unidades por tipologías, podemos
-  gestionar las categorías de las unidades de medida desde |menu_cat_uom|.
+* Nombre: Nombre que recibe la unidad.
+* Símbolo: Símbolo que se utiliza para designar a la unidad.
+* Categoía: Agrupa las distintas unidades por tipologías, podemos
+  gestionar las categorías de las unidades de medida desde unidades de medida.
 * |factor_uom| y |rate_uom|: Estos campos definen en las unidades de medida
   la relación existente entre una unidad y la considerada *base* o *estándar*.
   Por ejemplo si trabajamos con unidades de longitud, aunque tomemos como

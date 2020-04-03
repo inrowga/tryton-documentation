@@ -18,7 +18,7 @@ Producir materiales
 .. _produce-goods:
 
 Para producir materiales debemos crear una orden de producción desde la opción
-|menu_production_list|.
+producciones.
 
 .. view:: production.production_view_form
    :field: code
@@ -28,15 +28,10 @@ Para producir materiales debemos crear una orden de producción desde la opción
 
 Las órdenes de producción están formados por dos tipos de movimiento:
 
-* |inputs|: En ellas introduciremos todos los productos que se necessitan
+* Entrades: En ellas introduciremos todos los productos que se necessitan
   **consumir** para realizar la producción.
-* |outputs|: En ellas introduciremos los productos **resultantes** de la
+* Salidas: En ellas introduciremos los productos **resultantes** de la
   producción.
-
-.. |menu_production_list| tryref:: production.menu_production_list/complete_name
-.. |inputs| field:: production/inputs
-.. |outputs| field:: production/outputs
-.. |cost| field:: production/cost
 
 En la parte inferior izquierda podremos observar en todo momento en qué estado
 se encuentra la producción. Los pasos básicos son los siguientes y siguen este
@@ -64,31 +59,30 @@ Costes de producción
 --------------------
 
 Una vez finalizada la producción, se calculan los costos de la misma y
-estos se reparten en las |outputs|, rellenando así el precio unitario de las
-|outputs|.
+estos se reparten en las salidas, rellenando así el precio unitario de las
+salidas.
 
 El cálculo del coste de la producción se hará a través del sumatorio de los
 precios de coste de todos los productos, que forman esta producción. En el
 momento en que seleccionemos un producto, este tendrá un precio de coste
 individual. La producción verifica que todo el coste está repartido en el
-precio de la unidad de los |outputs|.
+precio de la unidad de las salidas.
 
-En la pestaña Información Adicional podremos ver el |cost| total de la
+En la pestaña Información Adicional podremos ver el coste total de la
 producción.
 
 Consumo de materiales no previstos
 ----------------------------------
 En cualquier estado de la producción podemos añadir nuevos materiales en las
-|inputs| y las |outputs| de la producción, aunque no quitar las que ya
+entradas y las salidas de la producción, aunque no quitar las que ya
 están realizados. Esto nos permite añadir entradas adicionales y salidas no
 previstas, por ejemplo desechos, mientras la producción está en curso.
 
 Para introducir un desecho debemos introducir una nueva línea en las
-|outputs| utilizando cómo ubicación destino una ubicación de tipo
+salidas utilizando cómo ubicación destino una ubicación de tipo
 Perdido/Encontrado para reflejar que hemos desechado esos productos.
 
 
-.. inheritref:: production/production:section:lista_de_materiales
 
 Lista de materiales
 ===================
@@ -113,14 +107,14 @@ Crear una lista de materiales
 -----------------------------
 
 Para crear una lista de materiales nos deberemos dirigir a la opción
-|menu_bom_list|. Para ello, deberemos especificar su |bom_name|, que nos
-servirá para identificarla. Ademas deberemos introducir sus |bom_inputs| y sus
-|bom_outputs|, de la siguiente forma:
+lista de material. Para ello, deberemos especificar su nombre, que nos
+servirá para identificarla. Ademas deberemos introducir sus entradas y sus
+salidas, de la siguiente forma:
 
- * |bom_inputs|: Indicaremos la cantidad de cada producto que utilizaremos
+ * Entradas: Indicaremos la cantidad de cada producto que utilizaremos
    para realizar los productos resultantes. Siguiendo, el símil de la receta,
    se correspondería con los ingredientes y sus cantidades.
- * |bom_outputs|: Indicaderemos las cantidades de los productos resultantes.
+ * Salidas: Indicaderemos las cantidades de los productos resultantes.
    Cómo mínimo deberemos tener una linea con el producto final.
 
 
@@ -128,7 +122,7 @@ Por exemplo, si queremos definir la lista de materiales *Caja de 6 latas de
 refresco*, crearíamos las siguiente lista de materiales:
 
 +---------------------+-----------------------+
-| |bom_inputs|        | |bom_outputs|         |
+| Entradas            | Salidas               |
 +=====================+=======================+
 | 6 Latas refresco    | 1 Caja latas refresco |
 +---------------------+-----------------------+
@@ -149,22 +143,13 @@ pueden utilizar para producirlo.
 Utilizar listas de materiales en la orden de producción
 -------------------------------------------------------
 
-Si seleccionamos un |product| en la producción, podremos seleccionar una |bom|
-relacionada con el mismo. Llegados a este punto, especificando la |quantity|
-que queremos producir se nos rellenaran las |inputs| y las |outputs| con
+Si seleccionamos un producto  en la producción, podremos seleccionar una LdM
+relacionada con el mismo. Llegados a este punto, especificando la cantidad
+que queremos producir se nos rellenaran las entradas y las salidas con
 los materiales necesarios para realizar la producción.
 
 .. note:: En caso de que tengamos listas de materiales definidas en el
     producto el sistema nos cojera la primera por defecto.
-
-.. |menu_bom_list| tryref:: production.menu_bom_list/complete_name
-.. |quantity| field:: production/quantity
-.. |product| field:: production/product
-.. |bom| field:: production/bom
-.. |bom_name| field:: production.bom/name
-.. |bom_inputs| field:: production.bom/inputs
-.. |bom_outputs| field:: production.bom/outputs
-
 
 .. inheritref:: production/production:section:configuration
 
@@ -173,12 +158,8 @@ Configuración
 
 .. _production-configuration:
 
-En el menú |menu_configuration| podemos definir la configuración de las
+En el menú configuración podemos definir la configuración de las
 producciones.
 
-Mediante el campo |production_sequence| podemos personalizar la sequencia
+Mediante el campo secuencia podemos personalizar la sequencia
 que se utilizará para
-
-
-.. |menu_configuration| tryref:: production.menu_configuration/complete_name
-.. |production_sequence| field:: production.configuration/production_sequence

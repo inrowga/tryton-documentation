@@ -1,6 +1,6 @@
 #:inside:party/party:section:crear-un-tercero#
 
-Desde la pestaña |relations| podremos definir con que otros terceros está
+Desde la pestaña relaciones podremos definir con que otros terceros está
 relacionado este tercero. Esto es útil para indicar, por ejemplo los contactos
 de una misma empresa, o incluso sus empleados. Para crear una relación basta
 con indicar el tipo de relación y el tercero relacionado.
@@ -13,7 +13,7 @@ con indicar el tipo de relación y el tercero relacionado.
 Tipos de relaciones
 -------------------
 
-En el menú |menu_relation_type| podemos definir los tipos de relaciones entre
+En el menú tipo de relaciones podemos definir los tipos de relaciones entre
 terceros.
 
 Un tipo de relación, puede tener una relación inversa. Una relación inversa
@@ -30,4 +30,3 @@ A.
     inversa de "tiene como empleado". De este modo, se ligaran los dos lados
     de la relación.
 
-.. |menu_relation_type| tryref:: party_relationship.menu_relation_type/complete_name

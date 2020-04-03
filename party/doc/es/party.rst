@@ -29,21 +29,21 @@ siguientes campos:
 
 .. inheritref:: party/party:bullet_list:campos_general
 
-* |name|: con el nombre del tercero.
-* |lang|: donde indicaremos el idioma por defecto con el que nos dirigiremos al
+* Nombre: con el nombre del tercero.
+* Idioma: donde indicaremos el idioma por defecto con el que nos dirigiremos al
   tercero en los documentos (facturas, albaranes, cartas, etc.) que le
   enviemos.
-* |addresses|: en este campo introduciremos las direcciones, tanto postales
+* Direccines: en este campo introduciremos las direcciones, tanto postales
   como de facturación, del tercero. Podremos indicar tantas direcciones como
   queramos, para introducir una nueva dirección clicaremos en el botón *Nuevo*
   a la derecha del campo y rellenaremos los campos internos con la información
   correspondiente.
-* |contact_mechanisms|: aquí podremos indicar números de teléfono, direcciones
+* Métodos de contacto: aquí podremos indicar números de teléfono, direcciones
   de correo electrónico, direcciones web, etc. del tercero.
-* |categories|: en este campo podremos añadir categorías previamente definidas
-  o crear otras nuevas. Las |categories| sirven para agrupar los terceros según
+* Categorías: en este campo podremos añadir categorías previamente definidas
+  o crear otras nuevas. Las categorías sirven para agrupar los terceros según
   la tipología de estos y poder clasificarlos más fácilmente. Posteriormente
-  podremos acceder a |menu_categories| y consultar los terceros de una o varias
+  podremos acceder al menu categoríasy consultar los terceros de una o varias
   categorías.
 
 .. warning:: Para eliminar una dirección o un medio de contacto, lo haremos
@@ -82,7 +82,7 @@ Categorías
 
 Como ya hemos visto anteriormente, por medio de las categorías podemos agrupar
 terceros según los criterios que queramos, veremos la categoria en la parte
-inferior derecha. Por medio de la opción de menú |menu_categories| podemos
+inferior derecha. Por medio de la opción de menú categorías podemos
 acceder a todas las categorías que hemos creado y haciendo doble clic sobre
 cualquiera de ellas se nos abrirá una nueva pestaña con todos los terceros
 pertenecientes a la categoría seleccionada. Volviendo a la pestaña anterior,
@@ -147,7 +147,7 @@ Dispone de dos informes:
 Configuración
 =============
 
-En |menu_party_configuration| podemos encontrar distintas opciones
+En configuración podemos encontrar distintas opciones
 que nos permitirán adaptar la gestión de los terceros a nuestras necesidades.
 
 .. view:: party.party_configuration_view_form
@@ -156,18 +156,9 @@ que nos permitirán adaptar la gestión de los terceros a nuestras necesidades.
    Configuración de terceros
 
 
-En |party_sequence| podremos indicar el tipo de secuencia que queremos que
+En la secuencia del tercero podremos indicar el tipo de secuencia que queremos que
 sigan los terceros. Podemos elegir una de las creadas anteriormente o crear una
 nueva desde aquí (para ver como configurar secuencias:
 :ref:`admin-secuencias`). Para poder editar manualmente el código del tercero,
 sólo hay que dejar en blanco el campo.
 
-.. |menu_party| tryref:: party.menu_party_form/complete_name
-.. |name| field:: party.party/name
-.. |lang| field:: party.party/lang
-.. |addresses| field:: party.party/addresses
-.. |contact_mechanisms| field:: party.party/contact_mechanisms
-.. |categories| field:: party.party/categories
-.. |menu_categories| tryref:: party.menu_category_tree/complete_name
-.. |party_sequence| field:: party.configuration/party_sequence
-.. |menu_party_configuration| tryref:: party.menu_party_configuration/complete_name

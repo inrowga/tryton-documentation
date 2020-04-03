@@ -3,12 +3,10 @@ Facturación de proyectos
 
 Desde los proyectos podrá crear una factura a partir del tiempo de:
 
-.. inheritref:: project_invoice/project_invoice:bullet_list:project_invoice_method
-
 * Por el esfuerzo estimado
 * Por las horas realizadas
 
-En el proyecto, dispondremos del campo |invoice_method| donde decidimos el
+En el proyecto, dispondremos del campo método de facturación donde decidimos el
 proyecto y el tipo de facturación.
 
 Para saber el total de horas a facturar como las horas ya facturadas dispondremos
@@ -25,10 +23,6 @@ Para que se active el botón "Facturar" deberá:
 Sólo los usuarios del grupo "Facturación de proyectos" pueden crear facturas a
 partir de proyectos.
 
-.. |invoice_method| field:: project.work/project_invoice_method
-
-.. inheritref:: project_invoice/project_invoice:section:esfuerzo_estimado
-
 Por el esfuerzo estimado
 ------------------------
 
@@ -40,7 +34,6 @@ están las tareas en el estado abierto, no se facturarán hasta que los cierre (
 El tiempo que se facturará será el tiempo que se añade en el campo "Esfuerzo" de las
 tareas (el tiempo que se prevé la realización de esto e proyecto/tarea).
 
-.. inheritref:: project_invoice/project_invoice:section:horas_realizadas
 
 Por las horas realizadas
 ------------------------
@@ -49,7 +42,6 @@ Si seleccionamos esta opción podemos crear una factura con el tiempo que se ha 
 Se calcularán las horas a facturar a partir del tiempo que hemos ido añadiendo en los partes del trabajo
 (relacionado con el proyecto o tarea) y no se hayan facturado previamente.
 
-.. inheritref:: project_invoice/project_invoice:section:factura
 
 Factura
 -------
