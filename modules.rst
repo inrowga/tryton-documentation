@@ -11,5 +11,5 @@ Módulos incluidos en el manual
    :maxdepth: 1
    :glob:
 
-   ./../*/index
+   ./*/doc/es/index
 

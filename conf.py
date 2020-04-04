@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Tryton'
-copyright = '2020, Tryton'
-author = 'Tryton'
+project = 'Manual Tryton'
+copyright = ''
+author = 'Kopen Software & Other Tryton Comunity members'
 
 
 # -- General configuration ---------------------------------------------------

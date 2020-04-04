@@ -2,19 +2,20 @@ Manual de usuario de Tryton
 ===========================
 
 Este documento contiene algunas directrices para la utilización de la
-aplicación Tryton. Esta documentación se genera a partir de los módulos que
-tengan **instalados y disponibles** en su servidor de Tryton. Por este motivo,
-la documentación es según estos módulos que dispone, pudiéndose **ampliar** si
-dispone de otros módulos que amplíen nuevas funcionalidades.
+aplicación Tryton.
+
+.. warning:: Esta documentation esta basada en una versión anterior de tryton
+   y esta todavia en fase de desarrollo. Existen algunos apartados que
+   todavía no han sido revisados y pueden contenter información desactualizada.
 
 .. toctree::
    :maxdepth: 2
 
-   trytond_doc/base
-   trytond_doc/maestros
-   trytond_doc/areas_funcionales
-   trytond_doc/admin
-   trytond_doc/modules
+   trytond_doc/doc/es/base
+   maestros
+   areas_funcionales
+   trytond_doc/doc/es/admin
+   modules
 
 * :ref:`search`
 
