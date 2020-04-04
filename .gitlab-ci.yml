@@ -8,7 +8,7 @@ build:
   script:
   - pip install sphinx
   - make html
-  - mv _build/html/ public/
+  - mv build/html/ public/
   artifacts:
     paths:
     - public
