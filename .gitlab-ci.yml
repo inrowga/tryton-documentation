@@ -3,12 +3,10 @@ stages:
   - deploy
 
 build:
-  image: alpine
+  image: python:3.8
   stage: build
   script:
-  - apk --no-cache add py2-pip python-dev
   - pip install sphinx
-  - apk --no-cache add make
   - make html
   - mv _build/html/ public/
   artifacts:
