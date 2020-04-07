@@ -1,6 +1,6 @@
 #:after:party/party:paragraph:sale#
 
-El campo |grouping_method| nos permite definir cómo se van a agrupar los 
+El campo método agrupación albaranes de venta nos permite definir cómo se van a agrupar los 
 albaranes que se generen por las ventas de este tercero. Los métodos disponibles
 son los siguientes:
 

@@ -10,7 +10,7 @@ las líneas de una venta (ofrecer el producto con un nuevo precio).
 Configuración
 =============
 
-En |menu_configuration| diseñaremos nuestra promociones. Una promoción consiste en dos partes:
+En configuración diseñaremos nuestra promociones. Una promoción consiste en dos partes:
 
 * La condición para se aplique.
 * El cálculo del nuevo precio.
@@ -41,7 +41,6 @@ Ejemplo:
 
 Aplicar un 10% de descuento: unit_price*0.9
 
-.. |menu_configuration| tryref:: sale_promotion.menu_promotion/complete_name
 
 .. inheritref:: sale_promotion/sale_promotion:section:venta
 

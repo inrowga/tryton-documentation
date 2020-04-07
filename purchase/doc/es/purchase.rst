@@ -16,7 +16,7 @@ encontrar la compra.
 Crear una nueva compra
 ======================
 
-Para crear una nueva compra deberemos acceder a |menu_purchase| y se nos abrirá
+Para crear una nueva compra deberemos acceder a compras y se nos abrirá
 una pestaña con un listado de las compras introducidas con anterioridad,
 clasificadas según el estado en el que se encuentran (*Borrador*,
 *Presupuesto*, *Confirmado*, *En proceso*). Además, también podremos ver un
@@ -32,47 +32,46 @@ compra.
 .. view:: purchase.purchase_view_form
    :field: party
 
-   Captura de pantalla del |menu_purchase|
+   Captura de pantalla del menu compras
 
 La compra está compuesta por una parte en la que se define el proveedor con sus
 datos (Cabecera), y otra compuesta por varias pestañas que contendrán
 información concreta sobre la compra en sí. En la cabecera, una vez indiquemos
-el |party| se rellenará automáticamente el campo |invoice_address| con la
-información que tengamos en la ficha del |party|, pudiéndola modificar si lo
+el tercero se rellenará automáticamente el campo dirección de facturación con la
+información que tengamos en la ficha del tercero, pudiéndola modificar si lo
 deseamos.
 
-En la pestaña **Compra** podremos indicar la |purchase_date|, el |warehouse|
-que recibirá la compra, la |currency| y el |payment_term|. Estos dos últimos
+En la pestaña **Compra** podremos indicar la fecha de compra, el almacén
+que recibirá la compra, la moneda y el plazo de pago. Estos dos últimos
 campos también se rellenarán automáticamente con la información que tengamos
-del |party| en su ficha. Por último, tendremos que rellenar el campo |lines|
+del tercero en su ficha. Por último, tendremos que rellenar el campo líneas
 con la información de los productos que serán objeto de la compra, creando
 tantas líneas como productos distintos vayamos a comprar. Para generar una línea clicaremos en el icono *Nuevo* del campo
-|lines| y se nos abrirá un ventana emergente con los siguientes campos:
+líneas y se nos abrirá un ventana emergente con los siguientes campos:
 
- * |line_type|: Mediante este campo podremos definir distintos tipos de línea.
-   El valor por defecto es *Línea*, si mantenemos este |line_type| deberemos
+ * Tipo: Mediante este campo podremos definir distintos tipos de línea.
+   El valor por defecto es *Línea*, si mantenemos este tipo deberemos
    rellenar también los campos que siguen a este en la explicación. Los otros
    valores son *Comentario*, *Subtotal* y *Título* que se utilizan para añadir
    líneas extras que aparecerán en el informe, permitiendo de esta forma una
    personalización más sencilla. Estos últimos tres tipos se componen
-   únicamente de los campos |line_description| y |line_sequence|.
- * |line_product|: Aquí seleccionaremos el producto que vayamos a comprar.
+   únicamente de los campos descripción y sequencia.
+ * Producto: Aquí seleccionaremos el producto que vayamos a comprar.
    Establecer un producto es opcional, de todos modos, si queremos generar
    albaranes de proveedor y que se hagan los correspondientes movimientos de
    stock, deberemos seleccionar forzosamente un producto que no sea de tipo
    servicio.
- * |line_description|: En este campo reflejaremos aquello que aparecerá
+ * Descripción: En este campo reflejaremos aquello que aparecerá
    como descripción de la línea en la compra. Si indicamos previamente el
-   |line_product|, este campo se rellenará automáticamente con el nombre
+   producto, este campo se rellenará automáticamente con el nombre
    del producto, aunque podremos modificarlo.
- * |line_quantity| y |line_unit|: Indicaremos la cantidad y la unidad de
+ * Cantidad y unidad: Indicaremos la cantidad y la unidad de
    medida del producto que estamos introduciendo.
- * |line_unit_price|: Cuando indiquemos (o se nos rellene el campo con la
+ * Precio unidad: Cuando indiquemos (o se nos rellene el campo con la
    información introducida en la ficha del producto) el precio por unidad al
    que vendemos el producto, se nos rellenará de forma automática el campo
-   |line_amount| con el importe total, teniendo en cuenta la |line_quantity|
-   que hemos introducido.
- * |line_taxes|: Si tenemos configurados los productos con el impuesto que
+   importe con el importe total, teniendo en cuenta la cantidad que hemos introducido.
+ * Impuestos: Si tenemos configurados los productos con el impuesto que
    les corresponde, este campo se nos rellenará automáticamente con la
    información indicada en el producto, si no, deberemos indicar qué impuesto
    gravará la línea de la compra.
@@ -80,7 +79,7 @@ tantas líneas como productos distintos vayamos a comprar. Para generar una lín
 .. inheritref:: purchase/purchase:paragraph:generar_albaranes_y_facturas
 
 Si accedemos a la pestaña **Información adicional** podremos indicar en el
-campo |invoice_method| en qué punto de la compra queremos que se genere la
+campo método de facturación en qué punto de la compra queremos que se genere la
 factura. Para ello podremos elegir entre:
 
 * *Manual*: No se generará ninguna factura de forma automática y tendremos que
@@ -106,29 +105,6 @@ podremos acceder a la información concreta de cada documento. En
 :ref:`compra-estados-fac-alb` se indica en qué estados nos podemos encontrar
 estos dos documentos.
 
-.. |party| field:: purchase.purchase/party
-.. |invoice_address| field:: purchase.purchase/invoice_address
-.. |purchase_date| field:: purchase.purchase/purchase_date
-.. |warehouse| field:: purchase.purchase/warehouse
-.. |currency| field:: purchase.purchase/currency
-.. |payment_term| field:: purchase.purchase/payment_term
-.. |lines| field:: purchase.purchase/lines
-.. |line_type| field:: purchase.line/type
-.. |line_description| field:: purchase.line/description
-.. |line_sequence| field:: purchase.line/sequence
-.. |line_product| field:: purchase.line/product
-.. |line_quantity| field:: purchase.line/quantity
-.. |line_unit| field:: purchase.line/unit
-.. |line_unit_price| field:: purchase.line/unit_price
-.. |line_amount| field:: purchase.line/amount
-.. |line_taxes| field:: purchase.line/taxes
-.. |menu_purchase| tryref:: purchase.menu_purchase_form/complete_name
-.. |comment| field:: purchase.purchase/comment
-.. |invoice_method| field:: purchase.purchase/invoice_method
-
-
-.. inheritref:: purchase/purchase:section:estados
-
 Flujo de compras
 ================
 
@@ -148,7 +124,7 @@ guardada en este estado hasta el momento que consideremos oportuno o clicar
 en el botón *Presupuesto* para cambiar el estado de la compra.
 
 Una vez tengamos la compra en estado **Presupuesto** se rellenará
-automáticamente el campo |reference| según la secuencia que le hayamos indicado
+automáticamente el campo referencia según la secuencia que le hayamos indicado
 en la :ref:`Configuración<purchase-configuration>` de la compra. Representa que
 nuestro proveedor nos ha presentado un presupuesto pero que todavía no le hemos
 dado una respuesta sobre él. Una vez decidamos qué hacer con el presupuesto,
@@ -179,8 +155,8 @@ botón *Procesar*.
 Con el estado **En proceso** indicamos que nuestro proveedor está procesando la
 compra, por lo que la gestión dejará de depender de nosotros, ya que el
 siguiente paso será la recepción de la mercancía. A partir de este momento, el
-sistema ya sabe que estamos pendientes de recibir la mercancía del |party|
-indicado y al |warehouse| indicado.
+sistema ya sabe que estamos pendientes de recibir la mercancía del tercero
+indicado y al almacén indicado.
 
 En el momento en el que se le indique al sistema que se ha realizado la
 recepción de la mercancía, desde los departamentos correspondientes, y que la
@@ -198,7 +174,7 @@ Como hemos comentado anteriormente, desde las pestañas **Facturas** y
 las facturas y envíos que se han generado por la compra, estos estados pueden
 ser:
 
-* |invoice_state|
+* EStado de la factura
 
   * *Ninguno*: Todavía no se ha generado ninguna factura relacionada con esta
     compra.
@@ -210,7 +186,7 @@ ser:
     En el apartado :ref:`Excepciones de la compra<purchase-exceptions>`
     se detalla cómo corregir este estado.
 
-* |shipment_state|
+* Estado envío
 
   * *Ninguno*: Todavía no se ha generado ningún albarán relacionado con esta
     compra.
@@ -230,9 +206,6 @@ ser:
    realizamos la compra sobre un producto clasificado como *Bien* o como
    *Activo*, por lo que si la compra se realiza solamente sobre *Servicios* el
    sistema únicamente generará las facturas.
-
-.. |invoice_state| field:: purchase.purchase/invoice_state
-.. |shipment_state| field:: purchase.purchase/shipment_state
 
 
 Facturación parcial
@@ -300,13 +273,13 @@ Gestión de la excepción
 
 El procedimiento para gestionar una excepción será el mismo tanto si nos
 cancelan un albarán como una factura. Para la *excepción de factura* tendremos
-que indicar qué |invoices| se generarán de nuevo (en caso de que haya más de una),
+que indicar qué factura se generarán de nuevo (en caso de que haya más de una),
 y para la *excepción de envío* tendremos que indicar los productos que
 incluiremos en el nuevo albarán. Para llevar a cabo la gestión, clicaremos en
 el botón *Gestionar excepción de envío* o *Gestionar excepción de factura* y
 nos aparecerá una ventana donde podremos ver los movimientos (si se trata de
 la recepción de mercancía) o las facturas (si se trata de la factura) que
-causan la excepción, o dicho de otro modo, los |moves| o |invoices| que han
+causan la excepción, o dicho de otro modo, los movimientos o facturas que han
 sido cancelados.
 
 .. figure:: images/purchase-exception-moves.png
@@ -325,8 +298,8 @@ documento nuevo.
 Si hemos gestionado una excepción de envío y posteriormente accedemos a la
 pestaña **Albaranes** de la compra, veremos que el albarán original nos aparece
 en estado *Cancelado* y el nuevo albarán en estado *En espera*. Además, los
-|moves| originales aparecerán también en estado *Cancelado* y en la columna
-|purchase_exception_state| nos indicará si el producto se ha vuelto a utilizar
+movimientos originales aparecerán también en estado *Cancelado* y en la columna
+estado excepción nos indicará si el producto se ha vuelto a utilizar
 en el nuevo albarán (con el estado *Recreado*) o si no lo ha hecho (con el
 estado *Ignorado*).
 
@@ -336,11 +309,6 @@ han generado por medio de la compra a modo de histórico. De ellas, la que hayan
 provocado la excepción estarán en estado *Cancelado* y las que hayamos generado
 de nuevo en el estado concreto en el que se encuentren (*Borrador*, *Validada*
 o *Confirmada*).
-
-.. |moves| field:: purchase.purchase/moves
-.. |purchase_exception_state| field:: stock.move/purchase_exception_state
-.. |invoices| field:: purchase.purchase/invoices
-
 
 Proceso de cancelación de compras
 =================================
@@ -402,13 +370,9 @@ de cancelación, que salvo excepción serán la mayoría:
 Configuración
 =============
 
-En |menu_configuration| podemos definir el valor por defecto para el campo
-|invoice_method|. En el apartado
+En configuración podemos definir el valor por defecto para el campo
+método de facturación. En el apartado
 :ref:`Métodos de facturación<generacion-albaranesfacturas>` se detalla
 los valores posibles, junto con sus implicaciones. Además también podremos
-definir la |conf_sequence| que será la utilizada para generar el campo
-|reference|.
-
-.. |menu_configuration| tryref:: purchase.menu_configuration/complete_name
-.. |conf_sequence| field:: purchase.configuration/purchase_sequence
-.. |reference| field:: purchase.purchase/reference
+definir la secuencia de compra que será la utilizada para generar el campo
+referencia.

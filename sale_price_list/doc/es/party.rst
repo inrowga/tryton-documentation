@@ -2,7 +2,6 @@
 
 .. inheritref:: party/party:paragraph:sale
 
-En la pestaña Ventas podemos especificar la |sale_price_list| que se utilizará
+En la pestaña Ventas podemos especificar la tarifa de venta que se utilizará
 por defecto para este cliente en los presupuestos/ventas.
 
-.. |sale_price_list| field:: party.party/sale_price_list

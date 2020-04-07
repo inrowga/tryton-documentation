@@ -14,7 +14,7 @@ profundizaremos en los distintos estados en los que podemos encontrar la venta.
 Crear una nueva venta
 =====================
 
-Al acceder a |menu_sale| se nos abrirá una pestaña con un listado de las ventas
+Al acceder a ventas se nos abrirá una pestaña con un listado de las ventas
 que hemos ido introduciendo con anterioridad clasificadas según el estado en
 el que se encuentran (*Borrador*, *Presupuesto*, *Confirmado*, *En proceso*).
 Además, también podremos ver un listado con todas las ventas realizadas,
@@ -37,46 +37,46 @@ deberemos rellenar para crear la venta.
 La venta está compuesta por una parte en la que se define el cliente con sus
 datos (Cabecera), y otra compuesta por varias pestañas que contendrán
 información concreta sobre la venta en sí. En la cabecera, una vez indiquemos
-el |party| se rellenarán automáticamente los campos |invoice_address| y
-|shipment_address| con la información que tengamos en la ficha del |party|,
+el tercero se rellenarán automáticamente los campos dirección de facturación y
+dirección de facturación con la información que tengamos en la ficha del tercero,
 pudiéndolos modificar si lo deseamos.
 
 .. inheritref:: sale/sale:paragraph:campos_venta
 
-En la pestaña **Venta** podremos indicar la |sale_date|, el |warehouse| desde
-donde se realiza la venta, la |currency| y el |payment_term|. Estos dos últimos
+En la pestaña **Venta** podremos indicar la fecha venta, el almacén  desde
+donde se realiza la venta, la moneda y el palzo de pago. Estos dos últimos
 campos también se rellenarán automáticamente con la información que tengamos
-del |party| en su ficha.
+del tercero en su ficha.
 
-Por último, tendremos que rellenar el campo |lines| con la información de los
+Por último, tendremos que rellenar el campo línias con la información de los
 productos que serán objeto de la venta, creando tantas líneas como productos
 distintos vayamos a vender o presupuestar. Para generar una línea clicaremos en
-el icono *Nuevo* del campo |lines| y se nos abrirá un ventana emergente con los
+el icono *Nuevo* del campo línias y se nos abrirá un ventana emergente con los
 siguientes campos:
 
- * |line_type|: Mediante este campo podremos definir distintos tipos de línea.
-   El valor por defecto es *Línea*, si mantenemos este |line_type| deberemos
+ * Tipo: Mediante este campo podremos definir distintos tipos de línea.
+   El valor por defecto es *Línea*, si mantenemos este tipo deberemos
    rellenar también los campos que siguen a este en la explicación. Los otros
    valores son *Comentario*, *Subtotal* y *Título* que se utilizan para añadir
    líneas extras que aparecerán en el informe permitiendo de esta forma una
    personalización más sencilla. Estos últimos tres tipos se componen
-   únicamente de los campos |line_description| y |line_sequence|.
- * |line_product|: Aquí seleccionaremos el producto que queremos vender o
+   únicamente de los campos descripción y sequencia.
+ * Product: Aquí seleccionaremos el producto que queremos vender o
    presupuestar. Establecer un producto es opcional, de todos modos, si
    queremos que estos productos estén en los albaranes y se hagan los
    correspondientes movimientos de stock, deberemos seleccionar forzosamente
    un producto que no sea de tipo servicio.
- * |line_description|: En este campo reflejaremos aquello que aparecerá
+ * Descripción: En este campo reflejaremos aquello que aparecerá
    como descripción de la línea en la venta. Si indicamos previamente el
-   |line_product|, este campo se rellenará automáticamente con el nombre
+   producto , este campo se rellenará automáticamente con el nombre
    del producto, aunque podremos modificarlo.
- * |line_quantity| y |line_unit|: Indicaremos la cantidad y la unidad de
+ * Cantidad  y unidad: Indicaremos la cantidad y la unidad de
    medida del producto que estamos introduciendo.
- * |line_unit_price|: Cuando indiquemos (o se nos rellene el campo con la
+ * Precio unidad: Cuando indiquemos (o se nos rellene el campo con la
    información introducida en la ficha del producto) el precio por unidad al
    que vendemos el producto, se nos rellenará de forma automática el campo
-   |line_amount| con el total de la línea.
- * |line_taxes|: Si tenemos configurados los productos con el impuesto que
+   importe con el total de la línea.
+ * Impuestos: Si tenemos configurados los productos con el impuesto que
    les corresponde, este campo se nos rellenará automáticamente con la
    información indicada en el producto, si no, deberemos indicar qué impuesto
    gravará la línea de la venta.
@@ -84,9 +84,9 @@ siguientes campos:
 .. _generacion-albaranesfacturas:
 
 Si accedemos a la pestaña **Información adicional** podremos indicar en los
-campos |invoice_method| y el |shipment_method| en qué punto de la venta
+campos método de facturación y el método de envío en qué punto de la venta
 queremos que se genere la factura, y cuándo queremos que se realice el envío de
-la mercancía. Para el campo |invoice_method| podremos elegir entre:
+la mercancía. Para el campo método de facturación podremos elegir entre:
 
 * *Manual*: No se generará ninguna factura de forma automática y tendremos que
   generar nosotros la factura de forma manual.
@@ -98,7 +98,7 @@ la mercancía. Para el campo |invoice_method| podremos elegir entre:
   albarán. Si el albarán no contiene todos los productos de la venta, sólo se
   facturarán aquellos productos que hayan sido enviados.
 
-En el campo |shipment_method| podremos elegir entre:
+En el campo método de envio podremos elegir entre:
 
 * *Manual*: No se generará ningún albarán de forma automática y tendremos que
   generar nosotros el movimiento de stock
@@ -118,27 +118,6 @@ información sobre los envíos y facturación de la venta. Una vez se generen lo
 albaranes o facturas, nos aparecerán en sus respectivas pestañas y podremos
 acceder a la información concreta de cada documento. En :ref:`venta-estados-fac-alb`
 se indica en qué estados nos podemos encontrar estos dos documentos.
-
-.. |party| field:: sale.sale/party
-.. |invoice_address| field:: sale.sale/invoice_address
-.. |shipment_address| field:: sale.sale/shipment_address
-.. |sale_date| field:: sale.sale/sale_date
-.. |warehouse| field:: sale.sale/warehouse
-.. |payment_term| field:: sale.sale/payment_term
-.. |lines| field:: sale.sale/lines
-.. |line_type| field:: sale.line/type
-.. |line_description| field:: sale.line/description
-.. |line_sequence| field:: sale.line/sequence
-.. |line_product| field:: sale.line/product
-.. |line_quantity| field:: sale.line/quantity
-.. |line_unit| field:: sale.line/unit
-.. |line_unit_price| field:: sale.line/unit_price
-.. |line_amount| field:: sale.line/amount
-.. |line_taxes| field:: sale.line/taxes
-.. |comment| field:: sale.sale/comment
-.. |invoice_method| field:: sale.sale/invoice_method
-.. |shipment_method| field:: sale.sale/shipment_method
-.. |currency| field:: sale.sale/currency
 
 
 .. inheritref:: sale/sale:section:estados
@@ -162,7 +141,7 @@ guardada en este estado hasta el momento que consideremos oportuno o clicar
 en el botón *Presupuesto* para cambiar el estado de la venta.
 
 Una vez tengamos la venta en estado **Presupuesto** se rellenará
-automáticamente el campo |reference| según la secuencia que le hayamos indicado
+automáticamente el campo referencia según la secuencia que le hayamos indicado
 en la :ref:`Configuración<sale-configuration>` de la venta. Representa que le
 hemos presentado un presupuesto a nuestro cliente pero este todavía no nos ha
 dado una respuesta sobre él. Una vez nos conteste nuestro cliente, podemos
@@ -205,7 +184,7 @@ Como hemos comentado anteriormente, desde las pestañas **Facturas** y
 **Albaranes** veremos en todo momento el estado en el que se encuentran
 las facturas y envíos generados por la venta, estos estados pueden ser:
 
-* |invoice_state|
+* Estado de la factura
 
   * *Ninguno*: Todavía no se ha generado ninguna factura relacionada con esta
     venta.
@@ -216,7 +195,7 @@ las facturas y envíos generados por la venta, estos estados pueden ser:
     cancelado la factura. En el apartado :ref:`sale-exceptions` se detalla cómo
     corregir este estado.
 
-* |shipment_state|
+* Estado envío
 
   * *Ninguno*: Todavía no se ha generado ningún albarán relacionado con esta
     venta.
@@ -231,10 +210,6 @@ las facturas y envíos generados por la venta, estos estados pueden ser:
 .. note:: Los albaranes de envío únicamente se generarán si realizamos la venta
    sobre un producto clasificado como *Bien* o como *Activo*, por lo que si la
    venta se realiza sobre un servicio solamente se generarán las facturas.
-
-.. |invoice_state| field:: sale.sale/invoice_state
-.. |shipment_state| field:: sale.sale/shipment_state
-
 
 .. inheritref:: sale/sale:section:devolucion_venta
 
@@ -265,9 +240,9 @@ Realizar una venta con distinta divisa
 
 En caso de que tengamos clientes que nos compren con una divisa distinta a la
 que tenemos configurada por defecto (y con la que realizamos toda la actividad
-contable), podemos indicarlo en el campo |currency| de la venta. Esto provocará
+contable), podemos indicarlo en el campo moneda de la venta. Esto provocará
 que cuando seleccionemos el producto en la línea de venta, el precio que se
-indica en el campo |line_unit_price| refleje ya la conversión a la moneda
+indica en el campo precio unidad refleje ya la conversión a la moneda
 indicada según la tasa de cambio informada para la fecha de la venta (podemos
 acceder a :ref:`gestion-moneda` para ver cómo configurar las tasas de cambio de
 las monedas extranjeras).
@@ -277,7 +252,7 @@ las monedas extranjeras).
    la conversión de una línea ya introducida deberemos borrarla y volverla a
    crear.
 
-Todo el proceso de la venta se realizará con la |currency| indicada y una vez
+Todo el proceso de la venta se realizará con la moneda indicada y una vez
 nuestro cliente realice el pago, y nosotros lo informemos en el sistema,
 **Tryton** realiza una nueva conversión a nuestra divisa con la tasa de cambio
 en el momento del pago.
@@ -332,13 +307,13 @@ Gestión de la excepción
 
 El procedimiento para gestionar una excepción será el mismo tanto si nos
 cancelan un albarán como una factura. Para la *excepción de factura* tendremos
-que indicar qué |invoices| se generarán de nuevo (en caso de que haya más de una),
+que indicar qué facturas se generarán de nuevo (en caso de que haya más de una),
 y para la *excepción de envío* tendremos que indicar los productos que
 incluiremos en el nuevo albarán. Para llevar a cabo la gestión, clicaremos en
 el botón *Gestionar excepción de envío* o *Gestionar excepción de factura* y
 nos aparecerá una ventana dónde podremos ver los movimientos (si se trata del
 envío) o las facturas (si se trata de la factura) que causan la
-excepción, o dicho de otro modo, los |moves| o |invoices| que han sido
+excepción, o dicho de otro modo, los movimentos o facturas  que han sido
 cancelados.
 
 .. figure:: images/sale-exception-moves.png
@@ -346,7 +321,7 @@ cancelados.
    Captura de pantalla de los movimientos a recrear
 
 Será desde esta ventana dónde podremos seleccionar los productos que
-queremos que se incluyan en el nuevo albarán, o las |invoices| que queremos que
+queremos que se incluyan en el nuevo albarán, o las facturas que queremos que
 se vuelvan a crear. Por defecto, cuando se abra la ventana, aparecen todos los
 productos seleccionados, si clicamos sobre alguno de ellos los
 deseleccionaremos, y si clicamos de nuevo, los volveremos a seleccionar. Una
@@ -359,36 +334,26 @@ nada, no se generará ningún documento nuevo.
 Si hemos gestionado una excepción de envío y posteriormente accedemos a la
 pestaña **Albaranes** de la venta, veremos que el albarán original nos aparece
 en estado *Cancelado* y el nuevo albarán en estado *En espera*. Además, los
-|moves| originales aparecerán también en estado *Cancelado* y en la columna
-|sale_exception_state| nos indicará si el producto se ha vuelto a utilizar en
+movimeinetos originales aparecerán también en estado *Cancelado* y en la columna
+estado excepción nos indicará si el producto se ha vuelto a utilizar en
 el nuevo albarán (con el estado *Recreado*) o si no lo ha hecho (con el estado
 *Ignorado*).
 
 Si la gestión la hemos hecho sobre la factura, podremos acceder posteriormente
-a la pestaña **Facturas** y nos aparecerán un listado con las |invoices| que se
+a la pestaña **Facturas** y nos aparecerán un listado con las facturas que se
 han generado por medio de la venta a modo de histórico. De ellas, la que hayan
 provocado la excepción estarán en estado *Cancelado* y las que hayamos generado
 de nuevo en el estado concreto en el que se encuentren (*Borrador*, *Validada*
 o *Confirmada*).
-
-.. |moves| field:: sale.sale/moves
-.. |sale_exception_state| field:: stock.move/sale_exception_state
-.. |invoices| field:: sale.sale/invoices
-
-.. inheritref:: sale/sale:section:configuracion
 
 Configuración
 =============
 
 .. _sale-configuration:
 
-En |menu_configuration| podemos definir los valores por defecto para los campos
-|invoice_method| y |shipment_method|. En el apartado
+En configuración podemos definir los valores por defecto para los campos
+método de facturación y método de envío. En el apartado
 :ref:`Métodos de facturación y envío<generacion-albaranesfacturas>` se detalla
 los valores posibles, junto con sus implicaciones. Además también podremos
-definir la |conf_sequence| que será la utilizada para generar el campo
-|reference|.
-
-.. |menu_configuration| tryref:: sale.menu_configuration/complete_name
-.. |conf_sequence| field:: sale.configuration/sale_sequence
-.. |reference| field:: sale.sale/reference
+definir la secuencia de venta que será la utilizada para generar el campo
+referencia.

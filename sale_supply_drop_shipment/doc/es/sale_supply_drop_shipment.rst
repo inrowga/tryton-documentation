@@ -1,14 +1,11 @@
 Envío directo
 =============
 
-Dispone de la opción |drop_shipment| en la pestaña de proveedor del producto si está
-marcada la opción |purchasable| del producto. Cuando se activa, la solicitud de
+Dispone de la opción envío directo en la pestaña de proveedor del producto si está
+marcada la opción comprable del producto. Cuando se activa, la solicitud de
 compra y la compra vinculada tienen la dirección del cliente como dirección de
 entrega; cuando se confirma la venta, se crea un envío directo y enlaza la
 compra y la venta.
-
-.. |drop_shipment| field:: purchase.product_supplier/drop_shipment
-.. |purchasable| field:: product.template/purchasable
 
 .. warning:: En la información del proveedores del producto, deberán anotar
                también el tiempo de entrega aunque no sea un campo requerido.

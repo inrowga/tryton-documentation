@@ -1,7 +1,7 @@
 #:after:party/party:paragraph:sale#
 
 
-El campo |grouping_method| nos permite definir cómo se van a agrupar las
+El campo método agrupación facturas de venta nos permite definir cómo se van a agrupar las
 facturas que se generen por las ventas de este tercero. Los métodos disponibles
 son los siguientes:
 
