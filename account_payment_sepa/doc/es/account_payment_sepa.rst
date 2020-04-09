@@ -21,8 +21,6 @@ documentos, una vez cancelado.
 Para cualquier duda legal relacionada con el mandato SEPA, en este `link`_ 
 encontrarás toda la información oficial. 
 
-.. inheritref:: account_payment_sepa/account_payment_sepa:section:generar
-
 Procedimientos para generar un mandato
 ======================================
 
@@ -56,7 +54,4 @@ identificada por los números de *Tipo* IBAN u Otro, además de añadirle una
 
 Una vez validado el mandato habremos finalizado el proceso. 
 
-
-
-.. |party| field:: company.company/party
 .. _link: http://www.sepaesp.es/sepa/es/faqs/elmandato/

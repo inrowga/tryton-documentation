@@ -1,6 +1,3 @@
-
-.. inheritref:: account_asset/account_asset:section:amortizacion
-
 Amortización contable
 =====================
 

@@ -1,4 +1,3 @@
-.. inheritref:: account_invoice/account_invoice:title:invoicing
 
 -----------
 Facturación
@@ -21,7 +20,10 @@ encontraremos será el mismo: Podremos encontrar la factura en distintos estados
 dependiente de en qué punto se encuentre el proceso de facturación. Los estados
 en lo que podremos encontrar una factura son:
 
-.. inheritref:: account_invoice/account_invoice:paragraph:invoice_draft
+Si la factura se genera desde una venta, esta también se creará en estado
+*Borrador* con todos los campos rellenados según la información de la venta,
+por lo que en este caso, tan solo tendremos que comprobar que los datos son
+correctos y *Validar* o *Confirmar* la factura.
 
 * **Borrador**: Será el estado en el que se genere la factura y el único en
   el que se permita su edición, por lo que mientras factura se encuentre en
@@ -55,8 +57,6 @@ en lo que podremos encontrar una factura son:
   reconocerá que esta ha sido pagada y su estado cambiará a *Pagada*.
 
 Los campos que podemos encontrar en una factura son:
-
-.. inheritref:: account_invoice/account_invoice:bullet_list:fields
 
 * Tercer: Al seleccionarlo se nos rellenarán varios campos como cuenta o
   moneda con la información que tengamos registrada del tercero.
@@ -108,8 +108,6 @@ Los campos que podemos encontrar en una factura son:
 * Impuestos: Refleja toda la información que le hemos indicado en los
   impuestos con la base imponible total de todos los productos por impuesto.
 
-.. inheritref:: account_invoice/account_invoice:paragraph:prevent_duplicates
-
 Si cambiamos a la pestaña **Información adicional** podremos acceder a la
 información contable de la factura, y, una vez confirmada, podremos acceder
 por medio del icono en forma de carpeta del campo asientos a la información
@@ -120,12 +118,24 @@ rellenarán automáticamente los campos importe a pagar hoy y importe a pagar,
 teniendo en cuenta el total de la factura y el plazo de pago que le
 hayamos indicado.
 
-.. inheritref:: account_invoice/account_invoice:section:cancelar
+------------------------------------
+Añadir líneas pendientes de facturar
+------------------------------------
+
+En sistemas de automatización de facturación se generan facturas a partir de
+líneas a facturar. Esto es muy común por ejemplo en el proceso de contratos de
+servicios que se generen líneas, y al fin de mes, se facturen.
+
+.. image:: images/account_invoice_standalone.png
+
+Cuando creas un nueva factura, al seleccionar el tercero, en las líneas de la
+factura, podrás seleccionar líneas existentes pendientes de facturar.
+
+.. note:: Sólo podrás seleccionar las líneas de factura del tercero de la
+   factura y que no sean facturadas previamente.
 
 Cancelar una factura
 --------------------
-
-.. inheritref:: account_invoice/account_invoice:paragraph:excepciones
 
 Si una factura ya está confirmada, **Tryton** no nos permitirá cancelarla o
 anularla. Para poder hacerlo deberemos generar una factura de abono que anule
@@ -137,7 +147,14 @@ anulemos la original. En este caso tendremos que tener en cuenta que a esta
 nueva factura se le asignará un nuevo número de factura distinto al de la
 original.
 
-.. inheritref:: account_invoice/account_invoice:section:abono
+Esto provocará que, si la factura se encuentra en estado *Borrador*, al no 
+haberse contabilizado todavía, el sistema nos permita cancelarla. Si la factura 
+se ha generado desde una venta, en caso de que lo necesitemos, podremos
+cancelarla antes de confirmarla. Esta cancelación generará lo que se conoce
+como *Excepción de factura* y la gestión pasará al departamento de ventas.
+Podemos ver cómo gestionar excepciones en la venta desde
+:ref:`sale-exceptions`.
+
 
 Abonar una factura
 ------------------

@@ -1,11 +1,6 @@
 
-.. inheritref:: account_payment/account_payment:section:pagos
-
-
 Configuración
 -------------
-
-.. inheritref:: account_payment/account_payment:paragraph:configuracion
 
 **Tryton** gestiona los cobros y los pagos a través de los diarios ,
 por lo que antes de realizar cualquier gestión, deberemos configurar al menos
@@ -39,8 +34,6 @@ el sistema.
 Listar efectos pendientes de cobro o pago
 ------------------------------------------
 
-.. inheritref:: account_payment/account_payment:paragraph:efectos
-
 Cuando se confirma un asiento, ya sea porque lo introducimos manualmente o
 porque se genera a partir de una factura, se crea a su vez en el sistema un
 efecto. Si accedemos a |menu_efects| podremos ver listados todos los efectos
@@ -50,8 +43,6 @@ inversos* dónde encontraremos listados los efectos los cuales teniendo el mismo
 tercereo tenemos efectos tanto a cobrar como a pagar. Y las pestañas *A pagar
 con mandato* y *A cobrar con mandato* que, como bien dice el nombre, son los
 efectos de pago o cobro a través de mandatos.
-
-.. inheritref:: account_payment/account_payment:section:informar-pagos
 
 Informar un pago o un cobro
 ---------------------------
@@ -64,7 +55,6 @@ campos se rellenarán con la información del efecto. Si estamos introduciendo u
 anticipo, por ejemplo, y no hay un efecto como contrapartida, tendremos que
 rellenar manualmente en resto de campos.
 
-.. inheritref:: account_payment/account_payment:paragraph:aprobar
 
 Para procesar un pago (paso que hacemos después de haber mandado la orden de
 pago o cobro al banco) tendremos que acceder a la pestaña *Aprobado*, si hemos

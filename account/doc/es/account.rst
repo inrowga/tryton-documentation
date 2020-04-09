@@ -65,8 +65,11 @@ un código al ejercicio fiscal, aunque este campo tiene un carácter opcional.
 
    Vista del formulario del Ejercicio fiscal
 
-
-.. inheritref:: account/account:paragraph:secuencias
+Por otro lado, **Tryton** permite utilizar la misma secuencia de facturas para
+las facturas de cliente, proveedor, abonos de cliente y abonos de proveedor
+pero esto no es válido bajo la normativa española. Así que, si nuestra empresa
+se rige por esta legislación, deberemos crear una serie exclusiva para nuestra
+facturación.
 
 En la pestaña *Secuencias* deberemos introducir la secuencia que queramos que
 se utilice para los asientos y las distintas facturas confirmadas del periodo
@@ -93,8 +96,6 @@ clasificado dentro de un período teniendo en cuenta su data.
 Crear una nueva cuenta contable
 -------------------------------
 
-.. inheritref:: account/account:paragraph:cuenta
-
 Una cuenta contable es el lugar donde indicamos los cambios que se producen en
 nuestros activos o pasivos durante un periodo concreto. Estos cambios suelen
 ser agrupados en distintas cuentas contables según su naturaleza, por lo que,
@@ -107,8 +108,6 @@ nueva cuenta debemos dirigirnos al menú contabilidad y clicar en el botón
 
    Vista formulario de la cuentas contable
 
-.. inheritref:: account/account:paragraph:cabecera_cuenta
-
 En primer lugar deberemos rellenar la cabecera del formulario que se nos
 abrirá, indicando el nombre y el código de esta nueva cuenta.
 Si le ponemos un código numérico, el código  nos servirá para
@@ -116,8 +115,6 @@ clasificar la cuenta e indicarle al sistema de qué grupos va a depender.
 
 Una vez completada la cabecera, podemos ir rellenando el resto de campos según
 el carácter que le queramos dar a la nueva cuenta contable:
-
-.. inheritref:: account/account:bullet_list:cuenta_contable
 
 * Empresa: Indicaremos para cual de nuestras empresas crearemos la
   cuenta.
@@ -223,7 +220,6 @@ operativo para empezar a realizar apuntes contables en él.
 
 Crear un plan contable
 ----------------------
-.. inheritref:: account/account:paragraph:plan_contable
 
 El plan contable es aquello que clasifica y organiza las distintas cuentas
 donde se irá recogiendo el registro contable de las operaciones que realice
@@ -249,13 +245,8 @@ posteriormente, podremos consultar por medio de |menu_open_chart|.
 .. |plan_account_payable| field:: account.create_chart.properties/account_payable
 .. |plan_account_receivable| field:: account.create_chart.properties/account_receivable
 
-
-.. inheritref:: account/account:section:impuestos
-
 Configurar impuestos
 --------------------
-
-.. inheritref:: account/account:paragraph:impuestos
 
 Para crear o modificar el sistema tributario de nuestro sistema deberemos
 acceder en primer lugar a |tax_group_menu| para crear los grupos donde
@@ -280,8 +271,6 @@ la cuenta de abono en las que realizaremos las anotaciones contables.
 Además, en caso de que el impuesto que estemos generando tenga otros
 dependientes de él, lo deberemos indicar en los hijos.
 
-.. inheritref:: account/account:paragraph:impuestos_pestanas
-
 Si accedemos a la pestaña *Código* podremos indica los distintos códigos de
 impuestos que utilizaremos para el impuesto.
 
@@ -292,25 +281,136 @@ impuestos, pero en función de su régimen.
 .. |tax_group_menu| tryref:: account.menu_tax_group_form/complete_name
 .. |tax_type_menu| tryref:: account.menu_tax_code_list/complete_name
 .. |tax_menu| tryref:: account.menu_tax_list/complete_name
-.. |name_tax| field:: account.tax/name
-.. |description_tax| field:: account.tax/description
-.. |group_tax| field:: account.tax/group
-.. |type_tax| field:: account.tax/type
-.. |amount_tax| field:: account.tax/amount
-.. |rate_tax| field:: account.tax/rate
-.. |invoice_account_tax| field:: account.tax/invoice_account
-.. |credit_note_account_tax| field:: account.tax/credit_note_account
-.. |child_tax| field:: account.tax/childs
 .. |rule_menu| tryref:: account.menu_tax_rule_form/complete_name
 
+Configurar plazos de pago
+-------------------------
 
-.. inheritref:: account/account:section:gestion
+Para crear o configurar los plazos de pago que posteriormente podremos aplicar
+a nuestros clientes o proveedores, accederemos a
+|menu_payment_terms_configuration| y, tras clicar en *Nuevo*, se nos abrirá el
+formulario de edición de los plazos de pago. En él deberemos
+indicar un nombre y rellenar al menos una línea de plazo de pago. Hay que tener
+en cuenta que cada plazo de pago se compone de una o varias , estas
+ nos indicarán cuándo y cómo se realizará el pago. Además, la cantidad
+de  que compongan el plazo nos indicará cuántos pagos se deberán hacer.
+Por ejemplo, si un pago es a 30 días, este plazo de pago sólo tendrá una
+línea, en cambio, si el plazo de pago se realiza a 15 y a 30 días, se deberán
+crear dos líneas, una para el pago a 15 días y otra para el pago a 30 días.
+
+Cuando accedamos a crear una nueva línea, los campos que tendremos que
+rellenar son:
+
+* tipo: Donde podemos escoger entre:
+    * *Fijo*: Es un valor fijo, siempre será el mismo sea cual sea el importe
+      total a pagar, por lo que no dependerá de nada. Al seleccionar esta
+      opción aparecerán dos campos nuevos:
+
+           * importe: Indicaremos el importe fijo que se deberá de pagar.
+           * moneda: La moneda que se usará para realizar el pago.
+
+    * *Porcentaje sobre remanente*: Calculará el importe a pagar según un
+      porcentaje aplicado sobre la cantidad que queda pendiente de pago.
+    * *Porcentaje sobre total*: Calculará el importe a pagar según un
+      porcentaje sobre el valor total de la factura. Al seleccionar esta opción
+      o la anterior aparecerán dos campos nuevos:
+
+          * porcentaje: Indicaremos aquí el valor en % de 0 a 100 que
+            queremos que se aplique al total o al remanente.
+          * divisor: Este campo se nos rellenará automáticamente si
+            indicamos previamente el porcentaje. En caso de rellenar este
+            campo primero, el que se rellenará automáticamente será el campo
+            porcentaje. Esto se debe a que ambos campos están relacionados e
+            indican lo mismo pero desde distintos puntos de vista. En este
+            campo podremos indicar el divisor que se utilizará para realizar
+            el cálculo del importe, o, dicho de otro modo, deberemos indicar
+            por qué número queremos que se divida el total o remanente para
+            calcular el importe a pagar. Por ejemplo, si indicamos en el campo
+            porcentaje que se calcule sobre el 50 %, el campo divisor se
+            nos rellenará con el número 2, ya que es lo mismo aplicar el 50 %
+            a un importe que dividirlo por 2.
+
+    * Remanente: El total de lo que queda por pagar, le resta del total lo ya
+      pagado. Siempre que configuremos los plazos con una sola línea, deberemos
+      escoger esta tipología, ya que al no haber ningún pago previo se realizará
+      el pago sobre el total. Además, cuando creemos plazos con varias ,
+      la última siempre deberá ser de esta tipología.
+
+Y por cada tipo de línea de pago, indicaremos sus *Incrementos*:
+
+* mes, setmanas y días: Indicaremos cuántos meses, semanas y días pasarán
+  para generar el pago de la línea del plazo que estamos creando.
+* mes, día de la setmana y día: Indicaremos el mes, día de la semana o día del
+  mes exacto en el que se realizará el pago de esta línea.
+
+Veamos algunos ejemplos de cómo configurar estas :
+
+* **Pago a 30 días**. Sólo crearemos una línea:
+
+  * tipo: Remanente
+  * mes: 0
+  * setmanas: 0
+  * días: 30
+
+* **Pago a 15/30 días**. Crearemos dos líneas:
+
+  * Primera línea:
+
+    * tipo: Porcentaje sobre total
+    * porcentaje: 50
+    * divisor: 2
+    * mes: 0
+    * setmanas: 0
+    * días: 15
+
+  * Segunda línea:
+
+    * tipo: Remanente
+    * mes: 0
+    * setmanas: 0
+    * días: 30
+
+* **Pago el 1 de cada mes**. Crearemos una línea:
+
+    * tipo: Remanente
+    * día: 1
+    * Dejaremos el resto de campos a 0.
+
+Podemos especificar para cada tercero un plazo de pago desde la pestaña
+**Contabilidad** de la ficha del propio tercero. En ella podremos indicar los
+plazos para las ventas (cliente) y para las compras (proveedor) que le
+realicemos.
+
+
+.. |menu_payment_terms_configuration| tryref:: account_invoice.menu_payment_terms_configuration/complete_name
+
+Amortización de activos
+=======================
+
+.. toctree::
+   :maxdepth: 2
+
+   ../../../account_asset/doc/es/account_asset
+
+Pagos y cobros
+==============
+
+.. toctree::
+   :maxdepth: 3
+
+   ../../../account_payment/doc/es/account_payament
+
+SEPA
+====
+
+.. toctree::
+   :maxdepth: 3
+
+   ../../../account_payment_sepa/doc/es/account_payament_sepa.rst
 
 ----------------
 Gestión contable
 ----------------
-
-.. inheritref:: account/account:section:otras_tareas_contables
 
 Consultar libros diario
 -----------------------
@@ -343,8 +443,65 @@ apuntes de los que se compone, así como la información concreta del asiento.
 
 .. |menu_move| tryref:: account.menu_move_form/complete_name
 
+Reclamaciones
+=============
+.. toctree::
+   :maxdepth: 2
 
-.. inheritref:: account/account:section:conciliar
+   ../../../account_dunning/doc/es/account_dunning
+
+Extractos
+=========
+.. toctree::
+   :maxdepth: 2
+
+   ../../../account_statement/doc/es/account_statement
+
+=========================
+Definir planes analíticos
+=========================
+
+Los planes analíticos nos permiten controlar y analizar las cuentas de nuestra
+empresa (entradas, salidas y balances) siguiendo una estructura de cuentas
+definida por nosotros. Un ejemplo típico es estructurar las cuentas por
+departamento y , por ejemplo, el departamento comercial dividido por comercial.
+
+.. Captura de árbol de cuentas analíticas con más de una jerarquía,
+   preferiblemente siguiendo el ejemplo comentado. Listado jerárquico de
+   cuentas analíticas que encontramos en Contabilidad/ Configuración/
+   Contabilidad analítica/ Cuentas analíticas
+
+La contabilidad analítica en Tryton es **multi jerárquica**. Esto quiere decir
+que podemos tener varios *planes analíticos*. Cada jerarquía tiene una cuenta
+raíz, estas son completamente independientes y deberían ser completas.
+
+Siguiendo el ejemplo, si nuestra empresa está muy enfocada a productos nos
+puede interesar tener la *típica* visión **por departamento** pero también
+tenerla **por producto**, registrando la aportación de cada departamento a cada
+producto. Así, una visita comercial para un producto concreto añadirá su coste
+al departamento comercial en la jerarquía *por departamento* y también en la
+cuenta de producto en la jerarquía *por producto*.
+
+Crear una nueva cuenta
+----------------------
+
+Crearemos las cuentas nuevas des del listado *normal* de cuentas analíticas que
+encontramos en la entrada de menú Contabilidad/ Configuración/ Contabilidad
+analítica/ Cuentas analíticas/ Cuentas analíticas.
+
+.. Captura de imagen de formulario de nueva cuenta analítica.
+
+Si estamos creando una jerarquía nueva elegiremos el **tipo** de cuenta
+**Raíz**. Si queremos añadir una cuenta a una jerarquía existente deberemos
+elegir primero la **raíz** de esta y luego la cuenta **padre**.
+
+Las cuentas **Vista** son cuentas que no aceptan entradas asociadas
+directamente a ellas y sirven para agrupar subcuentas (las cuentas *Raíz* en
+este sentido son como una cuenta *Vista*). Por ejemplo, si en una parte de
+nuestro plan analítico tenemos cuentas para cada proyecto, posiblemente nos
+interesará una cuenta *Proyectos*, para ver fácilmente el balance sumado de
+todos los proyectos, pero todos los gastos/ingresos deben ir a un proyecto
+concreto.
 
 Conciliar apuntes
 -----------------
@@ -411,9 +568,6 @@ periodo/s sobre los que queramos realizar la consulta.
 
 .. |menu_open_chart|  tryref:: account.menu_open_chart/complete_name
 .. |menu_cimp| tryref:: account.menu_code_tax_open_chart/complete_name
-
-
-.. inheritref:: account/account:section:cierre
 
 -------------------------------
 Cierre de la actividad contable

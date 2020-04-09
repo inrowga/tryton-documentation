@@ -1,6 +1,5 @@
 #:inside:party/party:section:terceros-multicompania#
 
-* Procedimiento de reclamación
 
 
 #:inside:account/party:bullet_list:campos_contabilidad#
