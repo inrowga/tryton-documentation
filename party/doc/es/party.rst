@@ -18,16 +18,25 @@ podemos crear tantas categorías y subcategorías de terceros como queramos
 para agruparlos según nuestros criterios.
 
 
-.. inheritref:: party/party:section:crear-un-tercero
+En la pestanya Logística podemos definir la ubicación del cliente y la
+ubicación de proveedor que se utilizará por defecto para los albaranes
+relacionados con este tercero.
+
+Podremos introducir la información bancaria del tercero en el campo
+cuentas bancarias.
+
+Desde la pestaña relaciones podremos definir con que otros terceros está
+relacionado este tercero. Esto es útil para indicar, por ejemplo los contactos
+de una misma empresa, o incluso sus empleados. Para crear una relación basta
+con indicar el tipo de relación y el tercero relacionado.
 
 Crear un tercero
 ================
 
-Para crear un tercero tendremos que acceder al menú |menu_party| y clicar en el
+Para crear un tercero tendremos que acceder al menú tercero y clicar en el
 botón *Nuevo*. En el formulario que se nos abrirá deberemos rellenar los
 siguientes campos:
 
-.. inheritref:: party/party:bullet_list:campos_general
 
 * Nombre: con el nombre del tercero.
 * Idioma: donde indicaremos el idioma por defecto con el que nos dirigiremos al
@@ -60,12 +69,20 @@ siguientes campos:
 
    Vista formulario de un Tercero
 
-.. inheritref:: party/party:paragraph:identificadores
-
-
 A la pestaña **Identificadores** introduciremos los códigos del tercero
 como CIF/NIF. En el caso de ser un CIF/NIF europeo, seleccionaremos la opción
 "VAT" (y nos validará el número introducido).
+
+Si accedemos a la pestaña **Contabilidad** podremos seguir introduciendo
+información sobre nuestro cliente. Los campos que deberemos indicar en esta
+pestaña son:
+
+* A pagar y a cobrar: indicaremos las cuentas que se
+  utilizarán cómo cuentas a cobrar/pagar por defecto en las facturas
+  relacionadas con el tercero.
+* Regla de impuesto de cliente y Regla de impuesto de proveedor:
+  especificaremos la regla de impuestos que queremos que se aplique 
+  al tercero. 
 
 
 Encontrar terceros sin NIF
@@ -104,7 +121,9 @@ documento (factura, presupuesto, etc) que hace referencia al mismo. En este
 caso podremos desactivarlo tal y como se explica en
 :ref:`desactivar-registros`.
 
-.. inheritref:: party/party:section:terceros-multicompania
+* Ubicación de cliente
+* Ubicación de proveedor
+* Procedimiento de reclamación
 
 Trabajar con terceros en multicompañía
 ======================================
@@ -127,7 +146,6 @@ de gastos del mismo producto como 60000002.
 
 A continuación detallamos los campos que dependen de la compañía en terceros:
 
-.. inheritref:: party/party:section:informes
 
 Informes
 ========
@@ -142,7 +160,27 @@ Dispone de dos informes:
   compañía, la dirección del destinatario, la fecha, un saludo, un final y la
   firma del usuario que lanza el informe.
 
-.. inheritref:: party/party:section:configuration
+
+Tipos de relaciones
+-------------------
+
+En el menú tipo de relaciones podemos definir los tipos de relaciones entre
+terceros.
+
+Un tipo de relación, puede tener una relación inversa. Una relación inversa
+nos define otra relación que se aplica para todos los terceros que tienen
+una relación pero en sentido inverso. Por ejemplo, si definimos la relación
+"tiene como empleado" cómo relación inversa de "es empleado de" y definimos
+que el tercero A es empleado del tercero B, con la relación inversa
+automáticamente obtendremos que el el tercero B tiene como empleado al tercero
+A.
+
+.. note:: Es importante rellenar ambos casos de la relación inversa. Siguiendo
+    el ejemplo anterior deberemos definir cómo inversa de "tiene como empleado"
+    la relación "es empleado de", y a la vez la relación "es empleado de" cómo
+    inversa de "tiene como empleado". De este modo, se ligaran los dos lados
+    de la relación.
+
 
 Configuración
 =============

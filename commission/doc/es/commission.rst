@@ -8,8 +8,6 @@ operación.
 
 Las comisiones se calculan sobre las facturas.
 
-.. inheritref:: commission/commission:section:planes
-
 Planes
 ======
 
@@ -43,8 +41,6 @@ Otra condición a tener en cuenta a la hora de generar el plan es el tipo de
 producto comisión. Este siempre tendrá que ser tipo servicio, no podrá ser un
 bien.
 
-.. inheritref:: commission/commission:section:agentes
-
 Agentes
 =======
 
@@ -71,8 +67,6 @@ plan
 de comisiones, como este tenga asignados. De la misma manera, podemos añadir el
 Agente en cualquier ficha de Terceros.
 
-.. inheritref:: commission/commission:section:creacion_comisiones
-
 Creación de comisiones
 ======================
 
@@ -83,7 +77,6 @@ factura).
 Si la factura es de cliente, nos genera comisiones en positivo. Si la factura
 es una devolución de cliente, nos genera las comisiones en negativo.
 
-.. inheritref:: commission/commission:section:relacionar_facturas_con_agentes
 
 Relacionar facturas con agentes
 ===============================
@@ -109,7 +102,6 @@ es diferente.
   tendrá preferencia este respecto al agente global de la factura o de si no
   disponemos de agente, las comisiones que se generarán serán respecto a la
   línea de la factura.
-.. inheritref:: commission/commission:section:facturar_comisiones
 
 Facturar las comisiones
 =======================
@@ -132,8 +124,6 @@ ejecutar el asistente.
 En el caso que el agente no disponga de esta información, una mensaje de alerta
 nos avisará que no puede generar la factura, pues este campo es requerido en la
 factura.
-
-.. inheritref:: commission/commission:section:cancelar_facturas
 
 Cancelar facturas relacionadas con comisiones
 =============================================

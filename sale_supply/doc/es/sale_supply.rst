@@ -14,7 +14,6 @@ En el momento que se genera el movimiento de compras, no influye el método de
 facturación en este criterio, ya que los movimientos y albaranes de la compra se 
 generarán en cuánto se cree el movimiento de la compra. 
 
-.. inheritref:: sale_suppply/sale_suppply:section:productos_suministro_venta
 
 Productos para el suministro de la venta
 ========================================
@@ -32,9 +31,6 @@ Es recomendable relacionar que proveedores ofrecen y entregan el producto en
 cuestión, lo podremos hacer desde la pestaña *Proveedores*, añadiendo línias 
 de proveedores, en el listado.
 
-.. |menu_template| tryref:: product.menu_template/complete_name
-
-.. inheritref:: sale_suppply/sale_suppply:section:generacion_solicitudes_compra
 
 Generación solicitudes de compra
 ================================
@@ -51,7 +47,3 @@ venta. A partir de este momento seguiremos los siguientes pasos:
 * Abriremos y confirmaremos la compra creada mediante el asistente anterior. 
   Esto creará el albarán de salida para el cliente.
 
-.. |menu_purchase_request_form| tryref:: stock_supply.menu_purchase_request_form/complete_name
-.. |menu_purchase_form| tryref:: purchase.menu_purchase_form/complete_name
-
-.. |supply_on_sale| field:: product.template/supply_on_sale

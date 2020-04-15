@@ -121,12 +121,13 @@ el carácter que le queramos dar a la nueva cuenta contable:
 
 * Padre: En caso de que la cuenta que estamos creando dependa de
   otra, lo deberemos indicar aquí.
-#Modificar
-* |kind_account|:  En este campo seleccionaremos de qué tipo será esta
-  nueva cuenta. Si indicamos en este campo *Vista* le estaremos indicando al
-  sistema que esta cuenta agrupará otras cuentas. El resto de tipologías que
-  podemos seleccionar son: *A cobrar*, *A pagar*, *Existencias*, *Gastos*,
-  *Ingresos* y *Otros*.
+
+* Vista:  En este campo seleccionaremos de qué tipo será esta
+  nueva cuenta, si no hay tipo les estremos indicando al sistema que esta 
+  cuenta agrupa otras cuentas. Si indicamos en este campo *Vista* le estaremos
+  indicando al sistema que esta cuenta agrupará otras cuentas. El resto de 
+  tipologías que  podemos seleccionar son: *A cobrar*, *A pagar*
+  , *Existencias*, *Gastos*, *Ingresos* y *Otros*.
 
 * Cierre: Marcaremos el *tick* en caso de que la cuenta sea
   prorrogable tras el cierre del ejercicio fiscal. Este campo nos permite
@@ -202,7 +203,7 @@ Crear un nuevo diario
 ---------------------
 Los libros diarios son libros donde se van estableciendo cronológicamente los
 registros contables que se van produciendo en nuestra empresa. Para crear uno
-nuevo debemos acceder por medio de la ruta |menu_journal| y hacer clic en el
+nuevo debemos acceder por medio de la ruta diario y hacer clic en el
 icono *Nuevo*.
 
 .. view:: account.journal_view_form
@@ -225,31 +226,25 @@ El plan contable es aquello que clasifica y organiza las distintas cuentas
 donde se irá recogiendo el registro contable de las operaciones que realice
 nuestra empresa. Es por esto que una vez definidos los pasos previos según
 nuestros intereses, podremos crear nuestro plan contable. Para ello
-accederemos por medio de |menu_create_chart| y se nos abrirá un asistente 
+accederemos por medio de planes contables y se nos abrirá un asistente 
 donde deberemos indicar la empresa sobre la que queremos crear el plan y la
 plantilla que utilizaremos para crearlo (por defecto el sistema tiene
 ya generada la plantilla *Plan de tipos de cuenta mínimo* aunque también
 podemos instalar el *Plan General de Contabilidad* o crear una plantilla
-personalizada por medio del menú |menu_template_account|). Una vez indicados
+personalizada por medio del menú crear assiento des de plantilla). Una vez indicados
 estos campos, clicamos en *Crear* y se nos abrirá una nueva ventana donde
 podremos indicar la cuenta a pagar por defecto  y la cuenta a cobrar por defecto
 que utilizaremos para el plan contable.
 
 Si clicamos de nuevo en *Crear* el sistema nos creará el nuevo Plan contable que,
-posteriormente, podremos consultar por medio de |menu_open_chart|.
+posteriormente, podremos consultar por medio de assientos contables.
 
-.. |menu_create_chart| tryref:: account.menu_create_chart/complete_name
-.. |account_template| model:: account.account.template
-.. |actualizar_plan| tryref:: account.menu_update_chart/complete_name
-.. |menu_template_account| tryref:: account.menu_account_type_template_tree/complete_name
-.. |plan_account_payable| field:: account.create_chart.properties/account_payable
-.. |plan_account_receivable| field:: account.create_chart.properties/account_receivable
 
 Configurar impuestos
 --------------------
 
 Para crear o modificar el sistema tributario de nuestro sistema deberemos
-acceder en primer lugar a |tax_group_menu| para crear los grupos donde
+acceder en primer lugar a grupo de impuestos| para crear los grupos donde
 posteriormente asociaremos los distintos tipos de impuestos que iremos
 generando. Estos grupos se clasifican según si los impuestos se graban durante
 la *venta*, la *compra* o durante *ambos*.
@@ -259,10 +254,10 @@ la *venta*, la *compra* o durante *ambos*.
    Vista de formulario de un Impuesto
 
 
-Para crear un nuevo impuesto, deberemos acceder a |tax_menu| y al clicar en
-*Nuevo* se nos abrirá la vista de edición donde deberemos rellenar los
-distintos campos para poder configurar el impuesto. Deberemos rellenar el
-nombre, la descripción, el grupo al que pertenece, el
+Para crear un nuevo impuesto, deberemos acceder al menu de impuestos 
+y al clicar en *Nuevo* se nos abrirá la vista de edición donde deberemos 
+rellenar los distintos campos para poder configurar el impuesto. Deberemos 
+rellenar el nombre, la descripción, el grupo al que pertenece, el
 tipo (si indicamos aquí que es un impuesto con importe fijo también
 deberemos indicar el importe, si, por el contrario, seleccionamos
 *Porcentaje* deberemos indicar el pordentaje sobre el que se calculará el
@@ -274,21 +269,16 @@ dependientes de él, lo deberemos indicar en los hijos.
 Si accedemos a la pestaña *Código* podremos indica los distintos códigos de
 impuestos que utilizaremos para el impuesto.
 
-En |rule_menu| podremos indicar los regímenes y reglas varias que agrupan los
-distintos impuestos. Tendremos también otra forma distinta de agrupar los
-impuestos, pero en función de su régimen.
-
-.. |tax_group_menu| tryref:: account.menu_tax_group_form/complete_name
-.. |tax_type_menu| tryref:: account.menu_tax_code_list/complete_name
-.. |tax_menu| tryref:: account.menu_tax_list/complete_name
-.. |rule_menu| tryref:: account.menu_tax_rule_form/complete_name
+En las reglas de impuestos  podremos indicar los regímenes y reglas varias que
+agrupan los distintos impuestos. Tendremos también otra forma distinta de 
+agrupar los impuestos, pero en función de su régimen.
 
 Configurar plazos de pago
 -------------------------
 
 Para crear o configurar los plazos de pago que posteriormente podremos aplicar
 a nuestros clientes o proveedores, accederemos a
-|menu_payment_terms_configuration| y, tras clicar en *Nuevo*, se nos abrirá el
+configuracion del termino de pago y, tras clicar en *Nuevo*, se nos abrirá el
 formulario de edición de los plazos de pago. En él deberemos
 indicar un nombre y rellenar al menos una línea de plazo de pago. Hay que tener
 en cuenta que cada plazo de pago se compone de una o varias , estas
@@ -382,8 +372,6 @@ plazos para las ventas (cliente) y para las compras (proveedor) que le
 realicemos.
 
 
-.. |menu_payment_terms_configuration| tryref:: account_invoice.menu_payment_terms_configuration/complete_name
-
 Amortización de activos
 =======================
 
@@ -437,11 +425,9 @@ Consultar asientos contables
 Para **Tryton** un asiento contable se compone de varios apuntes que se anotan
 en distintas cuentas contables. Conforme se vaya desarrollando nuestra
 práctica contable, se nos irán generando un gran número de asientos y apuntes
-que podremos consultar por medio de |menu_move|. Desde el listado que se nos
+que podremos consultar por medio del menu moviminetos. Desde el listado que se nos
 abrirá, podremos acceder a cada uno de los asientos contables para ver los
 apuntes de los que se compone, así como la información concreta del asiento.
-
-.. |menu_move| tryref:: account.menu_move_form/complete_name
 
 Reclamaciones
 =============
@@ -525,11 +511,11 @@ el menú.
 
 Otros formas de conciliar apuntes són:
 
-* Desde |menu_reconcile| se ejecuta un asistente que te va mostrando distintas
+* Desde conciliar se ejecuta un asistente que te va mostrando distintas
   propuestas con posibles apuntes a conciliar, pudiendo saltarlas si hace falta.
   Las propuestas las hace el programa, tu solo debes clicar botones de conciliar
   y saltar.
-* A |menu_move_line_form| se puedes buscar apuntes por tercero y/o cuenta y conciliar.
+* A movimientos de lineas se puedes buscar apuntes por tercero y/o cuenta y conciliar.
   También se disponde de la pestaña de "Efectos con apuntes inversos" que solo muestra
   posibles conciliaciones.
 * Abrir los apuntes a pagar-cobrar desde un tercero en concreto, con el botón "Relacionado".
@@ -539,17 +525,13 @@ Otros formas de conciliar apuntes són:
 
 .. Note:: Tenemos que tener en cuenta, tal y como hemos visto en
    :ref:`cuenta-nueva`, que solo podremos conciliar apuntes de cuentas
-   contables que tengan marcado el campo |reconcile_account|.
-
-.. |menu_reconcile|  tryref:: account.menu_reconcile/complete_name
-.. |menu_move_line_form|  tryref:: account_payment.menu_move_line_form/complete_name
-
+   contables que tengan marcado el campo coniciliar.
 
 Consulta planes contables
 --------------------------
 
 En cualquier momento podemos consultar el estado de nuestro plan contable
-accediendo a |menu_open_chart| y viendo los saldos totales o concretos de. Se
+accediendo a abrir planes contables y viendo los saldos totales o concretos de. Se
 nos abrirá un asistente donde deberemos indicar el ejercicio fiscal del plan
 contable que queremos consultar y, tras clicar en *Abrir* accederemos al plan
 contable (o planes si tenemos más de uno para el ejercicio fiscal). Desde esta
@@ -563,11 +545,8 @@ haciendo doble clic sobre ellas.
 
 Además, también podemos consultar el *Plan de código de impuestos* para saber
 la cantidad de impuestos soportados y devengados. Para ello accederemos a
-|menu_cimp| y en el asistente que se nos abrirá seleccionaremos el/los
+abir plan de código de impuestos  y en el asistente que se nos abrirá seleccionaremos el/los
 periodo/s sobre los que queramos realizar la consulta.
-
-.. |menu_open_chart|  tryref:: account.menu_open_chart/complete_name
-.. |menu_cimp| tryref:: account.menu_code_tax_open_chart/complete_name
 
 -------------------------------
 Cierre de la actividad contable

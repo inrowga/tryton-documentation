@@ -25,10 +25,8 @@ Tasas de cambio
 ===============
 
 En la pestaña *Tasa de cambio* podremos reflejar los valores del cambio y sus variaciones a lo largo
-del tiempo. Para ello debemos clicar en el botón *Nuevo* dentro de |rate| y nos aparecerá
+del tiempo. Para ello debemos clicar en el botón *Nuevo* dentro de tarifa y nos aparecerá
 una ventana flotante donde podremos introducir la fecha del cambio y la tasa de cambio.
-
-
 Para calcular la tasa de cambio actual, el programa siempre utilizará la tasa de cambio cuya fecha
 sea más próxima a la actual, de tal forma que si la tasa de cambio del dolar respecto al euro el
 01.09.2014 estaba en *1,3128* e introducimos esta información, el sistema realizará la  conversión

@@ -2,8 +2,6 @@
 Empresas
 ========
 
-.. inheritref:: company/company:section:gestion_de_empresas
-
 Empresas
 --------
 
@@ -12,6 +10,16 @@ La empresa es nuestra compañía. Los procedimientos a seguir para crearla son:
 * Abre el menú empresa  y crea una nueva empresa.
 * Selecciona el tercero y la moneda.
 
+Tiempo de trabajo en la empresa
+-------------------------------
+
+A la empresa podrá definir el tiempo de trabajo por defecto:
+
+
+* Horas por día de trabajo
+* Horas por semana de trabajo
+* Horas por mes de trabajo
+* Horas por año de trabajo
 
 Multicompañía
 -------------

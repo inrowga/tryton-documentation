@@ -13,7 +13,7 @@ producto para poder gestionar su amortización. Así, como luego veremos,
 cuando creemos el plan de amortización, sólo podremos seleccionar aquellos
 productos de tipo activo que hayan sido marcados como amortizable.
 
-Una vez tengamos el producto ya creado, deberemos ir al menú |menu_asset|.
+Una vez tengamos el producto ya creado, deberemos ir al menú amortizacion contable.
 Una vez dentro tendremos una vista de todos los planes de amortización
 según su estado (*Borrador*: Planes que todavía no están confirmados; *En ejecución*:
 Activos cuyas amortizaciones se están llevando a cabo; *Cerrado*: Activos ya
@@ -83,7 +83,7 @@ Una vez creadas las líneas sobre del plan de amortización podemos empezar a pr
 la amortización. Este proceso consiste en asentar las líneas que ya han vencido
 generando los apuntes correspondientes a cada línea.
 
-Para ello accederemos al menú |menu_create_moves| y se nos abrirá un asistente donde
+Para ello accederemos al menú crear movimiento y se nos abrirá un asistente donde
 deberemos indicar hasta que fecha queremos que se procese la amortización.
 Los apuntes que se generen se crearán en estado confirmado. Podemos consultar los
 apuntes creados en las líneas de las amortizaciones.
@@ -129,7 +129,7 @@ Venta de activos
 
 Una vez iniciada la amortización del activo puede ser que tengamos la necesidad o
 la oportunidad de venderlo. Para ello accedemos al menú *facturas* por medio de la
-ruta: |invoice_menu| y generamos una nueva factura clicando en el botón *Nuevo*.
+ruta: facturas y generamos una nueva factura clicando en el botón *Nuevo*.
 Se nos abrirá la ficha de edición de factura y deberemos rellenar los
 campos obligatorios (tercero, diario, plazo de pago y
 moneda) e indicar en las lineas de la factura el activo que queremos

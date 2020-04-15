@@ -5,8 +5,6 @@ Banca
 En el menu banca podrás gestionar los bancos y números bancarios de 
 los terceros.
 
-.. inheritref:: bank/bank:section:cuenta
-
 Cuenta
 ======
 

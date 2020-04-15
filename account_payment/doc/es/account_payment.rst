@@ -36,7 +36,7 @@ Listar efectos pendientes de cobro o pago
 
 Cuando se confirma un asiento, ya sea porque lo introducimos manualmente o
 porque se genera a partir de una factura, se crea a su vez en el sistema un
-efecto. Si accedemos a |menu_efects| podremos ver listados todos los efectos
+efecto. Si accedemos al menu efectos podremos ver listados todos los efectos
 que tenemos pendientes de pagar y cobrar separados por pestañas. Además también
 tenemos las pestañas *A pagar con apuntes inversos* y *A cobrar con apuntes
 inversos* dónde encontraremos listados los efectos los cuales teniendo el mismo

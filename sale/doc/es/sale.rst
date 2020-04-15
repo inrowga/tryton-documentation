@@ -9,8 +9,6 @@ mismo documento que irá cambiando de estado según vaya avanzando el proceso de
 la venta. En primer lugar veremos como crear una venta nueva y posteriormente
 profundizaremos en los distintos estados en los que podemos encontrar la venta.
 
-.. inheritref:: sale/sale:section:venta
-
 Crear una nueva venta
 =====================
 
@@ -26,8 +24,6 @@ detallada. Si lo que queremos es crear una venta nueva deberemos clicar sobre
 el icono *Nuevo* y se nos abrirá el formulario de edición con los campos que
 deberemos rellenar para crear la venta.
 
-.. |menu_sale| tryref:: sale.menu_sale_form/complete_name
-
 .. view:: sale.sale_view_form
    :field: party
 
@@ -41,7 +37,13 @@ el tercero se rellenarán automáticamente los campos dirección de facturación
 dirección de facturación con la información que tengamos en la ficha del tercero,
 pudiéndolos modificar si lo deseamos.
 
-.. inheritref:: sale/sale:paragraph:campos_venta
+Además, para calcular el precio del coste de envío, deberemos indicar el
+transportitsta que realizará la entrega y el método de coste envío en la pestaña
+**Información adicional**. En el momento de seleccionar un transportista también se
+generará una nueva línea en el pedido de venta con el coste y producto del
+envío. Cada vez que cambie una línea (ya sea el producto, precio o cantidad)
+esta línea se generará de nuevo. En el caso que sea un pedido que ya se haya
+guardado, se eliminará la línea creando una de nueva.
 
 En la pestaña **Venta** podremos indicar la fecha venta, el almacén  desde
 donde se realiza la venta, la moneda y el palzo de pago. Estos dos últimos
@@ -111,7 +113,6 @@ En el campo método de envio podremos elegir entre:
 Como se indica en el apartado :ref:`Configuración<sale-configuration>`, podemos
 configurar los métodos por defecto que se mostrarán en las ventas.
 
-.. inheritref:: sale/sale:paragraph:documents_lines
 
 Desde las pestañas **Facturas** y **Albaranes** podremos acceder a la
 información sobre los envíos y facturación de la venta. Una vez se generen los
@@ -120,7 +121,14 @@ acceder a la información concreta de cada documento. En :ref:`venta-estados-fac
 se indica en qué estados nos podemos encontrar estos dos documentos.
 
 
-.. inheritref:: sale/sale:section:estados
+Envios directos
+===============
+
+.. toctree::
+   :maxdepth: 2
+
+   ../../../sale_supply_drop_shipment/doc/es/sale_supply_drop_shipment
+
 
 Flujo de ventas
 ===============
@@ -160,8 +168,6 @@ tener presente que una vez confirmada la venta, no la podremos cancelar ni
 podremos hacer que esta pase a un estado anterior. Podremos dejar la venta en
 estado **Confirmado** hasta el momento en el que comencemos a procesar la
 venta, cuando le deberemos dar al botón *Procesar* para cambiar su estado.
-
-.. inheritref:: sale/sale:paragraph:process_lines
 
 Con el estado **En proceso** la gestión de la venta pasa al departamento de
 logística o al de producción, por lo que será el último paso que realizaremos
@@ -210,8 +216,6 @@ las facturas y envíos generados por la venta, estos estados pueden ser:
 .. note:: Los albaranes de envío únicamente se generarán si realizamos la venta
    sobre un producto clasificado como *Bien* o como *Activo*, por lo que si la
    venta se realiza sobre un servicio solamente se generarán las facturas.
-
-.. inheritref:: sale/sale:section:devolucion_venta
 
 Devolver o cancelar una venta una vez confirmada
 ================================================
@@ -345,6 +349,14 @@ han generado por medio de la venta a modo de histórico. De ellas, la que hayan
 provocado la excepción estarán en estado *Cancelado* y las que hayamos generado
 de nuevo en el estado concreto en el que se encuentren (*Borrador*, *Validada*
 o *Confirmada*).
+
+
+Iniciativas y oportunidades comerciales
+=======================================
+
+.. toctree::
+
+   ../../../sale_opportunity/doc/es/sale_opportunity
 
 Configuración
 =============

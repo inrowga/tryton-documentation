@@ -1,7 +1,5 @@
 #:after:stock_supply/stock_supply:section:planificacion#
 
-.. inheritref:: stock_supply/stock_supply:section:stock_dias_semana
-
 -----------------------------------------
 Suministro de stock por días de la semana
 -----------------------------------------

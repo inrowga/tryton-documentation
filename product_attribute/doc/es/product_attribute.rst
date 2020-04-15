@@ -11,8 +11,6 @@ variante del producto los campos que desea. Por ejemplo:
 * Grupo: Deportes
 * Atributos: Tipología, Medio, Cardio, ...
 
-.. inheritref:: product_attribute/product_attribute:section:atributos
-
 Atributos
 ---------
 
@@ -36,7 +34,6 @@ Una vez diseñado los campos que desea que estén disponibles en los productos,
 abra el menú atributo para añadir grupos y a cada grupo que campos
 van relacionados.
 
-.. inheritref:: product_attribute/product_attribute:section:producto
 
 Producto
 --------

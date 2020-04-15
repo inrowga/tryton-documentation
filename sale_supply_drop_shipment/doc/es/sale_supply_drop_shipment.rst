@@ -22,7 +22,6 @@ Un envío directo puede estar en uno de los siguientes estados:
 * Realizado: Todos los movimientos de stock están en estado realizado.
 * Cancelado: Todos los movimientos de stock están en estado cancelado.
 
-.. inheritref:: sale_suppply_drop_shipment/sale_suppply_drop_shipment:section:generacion_envios_directos
 
 Generación de envíos directos
 =============================
@@ -37,4 +36,3 @@ de proveedor a cliente (en inglés, drop shipment).
 
 Para acceder a los albaranes de envío directo, accederemos al menú |menu_shipment_drop|.
 
-.. |menu_shipment_drop| tryref:: sale_supply_drop_shipment.menu_shipment_drop_form/complete_name

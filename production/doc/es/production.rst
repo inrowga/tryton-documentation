@@ -10,7 +10,6 @@ Una producción esta definida básicamente por un *producto*, una *lista de
 materiales*, *costes material*, la *localización*, la *cantidad* y los
 *movimientos* de las órdenes de trabajo.
 
-.. inheritref:: production/production:section:producir_materiales
 
 Producir materiales
 ===================
@@ -101,7 +100,6 @@ nos describen como debemos realizar un determinado plato.
 
 .. _production-create-bom:
 
-.. inheritref:: production/production:section:crear_lista_de_materiales
 
 Crear una lista de materiales
 -----------------------------
@@ -150,8 +148,6 @@ los materiales necesarios para realizar la producción.
 
 .. note:: En caso de que tengamos listas de materiales definidas en el
     producto el sistema nos cojera la primera por defecto.
-
-.. inheritref:: production/production:section:configuration
 
 Configuración
 =============

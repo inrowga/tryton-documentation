@@ -19,8 +19,6 @@ este producto: "Camiseta marca X". En caso de que solo tengamos una talla para
 este tipo de camiseta, tendríamos la misma plantilla, pero solo una variante.
 
 
-.. inheritref:: product/product:section:crear-un-producto
-
 Crear un producto nuevo
 =======================
 
@@ -39,14 +37,61 @@ agrupar el producto que estamos creando con otros de similar tipología.
 
    Captura del menú productos
 
-.. inheritref:: product/product:paragraph:compra-venta
-
 Si seleccionamos en el campo tipo la opción *Bienes*, nos aparecerá también
 el campo consumible, que debemos marcar si queremos que no se controle el
 número de existencias de nuestro producto. En caso de dejarlo sin marcar el
 sistema llevará un control de la cantidad que tengamos de este producto.
 
-.. inheritref:: product/product:section:pestanas
+En caso de que queramos que el producto este disponible para las compras,
+debemos marcar el campo comprable. Una vez marcado nos aparecerá una nueva
+pestaña **Proveedores**, dónde podremos definir la comprable, en caso de
+que sea distinta de la UdM por defecto. Ademas podemos definir los
+proveedores que nos subministran este producto, junto con el
+nombre y el codigo propios del Proveedor.
+
+Además, en el campo tiempo de espera se puede informar al sistema del tiempo de
+entrega del producto por cada proveedor.
+
+En caso de que queramos que el producto este disponible para las ventas,
+debemos marcar el campo vendible. Una vez marcado nos aparecerá una nueva
+pestaña **Clientes**, dónde podremos definir la UdM de venta (en caso de que sea
+distinta de la UdM por defecto) y el tiempo de espera.
+
+En la pestaña **Contabilidad** podremos especificar la configuración contable
+del producto, pudiendo especificar los ingresos y los gastos.
+Además podremos indicar también qué impuestos se aplicarán por defecto al
+producto al venderlo, en el campo impuestos, y al comprarlo, en el campo
+impuestos de proveedor. Por ejemplo, podríamos utilizar los siguientes valores para
+estos campos:
+
+* Ingresis: 700000 - Ventas de mercaderías en España.
+* Gastos: 600000 - Compras de mercaderías.
+* Impuestos clientes: IVA 21%
+* Impuesto de proveedor : 21% IVA Soportado (operaciones corrientes)
+
+Para simplificar la configuración contable de los productos, podemos marcar
+los campos de la categoria contable y los impuestos para que se le aplique
+al producto los igresoss|, los gastos, los impuestos de cliente y
+los impuestos de proveedor definidos en la categoria del producto que hayamos
+seleccionado en la pestaña anterior. En :ref:`cat-productos` podemos ver
+como configurar la contabilidad de las categorías.
+
+Para indicar que un producto determinado debe tener asignado obligatoriamente
+un lote, debemos ir a la pestaña  **Lotes** y seleccionar los tipos de
+ubicaciones en que queremos que este lote sea obligatorio.
+
+.. figure:: images/required-lot.png
+
+Esto hará que cuando se procese un movimiento de existencias de este producto
+sea obligatorio un lote especificar un lote si el producto se esta recibiendo
+o enviando desde una ubicación de los tipos seleccionados. Por ejemplo, en la
+imagen anterior, el lote será obligatorio cuando hagamos una recepción de
+proveedor, una devolución al mismo, un envío a cliente o una devolución de
+cliente, ya que todos estos movimientos pasan por una ubicación de tipo
+Proveedor o Cliente. Además, el lote no será obligatorio para los movimientos
+internos en nuestro almacén, ya que no hemos marcado ni Almacenamiento ni
+Producción, ni tampoco para los Inventarios, ya que tampoco hemos marcado
+la opción Perdido/Encontrado.
 
 Cálculo del precio de coste
 ---------------------------
@@ -54,7 +99,16 @@ Cálculo del precio de coste
 En el campo metodo de coste indicaremos como se va a calcular el
 precio de coste de cada producto. Podemos elegir entre varios posibles métodos:
 
-.. inheritref:: product/product:bullet_list:cost_price_method_options
+* **FIFO**: Con esta opción, el precio de coste se actualiza de la misma forma
+  que con la opción de Método de coste Promedio cuando el producto se compra o
+  produce. Lo que aporta esta opción es que, cuando se mueven cantidades de
+  este producto fuera de nuestro almacén (las enviamos a un cliente, a la
+  ubicación de Perdido/encontrado al hacer un inventario o las usamos en una
+  producción), el precio de coste del producto también se actualiza restándole,
+  de forma ponderada, el coste de la cantidad enviada. Para calcular el coste
+  de estas unidades se asume que el primero que entra es el primero que sale
+  (FIFO en sus siglas en inglés) para ir a buscar el precio de compra de las
+  primeras unidades que aún no se han gastado.
 
 * **Fijo**: Se establece el valor manualmente en la ficha de producto y éste no
   se actualiza automáticamente bajo ninguna circunstancia.
@@ -72,8 +126,6 @@ precio de coste de cada producto. Podemos elegir entre varios posibles métodos:
    sistema que las unidades de este producto que hay en nuestro almacén tienen
    el precio de coste unitario que indicamos y la próxima vez que se recalcule
    se tomará de base este precio de coste.
-
-.. inheritref:: product/product:section:crear-variantes
 
 Crear variantes
 ---------------
@@ -99,7 +151,64 @@ variante e indicar también, si queremos, su descripción y su código.
    anterioridad nos resultará más practico crear la variante desde
    producto.
 
-.. inheritref:: product/product:section:relacionado_con_los_productos
+Historial de costes del producto
+--------------------------------
+
+En la o las variantes del producto, a las que podemos acceder des de productos 
+disponemos de un nuevo elemento relacionado a los resultados de la búsqueda: 
+Historial de costes.
+
+Al seleccionar esta opción, dispondremos de una nueva ventana con todo el historial
+de la variante (producto), con las fechas y el precio de coste en cada fecha, si 
+hay más de una. Así mismo el sistema, al canviar la vista del historial de costes 
+nos mostrará un gráfico del historial de estos costes. 
+
+.. |menu_product| tryref:: product.menu_product/complete_name
+
+.. _product-para-amortizacion-de-activos:
+
+Crear un producto para la amortización de activos
+=================================================
+
+Para poder contabilizar activos y su amortización es necesario definir productos de
+tipo "Activo", por lo que tendremos que crear un nuevo producto indicándole que es
+tipo *Activo* y en la pestaña *Contabilidad* marcar la casilla amortizable.
+Además, también deberemos indicar las siguiente cuentas contables,
+de las cuales las dos primeras son obligatorias:
+
+* Compte:  Es la cuenta que será utilizada por la factura de proveedor
+  para anotar la compra del activo. *Como por ejemplo la cuenta 213000 -
+  Maquinaria.*
+
+* Amortizable: Es la cuenta donde se anota la depreciación del activo
+  en el haber, y el gasto en el debe de la cuenta de gastos. *Como por ejemplo la
+  cuenta 281300 - Amortización acumulada de maquinaria*.
+
+* Ingressos del compte: Se utilizará para reflejar los posibles ingresos generados
+  por la venta del activo (en función de la depreciación ya realizada y el precio de
+  venta).
+  *Como por ejemplo la cuenta 771000 - Beneficios procedentes del inmovilizado
+  material*.
+
+* Perdidas:  Se utilizará para reflejar las posibles pérdidas generados por
+  la venta del activo (en función de la depreciación ya realizada y el precio de
+  venta). *Como por ejemplo la cuenta 681000 - Amortización del inmovilizado
+  material.*
+
+
+Si sabemos el número de meses en que se consideran cómo amortizados los
+activos, lo podemos indicar en el campo durada de la amortizacion.
+
+El producto sirve solamente de plantilla y para que el sistema pueda obtener en qué
+cuentas contables debe realizar los apuntes. No es necesario, por tanto, crear un
+nuevo producto para  cada ítem que queramos amortizar, solamente lo tendremos que
+hacer si queremos cambiar alguna de las cuentas que intervienen en la compra,
+amortización o venta.
+
+Por ejemplo, podemos tener un sólo producto *Vehículo* y disponer de varios
+vehículos a amortizar en la empresa, siempre y cuando deseemos que todos utilicen
+la misma cuenta de activo, de amortización, de gastos y de ingresos (en caso que
+lo vendamos).
 
 Trabajar con productos en multicompañía
 ---------------------------------------
@@ -118,8 +227,8 @@ que le haya indicado al sistema.
 A continuación detallamos los campos que no son comunes entre las distintas
 empresas que podamos tener:
 
-.. inheritref:: product/product:bullet_list:multicompany_fields
-
+* Ingresos
+* Gastos
 * Precio de venta
 * Precio de coste
 * Método de coste
@@ -159,9 +268,16 @@ en más categorías.
 
   Captura de pantalla del formulario de la categoria del producto
 
+Desde la pestaña **contabilidad** podremos indicar la cuenta de ingresos y
+la cuenta de gasto, así como los impuestos de proveedor y los
+impuestode clientes por defecto que se utilizarán en la categoria. De esta
+forma, cuando configuremos un producto podremos indicarle que utilice las
+cuentas e impuestos por defecto de la categoría a la que pertenece, y
+simplificar así nuestra tarea. En caso de que en el producto se indiquen unas
+cuentas o unos impuestos distintos a los de la categoría a la que pertenece,
+los indicados en la categoría del producto no tendrán efecto.
 
-.. inheritref:: product/product:section:unidades_de_medida
-#Revisar
+
 Unidades de medida
 ==================
 Podemos configurar las unidades de medida que utilizaremos para gestionar
@@ -177,53 +293,24 @@ unidad. Los campos que deberemos rellenar son:
 * Símbolo: Símbolo que se utiliza para designar a la unidad.
 * Categoía: Agrupa las distintas unidades por tipologías, podemos
   gestionar las categorías de las unidades de medida desde unidades de medida.
-* |factor_uom| y |rate_uom|: Estos campos definen en las unidades de medida
+* factor y converción: Estos campos definen en las unidades de medida
   la relación existente entre una unidad y la considerada *base* o *estándar*.
   Por ejemplo si trabajamos con unidades de longitud, aunque tomemos como
   unidad de medida el metro, también podemos utilizar múltiplos y submúltiplos
   de dicha unidad cuando no sea cómodo trabajar en metros. Se definen de esta
   forma los decámetros, hectómetros o kilómetros como múltiplos del metro, o
   los decímetros, centímetros o milímetros como sus submúltiplos. El campo
-  |factor_uom| define la relación que guarda estos múltiplos o  submúltiplos
-  con su unidad fundamental y el campo |rate_uom| la relación inversa. De esta
-  forma, el centímetro tendría un |factor_uom| de 0,01 y una |rate_uom| de 100,
-  o el kilómetro tendría un |factor_uom| de 1000, y un |rate_uom| de 0,001. En
+  factor define la relación que guarda estos múltiplos o  submúltiplos
+  con su unidad fundamental y el campo converción la relación inversa. De esta
+  forma, el centímetro tendría un factor de 0,01 y una converción de 100,
+  o el kilómetro tendría un factor de 1000, y un converción de 0,001. En
   caso del metro, así como de todas las unidades base, el valor de ambos campos
   será 1.
-* |rounding_uom|:Aquí indicaremos qué tipo de redondeo y que precisión queremos
+* Precisión de redondeo:Aquí indicaremos qué tipo de redondeo y que precisión queremos
   que se lleve a cabo con la Unidad de medida. Por ejemplo, podemos indica que
   se redondee el segundo decimal de uno en uno (introduciendo un valor de
   0,01), o que se redondee el tercer decimal de 5 en 5 (modificando el valor a
-  0,005 e indicando en |digits_uom| un valor de 3).
-* |active_uom|: Permite desactivar el registro sin borrarlo para aquellas
+  0,005 e indicando en decimales a mostrar un valor de 3).
+* Activable: Permite desactivar el registro sin borrarlo para aquellas
   unidades con las que no vayamos a trabajar.
 
-.. |menu_template| tryref:: product.menu_template/complete_name
-.. |menu_prod| tryref:: product.menu_product/complete_name
-.. |name| field:: product.template/name
-.. |menu_product_categories| tryref:: product.menu_category_tree/complete_name
-.. |type| field:: product.template/type
-.. |consumable| field:: product.template/consumable
-.. |categories| field:: product.template/categories
-.. |list_price| field:: product.template/list_price
-.. |cost_price| field:: product.template/cost_price
-.. |cost_price_method| field:: product.template/cost_price_method
-.. |default_uom| field:: product.template/default_uom
-.. |active| field:: product.template/active
-.. |products| field:: product.template/products
-.. |code| field:: product.product/code
-.. |description| field:: product.product/description
-.. |template| field:: product.product/template
-.. |cat_name| field:: product.category/name
-.. |cat_parent| field:: product.category/parent
-.. |cat_childs| field:: product.category/childs
-.. |menu_uom| tryref:: product.menu_uom_form/complete_name
-.. |name_uom| field:: product.uom/name
-.. |symbol_uom| field:: product.uom/symbol
-.. |category_uom| field:: product.uom/category
-.. |menu_cat_uom| tryref:: product.menu_uom_category_form/complete_name
-.. |factor_uom| field:: product.uom/factor
-.. |rate_uom| field:: product.uom/rate
-.. |rounding_uom| field:: product.uom/rounding
-.. |digits_uom| field:: product.uom/digits
-.. |active_uom| field:: product.uom/active

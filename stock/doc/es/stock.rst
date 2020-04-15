@@ -22,7 +22,10 @@ desaparezca sin más de su ubicación, en vez de esto, realiza un movimiento de
 stock hacia una ubicación virtual configurada a tal efecto. De esta forma se
 puede llevar un control más eficiente de nuestros materiales.
 
-.. inheritref:: stock/stock:paragraph:ubicaciones-internas
+De la misma manera, cuando realicemos una producción, los materiales producidos
+no se generarán de nuevo en nuestro almacén, sino que el sistema realizará un 
+movimiento de stock desde la ubicación virtual "producción" hacia nuestro 
+almacén.
 
 Ejemplificando lo anteriormente descrito, si realizamos una compra, en vez
 de aparecer de la nada en nuestro almacén, el sistema realizará un
@@ -37,8 +40,6 @@ movimiento de stock desde nuestro almacén hasta la ubicación
 inventariado, el registro de este nuevo material se realizará con un
 movimiento de la ubicación *perdido/encontrado* hacia nuestro almacén.
 
-
-.. inheritref:: stock/stock:section:recepcion_mercaderia
 
 Recepción de mercancía
 ======================
@@ -68,6 +69,7 @@ Deberemos tener en cuenta también que el abarán tendrá un estado distinto
 dependiendo del punto en el que se encuentre la recepción del material. A
 continuación veremos como crear un nuevo albarán de proveedor y dividiremos el
 proceso según el estado en el que se pueda encontrar el albarán:
+
 
 **Borrador**: Siempre que generemos un albarán este se creará en estado
 borrador. Para ello deberemos acceder por medio |menu_shipment_in_form| e
@@ -122,8 +124,6 @@ botón *Borrador*.
 
 Devolución de mercancía recibida
 --------------------------------
-
-.. inheritref:: stock/stock:paragraph:crear_devolucion_mercancia_recibida
 
 Para devolver una mercancía que hemos recibido debemos crear un albarán de
 devolución de proveedor desde la opción |menu_shipment_in_return_form|.
@@ -209,7 +209,11 @@ proceso según el estado en el que se pueda encontrar el albarán:
 de la cabecera indicando el cliente, la fecha estimada y el
 almacén para poder indicar seguidamente los moviminetos de salida.
 
-.. inheritref:: stock/stock:paragraph:albaranes_espera
+En este estado se generarán también los albaranes derivados de una venta
+(siempre que se venda algún producto de tipo *Bienes*). Estos albaranes
+contendrán en los movimientos de salida todos los movimientos generados por la
+venta y en los movimientos de inventario los movimientos necesarios para
+satisfacer los movimientos de salida.
 
 **En espera**: Cuando el abarán pase a este estado, se generarán los
 movimientos de inventario en estado *Borrador* para satisfacer los movimientos
@@ -244,7 +248,30 @@ de esta por parte del cliente o el transportista.
 realizado con el botón *Realizado* para indicar que los productos han sido
 enviados al cliente y por lo tanto ya no disponemos de ellos.
 
-.. inheritref:: stock/stock:section:cancelar
+Entregas parciales
+~~~~~~~~~~~~~~~~~~
+
+Para que las entregas parciales funcionen correctamente los albaranes de
+cliente deben haber sido creados a través de una venta, ya que a través de la
+misma el sistema podrá saber cuales son las cantidades de cada producto que
+todavía están pendientes de enviar.
+
+En caso de que no haya suficiente stock de algún producto, podemos hacer una
+entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de
+las líneas de inventario. Una vez eliminadas, podemos reservar el albarán ya
+que todos los movimientos estarán reservados. Cuando se realice el envío se
+actualizarán las cantidades de los movimientos de salida, reflejando las
+cantidades realmente asignadas.
+
+Una vez realizado el albarán, se generará un nuevo albarán en estado En espera
+con los movimientos pendientes de realizar. Podremos ver todos los movimientos
+y albaranes generados desde la pestaña Albaranes de la venta relacionada, tal
+como se muestra a continuación:
+
+.. figure:: images/shipments-from-sale.png
+
+Desde allí podemos ver los movimientos pendientes, aquellos con estado Borrador,
+junto con los albaranes pendientes, aquellos con estado En espera.
 
 Albaranes creados desde ventas
 ------------------------------
@@ -302,8 +329,6 @@ deben haber sido creados a travès de una venta, ya que a través de la misma el
 sistema podrá saber cuales son las cantidades de cada producto que todavía estàn
 pendientes de enviar.
 
-.. inheritref:: stock/stock:paragraph:eliminacion_lineas_no_entregadas
-
 En caso de que no haya suficiente stock de algún producto, podemos hacer una
 entrega parcial. Para ello, debemos eliminar las líneas en estado borrador de
 las líneas de inventario. Una vez eliminadas, podemos reservar el albarán ya que
@@ -328,7 +353,10 @@ albarán implica cancelar todos los movimientos (tanto los de inventario como
 los de salida) que están en estado borrador o reservado. Los movimientos que
 ya están realizados no se pueden cancelar.
 
-.. inheritref:: stock/stock:paragraph:exception
+En cambio, si cancelamos un albarán que procede de una venta, se generará una
+*Excepción en el envío* y la gestión pasará al departamento de ventas, por lo
+que el sistema no nos dejará volverlo a pasar a *Borrador*. Podemos ver cómo
+gestionar las excepciones en el envío desde :ref:`sale-exceptions`.
 
 Una vez cancelado un albarán este puede volver a estado borrador utilizando el
 botón *Borrador*.
@@ -364,7 +392,6 @@ recibida y almacenada en su lugar definitivo. El sistema realiza los
 moviminetos internos desde la ubicación configurada como *Zona de
 entrada* hasta la configurada como *Zona de almacenamiento*.
 
-.. inheritref:: stock/stock:section:mover-mercaderia-entre-ubicaciones
 
 Movimientos internos de stock
 =============================
@@ -417,7 +444,113 @@ botón *Realizar* para finalizar el movimiento interno. Con este estado
 indicamos al sistema que la mercancía ha sido recibida y almacenada en su nueva
 ubicación.
 
-.. inheritref:: stock/stock:section:movimientos
+Contabilizar estocs
+-------------------
+
+Para poder mantener en la contabilidad el reflejo del valor de los estocs en 
+tiempo real el usuario deberá: 
+
+1. Habilitar la opción para poder realizar la contabilización de este en el 
+    menú ejercicios fiscales, en la pestaña "Contabilización del stock", 
+    seleccionando la opción *Continental*. 
+ 
+2. Introducir en los productos, mejor en las categorías, las cuentas 
+    contables que hace falta usar. En los apartados relacionados con el estoc.
+     
+3. Configurar la cuenta contable dónde se contabilizarán las actualizaciones 
+    del precio de coste de la ficha del producto (si se quieren hacer).
+     
+A partir de estos pasos, por cada movimiento de estoc el programa hará un 
+asiento de la siguiente forma:
+
+1. Un apunte tendrá siempre la cuenta que hayamos introducido en el campo 
+   "Cuenta de estoc" de la categoría de producto (o del producto). Si es un 
+   movimiento de venta a esta cuenta irá en el haber porque resta valor a 
+   nuestro estoc. Si es uno de proveedor (compra) irá a la cuenta en el debe 
+   porque incrementa el valor del estoc. 
+ 
+2. El otro apunte tendrá la cuenta contable de uno de los campos "Cuenta de 
+   estoc cliente", "Cuenta de estoc proveedor", "Cuenta de estoc producción", 
+   "Cuenta de estoc perdido/encontrado", según el tipo de movimiento de estoc 
+   que se esté haciendo en cada momento. 
+
+Las cuentas contables a elegir las puede decir el usuario o consultar con su 
+gestoria, pero si simplemente se quiere tener un reflejo detallado en una 
+cuenta, podemos utilizar la 300000 como "Cuenta de estoc" y usar la 610000 o la 
+710000 para proveedores, producción, clientes e inventario. Hay que tener en 
+cuenta que el valor de perdido/encontrado no tener diferentes cuentas segon si 
+son pérdidas o ganancias; aunque el valor final en la 300000 seguirá siendo 
+correcto. 
+
+**Diferentes cuentas para diferentes productos**
+
+Podemos tener diferentes cuentas 300x para diferenciar el valor del estoc de 
+los productos de cada categoría de manera que sea sencillo clasificar y 
+control estas cantidades en el balance. 
+
+.. note:: las cuentas que se quieran utilizar en los campos nombrados 
+          anteriormente deberán tener seleccionada la clase "Estoc".
+
+.. important:: si se quiere utilizar una cuenta 610000, por ejemplo, 
+               recomendamos que se cree la cuenta 610001 para evitar problemas 
+               futuros con actualizaciones del plan contable.
+
+Albaranes y lotes
+=================
+
+.. toctree::
+   :maxdepth: 2
+
+   ../../../stock_lot/doc/es/stock_lot
+
+Abastecimientos de stock
+========================
+
+.. toctree::
+   :maxdepth: 2
+
+   ../../../stock_supply/doc/es/stock_supply
+
+-----------------
+Dividir albaranes
+-----------------
+
+A las líneas de albarán dispone de un asistente que permite dividir las lineas del
+albarán. Debe especificar las cantidad a dividir y ese albarán se dividirá en dos.
+
+Si se rellena el campo contador, sólo se dividirá ese número de veces. Puede
+crearse una línea con la cantidad restante.
+
+------------------
+Previsión de stock
+------------------
+
+Proporciona el modelo de **Previsión** en la gestión de inventarios.
+
+El formulario de previsión permite definir los movimientos de stock previstos
+hacia los clientes en cualquier período de tiempo en el futuro.
+
+Un asistente permite calcular las cantidades previstas respecto a un período en
+el pasado. Una vez el formulario se confirma, los movimientos correspondientes
+se crean y se distribuyen homogéneamente a lo largo del período.
+
+Dichos movimientos permitirá a otros procesos tener en cuenta las previsiones.
+
+En caso que queramos buscar los terceros de un determinado lote debemos
+incluir el lote en el filtro de movimientos.
+
+--------------
+Coste de envío
+--------------
+
+Los albaranes de entrada dispondrá de la información del coste de envío.
+
+-----------------------------------
+Inventario de stock por ubicaciones
+-----------------------------------
+
+Añade un asistente que permite crear inventarios automáticos para una lista
+dada de ubicaciones.
 
 Consultar movimientos de stock
 ==============================
@@ -440,7 +573,6 @@ estan en estado borrador. En el momento que se genera el albarán de esta
 compra, aunque el estado del albarán sea en borrador, los movimientos de la
 pestaña desaparecerán y solo los tendremos en la pestaña "Desde proveedor".
 
-.. inheritref:: stock/stock:paragraph:averiguar-terceros-movimiento
 
 Para averiguar los terceros a los que hemos recibido o mandado un
 producto debemos realizar un filtro poniendo en el campo producto el
@@ -459,7 +591,6 @@ Consultar la cantidad de un producto
 A la hora de consultar la cantidad de productos que tenemos almacenados,
 **Tryton** nos provee de varias opciones:
 
-.. inheritref:: stock/stock:bullet_list:product-quantity
 
 * **Producto por ubicaciones**: Permite consultar la cantidad disponible de
   un producto para cada ubicación de la empresa.
@@ -467,15 +598,13 @@ A la hora de consultar la cantidad de productos que tenemos almacenados,
   productos disponibles en una ubicación.
 
 El listado de producto por ubicaciones lo podremos abrir desde la opción
-|menu_product_form|, seleccionando el producto del que queremos saber las
+formulario del producto, seleccionando el producto del que queremos saber las
 cantidades, y abriendo la opción **Producto por ubicaciones** que encontraremos
 en la Flecha verde de la barra de acciones.
 
 Para conocer los **Productos en ubicación** debemos abrir el listado de
-ubicaciones que encontraremos en |menu_location_tree| y hacer doble clic sobre
+ubicaciones que encontraremos en localización y hacer doble clic sobre
 la ubicación que deseamos.
-
-.. inheritref:: stock/stock:paragraph:product-quantity
 
 Una vez accedamos a cualquiera de ellas, se nos abrirá un asistente en el que
 deberemos indicar sobre qué día queremos hacer la consulta de stock (**Tryton**
@@ -512,7 +641,7 @@ almacenados para validar que la información del sistema se corresponde con la
 realidad, ya que tras una temporada de gestión puede ser que las existencias
 que nos indica el sistema que tenemos y las que realmente tenemos no coincidan.
 Para regularizar estos desajustes tenemos los *Inventarios*, a los cuales se
-accede por medio de |menu_inventory_form|.
+accede por medio del formulario del inventario.
 
 .. view:: stock.inventory_view_form
    :field: location
@@ -524,96 +653,3 @@ material (para saber como funcionan estas ubicaciones podemos acceder a la
 introducción de la sección :ref:`intro-logística`), y la data a la que
 se corresponde. Una vez indicados los parámetros generales, deberemos clicar en
 el botón *Inventario completo* y se nos rellenarán las lineas con los productos
-y existencias que el sistema indica que tiene en la ubicación  indicada. En
-cada una de las líneas generadas podremos ver la cantidad que
-indica la cantidad que el sistema cree que tiene, y la cantidad, que
-podremos modificar con el número de existencias de nuestro recuento. Hay que
-tener en cuenta que al clicar sobre *Inventario completo* el sistema no creará
-líneas por los productos para los cuales no tiene existencias informadas. Para
-añadir nuevos productos en el inventario, simplemente tendremos que generar una
-línea nueva desde el botón *Nuevo* del campo linias. Cuando hayamos
-finalizado, utilizaremos el botón Confirmar, para regularizar las existencias.
-
-Cuando confirmemos el inventario, **Tryton** se encargará de realizar los
-movimientos necesarios para regularizar las cantidades, cogiendo cómo ubicación
-de origen o destino la que hayamos seleccionado en el campo existencias.
-
-.. Note::
-   Si queremos indicar algún producto nuevo o sin existencias en el almacén
-   según el sistema, podemos indicarlo añadiendo directamente la línea en el
-   campo líneas. En caso de regularizar solo existencias de productos
-   nuevos o sin existencias según el sistema, no es necesario clicar
-   previamente en el botón *Inventario completo*.
-
-Un inventario puede estar en alguno de los siguientes estados:
-
-* **Borrador**: Estado inicial en que se introducen las cantidades.
-* **Realizado**: Se ha finalizado el inventario y las existencias han sido
-  regularizadas.
-* **Cancelado**: El inventario ha sido cancelado.
-
-.. |menu_inventory_form| tryref:: stock.menu_inventory_form/complete_name
-
-.. inheritref:: stock/stock:section:configuracion
-
-Configuración
-=============
-
-Desde el menú |menu_configuration| podremos configurar algunos aspectos del
-funcionamiento de la sección *Logística*. Podremos indicar las secuencias que
-deberán seguir las distintas tipologías de albaranes desde |menu_conf_stock|
-y desde |menu_conf_location| podremos configurar las ubicaciones de nuestra
-empresa.
-
-.. |menu_configuration| tryref:: stock.menu_configuration/complete_name
-.. |menu_conf_stock| tryref:: stock.menu_stock_configuration/complete_name
-
-.. inheritref:: stock/stock:section:location_configuration
-
-Configurar las ubicaciones de nuestra empresa
----------------------------------------------
-
-Las ubicaciones nos permitirán especificar los almacenes y lugares físicos o
-virtuales de nuestros productos. Como ya hemos indicado, para acceder a este
-menú lo haremos por medio de |menu_conf_location| y se nos abrirá un listado
-con las ubicaciones por defecto del sistema, podemos modificarlas o crear otras
-nuevas. Si creamos una ubicación nueva, se nos abrirá el formulario de edición
-con los siguientes campos:
-
-* Nombre: En este campo indicaremos el nombre que le daremos a la
-  ubicación.
-* Código: Podemos indicarle también un código que haga referencia a la
-  ubicación.
-* Padre: Si la ubicación que estamos introduciendo se encuentra situada
-  en el interior de otra, en este campo deberemos indicar de qué ubicación
-  depende la nueva que estamos creando.
-* Tipo de ubicacón: Aquí indicaremos la tipología que tendrá la nueva ubicación,
-  pudiendo elegir entre:
-
-    * *Vista*: Estas ubicaciones agrupan diferentes ubicaciones en su interior.
-    * *Proveedor*: Es una ubicación virtual que representa los almacenes de
-      nuestros proveedores.
-    * *Cliente*: Al igual que la ubicación *Proveedor*, se trata de una
-      ubicación virtual que simula los movimientos de stock hacía el cliente.
-    * *Perdido/encontrado*: Es la ubicación virtual que el sistema utiliza
-      para los productos que perdemos o encontramos.
-    * *Producción*: Ubicación virtual que utilizaremos en caso de tener un
-      proceso de producción.
-    * *Interna*: Es la ubicación concreta donde se almacenan (definitiva o
-      temporalmente) nuestra mercancía.
-    * *Almacén*: Representa la ubicación genérica de nuestros almacenes. En su
-      interior alberga varias ubicaciones internas, por eso, al seleccionar
-      esta tipología se nos habilitarán tres nuevos campos:
-
-        * Dirección: En este campo, si lo deseamos, podemos indicar la
-          dirección postal donde se encuentra nuestro almacén.
-        * Entrada y salida: En estos campos
-          deberemos seleccionar las ubicaciones internas que se utilizarán
-          como muelle de carga y de descarga, ya que cuando hagamos un
-          movimiento de stock, el sistema automáticamente realiza el movimiento
-          interno hasta la zona de salida o entrada (dependiendo de la
-          dirección del envío).
-        * Interna: Es la ubicación interna del almacén.
-          Correspondería a la zona de almacenaje dentro del almacén
-          (diferenciándola del muelle de carga y descarga).
-

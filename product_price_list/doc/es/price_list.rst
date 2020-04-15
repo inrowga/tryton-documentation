@@ -2,7 +2,6 @@
 Tarifas de productos
 ====================
 
-.. inheritref:: product_price_list/price_list:paragraph:tarifas
 
 Por defecto el sistema de tarifas usa el campo **unit_price** (precio de venta) y
 a partir de él podemos hacer operaciones.
@@ -17,8 +16,6 @@ del 10% al precio de venta:::
    Diseño de una tarifa de precios en Tryton
 
 También dispone de variables extras para calcular su precio final:
-
-.. inheritref:: product_price_list/price_list:bullet_list:product_price_list
 
 * **product**: Acceder a los campos del producto. Por ejemplo, el precio de coste:
   product.cost_price
@@ -47,8 +44,6 @@ Deberá usar un ID válido.
 .. note:: Las tarifas de venta sólo se aplican a los **pedidos de venta**. Si
           usted crea una **factura** manualmente se le aplicará el **precio de
           venta del producto**.
-
-.. inheritref:: product_price_list/price_list:section:lineas_en_las_tarifas
 
 Lineas en las tarifas
 =====================

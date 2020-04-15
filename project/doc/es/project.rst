@@ -2,8 +2,6 @@
 Proyectos
 =========
 
-.. inheritref:: project/project:section:proyectos
-
 Proyectos
 =========
 
@@ -18,18 +16,14 @@ El módulo de proyectos contiene como base el módulo `partes de trabajo
 <../timesheet/index.html>`_ y todas las funcionalidades de los partes de trabajo
 se ven reflejados en proyectos y tareas de proyecto.
 
-Toda la gestión de proyectos accederemos en el menú principal a: |menu_projects|.
+Toda la gestión de proyectos accederemos en el menú principal a: proyectos.
 
-.. |menu_projects| tryref::  project.menu_project/complete_name
-
-.. inheritref:: project/project:section:proyecto
 
 Proyecto
 ========
 
 Para crear o listar los proyectos accederemos a proyecto.
 
-.. |menu_project| tryref:: project.menu_project_form/complete_name
 
 Una proyecto está compuesta principalmente por **tareas** y **parte de trabajo**.
 

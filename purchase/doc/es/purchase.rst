@@ -11,8 +11,6 @@ el proceso de compra. En primer lugar veremos como crear una compra nueva y
 posteriormente profundizaremos en los distintos estados en los que podemos
 encontrar la compra.
 
-.. inheritref:: purchase/purchase:section:compra
-
 Crear una nueva compra
 ======================
 
@@ -76,7 +74,6 @@ líneas y se nos abrirá un ventana emergente con los siguientes campos:
    información indicada en el producto, si no, deberemos indicar qué impuesto
    gravará la línea de la compra.
 
-.. inheritref:: purchase/purchase:paragraph:generar_albaranes_y_facturas
 
 Si accedemos a la pestaña **Información adicional** podremos indicar en el
 campo método de facturación en qué punto de la compra queremos que se genere la
@@ -96,7 +93,6 @@ Como se indica en el apartado :ref:`Configuración<purchase-configuration>`,
 podemos configurar el método de facturación por defecto que se mostrarán en las
 compras.
 
-.. inheritref:: purchase/purchase:paragraph:la_opcion_de_producto
 
 Desde las pestañas **facturas** y **albaranes** podremos acceder a la
 información sobre las recepciones y facturación de la compra. Una vez se
@@ -104,6 +100,21 @@ generen los albaranes o facturas, nos aparecerán en sus respectivas pestañas y
 podremos acceder a la información concreta de cada documento. En
 :ref:`compra-estados-fac-alb` se indica en qué estados nos podemos encontrar
 estos dos documentos.
+
+------------------------------------
+Añadir líneas pendientes de facturar
+------------------------------------
+
+En sistemas de automatización de facturación se genera facturas a partir de líneas a facturar.
+Esto se muy común por ejemplo en el proceso de contratos de servicios se generen líneas, y
+al fin de mes, se facturen.
+
+Cuando crea un nueva factura, al seleccionar el tercero, en las líneas de la factura, podrá
+seleccionar líneas existentes pendientes de facturar.
+
+.. note:: Sólo podrá seleccionar las líneas de factura del tercero de la factura
+          y que no sean facturadas previamente.
+
 
 Flujo de compras
 ================
@@ -174,7 +185,7 @@ Como hemos comentado anteriormente, desde las pestañas **Facturas** y
 las facturas y envíos que se han generado por la compra, estos estados pueden
 ser:
 
-* EStado de la factura
+* Estado de la factura
 
   * *Ninguno*: Todavía no se ha generado ninguna factura relacionada con esta
     compra.
@@ -237,7 +248,6 @@ Si tenemos que devolver productos a un proveedor podemos crear la compra con
 las cantidades negativas. Esto nos generará el correspondiente albarán de
 devolución y las facturas de abono de proveedor.
 
-.. inheritref:: purchase/purchase:section:excepciones
 
 Excepciones en la compra
 ========================

@@ -1,12 +1,5 @@
 #:after:sale/sale:paragraph:campos_venta#
 
-Además, para calcular el precio del coste de envío, deberemos indicar el
-transportitsta que realizará la entrega y el método de coste envío en la pestaña
-**Información adicional**. En el momento de seleccionar un transportista también se
-generará una nueva línea en el pedido de venta con el coste y producto del
-envío. Cada vez que cambie una línea (ya sea el producto, precio o cantidad)
-esta línea se generará de nuevo. En el caso que sea un pedido que ya se haya
-guardado, se eliminará la línea creando una de nueva.
 
 #:after:sale/sale:section:configuracion#
 
