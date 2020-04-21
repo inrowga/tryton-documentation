@@ -11,7 +11,7 @@ De esta forma es posible definir que un cliente con el que nos comunicamos
 en inglés tenga el formato de fecha mes/día/año, mientras que con los clientes
 que hablan francés el formato sea día/mes/año.
 
-Para cambiar estos parámetros por idioma debemos dirigirnos a |menu_lang|.
+Para cambiar estos parámetros por idioma debemos dirigirnos a Localización.
 Ahí nos aparecerá la lista de idiomas disponibles y podremos entrar en la ficha
 del idioma del cual queremos cambiar el formato.
 
@@ -23,7 +23,7 @@ del idioma del cual queremos cambiar el formato.
 El formato de fecha
 ===================
 
-En el campo |date| podemos elegir el tipo de formato con el que se nos mostrarán
+En el campo fecha podemos elegir el tipo de formato con el que se nos mostrarán
 la fechas para el idioma en concreto. El tipo de formato se tiene que indicar
 por medio de:
 
@@ -81,7 +81,7 @@ El formato de número
 Por otro lado, también es posible definir como se visualizarán e interpretaran
 los números por medio de los siguientes campos:
 
-* |grouping|: indicamos cada cuantos dígitos queremos que se muestre el
+* Agrupación: indicamos cada cuantos dígitos queremos que se muestre el
   separador de **miles**. Vea algunos ejemplos:
 
   * [3, 3, 0] El primer bloque (empezando por la derecha) utilizará 3 dígitos,
@@ -96,12 +96,12 @@ los números por medio de los siguientes campos:
     siguiente cuatro y el resto no mostrarán separador de miles. Por ejemplo:
     123456.7891.23.456,00
 
-* |thousands_sep|: indicamos el símbolo que queremos utilizar como separador.
+* Separador de miles: indicamos el símbolo que queremos utilizar como separador.
   En los ejemplos anteriores hemos utilizado el punto, pero se puede utilizar
   cualquier otro o simplemente dejar el campo sin rellenar para que no se
   utilice ningún símbolo, de tal manera que *mil* se expresaría: 1 000
 
-* |decimal_point|: es equivalente al campo anterior sólo que el símbolo
+* Separador de decimales: es equivalente al campo anterior sólo que el símbolo
   indicado es el que se utilizará para indicar la separación de los decimales,
   en este caso no es posible dejar el campo en blanco.
 
@@ -117,8 +117,3 @@ los números por medio de los siguientes campos:
    caso todos los sistemas suelen interpretar tanto la coma como el punto
    como separador decimal.
 
-.. |menu_lang| tryref:: ir.menu_lang_form/complete_name
-.. |date| field:: ir.lang/date
-.. |grouping| field:: ir.lang/grouping
-.. |thousands_sep| field:: ir.lang/thousands_sep
-.. |decimal_point| field:: ir.lang/decimal_point

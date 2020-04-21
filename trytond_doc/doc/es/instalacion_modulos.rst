@@ -11,7 +11,7 @@ Para instalar cualquier módulo debemos acceder a la aplicación o bien con
 el usuario y contraseña de Administrador o disponer de permisos para realizar 
 esta acción en nuestro usuario. 
 
-En el menú de la aplicación |menu_modulos| encontraremos
+En el menú de la aplicación Módulos encontraremos
 el listado de módulos disponibles, información sobre la versión, si se 
 encuentran o no instalados y dos botones:
 
@@ -44,7 +44,7 @@ Cancelar la instalación
 Para ejecutar la instalación de los módulos seleccionados debemos hacer clic
 sobre el botón ejecutar acción y selecionar *instalaciones/actualizaciones
 pendientes* (esta opción también está disponible en el menú principal en 
-|menu_ejecutar|). Tras ello se nos mostrará una pantalla con todos los módulos 
+ejecutar). Tras ello se nos mostrará una pantalla con todos los módulos 
 a instalar que deberemos confirmar con el botón Inicia actualización. 
 
 La duración del proceso dependerá de la cantidad y la tipología de los módulos 
@@ -55,6 +55,3 @@ Pese a que el sistema actualiza de forma automática el menú principal, es
 aconsejable salir y volver a entrar a la aplicación antes de empezar a trabajar
 con las nuevas funcionalidades.
 
-
-.. |menu_modulos| tryref:: ir.menu_module_form/complete_name
-.. |menu_ejecutar| tryref:: ir.menu_module_install_upgrade/complete_name

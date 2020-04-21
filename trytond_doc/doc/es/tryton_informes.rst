@@ -69,7 +69,7 @@ separados. Si, por ejemplo, deseamos imprimir varias facturas en un único
 fichero (cada factura empezará en una nueva página y el fichero resultante
 contendrá múltiples páginas), hay que configurarlo. 
 
-En la configuración de informes ( |menu_action_report| ) deberemos editar el
+En la configuración de informes  deberemos editar el
 informe para añadirle una acción de teclado relacionado con:
 
 * Modelo. Por ejemplo si el informe es una factura, el modelo será "Factura".
@@ -80,8 +80,6 @@ acción por defecto y la nueva acción que hemos creado:
 
 * Informe de cada registro en ficheros independientes (por defecto).
 * Informe de todos los registros en un sólo fichero (la que hemos creado).
-
-.. |menu_action_report| tryref:: ir.menu_action_report_form/complete_name
 
 --------------------
 Personalizar informe
@@ -94,11 +92,9 @@ para que se le adapte los informes según sus necesidades, tanto a nivel gráfic
 Si el informe está definido en formato ODT se puede modificar siguiendo estos
 pasos:
 
-* En la configuración de informes ( |menu_action_report| ) abrimos el
-  informe a modificar y nos decargamos su contenido desde el campo
-  |report_content|.
+* En la configuración de informes abrimos el informe a modificar y nos
+  decargamos su contenido desde el campo contenido.
 * Editamos el informe con un procesador de textos que pueda leer/escribir los
   formatos ODT.
-* Subimos el fichero ODT modificado al campo |report_content| del informe.
+* Subimos el fichero ODT modificado al campo contenido del informe.
 
-.. |report_content| field:: ir.action.report/report_content
