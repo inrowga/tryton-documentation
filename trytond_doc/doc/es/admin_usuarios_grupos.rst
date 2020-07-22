@@ -72,18 +72,18 @@ campos:
    Campos de la pestaña *Permisos de acceso*
 
 
-* Acceso a menús: Aquí seleccionaremos a qué modelos de los diferentes módulos
+* Acceso a modelos: Aquí seleccionaremos a qué modelos de los diferentes módulos
   se podrá acceder desde el grupo en cuestión. Una vez seleccionado el modelo, podemos
   elegir entre si el grupo tendrá permiso para leer, modificar, crear, y/o eliminar.
 
-* Accesi a campos: Aquí seleccionaremos los campos concretos sobre los que queremos
+* Acceso a campos: Aquí seleccionaremos los campos concretos sobre los que queremos
   modificar los permisos, pudiendo elegir también entre leer, modificar, crear y/o
   eliminar. En caso de que queramos que un determinado grupo tenga acceso a un módulos 
   (por ejemplo módulo ventas) pero no queremos que puedan ver un campo en concreto
   (por ejemplo precio de coste) deberemos seleccionar aquí el campo en cuestión y
   dejar sin seleccionar ninguno de los permisos (Leer, modificar, crear y eliminar).
   
-* Acceso a menús Desde aquí podremos seleccionar o modificar las rutas de acceso
+* Acceso a menús: Desde aquí podremos seleccionar o modificar las rutas de acceso
   que queremos que tenga el grupo (por ejemplo, podemos hacer que el grupo *Contabilidad*
   tenga también acceso al menú *banca*.
   
