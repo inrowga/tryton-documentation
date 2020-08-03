@@ -183,8 +183,8 @@ se habrá completado.
 
 .. _venta-estados-fac-alb:
 
-|invoice_state| y |shipment_state|
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Estado de factura y estado de envio
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Como hemos comentado anteriormente, desde las pestañas **Facturas** y
 **Albaranes** veremos en todo momento el estado en el que se encuentran

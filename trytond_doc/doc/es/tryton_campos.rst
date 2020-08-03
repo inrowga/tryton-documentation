@@ -34,7 +34,7 @@ del cliente.
 Traducción
 ----------
 
-Los campos que contengan una bandera permiten la traducción en varios idiomas.
+Los campos que contengan el símbolo de traducción permiten la traducción en varios idiomas.
 Para traducir un campo, simplemente haz clic en el icono de la bandera y una 
 ventana emergente mostrará el texto en cada idioma.
 
@@ -43,6 +43,11 @@ la caja de texto para rellenar la traducción.
 
 Si un idioma dispone del campo "Revisión" activado, esta traducción no estará
 pendiente hasta que la edite (revise).
+
+Símbolo traducción
+
+
+.. figure:: images/tryton-icon-translate.png
 
 .. figure:: images/tryton-translate.png
 

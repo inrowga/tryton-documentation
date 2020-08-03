@@ -265,7 +265,7 @@ cantidades realmente asignadas.
 
 Una vez realizado el albarán, se generará un nuevo albarán en estado En espera
 con los movimientos pendientes de realizar. Podremos ver todos los movimientos
-y albaranes generados desde la pestaña Albaranes de la venta relacionada, tal
+y albaranes generados desde la accion relacionados de la venta
 como se muestra a continuación:
 
 .. figure:: images/shipments-from-sale.png

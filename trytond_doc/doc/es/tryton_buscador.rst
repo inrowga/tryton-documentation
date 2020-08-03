@@ -102,25 +102,17 @@ Donde:
 ¿Cómo encontrar registros inactivos?
 ------------------------------------
 
-Como se explica en :ref:`desactivar-registros`, los registros pueden ser
+Como se explica en :ref:'desactivar-registros', los registros pueden ser
 desactivados. Para consultar los registros que hayan sido desactivados
-podemos utilizar el filtro activo:
-
-
-.. figure:: images/tryton-buscar-inactivos.png
-   
-   Buscar registros inactivos
-
-
-O directamente escribiendo el siguiente filtro::
-
-    Activo: Falso
-
-Aplicando este filtro veremos todos los registros que hayan sido desactivados.
+tenemos que pulsar el icono archivador que hay en el final de la barra filtro
+como se muestra en la imagen:
 
 .. figure:: images/tryton-resultado-inactivo.png
 
    Resultado de búsqueda de registros inactivos
+
+En caso de que no haya la opción, del archivador quiere decir que el
+registro no se puede desactivar.
 
 
 Filtrar por más de un criterio
