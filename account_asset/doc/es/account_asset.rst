@@ -139,7 +139,7 @@ Para ello clicaremos en el botón *Nuevo registro* en la sección linias  y se n
 una ventana flotante en la que tendremos que elegir en producto el tipo de activo que
 queremos vender. Una vez hecho aparecerá, inmediatamente debajo del producto, el campo
 activo  donde tendremos que seleccionar el activo concreto que queremos vender (en caso
-de querer vender un vehículo por ejemplo, en producto| seleccionaríamos la plantilla
+de querer vender un vehículo por ejemplo, en producto seleccionaríamos la plantilla
 de producto *Vehículo* y en activo el vehículo en cuestión que queremos vender).
 Con la selección del activo en el campo producto  también se nos habrá rellenado
 automáticamente el campo cuenta con la cuenta 77100000 (*Beneficios procedentes

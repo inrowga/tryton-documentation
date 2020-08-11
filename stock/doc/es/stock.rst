@@ -72,7 +72,7 @@ proceso según el estado en el que se pueda encontrar el albarán:
 
 
 **Borrador**: Siempre que generemos un albarán este se creará en estado
-borrador. Para ello deberemos acceder por medio |menu_shipment_in_form| e
+borrador. Para ello deberemos acceder por medio albaranes de proveedor e
 introducir el proveedor y el almecen en la pestaña que se nos
 abrirá. Una vez introducidos estos datos, podremos indicar todos los
 movimientos de entrada, especificando en ellos los productos que estamos
@@ -126,7 +126,7 @@ Devolución de mercancía recibida
 --------------------------------
 
 Para devolver una mercancía que hemos recibido debemos crear un albarán de
-devolución de proveedor desde la opción |menu_shipment_in_return_form|.
+devolución de proveedor desde la opción albaranes de devolución de proveedor.
 Al igual que un albarán de proveedor, un albarán de devolución puede estar
 en varios estados dependiendo del estado en el se se encuentre la devolución
 física del producto:
@@ -185,7 +185,7 @@ De la misma forma que los albaranes de proveedor le indican al sistema cuando
 debe introducir qué producto, los albaranes de cliente funcionan como albaranes
 de salida que le indicarán al sistema cuando dejamos de disponer de un producto
 que se encuentra en nuestros almacenes. Para gestionar estos albaranes deberemos
-acceder al menú |menu_shipment_out_form|.
+acceder al menú albaranes de proveedor.
 
 Antes de ver como crear un nuevo albarán de cliente tenemos que tener claro que
 estos albaranes también están formados por dos tipos de movimiento:
@@ -372,13 +372,13 @@ Recibir devoluciones de mercancía
 
 Para gestionar las devoluciones que nuestros clientes nos puedan hacer de los
 pedidos enviados, deberemos crear un albarán de devolución de mercancía desde
-el menú |menu_shipment_out_return_form|. Estos albaranes cambiarán de estado
+el menú albaranes de devolución de proveedor. Estos albaranes cambiarán de estado
 según el punto en el que se encuentre la devolución:
 
 **Borrador**: Estado inicial en que se introducen los movimientos de los
 productos que nos van a devolver. Una vez abierta la pestaña deberemos
 introducir el client y el almacen. En este
-momento ya podremos introducir todos los movimientos de entrada|, para
+momento ya podremos introducir todos los movimientos de entrada, para
 especificar los productos que estamos recibiendo.
 
 **Recibido**: Al pulsar sobre el botón *Recibido* se realizarán todos los
@@ -399,7 +399,7 @@ Movimientos internos de stock
 Por medio de los albaranes internos podemos gestionar los movimientos de
 mercancía entre nuestras propias ubicaciones. Estos movimientos pueden
 realizarse dentro de un mismo almacén o entre almacenes distintos. Para crear
-uno nuevo accederemos por medio de |menu_shipment_internal_form|. Estos
+uno nuevo accederemos por medio del menu Movimientos. Estos
 albaranes puede estar en alguno de los siguientes estados:
 
 **Borrador**: Estado inicial en que se introducen los movimientos internos.
@@ -557,7 +557,7 @@ Consultar movimientos de stock
 
 Como hemos dicho anteriormente, los albaranes internos, de salida y de entrada
 crean varios tipos de movimiento. Si queremos acceder a consultar los
-movimientos que hemos realizado, lo podemos hacer por medio de |menu_move_form|.
+movimientos que hemos realizado, lo podemos hacer por medio de Movimientos.
 En la pestaña que se nos abrirá nos aparecerán todos los movimientos
 que se han realizado, podremos filtrar por medio de las pestañas y del
 campo de búsqueda en caso de que queramos concretar los registros que se

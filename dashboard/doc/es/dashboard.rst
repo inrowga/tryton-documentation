@@ -20,8 +20,9 @@ Una vez tenemos creadas las acciones que queremos que nos aparezcan en el
 escritorio tenemos que asociarlas a él. De todas las acciones, solo podremos
 seleccionar aquellas que están indicadas como uso *dashboard*. Para ello
 accederemos  al menú de usuario y nos iremos a la pestaña *Escritorio*. Desde
-allí podremos indicar qué |dash_act| queremos que nos aparezcan en el
-*Escritorio* y también la |dash_lay| que queramos que nos presente.
+allí podremos indicar qué acciones del escritorio queremos que nos aparezcan
+en el *Escritorio* y también la organización del escritorio que queramos que
+nos presente.
 
 .. view:: res.user_view_form
    :field: dashboard_layout
@@ -30,10 +31,3 @@ allí podremos indicar qué |dash_act| queremos que nos aparezcan en el
 
 .. Note:: El sistema solo permite tener un escritorio por usuario, por lo que no es
    posible tener varios con diferentes acciones.
-
-.. |act_window| model:: ir.action.act_window
-.. |keyword| model:: ir.action.keyword
-.. |usage| field:: ir.action.act_window/usage
-.. |menu_user| tryref:: res.menu_user_form/complete_name
-.. |dash_act| field:: res.user/dashboard_actions
-.. |dash_lay| field:: res.user/dashboard_layout

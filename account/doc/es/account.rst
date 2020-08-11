@@ -244,7 +244,7 @@ Configurar impuestos
 --------------------
 
 Para crear o modificar el sistema tributario de nuestro sistema deberemos
-acceder en primer lugar a grupo de impuestos| para crear los grupos donde
+acceder en primer lugar a grupo de impuestos para crear los grupos donde
 posteriormente asociaremos los distintos tipos de impuestos que iremos
 generando. Estos grupos se clasifican según si los impuestos se graban durante
 la *venta*, la *compra* o durante *ambos*.
